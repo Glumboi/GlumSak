@@ -16,7 +16,7 @@
   ![alt text](https://i.imgur.com/0C5dTRA.png)
   
 # Changelog
-  -Beta 1.0:
+  - Beta 1.0:
     First ever public release of GlumSak
   
 ## License
