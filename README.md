@@ -12,6 +12,8 @@
 
 <div align="center">
 
+Source code soon!
+
 # Manual (UI could differ from the image)
   ![alt text](https://i.imgur.com/0C5dTRA.png)
   
