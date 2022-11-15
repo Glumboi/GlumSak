@@ -31,6 +31,14 @@ making this project happen.
 And another special thanks to Sin himself for supporting me and this project
 by buying me a server to test around with and for having such a cool community.
   
+# What can it do?
+  - Install keys, shaders and firmwares to yuzu (shader not supported currently) and ryu with only a few clicks!
+  
+# Future plans
+  Soon!
+  
+
+  
 ## License
 
 Released under [BD3](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
