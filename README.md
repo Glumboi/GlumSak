@@ -49,8 +49,7 @@ by buying me a server to test around with and for having such a cool community.
   Soon!
   
 # Current supported shaders
-  - Mario Kart 8 Deluxe
-  - More to come real soon!
+  - All as long as you use a valid shaders file
   
 # What is it written in?
   - C# Winforms in .NET Framework 4.8.1
