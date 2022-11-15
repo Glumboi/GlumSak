@@ -1,7 +1,6 @@
 # GlumSak
 
-![alt text](https://i.imgur.com/xZktzsO.png)
-<img src="https://i.imgur.com/xZktzsO.png" data-canonical-src="https://i.imgur.com/xZktzsO.png" width="200" height="400" />
+<img src="https://i.imgur.com/xZktzsO.png" data-canonical-src="https://i.imgur.com/xZktzsO.png" width="400" height="400" />
  
 [![Glumboi - GlumSak](https://img.shields.io/static/v1?label=Glumboi&message=GlumSak&color=blue&logo=github)](https://github.com/Glumboi/GlumSak "Go to GitHub repo")
 [![stars - GlumSak](https://img.shields.io/github/stars/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
