@@ -13,7 +13,7 @@
 <div align="center">
 
 # Manual
-  
+  ![alt text](https://i.imgur.com/0C5dTRA.png)
 ## License
 
 Released under [BD3](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
