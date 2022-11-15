@@ -37,7 +37,12 @@ by buying me a server to test around with and for having such a cool community.
 # Future plans
   Soon!
   
-
+# Current supported shaders
+  - Mario Kart 8 Deluxe
+  - More to come real soon!
+  
+  
+# This is for education, sue at your own risk!
   
 ## License
 
