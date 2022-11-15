@@ -10,7 +10,7 @@
 
 
 [![GitHub tag](https://img.shields.io/github/tag/Glumboi/GlumSak?include_prereleases=&sort=semver&color=blue)](https://github.com/Glumboi/GlumSak/releases/)
-[![License](https://img.shields.io/badge/License-BD3-blue)](#license)
+[![License](https://img.shields.io/badge/License-BSD3-blue)](#license)
 [![issues - GlumSak](https://img.shields.io/github/issues/Glumboi/GlumSak)](https://github.com/Glumboi/GlumSak/issues)
 
 
