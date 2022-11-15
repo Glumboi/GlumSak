@@ -19,7 +19,6 @@
 </div>
 
 ## Documentation
-Amogus
 
 <div align="center">
 [![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](/docs/ "Go to project documentation")
