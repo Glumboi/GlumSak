@@ -52,5 +52,5 @@ by buying me a server to test around with and for having such a cool community.
   
 ## License
 
-Released under [BD3](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
+Released under [BSD3](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
 My biggest and most fun project. 
