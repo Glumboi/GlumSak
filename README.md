@@ -14,6 +14,11 @@
 
 # Manual (UI could differ from the image)
   ![alt text](https://i.imgur.com/0C5dTRA.png)
+  
+# Changelog
+  - Beta 1.0:
+    First ever public release of GlumSak
+  
 ## License
 
 Released under [BD3](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
