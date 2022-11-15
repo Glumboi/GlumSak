@@ -43,6 +43,10 @@ by buying me a server to test around with and for having such a cool community.
   - Mario Kart 8 Deluxe
   - More to come real soon!
   
+# What is it written in?
+  - C# Winforms in .NET Framework 4.8.1
+  - A little part is written in Python
+  
   
 # This is for education, use at your own risk!
   
