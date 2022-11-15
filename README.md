@@ -18,6 +18,18 @@
 # Changelog
   - Beta 1.0:
     First ever public release of GlumSak
+    
+# What is GlumSak?
+This project originally was a joke and I never thought that I'll do this some day.
+This project is highly inspired from emusak-ui  by CapitaineJSparrow. With the difference 
+that I did all the things from ground up myself. This is probably my biggest and most 
+time consuming project, but I really enjoy developing it. 
+
+A special thanks to all the people in Sin's cove that motivated me over the past 1-2 months 
+making this project happen.
+
+And another special thanks to Sin himself for supporting me and this project
+by buying me a server to test around with and for having such a cool community.
   
 ## License
 
