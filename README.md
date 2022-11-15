@@ -26,7 +26,7 @@ Source code soon!
     First ever public release of GlumSak
   # Beta 1.1:
     - Custom shader links file support added!
-    - Useres now have to set a links file in the settings for shaders to work
+    - Users now have to set a links file in the settings for shaders to work
     - Documentation on how to do your own shader file soon (you can get mine from a place ya'll should know)
     
 # What is GlumSak?
