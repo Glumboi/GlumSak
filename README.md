@@ -31,6 +31,7 @@
     - Documentation on how to do your own shader file soon (you can get mine from a place ya'll should know)+
   # Beta 1.1.1:
     - Made it so you can't resize the Mainwindow
+    - Updated the icon to look better
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
