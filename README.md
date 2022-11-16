@@ -7,6 +7,7 @@
 [![Glumboi - GlumSak](https://img.shields.io/static/v1?label=Glumboi&message=GlumSak&color=blue&logo=github)](https://github.com/Glumboi/GlumSak "Go to GitHub repo")
 [![stars - GlumSak](https://img.shields.io/github/stars/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
 [![forks - GlumSak](https://img.shields.io/github/forks/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/GlumSak)
 
 
 [![GitHub tag](https://img.shields.io/github/tag/Glumboi/GlumSak?include_prereleases=&sort=semver&color=blue)](https://github.com/Glumboi/GlumSak/releases/)
