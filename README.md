@@ -18,8 +18,7 @@
 
 Source code soon!
 
-# Requirements
-[This Font](https://fonts.google.com/specimen/Russo+One)
+# Restart is recommended after install
 
 # Manual (UI could differ from the image)
   ![alt text](https://i.imgur.com/0C5dTRA.png)
