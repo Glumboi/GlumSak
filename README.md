@@ -37,7 +37,7 @@ This project is highly inspired from emusak-ui  by CapitaineJSparrow. With the d
 that I did all the things from ground up myself. This is probably my biggest and most 
 time consuming project, but I really enjoy developing it. 
 
-A special thanks to all the people in Sin's cove that motivated me over the past 1-2 months 
+A special thanks to all the people in Sin's cove that motivated me over the past 1-2 weeks 
 making this project happen.
 
 And another special thanks to Sin himself for supporting me and this project
