@@ -1,0 +1,163 @@
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.GUI.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.GUI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.GUI.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.1.5.3.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuButton.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuDropdown.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuImageButton.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuLabel.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuPictureBox.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuScrollBar.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuSeparator.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuShadowPanel.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuSlider.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuTextbox.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuToolTip.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.ConfigIni.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.EmuFiles.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Emulators.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.JSON.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Network.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Glumboi.UI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Newtonsoft.Json.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Buffers.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Diagnostics.DiagnosticSource.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Memory.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Numerics.Vectors.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.UI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\TelerikCommon.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Transitions.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.JSON.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.JSON.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.ConfigIni.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.ConfigIni.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.EmuFiles.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Emulators.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Emulators.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Network.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Network.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Glumboi.UI.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.Shell.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Buffers.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Diagnostics.DiagnosticSource.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Memory.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Numerics.Vectors.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.UI.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Transitions.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.AssemblyReference.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.ConfigurationWindow.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.GangShitWindow.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.LoadingScreen.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.MainWindow.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.Properties.Resources.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.GenerateResource.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.dll.licenses
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.CoreCompileInputs.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.CopyComplete
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.SettingsWindow.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuProgressBar.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Bunifu.UI.WinForms.BunifuCircleProgress.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.Themes.CrystalDark.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\HtmlAgilityPack.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.EmuFiles.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\HtmlAgilityPack.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\HtmlAgilityPack.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Discord.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Glumboi.Debug.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\DiscordRPC.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.Win32.Registry.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Discord.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Discord.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Glumboi.Debug.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\DiscordRPC.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\DiscordRPC.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.GameActionsWindow.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.AboutWindow.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.GUI.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.GUI.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.GUI.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.ConfigIni.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Discord.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.EmuFiles.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Emulators.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.JSON.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Network.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Newtonsoft.Json.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Buffers.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Diagnostics.DiagnosticSource.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Memory.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Numerics.Vectors.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.Themes.CrystalDark.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.UI.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\TelerikCommon.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Transitions.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\DiscordRPC.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\HtmlAgilityPack.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.Win32.Registry.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.JSON.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.JSON.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.ConfigIni.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.ConfigIni.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Discord.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Discord.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.EmuFiles.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.EmuFiles.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Emulators.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Emulators.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Network.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak-Revive.Network.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Glumboi.Debug.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Glumboi.UI.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Buffers.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Memory.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Numerics.Vectors.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Telerik.WinControls.UI.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Transitions.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\DiscordRPC.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\DiscordRPC.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\HtmlAgilityPack.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\HtmlAgilityPack.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.AssemblyReference.cache
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.AboutWindow.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.ConfigurationWindow.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.GameActionsWindow.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.GangShitWindow.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.LoadingScreen.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.MainWindow.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.Properties.Resources.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.SettingsWindow.resources
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.GenerateResource.cache
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.dll.licenses
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.CoreCompileInputs.cache
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.csproj.CopyComplete
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak-Revive.GUI.pdb

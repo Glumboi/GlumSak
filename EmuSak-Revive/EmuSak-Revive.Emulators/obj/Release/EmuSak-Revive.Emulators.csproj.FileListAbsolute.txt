@@ -1,0 +1,39 @@
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\EmuSak-Revive.Emulators.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\EmuSak-Revive.Emulators.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\EmuSak-Revive.Emulators.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Buffers.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Diagnostics.DiagnosticSource.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Memory.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Numerics.Vectors.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Buffers.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Diagnostics.DiagnosticSource.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Memory.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Numerics.Vectors.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.csproj.AssemblyReference.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.csproj.CoreCompileInputs.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.csproj.CopyComplete
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\Glumboi.UI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\Glumboi.UI.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\EmuSak-Revive.Emulators.dll.config
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\EmuSak-Revive.Emulators.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\EmuSak-Revive.Emulators.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Buffers.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Diagnostics.DiagnosticSource.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Memory.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Numerics.Vectors.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\Glumboi.UI.pdb
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Buffers.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Memory.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Numerics.Vectors.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.csproj.AssemblyReference.cache
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.csproj.CoreCompileInputs.cache
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.csproj.CopyComplete
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.dll
+D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.Emulators\obj\Release\EmuSak-Revive.Emulators.pdb
