@@ -16,8 +16,6 @@
 
 <div align="center">
 
-Source code soon!
-
 # Restart is recommended after install
 
 # Manual (UI could differ from the image)
