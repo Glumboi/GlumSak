@@ -32,7 +32,7 @@
     - Updated the icon to look better
   # Beta 1.2:
     - Added a button to the settings window that saves the settings
-    - Added a little info when no emu files/folders a found
+    - Added a little info when no emu files/folders are found
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
