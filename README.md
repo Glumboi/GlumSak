@@ -1,6 +1,4 @@
 <div align="center">
- 
-# GlumSak
 
 <img src="https://i.imgur.com/fCp9uRh.png" width="312" height="100" />
  
