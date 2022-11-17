@@ -2,6 +2,10 @@
 
 <img src="https://i.imgur.com/fCp9uRh.png" width="312" height="100" />
 
+# News
+
+[![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=gazff)](https://github.com/gazf/github-readme-twitter)
+
 [![Glumboi - GlumSak](https://img.shields.io/static/v1?label=Glumboi&message=GlumSak&color=blue&logo=github)](https://github.com/Glumboi/GlumSak "Go to GitHub repo")
 [![stars - GlumSak](https://img.shields.io/github/stars/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
 [![forks - GlumSak](https://img.shields.io/github/forks/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
