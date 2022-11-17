@@ -1,7 +1,7 @@
 <div align="center">
 
 <img src="https://i.imgur.com/fCp9uRh.png" width="312" height="100" />
- 
+
 [![Glumboi - GlumSak](https://img.shields.io/static/v1?label=Glumboi&message=GlumSak&color=blue&logo=github)](https://github.com/Glumboi/GlumSak "Go to GitHub repo")
 [![stars - GlumSak](https://img.shields.io/github/stars/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
 [![forks - GlumSak](https://img.shields.io/github/forks/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
@@ -9,7 +9,7 @@
 
 
 [![GitHub tag](https://img.shields.io/github/tag/Glumboi/GlumSak?include_prereleases=&sort=semver&color=blue)](https://github.com/Glumboi/GlumSak/releases/)
-[![License](https://img.shields.io/badge/License-BSD3-blue)](#license)
+[![License](https://img.shields.io/badge/License-GPL-2.0-blue)](#license)
 [![issues - GlumSak](https://img.shields.io/github/issues/Glumboi/GlumSak)](https://github.com/Glumboi/GlumSak/issues)
 
 
@@ -62,5 +62,5 @@ by buying me a server to test around with and for having such a cool community.
   
 ## License
 
-Released under [BSD3](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
+Released under [GPL-2.0](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
 My biggest and most fun project. 
