@@ -30,6 +30,9 @@
   # Beta 1.1.1:
     - Made it so you can't resize the Mainwindow
     - Updated the icon to look better
+  # Beta 1.2:
+    - Added a button to the settings window that saves the settings
+    - Added a little info when no emu files/folders a found
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
