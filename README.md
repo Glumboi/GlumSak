@@ -2,7 +2,7 @@
 
 <img src="https://i.imgur.com/fCp9uRh.png" width="312" height="100" />
 
-# News
+### News
 
 [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=GlumSak)](https://github.com/gazf/github-readme-twitter)
 
