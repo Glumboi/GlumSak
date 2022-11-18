@@ -37,6 +37,8 @@
   # Beta 1.2:
     - Added a button to the settings window that saves the settings
     - Added a little info when no emu files/folders are found
+  # Beta 1.2.1:
+    - Fixed an issue that  caused Pokémon to display the name wrong
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
