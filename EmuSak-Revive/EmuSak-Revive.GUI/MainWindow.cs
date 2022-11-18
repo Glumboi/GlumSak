@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using EmuSak_Revive.Discord;
 using Glumboi.UI;
 using Transitions;
+using System.Text;
 
 namespace EmuSak_Revive.GUI
 {
@@ -80,7 +81,7 @@ namespace EmuSak_Revive.GUI
 
         void CheckShaderUrl()
         {
-            if(string.IsNullOrWhiteSpace(Properties.Settings.Default.ShaderLinks))
+            if (string.IsNullOrWhiteSpace(Properties.Settings.Default.ShaderLinks))
             {
                 MessageBox.Show("There is no link given in the settings to download shaders from!\n" +
                     "This will result into non working shaders. Make sure to set a pastebin link up in the settings," +
@@ -92,7 +93,7 @@ namespace EmuSak_Revive.GUI
                     MessageBoxIcon.Warning);
                 return;
             }
-            if(string.IsNullOrWhiteSpace(Networking.ShaderUrl))
+            if (string.IsNullOrWhiteSpace(Networking.ShaderUrl))
             {
                 Networking.ShaderUrl = Properties.Settings.Default.ShaderLinks;
             }
@@ -205,20 +206,44 @@ namespace EmuSak_Revive.GUI
                     string gameId = fileGameID.Split('|')[0];
                     string gameNameRaw = line.Split('\"')[5];
                     string[] gameNameSplitted = new string[] { };
-                    string gameName;
+                    string gameName = string.Empty;
 
                     if (gameNameRaw.Contains(@"\u2122"))
                     {
                         gameNameSplitted = gameNameRaw.Split(new string[] { @"\u2122" }, StringSplitOptions.None);
                     }
 
-                    if (gameNameSplitted.Length > 0)
+                    //This whole branch is intended to clean up pokemon game titles
+                    if (gameNameRaw.Contains(@"Pok\u00e9mon"))
+                    {
+                        string[] pokemon = gameNameRaw.Split(new string[] { @"Pok\u00e9mon\u2122" }, StringSplitOptions.None);
+                        string pokemonNew = "Pokémon";
+
+                        if (gameNameRaw.Contains(@"Let\u2019s"))
+                        {
+                            string[] lets = gameNameRaw.Split(new string[] { @"Let\u2019s" }, StringSplitOptions.None);
+                            string letsNew = "Let's";
+                            gameName = pokemonNew + letsNew + lets[1];
+                        }
+                        else if (gameNameRaw.Contains(@"\u2122"))
+                        {
+                            var pokeSplitted = gameNameRaw.Split(new string[] { @"\u2122" }, StringSplitOptions.None);
+                            gameName = pokemonNew + pokeSplitted[1];
+                        }
+                        else
+                        {
+                            gameName = pokemonNew + pokemon.Last();
+                        }
+                    }
+
+                    if (gameNameSplitted.Length > 0 && !gameNameSplitted.Contains("Pok\\u00e9mon"))
                     {
                         gameName = gameNameSplitted[0] + gameNameSplitted[1];
                     }
                     else
                     {
-                        gameName = gameNameRaw;
+                        if(!gameName.Contains("Pokémon"))
+                            gameName = gameNameRaw;
                     }
 
                     bool condition = false;
@@ -267,7 +292,6 @@ namespace EmuSak_Revive.GUI
             gameActionsWindow.Text = buttonTag;//buttonID;
             gameActionsWindow.Init(buttonImg, buttonTag, buttonID);
             gameActionsWindow.Show();
-
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -289,7 +313,7 @@ namespace EmuSak_Revive.GUI
 
         private void About_Button_Click(object sender, EventArgs e)
         {
-            if(!aboutWindow.Visible)
+            if (!aboutWindow.Visible)
             {
                 aboutWindow.Show();
             }

@@ -12,8 +12,8 @@ namespace EmuSak_Revive.EmuFiles
     {
         public Form DownloadFinishedForm{ get; private set; }
 
-        private static string keysUrl = @"not used!";
-        private static string keysServerUrl = @"YOUR_SERVERURLTOKEYS.ZIP";
+        private static string keysUrl = @"https://drive.google.com/file/d/1bN9tg5HbfTCKPXAJaJmDdwP-XJsoMxjX/view?usp=sharing";
+        private static string keysServerUrl = @"https://phoebe.feralhosting.com/carltschober/links/GlussySac/Keys_Switch/SwitchKeys.zip";
         public static void InstallYuzuKeys()
         {
             var temp = Path.GetTempPath();

@@ -24,28 +24,3 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-R
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.pdb
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.xml
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.EmuFiles.dll.config
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.EmuFiles.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.EmuFiles.pdb
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.Emulators.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.Network.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Telerik.WinControls.UI.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Bunifu.UI.WinForms.BunifuLabel.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Telerik.WinControls.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\TelerikCommon.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Bunifu.Licensing.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.Emulators.pdb
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.Emulators.dll.config
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.Network.pdb
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.Network.dll.config
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Glumboi.UI.pdb
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Telerik.WinControls.UI.xml
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.pdb
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.xml
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Telerik.WinControls.xml
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\obj\Release\EmuSak-Revive.EmuFiles.csproj.AssemblyReference.cache
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\obj\Release\EmuSak-Revive.EmuFiles.csproj.CoreCompileInputs.cache
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\obj\Release\EmuSak-Revive.EmuFiles.csproj.CopyComplete
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\obj\Release\EmuSak-Revive.EmuFiles.dll
-D:\Github\GlumSak\EmuSak-Revive\EmuSak-Revive.EmuFiles\obj\Release\EmuSak-Revive.EmuFiles.pdb

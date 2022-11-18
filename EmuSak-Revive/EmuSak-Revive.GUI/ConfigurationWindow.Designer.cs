@@ -238,7 +238,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConfigurationWindow";
             this.Text = "ConfigurationWindow";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfigureWindow_FormClosing);
             this.Load += new System.EventHandler(this.ConfigureWindow_Load);
             this.TitleBar.ResumeLayout(false);
             this.TitleBar.PerformLayout();

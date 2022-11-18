@@ -38,7 +38,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon3_Asset.ico</ApplicationIcon>
+    <ApplicationIcon>Icon4_Asset.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Glumboi.Debug">
@@ -245,6 +245,7 @@
   <ItemGroup>
     <Content Include="Icon2_Asset.ico" />
     <Content Include="Icon3_Asset.ico" />
+    <Content Include="Icon4_Asset.ico" />
     <Content Include="Icon_Asset.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -257,7 +258,7 @@
   </Target>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Reactor_Enabled="0" Reactor_Deploy="0" Reactor_Commands="" Reactor_Project="" Reactor_Configuration="Release" Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyFileName&gt;" />
+      <UserProperties Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyFileName&gt;" Reactor_Configuration="Release" Reactor_Project="" Reactor_Commands="" Reactor_Deploy="0" Reactor_Enabled="0" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

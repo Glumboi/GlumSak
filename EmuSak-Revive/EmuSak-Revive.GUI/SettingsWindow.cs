@@ -100,8 +100,10 @@ namespace EmuSak_Revive.GUI
             OpenFolder(RyuPath_TextBox);
         }
 
-        private void PasteBinUrl_TextBox_TextChanged(object sender, EventArgs e)
+        private void SaveAndClose_Button_Click(object sender, EventArgs e)
         {
+            SaveSettings();
+            Close();
         }
     }
 }

@@ -38,13 +38,6 @@ namespace EmuSak_Revive.GUI
             ryujinxToolTip.SetToolTip(Ryujinx_Button, "Launches the app in Ryujinx mode");*/
         }
 
-        private void ConfigureWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason != CloseReason.UserClosing) return;
-            e.Cancel = true;
-            Hide();
-        }
-
         private void TitleBar_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -67,20 +60,32 @@ namespace EmuSak_Revive.GUI
         void LaunchApp(int mode)
         {
             LoadingScreen ls = new LoadingScreen();
-            if (mode == 0)
-            {
-                this.Hide(); 
-                ls.Show(); 
-                ls.LaunchWithYuzuConfig(); 
-                return;
-            }
+            this.Hide();
 
-            if (mode == 1)
+            try
             {
-                this.Hide();
-                ls.Show();
-                ls.LaunchWithRyujinxConfig();
-                return;
+                if (mode == 0)
+                {
+                    ls.Show();
+                    ls.LaunchWithYuzuConfig();
+                    return;
+                }
+
+                if (mode == 1)
+                {
+                    ls.Show();
+                    ls.LaunchWithRyujinxConfig();
+                    return;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Could not detect default emulator settings directory. " +
+                    "If you haven't launched your emulator yet then do so." +
+                    "\nIf you have a portable install then go to the settings menu and enter the location.", 
+                    "Info",
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
             }
         }
 

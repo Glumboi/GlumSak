@@ -359,6 +359,8 @@
     <Content Include="Assets\HappyDog_Asset.gif" />
     <Content Include="Assets\Icon2_Asset.ico" />
     <Content Include="Assets\Icon3_Asset.ico" />
+    <Content Include="Assets\Icon4_Asset.ico" />
+    <Content Include="Assets\Icon4_Asset.png" />
     <Content Include="Assets\Icon_Asset.ico" />
     <Content Include="Assets\Key_Asset.png" />
     <Content Include="Assets\Minimize_Asset.png" />
@@ -369,6 +371,7 @@
     <Content Include="Assets\RabbitVibe_Asset.gif" />
     <Content Include="Assets\Rocket_Asset.png" />
     <Content Include="Assets\Ryujinx_Asset.png" />
+    <Content Include="Assets\Save_Asset.png" />
     <Content Include="Assets\Update_Asset.png" />
     <Content Include="Assets\Yuzu_Asset.png" />
   </ItemGroup>
