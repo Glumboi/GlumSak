@@ -39,6 +39,14 @@
     - Added a little info when no emu files/folders are found
   # Beta 1.2.1:
     - Fixed an issue that caused Pokémon to display the name wrong
+  # Beta 2.0:
+    - Added a new feature that let's you filter the games (can be laggy)
+    - Fixed some small scaling issues on higher dpi's
+    - Increased the size of the Mainwindow
+    - Fixed other small bugs
+    - Improved scrolling performance
+    - New scrollbar
+    - New installer images
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
