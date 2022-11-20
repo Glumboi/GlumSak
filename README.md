@@ -47,6 +47,7 @@
     - Improved scrolling performance
     - New scrollbar
     - New installer images
+    - New game button animation
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
