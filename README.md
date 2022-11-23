@@ -51,6 +51,9 @@
   # Beta 2.1:
     - Added a new feature that plays a sound when doing certain actions (needs to be activated in the settings)
     - Separated keys from the app, that means you now need a valid paste in order to downlaod keys!
+  # Beta 2.1.1:
+    - Re worked the audio system to work better
+    - Fixed custom install locations from the installer
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
