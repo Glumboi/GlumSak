@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bunifu.UI.WinForms.BunifuDatePicker</name>
+    </assembly>
+    <members>
+        <member name="T:Bunifu.UI.WinForms.BunifuDatePicker">
+            <summary>
+            Add customizable date pickers for your date/time inputs.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuDatePicker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuDatePicker" /> control.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuDatePicker.Indicator">
+            <summary>
+            Provides various supported indicator locations points.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Left">
+            <summary>
+            Position to the left area.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right">
+            <summary>
+            Position to the right area.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.Indicator.None">
+            <summary>
+            No position.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuDatePicker.TextAlign">
+            <summary>
+            Provides various supported text alignment options.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left">
+            <summary>
+            Left aligned.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Right">
+            <summary>
+            Right aligned.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Center">
+            <summary>
+            Center aligned.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness">
+            <summary>
+            Provides various border thickness options.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick">
+            <summary>
+            Thick border.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin">
+            <summary>
+            Thin border.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the control is enabled.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.DisplayWeekNumbers">
+            <summary>
+            Gets or sets a value indicating whether the week numbers will be displayed.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.Width">
+            <summary>
+            Gets or sets minimum width of the date picker.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.Height">
+            <summary>
+            Gets or sets minimum height of the date picker.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.LeftTextMargin">
+            <summary>
+            Gets or sets the left text margin.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.IconColor">
+            <summary>
+            Gets or sets the date picker icon color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.DisabledColor">
+            <summary>
+            Gets or sets the disabled background/border color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.BorderColor">
+            <summary>
+            Gets or sets the border color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.BackColor">
+            <summary>
+            Gets or sets the background color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.ForeColor">
+            <summary>
+            Gets or sets the foreground color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.Icon">
+            <summary>
+            Gets or sets the indicator icon.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.Font">
+            <summary>
+            Gets or sets the control font.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.DateBorderThickness">
+            <summary>
+            Gets or sets the border thickness.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.DateTextAlign">
+            <summary>
+            Gets or sets the date/time text alignment.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.IconLocation">
+            <summary>
+            Gets or sets the indicator location.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.FillDatePicker">
+            <summary>
+            Gets or sets a value indicating whether the date picker 
+            will be filled using the <see cref="P:Bunifu.UI.WinForms.BunifuDatePicker.Color"/> property.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.RightToLeftLayout">
+            <summary>
+            Gets or sets whether the contents of the <see cref="T:System.Windows.Forms.DateTimePicker" /> 
+            are laid out from right to left.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.ShowUpDown">
+            <summary>
+            Gets or sets a value indicating whether a spin button control 
+            (also known as an up-down control) is used to adjust the date/time value.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.DPHeight">
+            <summary>
+            Gets or sets the date picker height.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuDatePicker.Color">
+            <summary>
+            Gets or sets the border/background color.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuDatePicker.ChangeColor(System.Drawing.Bitmap,System.Drawing.Color)">
+            <summary>
+            Changes a bitmap's color.
+            </summary>
+            <param name="image">
+            The bitmap image.
+            </param>
+            <param name="color">
+            The new bitmap color.
+            </param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuDatePicker.BunifuControlActionList.GetSortedActionItems">
+            <summary>
+            Implementation of this abstract method creates Smart Tag items,
+            associates their targets, and collects them into a list.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuDatePicker.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuDatePicker.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuDatePicker.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.Properties.Resources.calendar">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

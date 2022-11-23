@@ -1,0 +1,3016 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bunifu.UI.WinForms.1.5.3</name>
+    </assembly>
+    <members>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.components">
+            <summary>
+            The components
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.queue">
+            <summary>
+            The queue
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.thread">
+            <summary>
+            The thread
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.timer">
+            <summary>
+            The timer
+            </summary>
+        </member>
+        <member name="E:BunifuAnimatorNS.BunifuTransition.AnimationCompleted">
+            <summary>
+            Occurs when animation of the control is completed
+            </summary>
+        </member>
+        <member name="E:BunifuAnimatorNS.BunifuTransition.AllAnimationsCompleted">
+            <summary>
+            Ocuurs when all animations are completed
+            </summary>
+        </member>
+        <member name="E:BunifuAnimatorNS.BunifuTransition.TransfromNeeded">
+            <summary>
+            Occurs when needed transform matrix
+            </summary>
+        </member>
+        <member name="E:BunifuAnimatorNS.BunifuTransition.NonLinearTransfromNeeded">
+            <summary>
+            Occurs when needed non-linear transformation
+            </summary>
+        </member>
+        <member name="E:BunifuAnimatorNS.BunifuTransition.MouseDown">
+            <summary>
+            Occurs when user click on the animated control
+            </summary>
+        </member>
+        <member name="E:BunifuAnimatorNS.BunifuTransition.FramePainted">
+            <summary>
+            Occurs when frame of animation is painting
+            </summary>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.MaxAnimationTime">
+            <summary>
+            Max time of animation (ms)
+            </summary>
+            <value>The maximum animation time.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.DefaultAnimation">
+            <summary>
+            Default animation
+            </summary>
+            <value>The default animation.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.Cursor">
+            <summary>
+            Cursor of animated control
+            </summary>
+            <value>The cursor.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.IsCompleted">
+            <summary>
+            Are all animations completed?
+            </summary>
+            <value><c>true</c> if this instance is completed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.Interval">
+            <summary>
+            Interval between frames (ms)
+            </summary>
+            <value>The interval.</value>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.animationType">
+            <summary>
+            The animation type
+            </summary>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.AnimationType">
+            <summary>
+            Type of built-in animation
+            </summary>
+            <value>The type of the animation.</value>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BunifuAnimatorNS.BunifuTransition"/> class.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BunifuAnimatorNS.BunifuTransition"/> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.Init">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.invokerControl">
+            <summary>
+            The invoker control
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Tick event of the timer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.Animator_Disposed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Disposed event of the Animator control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.Work">
+            <summary>
+            Works this instance.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.CheckRequests">
+            <summary>
+            initializeComponent result state of controls
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.IsStateOK(System.Windows.Forms.Control,BunifuAnimatorNS.AnimateMode)">
+            <summary>
+            Determines whether [is state ok] [the specified control].
+            </summary>
+            <param name="control">The control.</param>
+            <param name="mode">The mode.</param>
+            <returns><c>true</c> if [is state ok] [the specified control]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.RepairState(System.Windows.Forms.Control,BunifuAnimatorNS.AnimateMode)">
+            <summary>
+            Repairs the state.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="mode">The mode.</param>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.counter">
+            <summary>
+            The counter
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.DoAnimation(BunifuAnimatorNS.BunifuTransition.QueueItem)">
+            <summary>
+            Does the animation.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.InitDefaultAnimation(BunifuAnimatorNS.AnimationType)">
+            <summary>
+            Initializes the default animation.
+            </summary>
+            <param name="animationType">Type of the animation.</param>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.TimeStep">
+            <summary>
+            Time step
+            </summary>
+            <value>The time step.</value>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.Show(System.Windows.Forms.Control,System.Boolean,BunifuAnimatorNS.Animation)">
+            <summary>
+            Shows the control. As result the control will be shown with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.ShowSync(System.Windows.Forms.Control,System.Boolean,BunifuAnimatorNS.Animation)">
+            <summary>
+            Shows the control and waits while animation will be completed. As result the control will be shown with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.Hide(System.Windows.Forms.Control,System.Boolean,BunifuAnimatorNS.Animation)">
+            <summary>
+            Hides the control. As result the control will be hidden with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.HideSync(System.Windows.Forms.Control,System.Boolean,BunifuAnimatorNS.Animation)">
+            <summary>
+            Hides the control and waits while animation will be completed. As result the control will be hidden with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.BeginUpdate(System.Windows.Forms.Control,System.Boolean,BunifuAnimatorNS.Animation,System.Drawing.Rectangle)">
+            <summary>
+            It makes snapshot of the control before updating. It requires EndUpdate calling.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+            <param name="clipRectangle">Clip rectangle for animation</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.EndUpdate(System.Windows.Forms.Control)">
+            <summary>
+            Upadates control view with animation. It requires to call BeginUpdate before.
+            </summary>
+            <param name="control">Target control</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.EndUpdateSync(System.Windows.Forms.Control)">
+            <summary>
+            Upadates control view with animation and waits while animation will be completed. It requires to call BeginUpdate before.
+            </summary>
+            <param name="control">Target control</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.WaitAllAnimations">
+            <summary>
+            Waits while all animations will completed.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.WaitAnimation(System.Windows.Forms.Control)">
+            <summary>
+            Waits while animation of the control will completed.
+            </summary>
+            <param name="animatedControl">The animated control.</param>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.requests">
+            <summary>
+            The requests
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.OnCompleted(BunifuAnimatorNS.BunifuTransition.QueueItem)">
+            <summary>
+            Called when [completed].
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.AddToQueue(System.Windows.Forms.Control,BunifuAnimatorNS.AnimateMode,System.Boolean,BunifuAnimatorNS.Animation,System.Drawing.Rectangle)">
+            <summary>
+            Adds the contol to animation queue.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="mode">Animation mode</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+            <param name="clipRectangle">The clip rectangle.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.CreateDoubleBitmap(System.Windows.Forms.Control,BunifuAnimatorNS.AnimateMode,BunifuAnimatorNS.Animation,System.Drawing.Rectangle)">
+            <summary>
+            Creates the double bitmap.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="mode">The mode.</param>
+            <param name="animation">The animation.</param>
+            <param name="clipRect">The clip rect.</param>
+            <returns>Controller.</returns>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.OnFramePainted(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handles the <see cref="E:FramePainted" /> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.PaintEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.OnMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handles the <see cref="E:MouseDown" /> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.MouseEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.OnNonLinearTransfromNeeded(System.Object,BunifuAnimatorNS.NonLinearTransfromNeededEventArg)">
+            <summary>
+            Called when [non linear transfrom needed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.OnTransformNeeded(System.Object,BunifuAnimatorNS.TransfromNeededEventArg)">
+            <summary>
+            Called when [transform needed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.ClearQueue">
+            <summary>
+            Clears queue.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.OnAnimationCompleted(BunifuAnimatorNS.AnimationCompletedEventArg)">
+            <summary>
+            Called when [animation completed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.OnAllAnimationsCompleted">
+            <summary>
+            Called when [all animations completed].
+            </summary>
+        </member>
+        <member name="T:BunifuAnimatorNS.BunifuTransition.QueueItem">
+            <summary>
+            Class QueueItem.
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.QueueItem.animation">
+            <summary>
+            The animation
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.QueueItem.controller">
+            <summary>
+            The controller
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.QueueItem.control">
+            <summary>
+            The control
+            </summary>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.QueueItem.ActivateTime">
+            <summary>
+            Gets the activate time.
+            </summary>
+            <value>The activate time.</value>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.QueueItem.mode">
+            <summary>
+            The mode
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.QueueItem.clipRectangle">
+            <summary>
+            The clip rectangle
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.QueueItem.isActive">
+            <summary>
+            The is active
+            </summary>
+        </member>
+        <member name="P:BunifuAnimatorNS.BunifuTransition.QueueItem.IsActive">
+            <summary>
+            Gets or sets a value indicating whether this instance is active.
+            </summary>
+            <value><c>true</c> if this instance is active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.GetDecoration(System.Windows.Forms.Control)">
+            <summary>
+            Gets the decoration.
+            </summary>
+            <param name="control">The control.</param>
+            <returns>DecorationType.</returns>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.SetDecoration(System.Windows.Forms.Control,BunifuAnimatorNS.DecorationType)">
+            <summary>
+            Sets the decoration.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="decoration">The decoration.</param>
+        </member>
+        <member name="F:BunifuAnimatorNS.BunifuTransition.DecorationByControls">
+            <summary>
+            The decoration by controls
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.CanExtend(System.Object)">
+            <summary>
+            Specifies whether this object can provide its extender properties to the specified object.
+            </summary>
+            <param name="extendee">The <see cref="T:System.Object" /> to receive the extender properties.</param>
+            <returns>true if this object can provide extender properties to the specified object; otherwise, false.</returns>
+        </member>
+        <member name="M:BunifuAnimatorNS.BunifuTransition.InitializeComponent">
+            <summary>
+            Initializes the component.
+            </summary>
+        </member>
+        <member name="T:BunifuAnimatorNS.DecorationType">
+            <summary>
+            Enum DecorationType
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.DecorationType.None">
+            <summary>
+            The none
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.DecorationType.BottomMirror">
+            <summary>
+            The bottom mirror
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.DecorationType.Custom">
+            <summary>
+            The custom
+            </summary>
+        </member>
+        <member name="T:BunifuAnimatorNS.AnimationCompletedEventArg">
+            <summary>
+            Class AnimationCompletedEventArg.
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="P:BunifuAnimatorNS.AnimationCompletedEventArg.Animation">
+            <summary>
+            Gets or sets the animation.
+            </summary>
+            <value>The animation.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.AnimationCompletedEventArg.Control">
+            <summary>
+            Gets the control.
+            </summary>
+            <value>The control.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.AnimationCompletedEventArg.Mode">
+            <summary>
+            Gets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="T:BunifuAnimatorNS.TransfromNeededEventArg">
+            <summary>
+            Class TransfromNeededEventArg.
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="M:BunifuAnimatorNS.TransfromNeededEventArg.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BunifuAnimatorNS.TransfromNeededEventArg"/> class.
+            </summary>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.Matrix">
+            <summary>
+            Gets or sets the matrix.
+            </summary>
+            <value>The matrix.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.CurrentTime">
+            <summary>
+            Gets the current time.
+            </summary>
+            <value>The current time.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.ClientRectangle">
+            <summary>
+            Gets the client rectangle.
+            </summary>
+            <value>The client rectangle.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.ClipRectangle">
+            <summary>
+            Gets the clip rectangle.
+            </summary>
+            <value>The clip rectangle.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.Animation">
+            <summary>
+            Gets or sets the animation.
+            </summary>
+            <value>The animation.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.Control">
+            <summary>
+            Gets the control.
+            </summary>
+            <value>The control.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.Mode">
+            <summary>
+            Gets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.TransfromNeededEventArg.UseDefaultMatrix">
+            <summary>
+            Gets or sets a value indicating whether [use default matrix].
+            </summary>
+            <value><c>true</c> if [use default matrix]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:BunifuAnimatorNS.NonLinearTransfromNeededEventArg">
+            <summary>
+            Class NonLinearTransfromNeededEventArg.
+            </summary>
+            <seealso cref="T:System.EventArgs" />
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.CurrentTime">
+            <summary>
+            Gets the current time.
+            </summary>
+            <value>The current time.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.ClientRectangle">
+            <summary>
+            Gets the client rectangle.
+            </summary>
+            <value>The client rectangle.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.Pixels">
+            <summary>
+            Gets the pixels.
+            </summary>
+            <value>The pixels.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.Stride">
+            <summary>
+            Gets the stride.
+            </summary>
+            <value>The stride.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.SourceClientRectangle">
+            <summary>
+            Gets the source client rectangle.
+            </summary>
+            <value>The source client rectangle.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.SourcePixels">
+            <summary>
+            Gets the source pixels.
+            </summary>
+            <value>The source pixels.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.SourceStride">
+            <summary>
+            Gets or sets the source stride.
+            </summary>
+            <value>The source stride.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.Animation">
+            <summary>
+            Gets or sets the animation.
+            </summary>
+            <value>The animation.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.Control">
+            <summary>
+            Gets the control.
+            </summary>
+            <value>The control.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.Mode">
+            <summary>
+            Gets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:BunifuAnimatorNS.NonLinearTransfromNeededEventArg.UseDefaultTransform">
+            <summary>
+            Gets or sets a value indicating whether [use default transform].
+            </summary>
+            <value><c>true</c> if [use default transform]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:BunifuAnimatorNS.AnimateMode">
+            <summary>
+            Enum AnimateMode
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.AnimateMode.Show">
+            <summary>
+            The show
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.AnimateMode.Hide">
+            <summary>
+            The hide
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.AnimateMode.Update">
+            <summary>
+            The update
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.AnimateMode.BeginUpdate">
+            <summary>
+            The begin update
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.DoubleBitmapControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.DoubleBitmapControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.DoubleBitmapControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:BunifuAnimatorNS.DoubleBitmapForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.DoubleBitmapForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BunifuAnimatorNS.DoubleBitmapForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.PointFConverter.#ctor">
+            <summary>
+            Creates a new instance of PointFConverter
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.PointFConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Boolean, true if the source type is a string
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.PointFConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the specified string into a PointF
+            </summary>
+        </member>
+        <member name="M:BunifuAnimatorNS.PointFConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the PointF into a string
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.Bunifu1530.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.Bunifu1530.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.Bunifu1530.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.Lib.Styles.ZoomIn(System.Windows.Forms.Control,System.Int32)">
+            <summary>
+            Zooms the control in.
+            </summary>
+            <param name="pic">The pic.</param>
+            <param name="by">The by.</param>
+        </member>
+        <member name="M:Bunifu.Framework.Lib.Styles.ZoomOut(System.Windows.Forms.Control)">
+            <summary>
+            Zooms the out.
+            </summary>
+            <param name="pic">The pic.</param>
+        </member>
+        <member name="M:Bunifu.Framework.Lib.Styles.onclick(System.Windows.Forms.Control)">
+            <summary>
+            Onclicks the specified pic.
+            </summary>
+            <param name="pic">The pic.</param>
+        </member>
+        <member name="M:Bunifu.Framework.Lib.Elipse.Apply(System.Windows.Forms.Form,System.Int32)">
+            <summary>
+            Activates the form.
+            </summary>
+            <param name="Form">The form.</param>
+            <param name="_Elipse">The _ elipse.</param>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuCheckbox.OnChange">
+            <summary>
+            Occurs when [on change].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCheckbox.CheckedOnColor">
+            <summary>
+            Gets or sets the color of the checked on.
+            </summary>
+            <value>
+            The color of the checked on.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCheckbox.ChechedOffColor">
+            <summary>
+            Gets or sets the color of the cheched off.
+            </summary>
+            <value>
+            The color of the cheched off.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCheckbox.Checked">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Bunifu.Framework.UI.BunifuCheckbox"/> is checked.
+            </summary>
+            <value>
+              <c>true</c> if checked; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuCheckbox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCheckbox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCheckbox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCircleProgressbar.GetPassentage">
+            <summary>
+            Gets the get passentage.
+            </summary>
+            <value>
+            The get passentage.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCircleProgressbar.ProgressColor">
+            <summary>
+            Gets or sets the color of the progress.
+            </summary>
+            <value>
+            The color of the progress.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCircleProgressbar.LabelVisible">
+            <summary>
+            Gets or sets the back color of the progress 
+            </summary>
+            <value>
+            The color of the progress back.
+            </value>
+            
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCircleProgressbar.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCircleProgressbar.MaxValue">
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuCircleProgressbar.ProgressChanged">
+            <summary>
+            Occurs when [progress changed].
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuCircleProgressbar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCircleProgressbar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCircleProgressbar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuDatepicker.onValueChanged">
+            <summary>
+            Occurs when [on value changed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDatepicker.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDatepicker.Format">
+            <summary>
+            Gets or sets the callendar setting.
+            </summary>
+            <value>
+            The callendar setting.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDatepicker.FormatCustom">
+            <summary>
+            Gets or sets the format when custom.
+            </summary>
+            <value>
+            The format custom.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuDatepicker.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDatepicker.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDatepicker.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuColorTransition.ProgessValue">
+            <summary>
+            Gets the progess value.
+            </summary>
+            <value>
+            The progess value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuColorTransition.Color1">
+            <summary>
+            Gets or sets the color1.
+            </summary>
+            <value>
+            The color1.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuColorTransition.Color2">
+            <summary>
+            Gets or sets the color2.
+            </summary>
+            <value>
+            The color2.
+            </value>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuColorTransition.OnValueChange">
+            <summary>
+            Occurs when [on value change].
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuColorTransition.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuColorTransition.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuColorTransition.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCustomDataGrid.DoubleBuffered">
+            <summary>
+            Gets or sets a value indicating whether this control should redraw its surface using a secondary buffer to reduce or prevent flicker.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCustomDataGrid.HeaderBgColor">
+            <summary>
+            Gets or sets the color of the header.
+            </summary>
+            <value>
+            The color of the header.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuCustomDataGrid.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCustomDataGrid.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCustomDataGrid.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuDragControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDragControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDragControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Bunifu.Framework.UI.BunifuDropdown">
+            <summary>
+            Class BunifuDropdown.
+            </summary>
+            <seealso cref="T:System.Windows.Forms.UserControl" />
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.Framework.UI.BunifuDropdown" /> class.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.AddItem(System.String)">
+            <summary>
+            Adds the item.
+            </summary>
+            <param name="Item">The item.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.RemoveItem(System.String)">
+            <summary>
+            Removes the item.
+            </summary>
+            <param name="Item">The item.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.SelectedItem(System.String)">
+            <summary>
+            Selecteds the item.
+            </summary>
+            <param name="Item">The item.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.RemoveAt(System.Int32)">
+            <summary>
+            Removes at specified index
+            </summary>
+            <param name="index">The index.</param>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuDropdown._BorderRadius">
+            <summary>
+            The border radius
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>The border radius.</value>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuDropdown.onItemSelected">
+            <summary>
+            Occurs when [on value selected].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuDropdown.onItemAdded">
+            <summary>
+            Occurs when [on value added].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuDropdown.onItemRemoved">
+            <summary>
+            Occurs when [on value removed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.selectedIndex">
+            <summary>
+            Gets or sets the index of the selected.
+            </summary>
+            <value>The index of the selected.</value>
+            <exception cref="T:System.Exception">Out of index</exception>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.selectedValue">
+            <summary>
+            Gets the selected value.
+            </summary>
+            <value>The selected value.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>The items.</value>
+            
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+            <value>The items.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.onHoverColor">
+            <summary>
+            Gets or sets the color of the on hover.
+            </summary>
+            <value>The color of the on hover.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.NomalColor">
+            <summary>
+            Gets or sets the color of the nomal.
+            </summary>
+            <value>The color of the nomal.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.BunifuDropdown_Resize(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Resize event of the BunifuDropdown control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.Style_onClick(System.Object,System.EventArgs)">
+            <summary>
+            Handles the onClick event of the Style control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.BunifuDropdown_FontChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the FontChanged event of the BunifuDropdown control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.BunifuDropdown_ForeColorChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the ForeColorChanged event of the BunifuDropdown control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.Collections_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the SelectedIndexChanged event of the Collections control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.Collections_SelectionChangeCommitted(System.Object,System.EventArgs)">
+            <summary>
+            Handles the SelectionChangeCommitted event of the Collections control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.BunifuDropdown_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Load event of the BunifuDropdown control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the control can respond to user interaction.
+            </summary>
+            <value><c>true</c> if enabled; otherwise, <c>false</c>.</value>
+            <PermissionSet>
+              <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+              <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+            </PermissionSet>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuDropdown._enabled">
+            <summary>
+            The enabled
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuDropdown.DisabledColor">
+            <summary>
+            Gets or sets the color of the disabled.
+            </summary>
+            <value>The color of the disabled.</value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuDropdown.components">
+            <summary>    
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuDropdown.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuElipse.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuElipse.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuElipse.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.ButtonText">
+            <summary>
+            Gets or sets the button text. (Depricated)
+            </summary>
+            <value>
+            The button text.
+            </value>
+            
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Text">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the control can respond to user interaction.
+            </summary>
+            <PermissionSet>
+              <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+              <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+            </PermissionSet>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.DisabledColor">
+            <summary>
+            Gets or sets the color of the disabled.
+            </summary>
+            <value>
+            The color of the disabled.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.TextAlign">
+            <summary>
+            Gets or sets the text align.
+            </summary>
+            <value>
+            The text align.
+            </value>
+            
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Iconcolor">
+            <summary>
+            Gets or sets the iconcolor.
+            </summary>
+            <value>
+            The iconcolor.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.IsTab">
+            <summary>
+            Gets or sets a value indicating whether this instance is tab.
+            </summary>
+            <value>
+              <c>true</c> if this instance is tab; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Iconimage">
+            <summary>
+            Gets or sets the iconimage.
+            </summary>
+            <value>
+            The iconimage.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.IconVisible">
+            <summary>
+            Gets or sets a value indicating whether [icon visible].
+            </summary>
+            <value>
+              <c>true</c> if [icon visible]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.IconMarginLeft">
+            <summary>
+            Gets or sets the icon margin left.
+            </summary>
+            <value>
+            The icon margin left.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.IconMarginRight">
+            <summary>
+            Gets or sets the icon margin right.
+            </summary>
+            <value>
+            The icon margin right.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Iconimage_Selected">
+            <summary>
+            Gets or sets the iconimage_ selected.
+            </summary>
+            <value>
+            The iconimage_ selected.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Iconimage_right">
+            <summary>
+            Gets or sets the right. iconimage
+            </summary>
+            <value>
+            The iconimage_right.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Iconimage_right_Selected">
+            <summary>
+            Gets or sets the iconimage_right_ selected.
+            </summary>
+            <value>
+            The iconimage_right_ selected.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.TextFont">
+            <summary>
+             Button text font
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Textcolor">
+            <summary>
+             The color of the button text
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Normalcolor">
+            <summary>
+             Button color on Normal/Idle state
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuFlatButton._zoom">
+            <summary>
+             Button color on Normal/Idle state
+            </summary>
+            
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.IconZoom">
+            <summary>
+            Gets or sets the icon zoom.
+            </summary>
+            <value>
+            The icon zoom.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.IconRightZoom">
+            <summary>
+            Gets or sets the icon right zoom.
+            </summary>
+            <value>
+            The icon right zoom.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.OnHovercolor">
+            <summary>
+             Button color on hover state
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Activecolor">
+            <summary>
+              Button color on active state (When used as tabs).
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.Active">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Bunifu.Framework.UI.BunifuFlatButton"/> is active.
+            </summary>
+            <value><c>true</c> if active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.selected">
+            <summary>
+              Selects th button to actidve/Not active
+            </summary> 
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuFlatButton.OnHoverTextColor">
+            <summary>
+              Button text color on hover
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuFlatButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.Framework.UI.BunifuFlatButton"/> class.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuFlatButton.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuFlatButton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuFlatButton.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGauge.ProgressColor1">
+            <summary>
+            Gets or sets the progress color1.
+            </summary>
+            <value>
+            The progress color1.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGauge.ProgressBgColor">
+            <summary>
+            Gets or sets the color of the progress bg.
+            </summary>
+            <value>
+            The color of the progress bg.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGauge.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGauge.Thickness">
+            <summary>
+            Gets or sets the thickness.
+            </summary>
+            <value>
+            The thickness.
+            </value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuGauge.PlotProgrss(System.Int32)">
+            <summary>
+            Plots the progrss.
+            </summary>
+            <param name="progress">The progress.</param>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuGauge.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuGauge.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuGauge.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Bunifu.Framework.UI.BunifuGradientPanel">
+            <summary>
+            Create stylish gradient panels with extendable color customization options.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuGradientPanel.#ctor">
+            <summary>
+            Creates a new <see cref="T:Bunifu.Framework.UI.BunifuGradientPanel"/> control.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGradientPanel.GradientTopLeft">
+            <summary>
+            Gets or sets the top-left gradient color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGradientPanel.GradientTopRight">
+            <summary>
+            Gets or sets the top-right gradient color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGradientPanel.GradientBottomLeft">
+            <summary>
+            Gets or sets the bottom-left gradient color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGradientPanel.GradientBottomRight">
+            <summary>
+            Gets or sets the bottom-right gradient color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGradientPanel.Quality">
+            <summary>
+            [Deprecated] Gets or sets the gradient's quality.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuGradientPanel.BackColor">
+            <summary>
+            Gets or sets the control's background color.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuGradientPanel.Refresh">
+            <summary>
+            Forces the control to invalidate its client area and 
+            immediately redraw itself and any child controls.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuGradientPanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuGradientPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuGradientPanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuHTTP_Utils.Value">
+            <summary>
+            Gets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuHTTP_Utils.LastError">
+            <summary>
+            Gets the last error.
+            </summary>
+            <value>
+            The last error.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuHTTP_Utils.JobName">
+            <summary>
+            Gets the name of the job.
+            </summary>
+            <value>
+            The name of the job.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuHTTP_Utils.Url">
+            <summary>
+            Gets or sets the URL.
+            </summary>
+            <value>
+            The URL.
+            </value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.PostString">
+            <summary>
+            Posts the string.
+            </summary>
+            <exception cref="T:System.Exception">Http Job already running.</exception>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.PostString(System.String)">
+            <summary>
+            Posts the string.
+            </summary>
+            <param name="Data">The data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.PostString(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Posts the string.
+            </summary>
+            <param name="Data">The data.</param>
+            <exception cref="T:System.Exception">Http Job already running.</exception>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.PostString(System.String,System.String)">
+            <summary>
+            Posts the string.
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="jobname">The jobname.</param>
+            
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.PostString(System.String,System.String,System.String)">
+            <summary>
+            Posts the string.
+            </summary>
+            <param name="Data">The data.</param>
+            <param name="jobname">The jobname.</param>
+            <param name="url">The URL.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.AbortJob">
+            <summary>
+            Aborts the job.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuHTTP_Utils.IsBusy">
+            <summary>
+            Gets a value indicating whether this instance is busy.
+            </summary>
+            <value>
+              <c>true</c> if this instance is busy; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuHTTP_Utils.OnJobDone">
+            <summary>
+            Occurs when [on job done].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuHTTP_Utils.OnError">
+            <summary>
+            Occurs when [on error].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuHTTP_Utils.onAborted">
+            <summary>
+            Occurs when [on aborted].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuHTTP_Utils.onFileDownloadComplete">
+            <summary>
+            Occurs when [on file download complete].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuHTTP_Utils.onFileDownloadFail">
+            <summary>
+            Occurs when [on file download fail].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuHTTP_Utils.onBusyStateChanged">
+            <summary>
+            Occurs when [on busy state changed].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuHTTP_Utils.OnDownloadProgressChanged">
+            <summary>
+            Occurs when [on download progress changed].
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuHTTP_Utils.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuHTTP_Utils.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuImageButton.Zoom">
+            <summary>
+            Gets or sets the zoom.
+            </summary>
+            <value>
+            The zoom.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuImageButton.ImageActive">
+            <summary>
+            Gets or sets the image active.
+            </summary>
+            <value>
+            The image active.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuImageButton.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuImageButton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuImageButton.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCards.color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>
+            The color.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCards.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCards.RightSahddow">
+            <summary>
+            Gets or sets a value indicating whether [right sahddow].
+            </summary>
+            <value>
+              <c>true</c> if [right sahddow]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCards.LeftSahddow">
+            <summary>
+            Gets or sets a value indicating whether [left sahddow].
+            </summary>
+            <value>
+              <c>true</c> if [left sahddow]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuCards.BottomSahddow">
+            <summary>
+            Gets or sets a value indicating whether [bottom sahddow].
+            </summary>
+            <value>
+              <c>true</c> if [bottom sahddow]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuCards.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCards.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuCards.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Bunifu.Framework.UI.BunifuMaterialTextbox">
+            <summary>
+            Class BunifuMaterialTextbox.
+            </summary>
+            <seealso cref="T:System.Windows.Forms.UserControl" />
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.Framework.UI.BunifuMaterialTextbox"/> class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.LineThickness">
+            <summary>
+            Gets or sets the line thickness.
+            </summary>
+            <value>The line thickness.</value>
+            <exception cref="T:System.Exception">Value shoud be grater than 0</exception>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMaterialTextbox._lineColor">
+            <summary>
+            Gets or sets the color of the border.
+            </summary>
+            <value>
+            The color of the border.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.LineIdleColor">
+            <summary>
+            Gets or sets the color of the line idle.
+            </summary>
+            <value>The color of the line idle.</value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMaterialTextbox.linefocusColor">
+            <summary>
+            The linefocus color
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.LineMouseHoverColor">
+            <summary>
+            Gets or sets the color of the border focus.
+            </summary>
+            <value>The color of the border focus.</value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMaterialTextbox.lineAciveColor">
+            <summary>
+            The line acive color
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.LineFocusedColor">
+            <summary>
+            Gets or sets the color of the line active.
+            </summary>
+            <value>The color of the line active.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_Resize(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Resize event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.Refresh">
+            <summary>
+            Forces the control to invalidate its client area and immediately redraw itself and any child controls.
+            </summary>
+            <PermissionSet>
+              <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+              <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+            </PermissionSet>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMaterialTextbox._hcol">
+            <summary>
+            The hcol
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMaterialTextbox._htext">
+            <summary>
+            The htext
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.HintForeColor">
+            <summary>
+            Gets or sets the color of the hint fore.
+            </summary>
+            <value>The color of the hint fore.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.HintText">
+            <summary>
+            Gets or sets the hint text.
+            </summary>
+            <value>The hint text.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.textBox1_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the TextChanged event of the textBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_BackColorChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the BackColorChanged event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_FontChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the FontChanged event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_ForeColorChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the ForeColorChanged event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.Text">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.TextAlign">
+            <summary>
+            Gets or sets the text align.
+            </summary>
+            <value>The text align.</value>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuMaterialTextbox.OnValueChanged">
+            <summary>
+            Occurs when [on value changed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.isPassword">
+            <summary>
+            Gets or sets a value indicating whether this instance is password.
+            </summary>
+            <value><c>true</c> if this instance is password; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.textBox1_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the KeyDown event of the textBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.KeyEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.textBox1_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Handles the KeyPress event of the textBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.KeyPressEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.textBox1_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the KeyUp event of the textBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.KeyEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.textBox1_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MouseEnter event of the textBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.textBox1_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MouseLeave event of the textBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMaterialTextbox.Active">
+            <summary>
+            The active
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MouseEnter event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MouseLeave event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.characterCasing">
+            <summary>
+            Gets or sets the character casing.
+            </summary>
+            <value>The character casing.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.MaxLength">
+            <summary>
+            Gets or sets the maximum length.
+            </summary>
+            <value>The maximum length.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMetroTextbox_ParentChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the ParentChanged event of the BunifuMetroTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.isOnFocused">
+            <summary>
+            Gets a value indicating whether this instance is on focused.
+            </summary>
+            <value><c>true</c> if this instance is on focused; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.textBox1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the textBox1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.checkfocus_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Tick event of the checkfocus control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.AutoCompleteSource">
+            <summary>
+            Gets or sets the automatic complete source.
+            </summary>
+            <value>The automatic complete source.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.AutoCompleteMode">
+            <summary>
+            Gets or sets the automatic complete mode.
+            </summary>
+            <value>The automatic complete mode.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMaterialTextbox.AutoCompleteCustomSource">
+            <summary>
+            Gets or sets the automatic complete custom source.
+            </summary>
+            <value>The automatic complete custom source.</value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.GetFocus">
+            <summary>
+            Gets the focus.
+            </summary>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.BunifuMaterialTextbox_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Load event of the BunifuMaterialTextbox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMaterialTextbox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMaterialTextbox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.BorderThickness">
+            <summary>
+            Gets or sets the border thickness.
+            </summary>
+            <value>
+            The border thickness.
+            </value>
+            <exception cref="T:System.Exception">Value shoud be grater than 0</exception>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.BorderColorIdle">
+            <summary>
+            Gets or sets the color of the border.
+            </summary>
+            <value>
+            The color of the border.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.BorderColorFocused">
+            <summary>
+            Gets or sets the color of the border focus.
+            </summary>
+            <value>
+            The color of the border focus.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.BorderColorMouseHover">
+            <summary>
+            Gets or sets the color of the border focus.
+            </summary>
+            <value>
+            The color of the border focus.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMetroTextbox.curcolor">
+            <summary>
+            Forces the control to invalidate its client area and immediately redraw itself and any child controls.
+            </summary>
+            <PermissionSet>
+              <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+              <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode, ControlEvidence" />
+              <IPermission class="System.Diagnostics.PerformanceCounterPermission, System, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+            </PermissionSet>
+            
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.Text">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.TextAlign">
+            <summary>
+            Gets or sets the text align.
+            </summary>
+            <value>
+            The text align.
+            </value>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuMetroTextbox.OnValueChanged">
+            <summary>
+            Occurs when [on value changed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.isPassword">
+            <summary>
+            Gets or sets a value indicating whether this instance is password.
+            </summary>
+            <value>
+            <c>true</c> if this instance is password; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.isOnFocused">
+            <summary>
+            Gets a value indicating whether this instance is on focused.
+            </summary>
+            <value>
+            <c>true</c> if this instance is on focused; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.characterCasing">
+            <summary>
+            Gets or sets the character casing.
+            </summary>
+            <value>The character casing.</value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuMetroTextbox.MaxLength">
+            <summary>
+            Gets or sets the maximum length.
+            </summary>
+            <value>The maximum length.</value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuMetroTextbox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMetroTextbox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuMetroTextbox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuRange.RangeChanged">
+            <summary>
+            Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuRange.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuRange.RangeMax">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuRange.RangeMin">
+            <summary>
+            Gets or sets the value minimum.
+            </summary>
+            <value>
+            The value minimum.
+            </value>
+            <exception cref="T:System.Exception">Maximum Value Reached</exception>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuRange.MaximumRange">
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuRange.IndicatorColor">
+            <summary>
+            Gets or sets the color of the indicator.
+            </summary>
+            <value>
+            The color of the indicator.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuRange.BackgroudColor">
+            <summary>
+            Gets or sets the color of the backgroud.
+            </summary>
+            <value>
+            The color of the backgroud.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuRange.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuRange.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuRange.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuRating.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuRating.onValueChanged">
+            <summary>
+            Occurs when [on value changed].
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuRating.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuRating.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuRating.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSeparator.LineThickness">
+            <summary>
+            Gets or sets the line thickness.
+            </summary>
+            <value>
+            The line thickness.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuSeparator.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSeparator.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSeparator.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuiOSSwitch.OnValueChange">
+            <summary>
+            Occurs when [on value change].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuiOSSwitch.OnColor">
+            <summary>
+            Gets or sets the color of the on.
+            </summary>
+            <value>
+            The color of the on.
+            </value>
+            
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuiOSSwitch.OffColor">
+            <summary>
+            Gets or sets the color of the off.
+            </summary>
+            <value>
+            The color of the off.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuiOSSwitch.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuiOSSwitch.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuiOSSwitch.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.ActiveLineColor">
+            <summary>
+            Gets or sets the color of the active line.
+            </summary>
+            <value>
+            The color of the active line.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.ActiveForecolor">
+            <summary>
+            Gets or sets the active forecolor.
+            </summary>
+            <value>
+            The active forecolor.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.ActiveFillColor">
+            <summary>
+            Gets or sets the color of the active fill.
+            </summary>
+            <value>
+            The color of the active fill.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.ActiveCornerRadius">
+            <summary>
+            Gets or sets the active corner radius.
+            </summary>
+            <value>
+            The active corner radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.ActiveBorderThickness">
+            <summary>
+            Gets or sets the active border thickness.
+            </summary>
+            <value>
+            The active border thickness.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.IdleLineColor">
+            <summary>
+            Gets or sets the color of the idleine.
+            </summary>
+            <value>
+            The color of the idleine.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.IdleForecolor">
+            <summary>
+            Gets or sets the idle forecolor.
+            </summary>
+            <value>
+            The idle forecolor.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.IdleFillColor">
+            <summary>
+            Gets or sets the color of the idle fill.
+            </summary>
+            <value>
+            The color of the idle fill.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.IdleCornerRadius">
+            <summary>
+            Gets or sets the idle corner radius.
+            </summary>
+            <value>
+            The idle corner radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.IdleBorderThickness">
+            <summary>
+            Gets or sets the idle border thickness.
+            </summary>
+            <value>
+            The idle border thickness.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuThinButton2.ButtonText">
+            <summary>
+            Gets or sets the button text.
+            </summary>
+            <value>
+            The button text.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuThinButton2.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuThinButton2.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuThinButton2.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTileButton.Image">
+            <summary>
+            Gets or sets the image.
+            </summary>
+            <value>
+            The image.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTileButton.LabelPosition">
+            <summary>
+            Gets or sets the height of the label.
+            </summary>
+            <value>
+            The height of the label.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTileButton.ImageZoom">
+            <summary>
+            Gets or sets the image zoom.
+            </summary>
+            <value>
+            The image zoom.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTileButton.color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>
+            The color.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTileButton.colorActive">
+            <summary>
+            Gets or sets the color active.
+            </summary>
+            <value>
+            The color active.
+            </value>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuTileButton.BunifuTileButton_Resize(System.Object,System.EventArgs)">
+            <summary>
+            Gets or sets the background color for the control.
+            </summary>
+            <PermissionSet>
+              <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true" />
+            </PermissionSet>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuTileButton.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuTileButton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuTileButton.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuSlider.ValueChanged">
+            <summary>
+            Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSlider.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSlider.MaximumValue">
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSlider.IndicatorColor">
+            <summary>
+            Gets or sets the color of the indicator.
+            </summary>
+            <value>
+            The color of the indicator.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSlider.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSlider.BackgroudColor">
+            <summary>
+            Gets or sets the color of the backgroud.
+            </summary>
+            <value>
+            The color of the backgroud.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuSlider.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSlider.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSlider.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuVTrackbar.ValueChanged">
+            <summary>
+            Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuVTrackbar.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuVTrackbar.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuVTrackbar.SliderRadius">
+            <summary>
+            Gets or sets the slider radius.
+            </summary>
+            <value>
+            The slider radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuVTrackbar.MaximumValue">
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuVTrackbar.IndicatorColor">
+            <summary>
+            Gets or sets the color of the indicator.
+            </summary>
+            <value>
+            The color of the indicator.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuVTrackbar.BackgroudColor">
+            <summary>
+            Gets or sets the color of the backgroud.
+            </summary>
+            <value>
+            The color of the backgroud.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuVTrackbar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuVTrackbar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuVTrackbar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuWebClient.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuWebClient.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuWebClient.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuSearchEngine.onFileScan">
+            <summary>
+            Occurs when [on file scan].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuSearchEngine.onScanError">
+            <summary>
+            Occurs when [on scan error].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuSearchEngine.onFolderScan">
+            <summary>
+            Occurs when [on folder scan].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuSearchEngine.onFailed">
+            <summary>
+            Occurs when [on failed].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuSearchEngine.onAborted">
+            <summary>
+            Occurs when [on aborted].
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuSearchEngine.onScanComplete">
+            <summary>
+            Occurs when [on scan complete].
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSearchEngine.startScan(System.String)">
+            <summary>
+            Starts the scan.
+            </summary>
+            <param name="_path">The _path.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSearchEngine.abortScan">
+            <summary>
+            Aborts the scan.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSearchEngine.restartScan">
+            <summary>
+            Restarts the scan.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuSearchEngine.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSearchEngine.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSearchEngine.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSwitch.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSwitch.Value">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Bunifu.Framework.UI.BunifuSwitch"/> is value.
+            </summary>
+            <value>
+              <c>true</c> if value; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSwitch.Textcolor">
+            <summary>
+            Gets or sets the textcolor.
+            </summary>
+            <value>
+            The textcolor.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSwitch.Oncolor">
+            <summary>
+            Gets or sets the oncolor.
+            </summary>
+            <value>
+            The oncolor.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuSwitch.Onoffcolor">
+            <summary>
+            Gets or sets the onoffcolor.
+            </summary>
+            <value>
+            The onoffcolor.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuSwitch.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSwitch.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuSwitch.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Bunifu.Framework.UI.BunifuTrackbar.ValueChanged">
+            <summary>
+            Occurs when [value changed].
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTrackbar.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTrackbar.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTrackbar.SliderRadius">
+            <summary>
+            Gets or sets the slider radius.
+            </summary>
+            <value>
+            The slider radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTrackbar.MaximumValue">
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTrackbar.MinimumValue">
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTrackbar.IndicatorColor">
+            <summary>
+            Gets or sets the color of the indicator.
+            </summary>
+            <value>
+            The color of the indicator.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuTrackbar.BackgroudColor">
+            <summary>
+            Gets or sets the color of the backgroud.
+            </summary>
+            <value>
+            The color of the backgroud.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuTrackbar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuTrackbar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuTrackbar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuProgressBar.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+            <value>
+            The border radius.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuProgressBar.ProgressColor">
+            <summary>
+            Gets or sets the color of the progress.
+            </summary>
+            <value>
+            The color of the progress.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuProgressBar.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:Bunifu.Framework.UI.BunifuProgressBar.MaximumValue">
+            <summary>
+            Gets or sets the maximum value.
+            </summary>
+            <value>
+            The maximum value.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuProgressBar.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuProgressBar.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuProgressBar.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.UI.BunifuFormFadeTransition.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuFormFadeTransition.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.UI.BunifuFormFadeTransition.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.UI.Drag.Release">
+            <summary>
+            Releases this instance.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.BunifuCustomTextbox.BorderColor">
+            <summary>
+            Gets or sets the color of the border.
+            </summary>
+            <value>
+            The color of the border.
+            </value>
+        </member>
+        <member name="F:Bunifu.Framework.BunifuCustomTextbox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.BunifuCustomTextbox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.BunifuCustomTextbox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bunifu.Framework.BunifuFonts.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.Framework.BunifuFonts.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.Framework.BunifuFonts.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Bunifu.Framework.DoubleBitmapForm">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.DoubleBitmapForm.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.Framework.DoubleBitmapForm.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:WindowsFormsControlLibrary1.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WindowsFormsControlLibrary1.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WindowsFormsControlLibrary1.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:WindowsFormsControlLibrary1.Properties.Resources.BunifuCards">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:WindowsFormsControlLibrary1.Properties.Resources.BunifuFlatButton">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:WindowsFormsControlLibrary1.transparentBg1">
+            <summary>
+            Class transparentBg1.
+            </summary>
+            <seealso cref="T:System.Windows.Forms.Form" />
+        </member>
+        <member name="F:WindowsFormsControlLibrary1.transparentBg1._child">
+            <summary>
+            The child
+            </summary>
+        </member>
+        <member name="M:WindowsFormsControlLibrary1.transparentBg1.#ctor(System.Windows.Forms.Form,System.Windows.Forms.Form)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WindowsFormsControlLibrary1.transparentBg1"/> class.
+            </summary>
+            <param name="parent">The parent.</param>
+            <param name="child">The child.</param>
+        </member>
+        <member name="M:WindowsFormsControlLibrary1.transparentBg1.transparentForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Load event of the transparentForm control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WindowsFormsControlLibrary1.transparentBg1.timer1_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Tick event of the timer1 control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="F:WindowsFormsControlLibrary1.transparentBg1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WindowsFormsControlLibrary1.transparentBg1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WindowsFormsControlLibrary1.transparentBg1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

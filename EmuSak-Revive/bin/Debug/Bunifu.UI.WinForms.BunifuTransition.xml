@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bunifu.UI.WinForms.BunifuTransition</name>
+    </assembly>
+    <members>
+        <member name="T:Bunifu.UI.WinForms.BunifuAnimatorNS.Animation">
+            <summary>
+            provides the standard animation settings.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType">
+            <summary>
+            Provides various supported animation types.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Custom">
+            <summary>
+            Lets you provide a custom animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Rotate">
+            <summary>
+            Rotate animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide">
+            <summary>
+            Horizontal Slide animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide">
+            <summary>
+            Vertical Slide animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Scale">
+            <summary>
+            Scale animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.ScaleAndRotate">
+            <summary>
+            Scale and Rotate animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlideAndRotate">
+            <summary>
+            Horizontal Slide and Rotate animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.ScaleAndHorizSlide">
+            <summary>
+            Scale and Horizontal Slide animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent">
+            <summary>
+            Transparent animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Leaf">
+            <summary>
+            Leaf-bend animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Mosaic">
+            <summary>
+            Mosaic Shift animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Particles">
+            <summary>
+            Particles effect animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertBlind">
+            <summary>
+            Vertical Blind animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizBlind">
+            <summary>
+            Horizontal Blind animation.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.DoubleBitmapControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.DoubleBitmapControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.DoubleBitmapControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuAnimatorNS.DoubleBitmapForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.DoubleBitmapForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.DoubleBitmapForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.PointFConverter.#ctor">
+            <summary>
+            Creates a new instance of PointFConverter
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.PointFConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Boolean, true if the source type is a string
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.PointFConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the specified string into a PointF
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuAnimatorNS.PointFConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the PointF into a string
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuTransition">
+            <summary>
+            Add beautiful transitions to your controls and 
+            container controls when showing/hiding them.
+            </summary>
+            <seealso cref="T:System.ComponentModel.Component" />
+            <seealso cref="T:System.ComponentModel.IExtenderProvider" />
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuTransition" /> class.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuTransition" /> class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.MaxAnimationTime">
+            <summary>
+            Gets or sets the maximum animation time (in milliseconds).
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.Interval">
+            <summary>
+            Gets or sets the interval between frames (in milliseconds).
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TimeStep">
+            <summary>
+            Gets or sets the animation time step.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.DefaultAnimation">
+            <summary>
+            Gets or sets the default animation type.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.Cursor">
+            <summary>
+            Gets or sets the animation control's cursor.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.AnimationType">
+            <summary>
+            Gets or sets the animation type.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.IsCompleted">
+            <summary>
+            Are all animations completed?
+            </summary>
+            <value><c>true</c> if this instance is completed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.AddToQueue(System.Windows.Forms.Control,Bunifu.UI.WinForms.BunifuTransition.AnimateMode,System.Boolean,Bunifu.UI.WinForms.BunifuAnimatorNS.Animation,System.Drawing.Rectangle)">
+            <summary>
+            Adds the contol to animation queue.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="mode">Animation mode</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+            <param name="clipRectangle">The clip rectangle.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.ClearQueue">
+            <summary>
+            Clears queue.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.Show(System.Windows.Forms.Control,System.Boolean,Bunifu.UI.WinForms.BunifuAnimatorNS.Animation)">
+            <summary>
+            Shows the control. As result the control will be shown with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.ShowSync(System.Windows.Forms.Control,System.Boolean,Bunifu.UI.WinForms.BunifuAnimatorNS.Animation)">
+            <summary>
+            Shows the control and waits while animation will be completed. As result the control will be shown with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.Hide(System.Windows.Forms.Control,System.Boolean,Bunifu.UI.WinForms.BunifuAnimatorNS.Animation)">
+            <summary>
+            Hides the control. As result the control will be hidden with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.HideSync(System.Windows.Forms.Control,System.Boolean,Bunifu.UI.WinForms.BunifuAnimatorNS.Animation)">
+            <summary>
+            Hides the control and waits while animation will be completed. As result the control will be hidden with animation.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.BeginUpdate(System.Windows.Forms.Control,System.Boolean,Bunifu.UI.WinForms.BunifuAnimatorNS.Animation,System.Drawing.Rectangle)">
+            <summary>
+            It makes snapshot of the control before updating. It requires EndUpdate calling.
+            </summary>
+            <param name="control">Target control</param>
+            <param name="parallel">Allows to animate it same time as other animations</param>
+            <param name="animation">Personal animation</param>
+            <param name="clipRectangle">Clip rectangle for animation</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.EndUpdate(System.Windows.Forms.Control)">
+            <summary>
+            Upadates control view with animation. It requires to call BeginUpdate before.
+            </summary>
+            <param name="control">Target control</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.EndUpdateSync(System.Windows.Forms.Control)">
+            <summary>
+            Upadates control view with animation and waits while animation will be completed. It requires to call BeginUpdate before.
+            </summary>
+            <param name="control">Target control</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.WaitAllAnimations">
+            <summary>
+            Waits while all animations will completed.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.WaitAnimation(System.Windows.Forms.Control)">
+            <summary>
+            Waits while animation of the control will completed.
+            </summary>
+            <param name="animatedControl">The animated control.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.Work">
+            <summary>
+            Works this instance.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.CheckRequests">
+            <summary>
+            initialize component result state of controls.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.RepairState(System.Windows.Forms.Control,Bunifu.UI.WinForms.BunifuTransition.AnimateMode)">
+            <summary>
+            Repairs the state.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="mode">The mode.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.DoAnimation(Bunifu.UI.WinForms.BunifuTransition.QueueItem)">
+            <summary>
+            Does the animation.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.InitDefaultAnimation(Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType)">
+            <summary>
+            Initializes the default animation.
+            </summary>
+            <param name="animationType">Type of the animation.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.Init">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuTransition.AnimationCompleted">
+            <summary>
+            Occurs when animation of the control is completed
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuTransition.AllAnimationsCompleted">
+            <summary>
+            Ocuurs when all animations are completed
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuTransition.TransfromNeeded">
+            <summary>
+            Occurs when needed transform matrix
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeeded">
+            <summary>
+            Occurs when needed non-linear transformation
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuTransition.MouseDown">
+            <summary>
+            Occurs when user click on the animated control
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuTransition.FramePainted">
+            <summary>
+            Occurs when frame of animation is painting
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.IsStateOK(System.Windows.Forms.Control,Bunifu.UI.WinForms.BunifuTransition.AnimateMode)">
+            <summary>
+            Determines whether [is state ok] [the specified control].
+            </summary>
+            <param name="control">The control.</param>
+            <param name="mode">The mode.</param>
+            <returns><c>true</c> if [is state ok] [the specified control]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnTimerTick(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Tick event of the timer control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnAnimatorDisposed(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Disposed event of the Animator control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnCompleted(Bunifu.UI.WinForms.BunifuTransition.QueueItem)">
+            <summary>
+            Called when [completed].
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnFramePainted(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handles the <see cref="E:FramePainted" /> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.PaintEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnMouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Handles the <see cref="E:MouseDown" /> event.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Forms.MouseEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnNonLinearTransfromNeeded(System.Object,Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg)">
+            <summary>
+            Called when [non linear transfrom needed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnTransformNeeded(System.Object,Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg)">
+            <summary>
+            Called when [transform needed].
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnAnimationCompleted(Bunifu.UI.WinForms.BunifuTransition.AnimationCompletedEventArg)">
+            <summary>
+            Called when [animation completed].
+            </summary>
+            <param name="e">The e.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.OnAllAnimationsCompleted">
+            <summary>
+            Called when [all animations completed].
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.CreateDoubleBitmap(System.Windows.Forms.Control,Bunifu.UI.WinForms.BunifuTransition.AnimateMode,Bunifu.UI.WinForms.BunifuAnimatorNS.Animation,System.Drawing.Rectangle)">
+            <summary>
+            Creates the double bitmap.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="mode">The mode.</param>
+            <param name="animation">The animation.</param>
+            <param name="clipRect">The clip rect.</param>
+            <returns>Controller.</returns>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.AnimationCompletedEventArg.Animation">
+            <summary>
+            Gets or sets the animation.
+            </summary>
+            <value>The animation.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.AnimationCompletedEventArg.Control">
+            <summary>
+            Gets the control.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.AnimationCompletedEventArg.Mode">
+            <summary>
+            Gets the animation mode.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg" /> class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.Matrix">
+            <summary>
+            Gets or sets the matrix.
+            </summary>
+            <value>The matrix.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.CurrentTime">
+            <summary>
+            Gets the current time.
+            </summary>
+            <value>The current time.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.ClientRectangle">
+            <summary>
+            Gets the client rectangle.
+            </summary>
+            <value>The client rectangle.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.ClipRectangle">
+            <summary>
+            Gets the clip rectangle.
+            </summary>
+            <value>The clip rectangle.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.Animation">
+            <summary>
+            Gets or sets the animation.
+            </summary>
+            <value>The animation.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.Control">
+            <summary>
+            Gets the control.
+            </summary>
+            <value>The control.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.Mode">
+            <summary>
+            Gets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.TransfromNeededEventArg.UseDefaultMatrix">
+            <summary>
+            Gets or sets a value indicating whether [use default matrix].
+            </summary>
+            <value><c>true</c> if [use default matrix]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.CurrentTime">
+            <summary>
+            Gets the current time.
+            </summary>
+            <value>The current time.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.ClientRectangle">
+            <summary>
+            Gets the client rectangle.
+            </summary>
+            <value>The client rectangle.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.Pixels">
+            <summary>
+            Gets the pixels.
+            </summary>
+            <value>The pixels.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.Stride">
+            <summary>
+            Gets the stride.
+            </summary>
+            <value>The stride.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.SourceClientRectangle">
+            <summary>
+            Gets the source client rectangle.
+            </summary>
+            <value>The source client rectangle.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.SourcePixels">
+            <summary>
+            Gets the source pixels.
+            </summary>
+            <value>The source pixels.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.SourceStride">
+            <summary>
+            Gets or sets the source stride.
+            </summary>
+            <value>The source stride.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.Animation">
+            <summary>
+            Gets or sets the animation.
+            </summary>
+            <value>The animation.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.Control">
+            <summary>
+            Gets the control.
+            </summary>
+            <value>The control.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.Mode">
+            <summary>
+            Gets the mode.
+            </summary>
+            <value>The mode.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.NonLinearTransfromNeededEventArg.UseDefaultTransform">
+            <summary>
+            Gets or sets a value indicating whether [use default transform].
+            </summary>
+            <value><c>true</c> if [use default transform]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuTransition.QueueItem.IsActive">
+            <summary>
+            Gets or sets a value indicating whether this instance is active.
+            </summary>
+            <value><c>true</c> if this instance is active; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.GetDecoration(System.Windows.Forms.Control)">
+            <summary>
+            Gets the decoration.
+            </summary>
+            <param name="control">The control.</param>
+            <returns>DecorationType.</returns>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.SetDecoration(System.Windows.Forms.Control,Bunifu.UI.WinForms.BunifuTransition.DecorationType)">
+            <summary>
+            Sets the decoration.
+            </summary>
+            <param name="control">The control.</param>
+            <param name="decoration">The decoration.</param>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuTransition.DecorationByControls">
+            <summary>
+            The decoration by controls
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.CanExtend(System.Object)">
+            <summary>
+            Specifies whether this object can provide its extender properties to the specified object.
+            </summary>
+            <param name="extendee">The <see cref="T:System.Object" /> to receive the extender properties.</param>
+            <returns>true if this object can provide extender properties to the specified object; otherwise, false.</returns>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuTransition.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuTransition.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

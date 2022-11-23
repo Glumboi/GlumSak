@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bunifu.UI.WinForms.BunifuPanel</name>
+    </assembly>
+    <members>
+        <member name="T:Bunifu.UI.WinForms.BunifuPanel">
+            <summary>
+            Add customizable panels to your applications with additional styling options.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuPanel.#ctor">
+            <summary>
+            Creates a new <see cref="T:Bunifu.UI.WinForms.BunifuPanel"/> control.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuPanel.ShowBorders">
+            <summary>
+            Gets or sets a value indicating whether borders
+            will be displayed along the panel's edges.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuPanel.BorderThickness">
+            <summary>
+            Gets or sets the panel's border thickness.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuPanel.BorderRadius">
+            <summary>
+            Gets or sets the panel's border radius.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuPanel.BackgroundColor">
+            <summary>
+            Gets or sets the panel's background color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuPanel.BorderColor">
+            <summary>
+            Gets or sets the panel's border color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuPanel.BackColor">
+            <summary>
+            Gets or sets the control's background color.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuPanel.Refresh">
+            <summary>
+            Forces the control to invalidate its client area and 
+            immediately redraw itself and any child controls.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuPanel.RoundRectangle(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Draws a rounded rectangle and returns its absolute path.
+            </summary>
+            <param name="rectangle">
+            The rectangle bounds to be used when drawing.
+            </param>
+            <param name="radius">
+            The rectangle radius.
+            </param>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuPanel.ShowBordersChanged">
+            <summary>
+            Raised whenever the <see cref="P:Bunifu.UI.WinForms.BunifuPanel.ShowBorders"/> property has been changed.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuPanel.BackgroundColorChanged">
+            <summary>
+            Raised whenever the <see cref="P:Bunifu.UI.WinForms.BunifuPanel.BackgroundColor"/> property has been changed.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuPanel.BorderColorChanged">
+            <summary>
+            Raised whenever the <see cref="P:Bunifu.UI.WinForms.BunifuPanel.BorderColor"/> property has been changed.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuPanel.BorderRadiusChanged">
+            <summary>
+            Raised whenever the <see cref="P:Bunifu.UI.WinForms.BunifuPanel.BorderRadius"/> property has been changed.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuPanel.BorderThicknessChanged">
+            <summary>
+            Raised whenever the <see cref="P:Bunifu.UI.WinForms.BunifuPanel.BorderThickness"/> property has been changed.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuPanel.BunifuControlDesignerActionList">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuPanel.BunifuControlDesignerActionList"/> class.
+            </summary>
+            <seealso cref="T:System.ComponentModel.Design.DesignerActionList" />
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuPanel.BunifuControlDesignerActionList.GetSortedActionItems">
+            <summary>
+            Implementation of this abstract method creates Smart Tag items,
+            associates their targets, and collects them into a list.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuPanel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuPanel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuPanel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

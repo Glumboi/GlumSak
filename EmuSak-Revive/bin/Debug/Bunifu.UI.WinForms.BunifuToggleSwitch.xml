@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bunifu.UI.WinForms.BunifuToggleSwitch</name>
+    </assembly>
+    <members>
+        <member name="T:Bunifu.UI.WinForms.BunifuToggleSwitch">
+            <summary>
+            Add customizable toggle switches for boolean state changes in your apps.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuToggleSwitch"/> class.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.Checked">
+            <summary>
+            Gets or sets a value indicating whether 
+            the Toggle Switch has been checked.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.AnimationSpeed">
+            <summary>
+            Gets or sets the animation speed.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ThumbMargin">
+            <summary>
+            Gets or sets the thumb's (inner circle) padding.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleStateOn">
+            <summary>
+            Gets or sets the visual properties of the 'ON' toggle state.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleStateOff">
+            <summary>
+            Gets or sets the visual properties of the 'OFF' toggle state.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleStateDisabled">
+            <summary>
+            Gets or sets the visual properties of the disabled toggle state.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.Animation">
+            <summary>
+            Gets or sets the animation speed.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.Value">
+            <summary>
+            Gets or sets a value indicating whether thw switch is checked.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.InnerCirclePadding">
+            <summary>
+            Gets or sets the inner circle's padding.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.Padding">
+            <summary>
+            Gets or sets the inner circle's padding.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.BackgroundImage">
+            <summary>
+            Gets or sets the background image displayed in the control.
+            </summary>
+            <value>The background image.</value>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.BackgroundImageLayout">
+            <summary>
+            Gets or sets the background image layout as defined in the <see cref="T:System.Windows.Forms.ImageLayout" /> enumeration.
+            </summary>
+            <value>The background image layout.</value>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState">
+            <summary>
+            Provides visual properties for customizing  
+            <see cref="T:Bunifu.UI.WinForms.BunifuToggleSwitch"/>.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BorderThicknessInner">
+            <summary>
+            Gets or sets the inner border thickness.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BorderRadiusInner">
+            <summary>
+            Gets or sets the inner border radius.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BorderThickness">
+            <summary>
+            Gets or sets the border thickness.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BorderRadius">
+            <summary>
+            Gets or sets the border radius.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BorderColor">
+            <summary>
+            Gets or sets the border color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BorderColorInner">
+            <summary>
+            Gets or sets the inner border color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BackColor">
+            <summary>
+            Gets or sets the background color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.BackColorInner">
+            <summary>
+            Gets or sets the inner background color.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> containing 
+            the default properties.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.ResizeControl">
+            <summary>
+            Resizes amd re-renders the control appropriately.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.Refresh">
+            <summary>
+            Forces the control to invalidate its client area and 
+            immediately redraw itself and any child controls.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.DrawCircle(Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState)">
+            <summary>
+            Draws the thumb circle.
+            </summary>
+            <param name="State">The state.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.DrawBackground(Bunifu.UI.WinForms.BunifuToggleSwitch.ToggleState)">
+            <summary>
+            Draws the toggle's background.
+            </summary>
+            <param name="State">The state.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.DrawRoundedRectangle(System.Drawing.Graphics,System.Drawing.Rectangle,System.Int32,System.Drawing.Pen,System.Drawing.Color)">
+            <summary>
+            Draws a rounded background rectangle.
+            </summary>
+            <param name="graphics">The graphics object to use when drawing.</param>
+            <param name="bounds">The drawing rectangle's bounds.</param>
+            <param name="radius">The border radius.</param>
+            <param name="pen">The drawing pen to use.</param>
+            <param name="backColor">The background color.</param>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChanged">
+            <summary>
+            Occurs when the switch value has been changed.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuToggleSwitch.OnValuechange">
+            <summary>
+            Occurs when the switch value has been changed.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChanged"/> event.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs.#ctor(System.Boolean)">
+            <summary>
+            Provides data for the <see cref="E:Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChanged"/> event.
+            </summary>
+            <param name="isChecked">
+            Set the checked value to true/false.
+            </param>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs.Checked">
+            <summary>
+            Gets a value indicating whether the control is checked.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuToggleSwitch.BunifuControlActionList">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuToggleSwitch.BunifuControlActionList"/> class.
+            </summary>
+            <seealso cref="T:System.ComponentModel.Design.DesignerActionList" />
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.BunifuControlActionList.GetSortedActionItems">
+            <summary>
+            Implementation of this abstract method creates Smart Tag items,
+            associates their targets, and collects them into a list.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.BunifuControlActionList.Redraw">
+            <summary>
+            Forces the control to invalidate its client area and 
+            immediately redraw itself and any child controls.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuToggleSwitch.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuToggleSwitch2">
+            <summary>
+            (V2) Add customizable toggle switches for boolean state changes in your apps.
+            </summary>
+            <seealso cref="T:System.Windows.Forms.UserControl" />
+            <summary>
+            Class UCSwitch.
+            Implements the <see cref="T:System.Windows.Forms.UserControl" />
+            </summary>
+            <seealso cref="T:System.Windows.Forms.UserControl" />
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch2.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuToggleSwitch2" /> class.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles">
+            <summary>
+            Provides the various supported switch styles.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill">
+            <summary>
+            A filled switch.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Outline">
+            <summary>
+            An outline switch.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.Checked">
+            <summary>
+            Gets or sets a value indicating whether the switch is checked.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.OutlineThickness">
+            <summary>
+            Gets or sets the thickness of the switch when 
+            set to <see cref="F:Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Outline"/>.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.CheckedBackColor">
+            <summary>
+            Gets or sets the checked background color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.CheckedSwitchColor">
+            <summary>
+            Gets or sets the checked switch color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.UncheckedBackColor">
+            <summary>
+            Gets or sets the unchecked background color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.UncheckedSwitchColor">
+            <summary>
+            Gets or sets the unchecked switch color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.CheckedSwitchStyle">
+            <summary>
+            Gets or sets the checked switch style.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.UncheckedSwitchStyle">
+            <summary>
+            Gets or sets the unchecked switch style.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.Font">
+            <summary>
+            Gets or sets the control's font.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.Texts">
+            <summary>
+            Gets or sets the checked and unchecked texts respectively.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.CheckedForeColor">
+            <summary>
+            Gets or sets the checked fore color.
+            </summary>
+        </member>
+        <member name="P:Bunifu.UI.WinForms.BunifuToggleSwitch2.UncheckedForeColor">
+            <summary>
+            Gets or sets the checked switch fore color.
+            </summary>
+        </member>
+        <member name="E:Bunifu.UI.WinForms.BunifuToggleSwitch2.CheckedChanged">
+            <summary>
+            Occurs whenever the switch is checked.
+            </summary>
+        </member>
+        <member name="T:Bunifu.UI.WinForms.BunifuToggleSwitch2.BunifuControlActionList">
+            <summary>
+            Initializes a new instance of the <see cref="T:Bunifu.UI.WinForms.BunifuToggleSwitch2.BunifuControlActionList"/> class.
+            </summary>
+            <seealso cref="T:System.ComponentModel.Design.DesignerActionList" />
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch2.BunifuControlActionList.GetSortedActionItems">
+            <summary>
+            Implementation of this abstract method creates Smart Tag items,
+            associates their targets, and collects them into a list.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch2.BunifuControlActionList.Redraw">
+            <summary>
+            Forces the control to invalidate its client area and 
+            immediately redraw itself and any child controls.
+            </summary>
+        </member>
+        <member name="F:Bunifu.UI.WinForms.BunifuToggleSwitch2.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch2.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Bunifu.UI.WinForms.BunifuToggleSwitch2.InitializeComponent">
+            <summary>
+            Initializes the control.
+            </summary>
+        </member>
+    </members>
+</doc>
