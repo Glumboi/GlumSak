@@ -42,6 +42,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
@@ -87,6 +90,10 @@
     <Reference Include="Glumboi.UI">
       <HintPath>..\..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Torrents\Guna_UI_Framework_Ultimate_2.0.0.1_Downloadly.ir\Guna UI Framework Ultimate 2.0.0.1\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
       <Private>True</Private>
@@ -102,6 +109,10 @@
       <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="Siticone.UI">
+      <HintPath>..\..\..\..\Sitcone UI\Siticone.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
@@ -112,6 +123,7 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
       <Private>True</Private>
@@ -216,6 +228,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
@@ -259,6 +272,8 @@
     <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
     </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutWindow.cs">
@@ -285,6 +300,7 @@
     <Compile Include="GangShitWindow.Designer.cs">
       <DependentUpon>GangShitWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generics\PlayAudio.cs" />
     <Compile Include="Generics\UI.cs" />
     <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
@@ -351,6 +367,7 @@
     <Content Include="Assets\Configure_Asset.png" />
     <Content Include="Assets\Discord_Asset.png" />
     <Content Include="Assets\DrogaDog_Asset.png" />
+    <Content Include="Assets\enter_back.wav" />
     <Content Include="Assets\Firmware_Asset.png" />
     <Content Include="Assets\GangShit_Asset.gif" />
     <Content Include="Assets\Github_Asset.png" />
@@ -368,6 +385,7 @@
     <Content Include="Assets\PeepoHappy_Asset.gif" />
     <Content Include="Assets\Pepe_Asset.gif" />
     <Content Include="Assets\PlaceholderGame_Asset.jpg" />
+    <Content Include="Assets\Question_Asset.png" />
     <Content Include="Assets\RabbitVibe_Asset.gif" />
     <Content Include="Assets\Rocket_Asset.png" />
     <Content Include="Assets\Ryujinx_Asset.png" />
@@ -379,6 +397,10 @@
     <ProjectReference Include="..\..\EmuSak-Revive.JSON\EmuSak-Revive.JSON.csproj">
       <Project>{d2a09b1e-1038-4f16-94d6-bcbca502234b}</Project>
       <Name>EmuSak-Revive.JSON</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmuSak-Revive.Audio\EmuSak-Revive.Audio.csproj">
+      <Project>{c9696460-c8c4-4b6c-b3ac-e867997ad4ff}</Project>
+      <Name>EmuSak-Revive.Audio</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmuSak-Revive.ConfigIni\EmuSak-Revive.ConfigIni.csproj">
       <Project>{3eda1e76-4cb3-4bfc-a77d-f43739eecac7}</Project>

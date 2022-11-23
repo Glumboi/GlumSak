@@ -88,3 +88,12 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\Microsoft.Win32
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\DiscordRPC.pdb
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\DiscordRPC.xml
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Debug\EmuSak_Revive.GUI.AboutWindow.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\Siticone.UI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\Guna.UI2.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\EmuSak-Revive.Audio.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\EmuSak-Revive.Audio.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\NAudio.WinForms.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\NAudio.Core.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\NAudio.WinMM.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Debug\Microsoft.Win32.Registry.xml

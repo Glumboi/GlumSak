@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuSak-Revive.EmuFiles", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuSak-Revive.Discord", "EmuSak-Revive.Discord\EmuSak-Revive.Discord.csproj", "{58D248DF-57B3-44FB-BAA2-27A0D95001CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuSak-Revive.Audio", "EmuSak-Revive.Audio\EmuSak-Revive.Audio.csproj", "{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -125,6 +127,18 @@ Global
 		{58D248DF-57B3-44FB-BAA2-27A0D95001CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58D248DF-57B3-44FB-BAA2-27A0D95001CB}.Release|x86.ActiveCfg = Release|Any CPU
 		{58D248DF-57B3-44FB-BAA2-27A0D95001CB}.Release|x86.Build.0 = Release|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.All|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.All|Any CPU.Build.0 = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.All|x86.ActiveCfg = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.All|x86.Build.0 = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Debug|x86.Build.0 = Debug|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9696460-C8C4-4B6C-B3AC-E867997AD4FF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

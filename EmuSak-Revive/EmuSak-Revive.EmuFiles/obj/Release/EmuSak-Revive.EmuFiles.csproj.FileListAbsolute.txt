@@ -24,3 +24,8 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-R
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.pdb
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\HtmlAgilityPack.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Siticone.UI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsoft.WindowsAPICodePack.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsoft.WindowsAPICodePack.xml

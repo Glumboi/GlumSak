@@ -26,17 +26,19 @@ namespace EmuSak_Revive.GUI
             InitializeComponent();
         }
 
-        void LoadSettings()
+        private void LoadSettings()
         {
             YuzuPath_TextBox.Text = Properties.Settings.Default.PortableYuzuPath;
             RyuPath_TextBox.Text = Properties.Settings.Default.PortableRyujinxpath;
             PasteBinUrl_TextBox.Text = Properties.Settings.Default.ShaderLinks;
+            PlaySounds_CheckBox.Checked = Properties.Settings.Default.PlaySounds;
             //To ensure that the images aren't rounded.
             Ryujinx_Image.BorderRadius = 0;
             Yuzu_Image.BorderRadius = 0;
+            MainWindow_AudioSlider.Value = Properties.Settings.Default.MainWindowVolume;
         }
 
-        void SaveSettings()
+        private void SaveSettings()
         {
             if (!string.IsNullOrWhiteSpace(YuzuPath_TextBox.Text))
             {
@@ -63,6 +65,8 @@ namespace EmuSak_Revive.GUI
             }
             Properties.Settings.Default.ShaderLinks = PasteBinUrl_TextBox.Text;
             Network.Networking.ShaderUrl = ShaderUrl;
+            Properties.Settings.Default.PlaySounds = PlaySounds_CheckBox.Checked;
+            Properties.Settings.Default.MainWindowVolume = MainWindow_AudioSlider.Value;
             Properties.Settings.Default.Save();
         }
 
@@ -80,7 +84,7 @@ namespace EmuSak_Revive.GUI
             Hide();
         }
 
-        void OpenFolder(BunifuTextBox pathBox)
+        private void OpenFolder(BunifuTextBox pathBox)
         {
             var opener = new CommonOpenFileDialog { IsFolderPicker = true };
 
@@ -104,6 +108,22 @@ namespace EmuSak_Revive.GUI
         {
             SaveSettings();
             Close();
+        }
+
+        private void Help_Button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("If you want to select a portable install make sure to select the 'user' (yuzu)/'portable'(ryujinx)" +
+                " folder of your portable emu install.\n\n" +
+                "If you want to set the shaders paste make sure to paste a valid paste in! " +
+                "It can be any raw file on the web that contains the links and game names to the shaders.",
+                "Info",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
+
+        private void MainWindow_AudioSlider_Scroll(object sender, Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs e)
+        {
+            MainWindow.mainWindowPlayer.Volume = MainWindow_AudioSlider.Value / 100f;
         }
     }
 }

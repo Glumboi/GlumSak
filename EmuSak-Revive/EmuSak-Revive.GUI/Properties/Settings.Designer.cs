@@ -82,5 +82,29 @@ namespace EmuSak_Revive.GUI.Properties {
                 this["ShaderLinks"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool PlaySounds {
+            get {
+                return ((bool)(this["PlaySounds"]));
+            }
+            set {
+                this["PlaySounds"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int MainWindowVolume {
+            get {
+                return ((int)(this["MainWindowVolume"]));
+            }
+            set {
+                this["MainWindowVolume"] = value;
+            }
+        }
     }
 }

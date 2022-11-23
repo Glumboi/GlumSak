@@ -12,7 +12,6 @@ namespace EmuSak_Revive.GUI
 {
     public partial class ConfigurationWindow : Form
     {
-
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
 
@@ -57,7 +56,7 @@ namespace EmuSak_Revive.GUI
             this.WindowState = FormWindowState.Minimized;
         }
 
-        void LaunchApp(int mode)
+        private void LaunchApp(int mode)
         {
             LoadingScreen ls = new LoadingScreen();
             this.Hide();
@@ -82,9 +81,9 @@ namespace EmuSak_Revive.GUI
             {
                 MessageBox.Show("Could not detect default emulator settings directory. " +
                     "If you haven't launched your emulator yet then do so." +
-                    "\nIf you have a portable install then go to the settings menu and enter the location.", 
+                    "\nIf you have a portable install then go to the settings menu and enter the location.\n\n",
                     "Info",
-                    MessageBoxButtons.OK, 
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
         }

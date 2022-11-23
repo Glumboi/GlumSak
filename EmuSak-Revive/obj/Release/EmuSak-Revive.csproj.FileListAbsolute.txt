@@ -74,3 +74,11 @@ F:\visual studio\repos\EmuSak-Revive\bin\Release\GlumSak.exe
 F:\visual studio\repos\EmuSak-Revive\bin\Release\GlumSak.pdb
 F:\visual studio\repos\EmuSak-Revive\obj\Release\GlumSak.exe
 F:\visual studio\repos\EmuSak-Revive\obj\Release\GlumSak.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Release\Siticone.UI.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Release\Bunifu.UI.WinForms.BunifuCheckBox.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Release\EmuSak-Revive.Audio.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Release\EmuSak-Revive.Audio.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Release\Bunifu.UI.WinForms.BunifuSlider.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Release\NAudio.WinForms.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Release\NAudio.Core.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Release\NAudio.WinMM.dll

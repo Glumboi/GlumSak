@@ -29,8 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.PanelContainer = new Telerik.WinControls.UI.RadScrollablePanelContainer();
             this.Firmware_DropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.Main_Panel = new System.Windows.Forms.Panel();
@@ -39,12 +43,16 @@
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.Keys_Button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DownloadFirmware_Button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.About_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Update_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Configure_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Discord_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.Games_ScrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
+            this.Filter_TextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.RemoveFilter_Button = new ns1.SiticoneCircleButton();
+            this.Game_ContextMenu = new System.Windows.Forms.ContextMenu();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.Main_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Download_ProgressBar)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +100,7 @@
             this.Firmware_DropDown.ItemTopMargin = 3;
             this.Firmware_DropDown.Location = new System.Drawing.Point(128, 12);
             this.Firmware_DropDown.Name = "Firmware_DropDown";
-            this.Firmware_DropDown.Size = new System.Drawing.Size(294, 32);
+            this.Firmware_DropDown.Size = new System.Drawing.Size(345, 32);
             this.Firmware_DropDown.TabIndex = 13;
             this.Firmware_DropDown.Text = null;
             this.Firmware_DropDown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -102,9 +110,9 @@
             // Main_Panel
             // 
             this.Main_Panel.Controls.Add(this.Games_FlowPanel);
-            this.Main_Panel.Location = new System.Drawing.Point(128, 50);
+            this.Main_Panel.Location = new System.Drawing.Point(128, 78);
             this.Main_Panel.Name = "Main_Panel";
-            this.Main_Panel.Size = new System.Drawing.Size(611, 323);
+            this.Main_Panel.Size = new System.Drawing.Size(658, 347);
             this.Main_Panel.TabIndex = 16;
             // 
             // Games_FlowPanel
@@ -112,15 +120,15 @@
             this.Games_FlowPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Games_FlowPanel.Location = new System.Drawing.Point(0, 0);
             this.Games_FlowPanel.Name = "Games_FlowPanel";
-            this.Games_FlowPanel.Size = new System.Drawing.Size(611, 323);
+            this.Games_FlowPanel.Size = new System.Drawing.Size(658, 347);
             this.Games_FlowPanel.TabIndex = 18;
             this.Games_FlowPanel.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Games_FlowPanel_Scroll);
             // 
             // Download_ProgressBar
             // 
-            this.Download_ProgressBar.Location = new System.Drawing.Point(128, 379);
+            this.Download_ProgressBar.Location = new System.Drawing.Point(128, 431);
             this.Download_ProgressBar.Name = "Download_ProgressBar";
-            this.Download_ProgressBar.Size = new System.Drawing.Size(611, 19);
+            this.Download_ProgressBar.Size = new System.Drawing.Size(684, 19);
             this.Download_ProgressBar.TabIndex = 18;
             this.Download_ProgressBar.ThemeName = "CrystalDark";
             // 
@@ -143,11 +151,11 @@
             this.Keys_Button.ColorContrastOnClick = 45;
             this.Keys_Button.ColorContrastOnHover = 45;
             this.Keys_Button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.Keys_Button.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.Keys_Button.CustomizableEdges = borderEdges1;
             this.Keys_Button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Keys_Button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Keys_Button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -171,7 +179,7 @@
             this.Keys_Button.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("Keys_Button.IdleIconLeftImage")));
             this.Keys_Button.IdleIconRightImage = null;
             this.Keys_Button.IndicateFocus = false;
-            this.Keys_Button.Location = new System.Drawing.Point(609, 12);
+            this.Keys_Button.Location = new System.Drawing.Point(664, 12);
             this.Keys_Button.Name = "Keys_Button";
             this.Keys_Button.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Keys_Button.OnDisabledState.BorderRadius = 1;
@@ -205,7 +213,7 @@
             this.Keys_Button.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.Keys_Button.OnPressedState.IconLeftImage = null;
             this.Keys_Button.OnPressedState.IconRightImage = null;
-            this.Keys_Button.Size = new System.Drawing.Size(152, 32);
+            this.Keys_Button.Size = new System.Drawing.Size(148, 32);
             this.Keys_Button.TabIndex = 15;
             this.Keys_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Keys_Button.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -233,11 +241,11 @@
             this.DownloadFirmware_Button.ColorContrastOnClick = 45;
             this.DownloadFirmware_Button.ColorContrastOnHover = 45;
             this.DownloadFirmware_Button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.DownloadFirmware_Button.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.DownloadFirmware_Button.CustomizableEdges = borderEdges2;
             this.DownloadFirmware_Button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DownloadFirmware_Button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.DownloadFirmware_Button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -261,7 +269,7 @@
             this.DownloadFirmware_Button.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("DownloadFirmware_Button.IdleIconLeftImage")));
             this.DownloadFirmware_Button.IdleIconRightImage = null;
             this.DownloadFirmware_Button.IndicateFocus = false;
-            this.DownloadFirmware_Button.Location = new System.Drawing.Point(428, 12);
+            this.DownloadFirmware_Button.Location = new System.Drawing.Point(481, 12);
             this.DownloadFirmware_Button.Name = "DownloadFirmware_Button";
             this.DownloadFirmware_Button.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.DownloadFirmware_Button.OnDisabledState.BorderRadius = 1;
@@ -295,7 +303,7 @@
             this.DownloadFirmware_Button.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.DownloadFirmware_Button.OnPressedState.IconLeftImage = null;
             this.DownloadFirmware_Button.OnPressedState.IconRightImage = null;
-            this.DownloadFirmware_Button.Size = new System.Drawing.Size(175, 32);
+            this.DownloadFirmware_Button.Size = new System.Drawing.Size(177, 32);
             this.DownloadFirmware_Button.TabIndex = 14;
             this.DownloadFirmware_Button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.DownloadFirmware_Button.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -303,45 +311,6 @@
             this.DownloadFirmware_Button.TextPadding = new System.Windows.Forms.Padding(0);
             this.DownloadFirmware_Button.UseDefaultRadiusAndThickness = true;
             this.DownloadFirmware_Button.Click += new System.EventHandler(this.DownloadFirmware_Button_Click);
-            // 
-            // bunifuVScrollBar1
-            // 
-            this.bunifuVScrollBar1.AllowCursorChanges = true;
-            this.bunifuVScrollBar1.AllowHomeEndKeysDetection = false;
-            this.bunifuVScrollBar1.AllowIncrementalClickMoves = true;
-            this.bunifuVScrollBar1.AllowMouseDownEffects = true;
-            this.bunifuVScrollBar1.AllowMouseHoverEffects = true;
-            this.bunifuVScrollBar1.AllowScrollingAnimations = true;
-            this.bunifuVScrollBar1.AllowScrollKeysDetection = true;
-            this.bunifuVScrollBar1.AllowScrollOptionsMenu = true;
-            this.bunifuVScrollBar1.AllowShrinkingOnFocusLost = false;
-            this.bunifuVScrollBar1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuVScrollBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVScrollBar1.BackgroundImage")));
-            this.bunifuVScrollBar1.BindingContainer = this.Games_FlowPanel;
-            this.bunifuVScrollBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.bunifuVScrollBar1.BorderRadius = 14;
-            this.bunifuVScrollBar1.BorderThickness = 1;
-            this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
-            this.bunifuVScrollBar1.LargeChange = 10;
-            this.bunifuVScrollBar1.Location = new System.Drawing.Point(745, 50);
-            this.bunifuVScrollBar1.Maximum = 100;
-            this.bunifuVScrollBar1.Minimum = 0;
-            this.bunifuVScrollBar1.MinimumThumbLength = 18;
-            this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
-            this.bunifuVScrollBar1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVScrollBar1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVScrollBar1.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.bunifuVScrollBar1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bunifuVScrollBar1.ShrinkSizeLimit = 3;
-            this.bunifuVScrollBar1.Size = new System.Drawing.Size(17, 323);
-            this.bunifuVScrollBar1.SmallChange = 1;
-            this.bunifuVScrollBar1.TabIndex = 17;
-            this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.bunifuVScrollBar1.ThumbLength = 31;
-            this.bunifuVScrollBar1.ThumbMargin = 1;
-            this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.bunifuVScrollBar1.Value = 0;
             // 
             // About_Button
             // 
@@ -361,17 +330,17 @@
             this.About_Button.ImageActive = null;
             this.About_Button.ImageLocation = null;
             this.About_Button.ImageMargin = 40;
-            this.About_Button.ImageSize = new System.Drawing.Size(50, 50);
-            this.About_Button.ImageZoomSize = new System.Drawing.Size(90, 90);
+            this.About_Button.ImageSize = new System.Drawing.Size(60, 60);
+            this.About_Button.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.About_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("About_Button.InitialImage")));
-            this.About_Button.Location = new System.Drawing.Point(12, 308);
+            this.About_Button.Location = new System.Drawing.Point(8, 340);
             this.About_Button.Name = "About_Button";
             this.About_Button.Rotation = 0;
             this.About_Button.ShowActiveImage = true;
             this.About_Button.ShowCursorChanges = true;
             this.About_Button.ShowImageBorders = false;
             this.About_Button.ShowSizeMarkers = false;
-            this.About_Button.Size = new System.Drawing.Size(90, 90);
+            this.About_Button.Size = new System.Drawing.Size(100, 100);
             this.About_Button.TabIndex = 9;
             this.About_Button.ToolTipText = "";
             this.About_Button.WaitOnLoad = false;
@@ -397,17 +366,17 @@
             this.Update_Button.ImageActive = null;
             this.Update_Button.ImageLocation = null;
             this.Update_Button.ImageMargin = 40;
-            this.Update_Button.ImageSize = new System.Drawing.Size(50, 50);
-            this.Update_Button.ImageZoomSize = new System.Drawing.Size(90, 90);
+            this.Update_Button.ImageSize = new System.Drawing.Size(60, 60);
+            this.Update_Button.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.Update_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("Update_Button.InitialImage")));
-            this.Update_Button.Location = new System.Drawing.Point(12, 212);
+            this.Update_Button.Location = new System.Drawing.Point(8, 234);
             this.Update_Button.Name = "Update_Button";
             this.Update_Button.Rotation = 0;
             this.Update_Button.ShowActiveImage = true;
             this.Update_Button.ShowCursorChanges = true;
             this.Update_Button.ShowImageBorders = false;
             this.Update_Button.ShowSizeMarkers = false;
-            this.Update_Button.Size = new System.Drawing.Size(90, 90);
+            this.Update_Button.Size = new System.Drawing.Size(100, 100);
             this.Update_Button.TabIndex = 8;
             this.Update_Button.ToolTipText = "";
             this.Update_Button.WaitOnLoad = false;
@@ -432,17 +401,17 @@
             this.Configure_Button.ImageActive = null;
             this.Configure_Button.ImageLocation = null;
             this.Configure_Button.ImageMargin = 40;
-            this.Configure_Button.ImageSize = new System.Drawing.Size(50, 50);
-            this.Configure_Button.ImageZoomSize = new System.Drawing.Size(90, 90);
+            this.Configure_Button.ImageSize = new System.Drawing.Size(60, 60);
+            this.Configure_Button.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.Configure_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("Configure_Button.InitialImage")));
-            this.Configure_Button.Location = new System.Drawing.Point(12, 116);
+            this.Configure_Button.Location = new System.Drawing.Point(8, 128);
             this.Configure_Button.Name = "Configure_Button";
             this.Configure_Button.Rotation = 0;
             this.Configure_Button.ShowActiveImage = true;
             this.Configure_Button.ShowCursorChanges = true;
             this.Configure_Button.ShowImageBorders = false;
             this.Configure_Button.ShowSizeMarkers = false;
-            this.Configure_Button.Size = new System.Drawing.Size(90, 90);
+            this.Configure_Button.Size = new System.Drawing.Size(100, 100);
             this.Configure_Button.TabIndex = 7;
             this.Configure_Button.ToolTipText = "";
             this.Configure_Button.WaitOnLoad = false;
@@ -467,17 +436,17 @@
             this.Discord_Button.ImageActive = null;
             this.Discord_Button.ImageLocation = null;
             this.Discord_Button.ImageMargin = 40;
-            this.Discord_Button.ImageSize = new System.Drawing.Size(50, 50);
-            this.Discord_Button.ImageZoomSize = new System.Drawing.Size(90, 90);
+            this.Discord_Button.ImageSize = new System.Drawing.Size(60, 60);
+            this.Discord_Button.ImageZoomSize = new System.Drawing.Size(100, 100);
             this.Discord_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("Discord_Button.InitialImage")));
-            this.Discord_Button.Location = new System.Drawing.Point(12, 20);
+            this.Discord_Button.Location = new System.Drawing.Point(8, 22);
             this.Discord_Button.Name = "Discord_Button";
             this.Discord_Button.Rotation = 0;
             this.Discord_Button.ShowActiveImage = true;
             this.Discord_Button.ShowCursorChanges = true;
             this.Discord_Button.ShowImageBorders = false;
             this.Discord_Button.ShowSizeMarkers = false;
-            this.Discord_Button.Size = new System.Drawing.Size(90, 90);
+            this.Discord_Button.Size = new System.Drawing.Size(100, 100);
             this.Discord_Button.TabIndex = 6;
             this.Discord_Button.ToolTipText = "";
             this.Discord_Button.WaitOnLoad = false;
@@ -499,21 +468,168 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(108, 0);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(14, 423);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(14, 514);
             this.bunifuSeparator1.TabIndex = 5;
+            // 
+            // Games_ScrollBar
+            // 
+            this.Games_ScrollBar.AllowCursorChanges = true;
+            this.Games_ScrollBar.AllowHomeEndKeysDetection = false;
+            this.Games_ScrollBar.AllowIncrementalClickMoves = true;
+            this.Games_ScrollBar.AllowMouseDownEffects = true;
+            this.Games_ScrollBar.AllowMouseHoverEffects = true;
+            this.Games_ScrollBar.AllowScrollingAnimations = true;
+            this.Games_ScrollBar.AllowScrollKeysDetection = true;
+            this.Games_ScrollBar.AllowScrollOptionsMenu = true;
+            this.Games_ScrollBar.AllowShrinkingOnFocusLost = false;
+            this.Games_ScrollBar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Games_ScrollBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Games_ScrollBar.BackgroundImage")));
+            this.Games_ScrollBar.BindingContainer = this.Games_FlowPanel;
+            this.Games_ScrollBar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Games_ScrollBar.BorderRadius = 14;
+            this.Games_ScrollBar.BorderThickness = 1;
+            this.Games_ScrollBar.DurationBeforeShrink = 2000;
+            this.Games_ScrollBar.LargeChange = 10;
+            this.Games_ScrollBar.Location = new System.Drawing.Point(792, 78);
+            this.Games_ScrollBar.Maximum = 100;
+            this.Games_ScrollBar.Minimum = 0;
+            this.Games_ScrollBar.MinimumThumbLength = 18;
+            this.Games_ScrollBar.Name = "Games_ScrollBar";
+            this.Games_ScrollBar.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.Games_ScrollBar.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.Games_ScrollBar.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.Games_ScrollBar.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Games_ScrollBar.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Games_ScrollBar.ShrinkSizeLimit = 3;
+            this.Games_ScrollBar.Size = new System.Drawing.Size(20, 347);
+            this.Games_ScrollBar.SmallChange = 1;
+            this.Games_ScrollBar.TabIndex = 22;
+            this.Games_ScrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Games_ScrollBar.ThumbLength = 34;
+            this.Games_ScrollBar.ThumbMargin = 1;
+            this.Games_ScrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
+            this.Games_ScrollBar.Value = 0;
+            // 
+            // Filter_TextBox
+            // 
+            this.Filter_TextBox.AcceptsReturn = false;
+            this.Filter_TextBox.AcceptsTab = false;
+            this.Filter_TextBox.AnimationSpeed = 200;
+            this.Filter_TextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Filter_TextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Filter_TextBox.BackColor = System.Drawing.Color.Transparent;
+            this.Filter_TextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Filter_TextBox.BackgroundImage")));
+            this.Filter_TextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderRadius = 10;
+            this.Filter_TextBox.BorderThickness = 1;
+            this.Filter_TextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Filter_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Filter_TextBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.Filter_TextBox.DefaultText = "";
+            this.Filter_TextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Filter_TextBox.ForeColor = System.Drawing.Color.White;
+            this.Filter_TextBox.HideSelection = true;
+            this.Filter_TextBox.IconLeft = null;
+            this.Filter_TextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.Filter_TextBox.IconPadding = 10;
+            this.Filter_TextBox.IconRight = null;
+            this.Filter_TextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.Filter_TextBox.Lines = new string[0];
+            this.Filter_TextBox.Location = new System.Drawing.Point(128, 49);
+            this.Filter_TextBox.MaxLength = 32767;
+            this.Filter_TextBox.MinimumSize = new System.Drawing.Size(1, 1);
+            this.Filter_TextBox.Modified = false;
+            this.Filter_TextBox.Multiline = false;
+            this.Filter_TextBox.Name = "Filter_TextBox";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Filter_TextBox.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Filter_TextBox.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Filter_TextBox.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Filter_TextBox.OnIdleState = stateProperties4;
+            this.Filter_TextBox.Padding = new System.Windows.Forms.Padding(3);
+            this.Filter_TextBox.PasswordChar = '\0';
+            this.Filter_TextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.Filter_TextBox.PlaceholderText = "Filter games";
+            this.Filter_TextBox.ReadOnly = false;
+            this.Filter_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Filter_TextBox.SelectedText = "";
+            this.Filter_TextBox.SelectionLength = 0;
+            this.Filter_TextBox.SelectionStart = 0;
+            this.Filter_TextBox.ShortcutsEnabled = true;
+            this.Filter_TextBox.Size = new System.Drawing.Size(345, 23);
+            this.Filter_TextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.Filter_TextBox.TabIndex = 23;
+            this.Filter_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Filter_TextBox.TextMarginBottom = 0;
+            this.Filter_TextBox.TextMarginLeft = 3;
+            this.Filter_TextBox.TextMarginTop = 0;
+            this.Filter_TextBox.TextPlaceholder = "Filter games";
+            this.Filter_TextBox.UseSystemPasswordChar = false;
+            this.Filter_TextBox.WordWrap = true;
+            this.Filter_TextBox.TextChange += new System.EventHandler(this.Filter_TextBox_TextChanged);
+            // 
+            // RemoveFilter_Button
+            // 
+            this.RemoveFilter_Button.BackColor = System.Drawing.Color.Transparent;
+            this.RemoveFilter_Button.BorderColor = System.Drawing.Color.Transparent;
+            this.RemoveFilter_Button.CheckedState.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.CustomImages.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.RemoveFilter_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RemoveFilter_Button.ForeColor = System.Drawing.Color.White;
+            this.RemoveFilter_Button.HoveredState.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.Location = new System.Drawing.Point(475, 51);
+            this.RemoveFilter_Button.Name = "RemoveFilter_Button";
+            this.RemoveFilter_Button.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.RemoveFilter_Button.ShadowDecoration.Mode = ns5.ShadowMode.Circle;
+            this.RemoveFilter_Button.ShadowDecoration.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.Size = new System.Drawing.Size(19, 19);
+            this.RemoveFilter_Button.TabIndex = 24;
+            this.RemoveFilter_Button.Text = "X";
+            this.RemoveFilter_Button.Click += new System.EventHandler(this.RemoveFilter_Button_Click);
+            // 
+            // Game_ContextMenu
+            // 
+            this.Game_ContextMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem1});
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 0;
+            this.menuItem1.Text = "Install shader for {game}";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(773, 410);
+            this.ClientSize = new System.Drawing.Size(824, 462);
+            this.Controls.Add(this.RemoveFilter_Button);
+            this.Controls.Add(this.Filter_TextBox);
+            this.Controls.Add(this.Games_ScrollBar);
             this.Controls.Add(this.Download_ProgressBar);
             this.Controls.Add(this.Main_Panel);
             this.Controls.Add(this.Keys_Button);
             this.Controls.Add(this.DownloadFirmware_Button);
             this.Controls.Add(this.Firmware_DropDown);
-            this.Controls.Add(this.bunifuVScrollBar1);
             this.Controls.Add(this.About_Button);
             this.Controls.Add(this.Update_Button);
             this.Controls.Add(this.Configure_Button);
@@ -545,9 +661,13 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DownloadFirmware_Button;
         private Bunifu.UI.WinForms.BunifuDropdown Firmware_DropDown;
         private System.Windows.Forms.Panel Main_Panel;
-        private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel Games_FlowPanel;
         private Telerik.WinControls.UI.RadProgressBar Download_ProgressBar;
         private Telerik.WinControls.Themes.CrystalDarkTheme crystalDarkTheme1;
+        private Bunifu.UI.WinForms.BunifuVScrollBar Games_ScrollBar;
+        private Bunifu.UI.WinForms.BunifuTextBox Filter_TextBox;
+        private ns1.SiticoneCircleButton RemoveFilter_Button;
+        private System.Windows.Forms.ContextMenu Game_ContextMenu;
+        private System.Windows.Forms.MenuItem menuItem1;
     }
 }

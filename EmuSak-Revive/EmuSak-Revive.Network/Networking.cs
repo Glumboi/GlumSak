@@ -13,26 +13,37 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Microsoft.WindowsAPICodePack;
 using Telerik.WinControls.UI;
+using System.Threading;
+using Microsoft.WindowsAPICodePack.Taskbar;
+using System.Net.Http.Headers;
+using Octokit;
 
 namespace EmuSak_Revive.Network
 {
     public static class Networking
     {
         public static bool DownloadDone { get => _downloadDone; }
+        public static IntPtr MainWindowHandle { get; set; }
+        public static List<int> Versions { get => versionsList; }
         public static string ShaderUrl { get; set; }
         public static RadProgressBar DownloadProgressBar { get; set; }
-        public static List<int> Versions { get => versionsList; }
-        static List<int> versionsList = new List<int>();
 
-        static Stopwatch sw = new Stopwatch();  // The stopwatch which we will be using to calculate the download speed
+        private static List<int> versionsList = new List<int>();
+        private static Stopwatch sw = new Stopwatch();  // The stopwatch which we will be using to calculate the download speed
 
-        static string _unzipPath = string.Empty;
-        static string _outPathName = string.Empty;
-        static bool _showStartNotification = true;
-        static bool _showFinishNotification = true;
-        static bool _deleteTempAfterDone = true;
-        static bool _downloadDone = false;
+        /// <summary>
+        /// Variables used fro the download progress changed
+        /// </summary>
+        private static string _unzipPath = string.Empty;
+
+        private static string _outPathName = string.Empty;
+        private static bool _showStartNotification = true;
+        private static bool _showFinishNotification = true;
+        private static bool _deleteTempAfterDone = true;
+        private static bool _downloadDone = false;
         private static readonly Stopwatch _stopwatch = new System.Diagnostics.Stopwatch();
 
         public static void ShowDownloadDone(string downloadDoneMsg, string title)
@@ -40,13 +51,20 @@ namespace EmuSak_Revive.Network
             ToastHandler.ShowToast(downloadDoneMsg, title);
         }
 
+        /// <summary>
+        /// Gets all shader files from a raw text file
+        /// format of the trxt file has to be:
+        /// Mario Kart 8 Deluxe=https://thelinktotheshader.zip
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static string GetShaderDownload(string name)
         {
             var result = string.Empty;
 
             WebClient client = new WebClient();
 
-            if(!string.IsNullOrWhiteSpace(ShaderUrl))
+            if (!string.IsNullOrWhiteSpace(ShaderUrl))
             {
                 try
                 {
@@ -81,18 +99,13 @@ namespace EmuSak_Revive.Network
             return string.Empty;
         }
 
+        /// <summary>
+        /// Parses the given archive.org link with the firmwares and slpits the returned url and returns the result
+        /// </summary>
+        /// <param name="version"></param>
+        /// <returns></returns>
         public static string GetFirmwareDownload(string version)
         {
-            /*List<string> linksToVisit = ParseLinks("https://archive.org/download/nintendo-switch-global-firmwares");
-
-            var baseUrl = linksToVisit[0];
-            var baseSplitted = baseUrl.Split('#')[0];
-            var firmware = baseSplitted + "/Firmware%20";
-            var firmwareVersion = version;
-            var firmwareVersionFinal = firmware + firmwareVersion.Split(' ')[1] + ".zip";
-
-            return firmwareVersionFinal; => Disabled to test some things */
-
             return ParseLinks("https://archive.org/download/nintendo-switch-global-firmwares")
                 [0].Split(new char[] { '#' })[0]
                 + "/Firmware%20" + version.Split(new char[] { ' ' })[1]
@@ -115,7 +128,7 @@ namespace EmuSak_Revive.Network
                     .Select(x => x.OrgStr);
         }
 
-        static string GetAbsoluteUrlString(string baseUrl, string url)
+        private static string GetAbsoluteUrlString(string baseUrl, string url)
         {
             var uri = new Uri(url, UriKind.RelativeOrAbsolute);
             if (!uri.IsAbsoluteUri)
@@ -123,7 +136,14 @@ namespace EmuSak_Revive.Network
             return uri.ToString();
         }
 
+        /// <summary>
+        /// Parses a websites content and gets any links from the site and outputs them (used for archive.org)
+        /// </summary>
+        /// <param name="urlToCrawl"></param>
+        /// <returns></returns>
+        ///
         public static List<string> ParseLinks(string urlToCrawl)
+
         {
             WebClient webClient = new WebClient();
 
@@ -144,9 +164,13 @@ namespace EmuSak_Revive.Network
             return list.ToList();
         }
 
+        /// <summary>
+        /// This gets all firmwares from a archive.org site
+        /// </summary>
+        /// <returns></returns>
         public static List<string> GetFirmwareVersions()
         {
-            List<string> linksToVisit = ParseLinks("https://archive.org/download/nintendo-switch-global-firmwares");
+            List<string> linksToVisit = ParseLinks(@"https://archive.org/download/nintendo-switch-global-firmwares");
             List<string> rtrnList = new List<string>();
 
             foreach (var item in linksToVisit)
@@ -164,10 +188,13 @@ namespace EmuSak_Revive.Network
                     }
                 }
             }
-
             return rtrnList;
         }
 
+        /// <summary>
+        /// Launches a URL in the browser
+        /// </summary>
+        /// <param name="link"></param>
         public static void LaunchURLInBrowser(string link)
         {
             try
@@ -185,6 +212,11 @@ namespace EmuSak_Revive.Network
             }
         }
 
+        /// <summary>
+        /// Gets the image from a given url
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public static Image CreateImageFromURL(string url)
         {
             HttpWebRequest httpWebRequest = (HttpWebRequest)HttpWebRequest.Create(url);
@@ -193,6 +225,12 @@ namespace EmuSak_Revive.Network
             return Image.FromStream(stream);
         }
 
+        /// <summary>
+        /// Unzips a file and replaces it if it exists already
+        /// </summary>
+        /// <param name="inputFile"></param>
+        /// <param name="outPath"></param>
+        /// <param name="deleteAfterDone"></param>
         public static void Unzip(string inputFile, string outPath, bool deleteAfterDone = true)
         {
             using (ZipArchive source = ZipFile.Open(inputFile, ZipArchiveMode.Read, null))
@@ -218,6 +256,15 @@ namespace EmuSak_Revive.Network
             }
         }
 
+        /// <summary>
+        /// Used to download a file from the web with a trackable progress
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="outPathName"></param>
+        /// <param name="unzipPath"></param>
+        /// <param name="showFinishedNotification"></param>
+        /// <param name="showStartedNotification"></param>
+        /// <param name="deleteTempAfterDone"></param>
         public static void DownloadAFileFromServer(
             string url,
             string outPathName,
@@ -257,6 +304,10 @@ namespace EmuSak_Revive.Network
             }
         }
 
+        /// <summary>
+        /// Changes the current text of the progressbar
+        /// </summary>
+        /// <param name="text"></param>
         private static void ChangeProgressText(string text)
         {
             MethodInvoker mi = new MethodInvoker(() => DownloadProgressBar.Text = text);
@@ -270,6 +321,10 @@ namespace EmuSak_Revive.Network
             }
         }
 
+        /// <summary>
+        /// Updates the current value of the progressbar
+        /// </summary>
+        /// <param name="progress"></param>
         private static void UpdateProgress(int progress)
         {
             MethodInvoker mi = new MethodInvoker(() => DownloadProgressBar.Value1 = progress);
@@ -283,6 +338,9 @@ namespace EmuSak_Revive.Network
             }
         }
 
+        /// <summary>
+        /// Shows the given progressbar (used when the download starts)
+        /// </summary>
         private static void ShowProgressBar()
         {
             MethodInvoker mi = new MethodInvoker(() => DownloadProgressBar.Visible = true);
@@ -296,6 +354,9 @@ namespace EmuSak_Revive.Network
             }
         }
 
+        /// <summary>
+        /// Hides the given progressbar (used when the download finishes)
+        /// </summary>
         private static void HideProgressBar()
         {
             MethodInvoker mi = new MethodInvoker(() => DownloadProgressBar.Visible = false);
@@ -309,6 +370,11 @@ namespace EmuSak_Revive.Network
             }
         }
 
+        /// <summary>
+        /// Gets executed when the progress of an ongoing download from a fileserver finishes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private static void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
             Unzip(_outPathName, _unzipPath, _deleteTempAfterDone);
@@ -320,9 +386,15 @@ namespace EmuSak_Revive.Network
             UpdateProgress(0);
             HideProgressBar();
             _stopwatch.Reset();
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
             _downloadDone = true;
         }
 
+        /// <summary>
+        /// Gets executed when the progress of an ongoing download from a fileserver changes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             //DownloadProgressBar.Value = e.ProgressPercentage;
@@ -331,6 +403,10 @@ namespace EmuSak_Revive.Network
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
             UpdateProgress(int.Parse(Math.Truncate(percentage).ToString()));
+
+            //Used to display a progressbar on the taskbar
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal, MainWindowHandle);
+            TaskbarManager.Instance.SetProgressValue(e.ProgressPercentage, 100, MainWindowHandle);
 
             // Calculate progress values
             double fileSize = totalBytes / 1024.0 / 1024.0;
@@ -343,6 +419,11 @@ namespace EmuSak_Revive.Network
             ChangeProgressText(downloadSpeed);
         }
 
+        /// <summary>
+        /// Downloads keys from google drive
+        /// </summary>
+        /// <param name="URL"></param>
+        /// <param name="destinationPath"></param>
         public static void DownloadKeys(string URL, string destinationPath)
         {
             GDriveDownloader driveDownloader = new GDriveDownloader();

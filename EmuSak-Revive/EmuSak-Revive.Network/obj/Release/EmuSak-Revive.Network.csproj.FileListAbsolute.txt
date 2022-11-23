@@ -35,3 +35,11 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Bunifu.UI
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\HtmlAgilityPack.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\HtmlAgilityPack.pdb
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\HtmlAgilityPack.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Microsoft.Web.XmlTransform.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Siticone.UI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Microsoft.WindowsAPICodePack.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Microsoft.WindowsAPICodePack.Shell.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Microsoft.WindowsAPICodePack.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Octokit.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Octokit.xml

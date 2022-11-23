@@ -13,9 +13,7 @@ using EmuSak_Revive.EmuFiles;
 using Glumboi.Debug;
 using System.Threading.Tasks;
 using EmuSak_Revive.Discord;
-using Glumboi.UI;
-using Transitions;
-using System.Text;
+using EmuSak_Revive.Audio;
 
 namespace EmuSak_Revive.GUI
 {
@@ -24,30 +22,24 @@ namespace EmuSak_Revive.GUI
         public bool DoneLoading { get; private set; }
         public static int EmuConfig { get; private set; }
 
-        ConfigurationWindow configureWindow = new ConfigurationWindow();
-        GangShitWindow gangShitWindow = new GangShitWindow();
-        SettingsWindow settingsWindow = new SettingsWindow();
-        AboutWindow aboutWindow = new AboutWindow();
+        /*public static int WindowVolume
+        { get => (int)mainWindowPlayer.Volume * 100; set { mainWindowPlayer.Volume = value; } }*/
+
+        private ConfigurationWindow configureWindow = new ConfigurationWindow();
+        private GangShitWindow gangShitWindow = new GangShitWindow();
+        private SettingsWindow settingsWindow = new SettingsWindow();
+        private AboutWindow aboutWindow = new AboutWindow();
+        public static AudioPlayer mainWindowPlayer = new AudioPlayer(Properties.Settings.Default.MainWindowVolume);
         public static DebugConsole debugConsole = new DebugConsole(2, "Glumsak debug console", false, false);
 
-        List<string> iconUrls = new List<string>();
-        List<string> ids = new List<string>();
-        List<string> names = new List<string>();
-        List<string> firmwareVersions = new List<string>();
+        private List<string> iconUrls = new List<string>();
+        private List<string> ids = new List<string>();
+        private List<string> names = new List<string>();
+        private List<string> firmwareVersions = new List<string>();
 
-        int clickCount = 0; //For the lil easter egg
-        string firmwareToDownload = string.Empty;
-        Timer cooldownTimer = new Timer();
-
-        Bitmap[] happyGifs =
-        {
-            Properties.Resources.HappyBird_Asset,
-            Properties.Resources.PeepoHappy_Asset,
-            Properties.Resources.CatDance_Asset,
-            Properties.Resources.HappyCat_Asset,
-            Properties.Resources.RabbitVibe_Asset,
-            Properties.Resources.DrogaDog_Asset,
-        };
+        private int clickCount = 0; //For the lil easter egg
+        private string firmwareToDownload = string.Empty;
+        private Timer cooldownTimer = new Timer();
 
         public MainWindow()
         {
@@ -69,17 +61,47 @@ namespace EmuSak_Revive.GUI
             }
         }
 
+        private void LoadScrollbar()
+        {
+            if (Games_FlowPanel.Controls.Count <= 9)
+            {
+                Games_ScrollBar.Hide();
+            }
+            else
+            {
+                Games_ScrollBar.Show();
+            }
+        }
+
+        private void LoadSoundFiles()
+        {
+            try
+            {
+                mainWindowPlayer.AudioFiles = new List<string>()
+                {
+                    Environment.CurrentDirectory + @"\Audio\enter_back.wav",
+                    Environment.CurrentDirectory + @"\Audio\select.wav"
+                };
+            }
+            catch (Exception)
+            {
+                //Do nothing
+            }
+        }
+
         public void InitSettings()
         {
             cooldownTimer.Tick += CooldownTimer_Tick;
             cooldownTimer.Interval = 3000;
             Networking.DownloadProgressBar = Download_ProgressBar;
             Download_ProgressBar.Visible = false;
+            Networking.MainWindowHandle = this.Handle;
             LoadFirmwares();
             CheckShaderUrl();
+            LoadSoundFiles();
         }
 
-        void CheckShaderUrl()
+        private void CheckShaderUrl()
         {
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.ShaderLinks))
             {
@@ -99,9 +121,11 @@ namespace EmuSak_Revive.GUI
             }
         }
 
-        void LoadFirmwares()
+        private void LoadFirmwares()
         {
+            //https://archive.org/download/nintendo-switch-global-firmwares/Firmware%201.0.0.zip
             firmwareVersions = Networking.GetFirmwareVersions().Distinct().ToList();
+
             foreach (string item in firmwareVersions)
             {
                 Firmware_DropDown.Items.Add(item);
@@ -120,7 +144,7 @@ namespace EmuSak_Revive.GUI
             debugConsole.Info($"Firmwares loaded!, Amount of combobox items: {Firmware_DropDown.Items.Count}");
         }
 
-        void LoadStandardPresence()
+        private void LoadStandardPresence()
         {
             RichPresence richPresence = new RichPresence();
             richPresence.Init();
@@ -169,7 +193,6 @@ namespace EmuSak_Revive.GUI
                     iconUrls.Add(iconUrl);
                     names.Add(name);
                 }
-
             }
         }
 
@@ -181,11 +204,12 @@ namespace EmuSak_Revive.GUI
             btn.Name = name;
             btn.Image = img;
 
-            btn.AllowZooming = false;
-            btn.Size = new Size(145, 145); //Original size: 130
+            //btn.AllowZooming = false;
+            btn.Size = new Size(155, 155); //Original size: 130
             btn.FadeWhenInactive = true;
             btn.BorderStyle = BorderStyle.None;
-            btn.Click += GameButtonClicked;
+            btn.MouseDown += GameButtonClicked;
+            btn.MouseHover += Btn_MouseHover; ;
             btn.Tag = tag;
 
             Games_FlowPanel.Controls.Add(btn);
@@ -193,7 +217,14 @@ namespace EmuSak_Revive.GUI
             debugConsole.Info($"Created a button with the id: {btn.Name}");
         }
 
-        void LoadGamesToUI(int config)
+        private void Btn_MouseHover(object sender, EventArgs e)
+        {
+            PlayAudio.Play(mainWindowPlayer,
+                Properties.Settings.Default.PlaySounds,
+                mainWindowPlayer.AudioFiles[1]);
+        }
+
+        private void LoadGamesToUI(int config)
         {
             List<string> fileLines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Python/gameIcons_Ids.txt").ToList();
 
@@ -242,7 +273,7 @@ namespace EmuSak_Revive.GUI
                     }
                     else
                     {
-                        if(!gameName.Contains("Pokémon"))
+                        if (!gameName.Contains("Pokémon"))
                             gameName = gameNameRaw;
                     }
 
@@ -258,10 +289,12 @@ namespace EmuSak_Revive.GUI
 
                     if (condition)
                     {
-                        CreateButton(gameId, icon, gameName);//gameId, icon);
+                        CreateButton(gameId, icon, gameName);
                     }
                 }
             }
+
+            LoadScrollbar();
         }
 
         public void LoadButtons()
@@ -282,16 +315,30 @@ namespace EmuSak_Revive.GUI
             DoneLoading = true;
         }
 
-        private void GameButtonClicked(object sender, EventArgs e)
+        private string gameId = string.Empty;
+        private string gameName = string.Empty;
+        private Image gameImg = null;
+
+        private void GameButtonClicked(object sender, MouseEventArgs e)
         {
-            string buttonID = (sender as BunifuImageButton).Name;
-            Image buttonImg = (sender as BunifuImageButton).Image;
-            string buttonTag = (sender as BunifuImageButton).Tag.ToString();
+            gameId = (sender as BunifuImageButton).Name;
+            gameName = (sender as BunifuImageButton).Tag.ToString();
+            gameImg = (sender as BunifuImageButton).Image;
+
+            PlayAudio.Play(mainWindowPlayer,
+            Properties.Settings.Default.PlaySounds,
+            mainWindowPlayer.AudioFiles[0]);
 
             GameActionsWindow gameActionsWindow = new GameActionsWindow();
-            gameActionsWindow.Text = buttonTag;//buttonID;
-            gameActionsWindow.Init(buttonImg, buttonTag, buttonID);
+            gameActionsWindow.Text = gameName;//buttonID;
+            gameActionsWindow.Init(gameImg, gameName, gameId);
             gameActionsWindow.Show();
+        }
+
+        //For later development
+        private void ShadersItem_Click(object sender, EventArgs e)
+        {
+            GameActionsWindow.DownloadShader(gameName, gameId);
         }
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
@@ -343,12 +390,12 @@ namespace EmuSak_Revive.GUI
         {
             if (EmuConfig == 0)
             {
-                EmuKeys.InstallYuzuKeys();
+                EmuKeys.InstallKeys(0, Yuzu.PortableYuzu);
             }
 
             if (EmuConfig == 1)
             {
-                EmuKeys.InstallRyuKeys();
+                EmuKeys.InstallKeys(1, Ryujinx.PortableRyujinx);
             }
         }
 
@@ -381,7 +428,67 @@ namespace EmuSak_Revive.GUI
 
         private void Games_FlowPanel_Scroll(object sender, ScrollEventArgs e)
         {
-            Games_FlowPanel.Invalidate();
+            if (e.ScrollOrientation == ScrollOrientation.VerticalScroll)
+            {
+                Games_FlowPanel.VerticalScroll.Value = e.NewValue;
+            }
+
+            /*Games_FlowPanel.Invalidate();
+            base.OnScroll(e);*/
+        }
+
+        private void ResetFilter()
+        {
+            foreach (var item in Games_FlowPanel.Controls.OfType<BunifuImageButton>())
+            {
+                //item.Visible = true;
+                item.Invoke((MethodInvoker)delegate
+                {
+                    // Running on the UI thread
+                    item.Visible = true;
+                });
+            }
+        }
+
+        private void FilterGames(string filter)
+        {
+            foreach (var item in Games_FlowPanel.Controls.OfType<BunifuImageButton>())
+            {
+                if (!item.Tag.ToString().ToLower().Contains(filter))
+                {
+                    item.Invoke((MethodInvoker)delegate
+                    {
+                        // Running on the UI thread
+                        item.Visible = false;
+                    });
+                    //item.Visible = false;
+                }
+            }
+        }
+
+        private void Filter_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            //We use task and ivoke to make sure the UI stays responsive while filtering
+            Task.Run(() =>
+            {
+                var filter = Filter_TextBox.Text.ToLower();
+
+                if (!string.IsNullOrWhiteSpace(filter))
+                {
+                    ResetFilter();
+                    FilterGames(filter);
+                }
+
+                if (string.IsNullOrWhiteSpace(Filter_TextBox.Text))
+                {
+                    ResetFilter();
+                }
+            });
+        }
+
+        private void RemoveFilter_Button_Click(object sender, EventArgs e)
+        {
+            Filter_TextBox.Text = string.Empty;
         }
     }
 }

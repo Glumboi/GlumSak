@@ -5,81 +5,65 @@ using EmuSak_Revive.Emulators;
 using System.Windows.Forms;
 using System.Threading.Tasks;
 using System.Threading;
+using Glumboi.UI.Toast;
 
 namespace EmuSak_Revive.EmuFiles
 {
     public class EmuKeys
     {
-        public Form DownloadFinishedForm{ get; private set; }
+        public Form DownloadFinishedForm { get; private set; }
 
-        private static string keysUrl = @"https://drive.google.com/file/d/1bN9tg5HbfTCKPXAJaJmDdwP-XJsoMxjX/view?usp=sharing";
-        private static string keysServerUrl = @"https://phoebe.feralhosting.com/carltschober/links/GlussySac/Keys_Switch/SwitchKeys.zip";
-        public static void InstallYuzuKeys()
-        {
-            var temp = Path.GetTempPath();
-            var filePath = temp + "tempKeys.Sak";
+        private static string keysUrl = @"https://drive.google.com/file/d/1bN9tg5HbfTCKPXAJaJmDdwP-XJsoMxjX/view?usp=sharing"; //Old/for google drive
+        private static string keysServerUrl = Networking.GetShaderDownload("titlekeys"); //@"https://phoebe.feralhosting.com/carltschober/links/GlussySac/Keys_Switch/SwitchKeys.zip";
 
-            if (File.Exists(filePath))
-            {
-                if(Yuzu.PortableYuzu)
-                {
-                    Networking.Unzip(filePath, Yuzu.PortableKeysLoc, false);
-                    Networking.ShowDownloadDone("Installed keys from temp folder successfully to: \n" 
-                        + Yuzu.PortableKeysLoc + ".", "Info");
-                }
-                else
-                {
-                    Networking.Unzip(filePath, Yuzu.KeysLoc, false);
-                    Networking.ShowDownloadDone("Installed keys from temp folder successfully to: \n"
-                        + Yuzu.KeysLoc + ".", "Info");
-                }
-            }
-            else if(Yuzu.PortableYuzu)
-            {
-                Thread thread = new Thread(() => DownloadAndUnzipKeys(filePath, Yuzu.PortableKeysLoc));
-                thread.Start();
-            }
-            else
-            {
-                Thread thread = new Thread(() => DownloadAndUnzipKeys(filePath, Yuzu.KeysLoc));
-                thread.Start();
-            }
-        }
-
-        private static void DownloadAndUnzipKeys(string filePath, string destination)
+        private static void RunDownLoad(string filePath, string destination)
         {
             Networking.DownloadAFileFromServer(keysServerUrl, filePath, destination, true, false, false);
         }
-        
-        public static void InstallRyuKeys()
+
+        private static void DownLoadKeys(string path, string keysLoc)
         {
+            if (File.Exists(path))
+            {
+                Networking.Unzip(path, keysLoc, false);
+                Networking.ShowDownloadDone("Installed keys from temp folder successfully to: \n"
+                + keysLoc + ".", "Info");
+                return;
+            }
+
+            RunDownLoad(path, keysLoc);
+        }
+
+        public static void InstallKeys(int config, bool portable)
+        {
+            keysServerUrl = Networking.GetShaderDownload("titlekeys"); //So the link refreshes if user changed the paste
             var temp = Path.GetTempPath();
             var filePath = temp + "tempKeys.Sak";
 
-            if (File.Exists(filePath))
+            try
             {
-                if (Ryujinx.PortableRyujinx)
+                switch (config)
                 {
-                    Networking.Unzip(filePath, Ryujinx.PortableKeysLoc, false);
-                    Networking.ShowDownloadDone("Installed keys from temp folder successfully to: \n"
-                        + Ryujinx.PortableKeysLoc + ".", "Info");
-                }
-                else
-                {
-                    Networking.Unzip(filePath, Ryujinx.KeysLoc, false);
-                    Networking.ShowDownloadDone("Installed keys from temp folder successfully to: \n"
-                        + Ryujinx.KeysLoc + ".", "Info");
+                    case 0 when portable:
+                        DownLoadKeys(filePath, Yuzu.PortableKeysLoc);
+                        break;
+
+                    case 0 when !portable:
+                        DownLoadKeys(filePath, Yuzu.KeysLoc);
+                        break;
+
+                    case 1 when portable:
+                        DownLoadKeys(filePath, Ryujinx.PortableKeysLoc);
+                        break;
+
+                    case 1 when !portable:
+                        DownLoadKeys(filePath, Ryujinx.KeysLoc);
+                        break;
                 }
             }
-            else if (Ryujinx.PortableRyujinx)
+            catch (System.Exception)
             {
-                Thread thread = new Thread(() => DownloadAndUnzipKeys(filePath, Ryujinx.PortableKeysLoc));
-                thread.Start();
-            }
-            else
-            {
-                Thread thread = new Thread(() => DownloadAndUnzipKeys(filePath, Ryujinx.KeysLoc));
-                thread.Start();
+                ToastHandler.ShowToast("Could not install keys, make sure your paste is right!", "Error");
             }
         }
     }
