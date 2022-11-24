@@ -54,6 +54,10 @@
   # Beta 2.1.1:
     - Re worked the audio system to work better
     - Fixed custom install locations from the installer
+  # Beta 2.2:
+    - Improved small error feedbacks
+    - Fixed small bugs with the audio that caused to crash
+    - Added a new feature that sorts the firmwares correctly now
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
