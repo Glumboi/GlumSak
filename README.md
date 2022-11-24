@@ -96,4 +96,4 @@ by buying me a server to test around with and for having such a cool community.
 Released under [GPL-2.0](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
 My biggest and most fun project. 
   
-Donate me via crypto: 0xcF5f14E6Ce6867B58a0A887d5d86cd33dd38f1Ed
+Donate me via crypto (ETH): 0xcF5f14E6Ce6867B58a0A887d5d86cd33dd38f1Ed
