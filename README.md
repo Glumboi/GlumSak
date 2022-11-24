@@ -75,6 +75,9 @@ by buying me a server to test around with and for having such a cool community.
   - Install keys, shaders and firmwares to yuzu (shader not supported currently) and ryu with only a few clicks!
   - To select a portable install open the settings with the button on the left and select the folder of the portable Yuzu/Ryujinx make sure you select the folder that contains the filesystem folders and files, for Ryu it would be called "portable" and for Yuzu it's "user" then restart the app 
   
+# Create your own paste
+  [go](https://github.com/Glumboi/GlumSak-PasteCreator#how-to-use){:target="_blank"}.
+  
 # Future plans
   Soon!
   
