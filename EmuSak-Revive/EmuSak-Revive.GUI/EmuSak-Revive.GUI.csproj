@@ -302,6 +302,7 @@
     </Compile>
     <Compile Include="Generics\PlayAudio.cs" />
     <Compile Include="Generics\UI.cs" />
+    <Compile Include="Generics\VersionSorter.cs" />
     <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -392,6 +393,8 @@
     <Content Include="Assets\Save_Asset.png" />
     <Content Include="Assets\Update_Asset.png" />
     <Content Include="Assets\Yuzu_Asset.png" />
+    <None Include="Resources\select.wav" />
+    <None Include="Resources\enter_back.wav" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\EmuSak-Revive.JSON\EmuSak-Revive.JSON.csproj">

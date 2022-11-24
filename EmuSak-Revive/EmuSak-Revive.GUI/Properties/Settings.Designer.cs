@@ -97,7 +97,7 @@ namespace EmuSak_Revive.GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
         public int MainWindowVolume {
             get {
                 return ((int)(this["MainWindowVolume"]));

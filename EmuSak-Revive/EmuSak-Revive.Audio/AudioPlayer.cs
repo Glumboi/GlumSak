@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 
 namespace EmuSak_Revive.Audio
 {
@@ -9,13 +10,19 @@ namespace EmuSak_Revive.Audio
     {
         private WaveOut player = new WaveOut();
 
+        /// <summary>
+        /// Volume for our audio player (0.0f - 1f).
+        /// </summary>
         public float Volume
         { get => player.Volume; set { player.Volume = value; } }
 
+        /// <summary>
+        /// List of files for the audio player to play.
+        /// </summary>
         public List<string> AudioFiles { get; set; }
 
         /// <summary>
-        /// Volume must be a value between 0 and 100
+        /// Volume must be a value between 0 and 100.
         /// </summary>
         /// <param name="volume"></param>
         public AudioPlayer(int volume)
@@ -24,7 +31,7 @@ namespace EmuSak_Revive.Audio
         }
 
         /// <summary>
-        /// Volume must be a value between 0 and 100
+        /// Volume must be a value between 0 and 100.
         /// </summary>
         /// <param name="volume"></param>
         public void SetVolume(int volume)
@@ -53,6 +60,21 @@ namespace EmuSak_Revive.Audio
             }
         }
 
+        /// <summary>
+        /// Plays an audio file from an Unamanged memory stream.
+        /// </summary>
+        /// <param name="stream"></param>
+        public void PlayFromUnmanagedMemoryStream(UnmanagedMemoryStream stream)
+        {
+            var importer = new RawSourceWaveStream(stream, new WaveFormat());
+            var soundFx = new WaveOut();
+            soundFx.Init(importer);
+            soundFx.Play();
+        }
+
+        /// <summary>
+        /// Stops the current playing audio.
+        /// </summary>
         public void Stop()
         {
             player.Stop();

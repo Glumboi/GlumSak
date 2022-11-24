@@ -14,6 +14,8 @@ using Glumboi.Debug;
 using System.Threading.Tasks;
 using EmuSak_Revive.Discord;
 using EmuSak_Revive.Audio;
+using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace EmuSak_Revive.GUI
 {
@@ -98,7 +100,6 @@ namespace EmuSak_Revive.GUI
             Networking.MainWindowHandle = this.Handle;
             LoadFirmwares();
             CheckShaderUrl();
-            LoadSoundFiles();
         }
 
         private void CheckShaderUrl()
@@ -126,10 +127,12 @@ namespace EmuSak_Revive.GUI
             //https://archive.org/download/nintendo-switch-global-firmwares/Firmware%201.0.0.zip
             firmwareVersions = Networking.GetFirmwareVersions().Distinct().ToList();
 
-            foreach (string item in firmwareVersions)
+            foreach (var v in firmwareVersions.OrderByDescending(VersionSorter.OrderVersion))
             {
-                Firmware_DropDown.Items.Add(item);
+                Debug.WriteLine(v);
+                Firmware_DropDown.Items.Add(v);
             }
+
             var highestVersion = Max(Networking.Versions.ToArray());
             for (int i = 0; i < Firmware_DropDown.Items.Count; i++)
             {
@@ -161,6 +164,7 @@ namespace EmuSak_Revive.GUI
             UI.ChangeToDarkMode(this);
             LoadStandardPresence();
             InitSettings();
+            LoadSoundFiles();
         }
 
         public void ChangeEmuConfig(int config)
@@ -418,8 +422,6 @@ namespace EmuSak_Revive.GUI
 
         private void DownloadFirmware_Button_Click(object sender, EventArgs e)
         {
-            //Server URL: http://carltschober.phoebe.feralhosting.com/links/GlussySac/ => not used atm
-
             Task.Run(() =>
             {
                 EmuFirmware.InstallFirmware(EmuConfig, Networking.GetFirmwareDownload(firmwareToDownload));

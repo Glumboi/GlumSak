@@ -4,7 +4,6 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\obj\Debug\EmuSak-Revive
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\obj\Debug\EmuSak-Revive.Audio.csproj.CoreCompileInputs.cache
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\obj\Debug\EmuSak-Revive.Audio.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\obj\Debug\EmuSak-Revive.Audio.pdb
-F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\bin\Debug\AxInterop.WMPLib.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\bin\Debug\Microsoft.Win32.Registry.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\bin\Debug\NAudio.Asio.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Audio\bin\Debug\NAudio.Core.dll
