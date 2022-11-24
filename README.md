@@ -58,6 +58,8 @@
     - Improved small error feedbacks
     - Fixed small bugs with the audio that caused to crash
     - Added a new feature that sorts the firmwares correctly now
+  # Beta 2.3:
+    - Added anonfiles support
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
