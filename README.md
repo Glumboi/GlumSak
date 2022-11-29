@@ -3,9 +3,9 @@
 <img src="https://i.imgur.com/fCp9uRh.png" width="312" height="100" />
 
 Since this is a BETA I want to gather as much feedback as posible, thus I advise everyone to share their experience of with GlumSak
-Click me to write an E-Mail to me that describes your experience!](glumboi.contact@gmail.com)
-[](mailto:?subject=[My experience with GlumSak]%20Source%20Han%20Sans)
-  
+
+[Click me to write an E-Mail to me that describes your experience!](glumboi.contact@gmail.com)
+
 # News
 
 [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=GlumSak)](https://github.com/gazf/github-readme-twitter)
