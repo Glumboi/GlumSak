@@ -24,9 +24,6 @@ Since this is a BETA I want to gather as much feedback as possible, thus I advis
 <div align="center">
 
 # Restart is recommended after install
-
-# Manual (UI could differ from the image)
-  ![alt text](https://i.imgur.com/0C5dTRA.png)
   
 # Changelog
   # Beta 1.0:
@@ -99,6 +96,12 @@ by buying me a server to test around with and for having such a cool community.
 # What is it written in?
   - C# Winforms in .NET Framework 4.8.1
   - A little part is written in Python
+  
+# UI screenshots (UI could differ from the image depending on how fast I update it)
+  ![alt text](https://i.imgur.com/vzyujna.png)
+  ![alt text](https://i.imgur.com/ecO35CQ.png)
+  ![alt text](https://i.imgur.com/b2oQfnc.png)
+  ![alt text](https://i.imgur.com/34eRMMg.png)
   
   
 # This is for education, use at your own risk!
