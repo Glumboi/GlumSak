@@ -64,6 +64,12 @@ Since this is a BETA I want to gather as much feedback as possible, thus I advis
     - Added a new feature that sorts the firmwares correctly now
   # Beta 2.3:
     - Added anonfiles support
+  # Beta 3.0:
+    - New feature (cache/use last session)
+    - Re aligned some small UI controls
+    - Added rounded corners to the settings textboxes
+    - Improved loading time by a tiny bit
+    - Settings window redesign
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
