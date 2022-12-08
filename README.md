@@ -89,6 +89,7 @@ by buying me a server to test around with and for having such a cool community.
   
 # Future plans
   Soon!
+  [Roadmap](https://trello.com/b/NgcOhYhr/glumsak-road-map)
   
 # Current supported shaders
   - All as long as you use a valid shaders file
