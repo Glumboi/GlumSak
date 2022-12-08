@@ -88,7 +88,6 @@ by buying me a server to test around with and for having such a cool community.
   [Click me to learn how to create pastes!](https://github.com/Glumboi/GlumSak-PasteCreator#how-to-use)
   
 # Future plans
-  Soon!
   [Roadmap](https://trello.com/b/NgcOhYhr/glumsak-road-map)
   
 # Current supported shaders
