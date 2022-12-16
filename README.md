@@ -5,6 +5,7 @@
 Since this is a BETA I want to gather as much feedback as possible, thus I advise everyone to share their experience with GlumSak
 
 [Click me to write an E-Mail to me that describes your experience!](mailto:glumboi.contact@gmail.com)
+  
 [Click me to read the GlumSak guide!](https://docs.google.com/document/d/1NTG5DGCiKXF14YSqPk9PfOzY69keQOmrOqjAMg0o_YY)
 
 # News
