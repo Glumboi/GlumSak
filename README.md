@@ -75,6 +75,9 @@ Since this is a BETA I want to gather as much feedback as possible, thus I advis
     - Added a translation feature (current included langs: en-us, ger-de, tr-turk)
     - App now saves the last size of the form and re applys it
     - New dynamic scrollbar that adjusts itself depending on the current formsize and games in the flowpanel
+  # Beta 4.1:
+    - Added russian translation
+    - Fixed infinite loading bug
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
