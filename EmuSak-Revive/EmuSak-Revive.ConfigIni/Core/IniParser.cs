@@ -48,7 +48,7 @@ namespace EmuSak_Revive.ConfigIni.Core
 
                 while (strLine != null)
                 {
-                    strLine = strLine.Trim().ToUpper();
+                    strLine = strLine.Trim();
 
                     if (strLine != "")
                     {
@@ -99,8 +99,8 @@ namespace EmuSak_Revive.ConfigIni.Core
         public String GetSetting(String sectionName, String settingName)
         {
             SectionPair sectionPair;
-            sectionPair.Section = sectionName.ToUpper();
-            sectionPair.Key = settingName.ToUpper();
+            sectionPair.Section = sectionName;
+            sectionPair.Key = settingName;
 
             return (String)keyPairs[sectionPair];
         }
@@ -115,7 +115,7 @@ namespace EmuSak_Revive.ConfigIni.Core
 
             foreach (SectionPair pair in keyPairs.Keys)
             {
-                if (pair.Section == sectionName.ToUpper())
+                if (pair.Section == sectionName)
                     tmpArray.Add(pair.Key);
             }
 
@@ -131,8 +131,8 @@ namespace EmuSak_Revive.ConfigIni.Core
         public void AddSetting(String sectionName, String settingName, String settingValue)
         {
             SectionPair sectionPair;
-            sectionPair.Section = sectionName.ToUpper();
-            sectionPair.Key = settingName.ToUpper();
+            sectionPair.Section = sectionName;
+            sectionPair.Key = settingName;
 
             if (keyPairs.ContainsKey(sectionPair))
                 keyPairs.Remove(sectionPair);
@@ -158,8 +158,8 @@ namespace EmuSak_Revive.ConfigIni.Core
         public void DeleteSetting(String sectionName, String settingName)
         {
             SectionPair sectionPair;
-            sectionPair.Section = sectionName.ToUpper();
-            sectionPair.Key = settingName.ToUpper();
+            sectionPair.Section = sectionName;
+            sectionPair.Key = settingName;
 
             if (keyPairs.ContainsKey(sectionPair))
                 keyPairs.Remove(sectionPair);

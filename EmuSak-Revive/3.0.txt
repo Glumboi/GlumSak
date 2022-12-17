@@ -1,0 +1,7 @@
+3.0:
+
+- New feature (cache/use last session)
+- Re aligned some small UI controls
+- Added rounded corners to the settings textboxes
+- Improved loading time by a tiny bid
+- Settings window redesign

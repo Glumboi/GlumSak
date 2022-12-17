@@ -97,3 +97,10 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\NAudio.WinFor
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\NAudio.Core.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\NAudio.WinMM.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\Microsoft.Win32.Registry.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\AnonFileAPI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\de\EmuSak-Revive.GUI.resources.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak_Revive.Language.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\bin\Release\EmuSak_Revive.Language.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.MainWindow.de.resources
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\de\EmuSak-Revive.GUI.resources.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.GUI\obj\Release\EmuSak_Revive.GUI.New.MainWindow.resources

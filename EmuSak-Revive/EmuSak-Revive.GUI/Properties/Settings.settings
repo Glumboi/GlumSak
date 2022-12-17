@@ -18,10 +18,22 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="PlaySounds" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="MainWindowVolume" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">20</Value>
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="UseLastSession" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SelectedLanguage" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LastWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1034</Value>
+    </Setting>
+    <Setting Name="LastHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">581</Value>
     </Setting>
   </Settings>
 </SettingsFile>

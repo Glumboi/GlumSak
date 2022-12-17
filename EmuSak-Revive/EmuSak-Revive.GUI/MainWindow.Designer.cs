@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.PanelContainer = new Telerik.WinControls.UI.RadScrollablePanelContainer();
             this.Firmware_DropDown = new Bunifu.UI.WinForms.BunifuDropdown();
             this.Main_Panel = new System.Windows.Forms.Panel();
             this.Games_FlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Download_ProgressBar = new Telerik.WinControls.UI.RadProgressBar();
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
+            this.RemoveFilter_Button = new ns1.SiticoneCircleButton();
+            this.Game_ContextMenu = new System.Windows.Forms.ContextMenu();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.Filter_TextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.Games_ScrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.Keys_Button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.DownloadFirmware_Button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.About_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Update_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Configure_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Discord_Button = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.Games_ScrollBar = new Bunifu.UI.WinForms.BunifuVScrollBar();
-            this.Filter_TextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.RemoveFilter_Button = new ns1.SiticoneCircleButton();
-            this.Game_ContextMenu = new System.Windows.Forms.ContextMenu();
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.Main_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Download_ProgressBar)).BeginInit();
             this.SuspendLayout();
@@ -131,6 +131,166 @@
             this.Download_ProgressBar.Size = new System.Drawing.Size(684, 19);
             this.Download_ProgressBar.TabIndex = 18;
             this.Download_ProgressBar.ThemeName = "CrystalDark";
+            // 
+            // RemoveFilter_Button
+            // 
+            this.RemoveFilter_Button.BackColor = System.Drawing.Color.Transparent;
+            this.RemoveFilter_Button.BorderColor = System.Drawing.Color.Transparent;
+            this.RemoveFilter_Button.CheckedState.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.CustomImages.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.RemoveFilter_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RemoveFilter_Button.ForeColor = System.Drawing.Color.White;
+            this.RemoveFilter_Button.HoveredState.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.Location = new System.Drawing.Point(475, 51);
+            this.RemoveFilter_Button.Name = "RemoveFilter_Button";
+            this.RemoveFilter_Button.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.RemoveFilter_Button.ShadowDecoration.Mode = ns5.ShadowMode.Circle;
+            this.RemoveFilter_Button.ShadowDecoration.Parent = this.RemoveFilter_Button;
+            this.RemoveFilter_Button.Size = new System.Drawing.Size(19, 19);
+            this.RemoveFilter_Button.TabIndex = 24;
+            this.RemoveFilter_Button.Text = "X";
+            this.RemoveFilter_Button.Click += new System.EventHandler(this.RemoveFilter_Button_Click);
+            // 
+            // Game_ContextMenu
+            // 
+            this.Game_ContextMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem1});
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.Index = 0;
+            this.menuItem1.Text = "Install shader for {game}";
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(106, -34);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(14, 542);
+            this.bunifuSeparator1.TabIndex = 25;
+            // 
+            // Filter_TextBox
+            // 
+            this.Filter_TextBox.AcceptsReturn = false;
+            this.Filter_TextBox.AcceptsTab = false;
+            this.Filter_TextBox.AnimationSpeed = 200;
+            this.Filter_TextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Filter_TextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Filter_TextBox.BackColor = System.Drawing.Color.Transparent;
+            this.Filter_TextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Filter_TextBox.BackgroundImage")));
+            this.Filter_TextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Filter_TextBox.BorderRadius = 10;
+            this.Filter_TextBox.BorderThickness = 1;
+            this.Filter_TextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Filter_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Filter_TextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Filter_TextBox.DefaultText = "";
+            this.Filter_TextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Filter_TextBox.ForeColor = System.Drawing.Color.White;
+            this.Filter_TextBox.HideSelection = true;
+            this.Filter_TextBox.IconLeft = null;
+            this.Filter_TextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.Filter_TextBox.IconPadding = 10;
+            this.Filter_TextBox.IconRight = null;
+            this.Filter_TextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.Filter_TextBox.Lines = new string[0];
+            this.Filter_TextBox.Location = new System.Drawing.Point(128, 50);
+            this.Filter_TextBox.MaxLength = 32767;
+            this.Filter_TextBox.MinimumSize = new System.Drawing.Size(1, 1);
+            this.Filter_TextBox.Modified = false;
+            this.Filter_TextBox.Multiline = false;
+            this.Filter_TextBox.Name = "Filter_TextBox";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Filter_TextBox.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Filter_TextBox.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Filter_TextBox.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Filter_TextBox.OnIdleState = stateProperties4;
+            this.Filter_TextBox.Padding = new System.Windows.Forms.Padding(3);
+            this.Filter_TextBox.PasswordChar = '\0';
+            this.Filter_TextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.Filter_TextBox.PlaceholderText = "Filter games";
+            this.Filter_TextBox.ReadOnly = false;
+            this.Filter_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Filter_TextBox.SelectedText = "";
+            this.Filter_TextBox.SelectionLength = 0;
+            this.Filter_TextBox.SelectionStart = 0;
+            this.Filter_TextBox.ShortcutsEnabled = true;
+            this.Filter_TextBox.Size = new System.Drawing.Size(345, 20);
+            this.Filter_TextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.Filter_TextBox.TabIndex = 23;
+            this.Filter_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Filter_TextBox.TextMarginBottom = 0;
+            this.Filter_TextBox.TextMarginLeft = 3;
+            this.Filter_TextBox.TextMarginTop = 0;
+            this.Filter_TextBox.TextPlaceholder = "Filter games";
+            this.Filter_TextBox.UseSystemPasswordChar = false;
+            this.Filter_TextBox.WordWrap = true;
+            this.Filter_TextBox.TextChange += new System.EventHandler(this.Filter_TextBox_TextChanged);
+            // 
+            // Games_ScrollBar
+            // 
+            this.Games_ScrollBar.AllowCursorChanges = true;
+            this.Games_ScrollBar.AllowHomeEndKeysDetection = false;
+            this.Games_ScrollBar.AllowIncrementalClickMoves = true;
+            this.Games_ScrollBar.AllowMouseDownEffects = true;
+            this.Games_ScrollBar.AllowMouseHoverEffects = true;
+            this.Games_ScrollBar.AllowScrollingAnimations = true;
+            this.Games_ScrollBar.AllowScrollKeysDetection = true;
+            this.Games_ScrollBar.AllowScrollOptionsMenu = true;
+            this.Games_ScrollBar.AllowShrinkingOnFocusLost = false;
+            this.Games_ScrollBar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Games_ScrollBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Games_ScrollBar.BackgroundImage")));
+            this.Games_ScrollBar.BindingContainer = this.Games_FlowPanel;
+            this.Games_ScrollBar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Games_ScrollBar.BorderRadius = 14;
+            this.Games_ScrollBar.BorderThickness = 1;
+            this.Games_ScrollBar.DurationBeforeShrink = 2000;
+            this.Games_ScrollBar.LargeChange = 10;
+            this.Games_ScrollBar.Location = new System.Drawing.Point(792, 78);
+            this.Games_ScrollBar.Maximum = 100;
+            this.Games_ScrollBar.Minimum = 0;
+            this.Games_ScrollBar.MinimumThumbLength = 18;
+            this.Games_ScrollBar.Name = "Games_ScrollBar";
+            this.Games_ScrollBar.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
+            this.Games_ScrollBar.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
+            this.Games_ScrollBar.OnDisable.ThumbColor = System.Drawing.Color.Silver;
+            this.Games_ScrollBar.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Games_ScrollBar.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Games_ScrollBar.ShrinkSizeLimit = 3;
+            this.Games_ScrollBar.Size = new System.Drawing.Size(20, 347);
+            this.Games_ScrollBar.SmallChange = 1;
+            this.Games_ScrollBar.TabIndex = 22;
+            this.Games_ScrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Games_ScrollBar.ThumbLength = 34;
+            this.Games_ScrollBar.ThumbMargin = 1;
+            this.Games_ScrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
+            this.Games_ScrollBar.Value = 0;
             // 
             // Keys_Button
             // 
@@ -454,176 +614,15 @@
             this.Discord_Button.ZoomSpeed = 10;
             this.Discord_Button.Click += new System.EventHandler(this.Discord_Button_Click);
             // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
-            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(108, 0);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(14, 514);
-            this.bunifuSeparator1.TabIndex = 5;
-            // 
-            // Games_ScrollBar
-            // 
-            this.Games_ScrollBar.AllowCursorChanges = true;
-            this.Games_ScrollBar.AllowHomeEndKeysDetection = false;
-            this.Games_ScrollBar.AllowIncrementalClickMoves = true;
-            this.Games_ScrollBar.AllowMouseDownEffects = true;
-            this.Games_ScrollBar.AllowMouseHoverEffects = true;
-            this.Games_ScrollBar.AllowScrollingAnimations = true;
-            this.Games_ScrollBar.AllowScrollKeysDetection = true;
-            this.Games_ScrollBar.AllowScrollOptionsMenu = true;
-            this.Games_ScrollBar.AllowShrinkingOnFocusLost = false;
-            this.Games_ScrollBar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Games_ScrollBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Games_ScrollBar.BackgroundImage")));
-            this.Games_ScrollBar.BindingContainer = this.Games_FlowPanel;
-            this.Games_ScrollBar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Games_ScrollBar.BorderRadius = 14;
-            this.Games_ScrollBar.BorderThickness = 1;
-            this.Games_ScrollBar.DurationBeforeShrink = 2000;
-            this.Games_ScrollBar.LargeChange = 10;
-            this.Games_ScrollBar.Location = new System.Drawing.Point(792, 78);
-            this.Games_ScrollBar.Maximum = 100;
-            this.Games_ScrollBar.Minimum = 0;
-            this.Games_ScrollBar.MinimumThumbLength = 18;
-            this.Games_ScrollBar.Name = "Games_ScrollBar";
-            this.Games_ScrollBar.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.Games_ScrollBar.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.Games_ScrollBar.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.Games_ScrollBar.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Games_ScrollBar.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Games_ScrollBar.ShrinkSizeLimit = 3;
-            this.Games_ScrollBar.Size = new System.Drawing.Size(20, 347);
-            this.Games_ScrollBar.SmallChange = 1;
-            this.Games_ScrollBar.TabIndex = 22;
-            this.Games_ScrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Games_ScrollBar.ThumbLength = 34;
-            this.Games_ScrollBar.ThumbMargin = 1;
-            this.Games_ScrollBar.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
-            this.Games_ScrollBar.Value = 0;
-            // 
-            // Filter_TextBox
-            // 
-            this.Filter_TextBox.AcceptsReturn = false;
-            this.Filter_TextBox.AcceptsTab = false;
-            this.Filter_TextBox.AnimationSpeed = 200;
-            this.Filter_TextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.Filter_TextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.Filter_TextBox.BackColor = System.Drawing.Color.Transparent;
-            this.Filter_TextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Filter_TextBox.BackgroundImage")));
-            this.Filter_TextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Filter_TextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Filter_TextBox.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Filter_TextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.Filter_TextBox.BorderRadius = 10;
-            this.Filter_TextBox.BorderThickness = 1;
-            this.Filter_TextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.Filter_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Filter_TextBox.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.Filter_TextBox.DefaultText = "";
-            this.Filter_TextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Filter_TextBox.ForeColor = System.Drawing.Color.White;
-            this.Filter_TextBox.HideSelection = true;
-            this.Filter_TextBox.IconLeft = null;
-            this.Filter_TextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Filter_TextBox.IconPadding = 10;
-            this.Filter_TextBox.IconRight = null;
-            this.Filter_TextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Filter_TextBox.Lines = new string[0];
-            this.Filter_TextBox.Location = new System.Drawing.Point(128, 49);
-            this.Filter_TextBox.MaxLength = 32767;
-            this.Filter_TextBox.MinimumSize = new System.Drawing.Size(1, 1);
-            this.Filter_TextBox.Modified = false;
-            this.Filter_TextBox.Multiline = false;
-            this.Filter_TextBox.Name = "Filter_TextBox";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Filter_TextBox.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.Filter_TextBox.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Filter_TextBox.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Filter_TextBox.OnIdleState = stateProperties4;
-            this.Filter_TextBox.Padding = new System.Windows.Forms.Padding(3);
-            this.Filter_TextBox.PasswordChar = '\0';
-            this.Filter_TextBox.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.Filter_TextBox.PlaceholderText = "Filter games";
-            this.Filter_TextBox.ReadOnly = false;
-            this.Filter_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Filter_TextBox.SelectedText = "";
-            this.Filter_TextBox.SelectionLength = 0;
-            this.Filter_TextBox.SelectionStart = 0;
-            this.Filter_TextBox.ShortcutsEnabled = true;
-            this.Filter_TextBox.Size = new System.Drawing.Size(345, 23);
-            this.Filter_TextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.Filter_TextBox.TabIndex = 23;
-            this.Filter_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Filter_TextBox.TextMarginBottom = 0;
-            this.Filter_TextBox.TextMarginLeft = 3;
-            this.Filter_TextBox.TextMarginTop = 0;
-            this.Filter_TextBox.TextPlaceholder = "Filter games";
-            this.Filter_TextBox.UseSystemPasswordChar = false;
-            this.Filter_TextBox.WordWrap = true;
-            this.Filter_TextBox.TextChange += new System.EventHandler(this.Filter_TextBox_TextChanged);
-            // 
-            // RemoveFilter_Button
-            // 
-            this.RemoveFilter_Button.BackColor = System.Drawing.Color.Transparent;
-            this.RemoveFilter_Button.BorderColor = System.Drawing.Color.Transparent;
-            this.RemoveFilter_Button.CheckedState.Parent = this.RemoveFilter_Button;
-            this.RemoveFilter_Button.CustomImages.Parent = this.RemoveFilter_Button;
-            this.RemoveFilter_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.RemoveFilter_Button.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.RemoveFilter_Button.ForeColor = System.Drawing.Color.White;
-            this.RemoveFilter_Button.HoveredState.Parent = this.RemoveFilter_Button;
-            this.RemoveFilter_Button.Location = new System.Drawing.Point(475, 51);
-            this.RemoveFilter_Button.Name = "RemoveFilter_Button";
-            this.RemoveFilter_Button.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.RemoveFilter_Button.ShadowDecoration.Mode = ns5.ShadowMode.Circle;
-            this.RemoveFilter_Button.ShadowDecoration.Parent = this.RemoveFilter_Button;
-            this.RemoveFilter_Button.Size = new System.Drawing.Size(19, 19);
-            this.RemoveFilter_Button.TabIndex = 24;
-            this.RemoveFilter_Button.Text = "X";
-            this.RemoveFilter_Button.Click += new System.EventHandler(this.RemoveFilter_Button_Click);
-            // 
-            // Game_ContextMenu
-            // 
-            this.Game_ContextMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem1});
-            // 
-            // menuItem1
-            // 
-            this.menuItem1.Index = 0;
-            this.menuItem1.Text = "Install shader for {game}";
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(824, 462);
-            this.Controls.Add(this.RemoveFilter_Button);
             this.Controls.Add(this.Filter_TextBox);
+            this.Controls.Add(this.bunifuSeparator1);
+            this.Controls.Add(this.RemoveFilter_Button);
             this.Controls.Add(this.Games_ScrollBar);
             this.Controls.Add(this.Download_ProgressBar);
             this.Controls.Add(this.Main_Panel);
@@ -634,7 +633,6 @@
             this.Controls.Add(this.Update_Button);
             this.Controls.Add(this.Configure_Button);
             this.Controls.Add(this.Discord_Button);
-            this.Controls.Add(this.bunifuSeparator1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -655,7 +653,6 @@
         private Bunifu.UI.WinForms.BunifuImageButton Update_Button;
         private Bunifu.UI.WinForms.BunifuImageButton Configure_Button;
         private Bunifu.UI.WinForms.BunifuImageButton Discord_Button;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Telerik.WinControls.UI.RadScrollablePanelContainer PanelContainer;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Keys_Button;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton DownloadFirmware_Button;
@@ -669,5 +666,6 @@
         private ns1.SiticoneCircleButton RemoveFilter_Button;
         private System.Windows.Forms.ContextMenu Game_ContextMenu;
         private System.Windows.Forms.MenuItem menuItem1;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
     }
 }

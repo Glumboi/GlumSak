@@ -29,3 +29,4 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsof
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsoft.WindowsAPICodePack.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Microsoft.WindowsAPICodePack.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\AnonFileAPI.dll

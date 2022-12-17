@@ -24,6 +24,8 @@ namespace EmuSak_Revive.GUI
         public bool DoneLoading { get; private set; }
         public static int EmuConfig { get; private set; }
 
+        private List<BunifuImageButton> bunifuImageButtons = new List<BunifuImageButton>();
+
         /*public static int WindowVolume
         { get => (int)mainWindowPlayer.Volume * 100; set { mainWindowPlayer.Volume = value; } }*/
 
@@ -41,7 +43,7 @@ namespace EmuSak_Revive.GUI
 
         private int clickCount = 0; //For the lil easter egg
         private string firmwareToDownload = string.Empty;
-        private Timer cooldownTimer = new Timer();
+        private readonly Timer cooldownTimer = new Timer();
 
         public MainWindow()
         {
@@ -93,13 +95,23 @@ namespace EmuSak_Revive.GUI
 
         public void InitSettings()
         {
+            LangLoader.Run();
             cooldownTimer.Tick += CooldownTimer_Tick;
             cooldownTimer.Interval = 3000;
             Networking.DownloadProgressBar = Download_ProgressBar;
             Download_ProgressBar.Visible = false;
             Networking.MainWindowHandle = this.Handle;
+
             LoadFirmwares();
             CheckShaderUrl();
+        }
+
+        private void LoadEmuIcon()
+        {
+            if (EmuConfig == 0)
+            {
+                
+            }
         }
 
         private void CheckShaderUrl()
@@ -133,16 +145,7 @@ namespace EmuSak_Revive.GUI
                 Firmware_DropDown.Items.Add(v);
             }
 
-            var highestVersion = Max(Networking.Versions.ToArray());
-            for (int i = 0; i < Firmware_DropDown.Items.Count; i++)
-            {
-                object dropItem = Firmware_DropDown.Items[i];
-                var itemText = dropItem.ToString();
-                if (itemText.Contains(highestVersion.ToString()))
-                {
-                    Firmware_DropDown.SelectedIndex = i;
-                }
-            }
+            Firmware_DropDown.SelectedIndex = 0;
 
             debugConsole.Info($"Firmwares loaded!, Amount of combobox items: {Firmware_DropDown.Items.Count}");
         }
@@ -162,9 +165,9 @@ namespace EmuSak_Revive.GUI
         private void MainWindow_Load(object sender, EventArgs e)
         {
             UI.ChangeToDarkMode(this);
+            LoadSoundFiles();
             LoadStandardPresence();
             InitSettings();
-            LoadSoundFiles();
         }
 
         public void ChangeEmuConfig(int config)
@@ -200,9 +203,22 @@ namespace EmuSak_Revive.GUI
             }
         }
 
-        private void CreateButton(string name, string imageUrl, string tag)
+        private void CreateButton(
+            string name,
+            string imageUrl,
+            string tag,
+            bool useImage = false,
+            Image btnImage = null)
         {
-            var img = Networking.CreateImageFromURL(imageUrl);
+            Image img = null;
+            if (!useImage)
+            {
+                img = Networking.CreateImageFromURL(imageUrl);
+            }
+            else
+            {
+                img = btnImage;
+            }
 
             BunifuImageButton btn = new BunifuImageButton();
             btn.Name = name;
@@ -217,7 +233,7 @@ namespace EmuSak_Revive.GUI
             btn.Tag = tag;
 
             Games_FlowPanel.Controls.Add(btn);
-
+            bunifuImageButtons.Add(btn);
             debugConsole.Info($"Created a button with the id: {btn.Name}");
         }
 
@@ -232,8 +248,9 @@ namespace EmuSak_Revive.GUI
         {
             List<string> fileLines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Python/gameIcons_Ids.txt").ToList();
 
-            foreach (string line in fileLines)
+            for (int i = 0; i < fileLines.Count; i++)
             {
+                string line = fileLines[i];
                 if (!line.Contains("null"))
                 {
                     string fileGameID = line.Split('\"')[3];
@@ -299,6 +316,45 @@ namespace EmuSak_Revive.GUI
             }
 
             LoadScrollbar();
+
+            List<Image> images = new List<Image>();
+            List<string> names = new List<string>();
+            List<string> ids = new List<string>();
+
+            foreach (var item in bunifuImageButtons)
+            {
+                images.Add(item.Image);
+                ids.Add(item.Name);
+                names.Add(item.Tag.ToString());
+            }
+
+            GlumSakCache.CreateGlumSakCache(images, names, ids, config);
+        }
+
+        public void LoadWithCache()
+        {
+            GlumSakCache.GetCacheContent();
+            var gameImgs = GlumSakCache.GameImgs;
+            var gameNames = GlumSakCache.GameNames;
+            var gameIds = GlumSakCache.GameIds;
+
+            LoadPortableEmus();
+            if (GlumSakCache.EmuConfig == "Yuzu")
+            {
+                ChangeEmuConfig(0);
+                Yuzu.GetGames();
+            }
+            else
+            {
+                ChangeEmuConfig(1);
+                Ryujinx.GetGames();
+            }
+
+            for (int i = 0; i < gameNames.Count; i++)
+            {
+                CreateButton(gameNames[i], "", gameIds[i], true, gameImgs[i]);
+            }
+            DoneLoading = true;
         }
 
         public void LoadButtons()
@@ -354,7 +410,6 @@ namespace EmuSak_Revive.GUI
         private void Configure_Button_Click(object sender, EventArgs e)
         {
             settingsWindow.Show();
-            //configureWindow.Show();
         }
 
         private void Discord_Button_Click(object sender, EventArgs e)
@@ -407,7 +462,7 @@ namespace EmuSak_Revive.GUI
         {
             Temporary.DeleteTemporaryFiles();
 
-            MessageBox.Show("Deleted all temporary files");
+            MessageBox.Show("Deleted all temporary files.\nThis includes the last sessions cache aswell as any temp files that GlumSak created.");
         }
 
         private void Firmware_DropDown_SelectedIndexChanged(object sender, EventArgs e)
@@ -434,16 +489,12 @@ namespace EmuSak_Revive.GUI
             {
                 Games_FlowPanel.VerticalScroll.Value = e.NewValue;
             }
-
-            /*Games_FlowPanel.Invalidate();
-            base.OnScroll(e);*/
         }
 
         private void ResetFilter()
         {
             foreach (var item in Games_FlowPanel.Controls.OfType<BunifuImageButton>())
             {
-                //item.Visible = true;
                 item.Invoke((MethodInvoker)delegate
                 {
                     // Running on the UI thread
@@ -463,7 +514,6 @@ namespace EmuSak_Revive.GUI
                         // Running on the UI thread
                         item.Visible = false;
                     });
-                    //item.Visible = false;
                 }
             }
         }
@@ -473,12 +523,10 @@ namespace EmuSak_Revive.GUI
             //We use task and ivoke to make sure the UI stays responsive while filtering
             Task.Run(() =>
             {
-                var filter = Filter_TextBox.Text.ToLower();
-
-                if (!string.IsNullOrWhiteSpace(filter))
+                if (!string.IsNullOrWhiteSpace(Filter_TextBox.Text.ToLower()))
                 {
                     ResetFilter();
-                    FilterGames(filter);
+                    FilterGames(Filter_TextBox.Text.ToLower());
                 }
 
                 if (string.IsNullOrWhiteSpace(Filter_TextBox.Text))

@@ -1,12 +1,15 @@
 ﻿using Bunifu.Framework.UI;
 using Bunifu.UI.WinForms;
+using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.Emulators;
 using EmuSak_Revive.GUI.Generics;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Telerik.WinControls.UI;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace EmuSak_Revive.GUI
 {
@@ -26,15 +29,22 @@ namespace EmuSak_Revive.GUI
             InitializeComponent();
         }
 
+        private void GetSettings()
+        {
+            LangLoader.Run();
+            Cache_CheckBox.Checked = Properties.Settings.Default.UseLastSession;
+        }
+
+        private void SaveSettings()
+        {
+            Properties.Settings.Default.UseLastSession = Cache_CheckBox.Checked;
+            Properties.Settings.Default.Save();
+        }
+
         private void ConfigureWindow_Load(object sender, EventArgs e)
         {
             UI.ChangeToDarkMode(this);
-
-            /*BunifuToolTip yuzuToolTip = new BunifuToolTip();
-            BunifuToolTip ryujinxToolTip = new BunifuToolTip();
-
-            yuzuToolTip.SetToolTip(Yuzu_Button, "Launches the app in Yuzu mode");
-            ryujinxToolTip.SetToolTip(Ryujinx_Button, "Launches the app in Ryujinx mode");*/
+            GetSettings();
         }
 
         private void TitleBar_MouseDown(object sender, MouseEventArgs e)
@@ -59,22 +69,44 @@ namespace EmuSak_Revive.GUI
         private void LaunchApp(int mode)
         {
             LoadingScreen ls = new LoadingScreen();
-            this.Hide();
-
             try
             {
-                if (mode == 0)
+                if (mode == 0 && !Cache_CheckBox.Checked)
                 {
                     ls.Show();
+                    Close();
                     ls.LaunchWithYuzuConfig();
                     return;
                 }
 
-                if (mode == 1)
+                if (mode == 1 && !Cache_CheckBox.Checked)
                 {
                     ls.Show();
+                    Close();
                     ls.LaunchWithRyujinxConfig();
                     return;
+                }
+
+                if (Cache_CheckBox.Checked)
+                {
+                    if (GlumSakCache.CacheExists())
+                    {
+                        ls.ignoreCache = false;
+                        ls.Show();
+                        Close();
+                        ls.LaunchWithLastSesionCache();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No cache found, make sure you started GlumSak without using cache once!\n" +
+                                "Also the cache will always be your last session meaning: " +
+                                "If you launch in Yuzu mode but your last config was created in Ryujinx mode, " +
+                                "it will use the ryujinx config then!",
+                                "Info",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception)
@@ -96,6 +128,15 @@ namespace EmuSak_Revive.GUI
         private void Yuzu_Button_Click(object sender, EventArgs e)
         {
             LaunchApp(0);
+        }
+
+        private void ConfigurationWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
+            if (e.CloseReason != CloseReason.UserClosing) return;
+            e.Cancel = true;
+            SaveSettings();
+            Hide();
         }
     }
 }

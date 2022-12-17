@@ -82,3 +82,11 @@ F:\visual studio\repos\EmuSak-Revive\bin\Debug\NAudio.WinForms.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\NAudio.Core.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\NAudio.WinMM.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\de\EmuSak-Revive.GUI.resources.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\AnonFileAPI.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak-Revive.ConfigIni.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak-Revive.ConfigIni.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak-Revive.ConfigIni.dll.config
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak_Revive.Language.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak_Revive.Language.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\Guna.UI2.dll

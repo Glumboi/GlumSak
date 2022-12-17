@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Windows.Forms" />
@@ -56,6 +57,7 @@
     <Compile Include="EmuFirmware.cs" />
     <Compile Include="EmuKeys.cs" />
     <Compile Include="EmuShader.cs" />
+    <Compile Include="GlumSakCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Temporary.cs" />
     <Compile Include="ZipArchiveExtensions.cs" />

@@ -1,15 +1,21 @@
 ﻿using Bunifu.UI.WinForms;
+using EmuSak_Revive.ConfigIni;
+using EmuSak_Revive.ConfigIni.Core;
+using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.GUI.Generics;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace EmuSak_Revive.GUI
 {
@@ -26,7 +32,7 @@ namespace EmuSak_Revive.GUI
             InitializeComponent();
         }
 
-        private void LoadSettings()
+        public void LoadSettings()
         {
             YuzuPath_TextBox.Text = Properties.Settings.Default.PortableYuzuPath;
             RyuPath_TextBox.Text = Properties.Settings.Default.PortableRyujinxpath;
@@ -36,6 +42,16 @@ namespace EmuSak_Revive.GUI
             Ryujinx_Image.BorderRadius = 0;
             Yuzu_Image.BorderRadius = 0;
             MainWindow_AudioSlider.Value = Properties.Settings.Default.MainWindowVolume;
+            UpdateSliderValLabel();
+            LoadLanguages();
+            try
+            {
+                Language_DropDown.SelectedIndex = Properties.Settings.Default.SelectedLanguage;
+            }
+            catch (Exception)
+            {
+                return;
+            }
         }
 
         private void SaveSettings()
@@ -63,11 +79,23 @@ namespace EmuSak_Revive.GUI
                 Properties.Settings.Default.PortableRyujinxpath = string.Empty;
                 Properties.Settings.Default.PortableRyujinx = false;
             }
+
             Properties.Settings.Default.ShaderLinks = PasteBinUrl_TextBox.Text;
             Network.Networking.ShaderUrl = ShaderUrl;
             Properties.Settings.Default.PlaySounds = PlaySounds_CheckBox.Checked;
             Properties.Settings.Default.MainWindowVolume = MainWindow_AudioSlider.Value;
+            Properties.Settings.Default.SelectedLanguage = Language_DropDown.SelectedIndex;
+
             Properties.Settings.Default.Save();
+        }
+
+        private void LoadLanguages()
+        {
+            Language.Lang.LoadLanguageConfigs();
+            foreach (var str in Language.Lang.Languages.Distinct())
+            {
+                Language_DropDown.Items.Add(str);
+            }
         }
 
         private void SettingsWindow_Load(object sender, EventArgs e)
@@ -124,6 +152,36 @@ namespace EmuSak_Revive.GUI
         private void MainWindow_AudioSlider_Scroll(object sender, Utilities.BunifuSlider.BunifuHScrollBar.ScrollEventArgs e)
         {
             MainWindow.mainWindowPlayer.Volume = MainWindow_AudioSlider.Value / 100f;
+            UpdateSliderValLabel();
+        }
+
+        private void UpdateSliderValLabel()
+        {
+            MainWindowVolume_Label.Text = MainWindow_AudioSlider.Value.ToString();
+        }
+
+        private void UpdateExtraLangs()
+        {
+            Network.Networking.TransLateFileSize(Language.Lang.GetSingeString("extraLang", "FileSizeString"));
+        }
+
+        private void UpdateLanguage()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                Language.Lang.LoadLanguage(Language_DropDown.SelectedIndex, form);
+            }
+            UpdateExtraLangs();
+        }
+
+        private void Language_DropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateLanguage();
+        }
+
+        private void PlaySounds_CheckBox_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)
+        {
+            Properties.Settings.Default.PlaySounds = PlaySounds_CheckBox.Checked;
         }
     }
 }

@@ -24,12 +24,17 @@ namespace EmuSak_Revive.EmuFiles
         {
             DirectoryInfo di = new DirectoryInfo(path);
 
-            foreach (FileInfo file in di.GetFiles())
+            var files = di.GetFiles();
+            for (var index = 0; index < files.Length; index++)
             {
+                var file = files[index];
                 file.Delete();
             }
-            foreach (DirectoryInfo dir in di.GetDirectories())
+
+            var dirs = di.GetDirectories();
+            for (var index = 0; index < dirs.Length; index++)
             {
+                var dir = dirs[index];
                 dir.Delete(true);
             }
         }
@@ -44,31 +49,23 @@ namespace EmuSak_Revive.EmuFiles
             //Network.GDriveDownloader downloader = new Network.GDriveDownloader();
             //downloader.DownloadFile(url, fileName);
 
-            Task.Run(() =>
-            {
-                if (portable)
-                {
-                    RunRyuDownloadAsync(fileName, portableFirmwareLoc, url);
-                }
-                else
-                {
-                    RunRyuDownloadAsync(fileName, firmwareLoc, url);
-                }
-            });
+            Task.Run(() => { RunRyuDownloadAsync(fileName, portable ? portableFirmwareLoc : firmwareLoc, url); });
         }
 
         private static void RyuFirmwareExtraction(string path)
         {
             var files = Directory.GetFiles(path);
 
-            foreach(string file in files)
+            for (var index = 0; index < files.Length; index++)
             {
+                var file = files[index];
                 var dirName = file;
                 var splitted = file.Split('\\');
 
-                foreach(string fileName in splitted)
+                for (var i = 0; i < splitted.Length; i++)
                 {
-                    if(fileName.Contains(".nca"))
+                    var fileName = splitted[i];
+                    if (fileName.Contains(".nca"))
                     {
                         File.Move(file, path + "\\" + "\\00");
                         Directory.CreateDirectory(path + "\\" + fileName);

@@ -187,9 +187,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConfigIni.cs" />
-    <Compile Include="Core\ConfigVars.cs" />
-    <Compile Include="Core\IniFile.cs" />
     <Compile Include="Core\IniParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

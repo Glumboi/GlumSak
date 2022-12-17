@@ -11,7 +11,8 @@ namespace EmuSak_Revive.GUI
 {
     public partial class LoadingScreen : Form
     {
-        MainWindow mainWindow = new MainWindow();
+        private readonly New.MainWindow mainWindow = new New.MainWindow();
+        public bool ignoreCache = true;
 
         public LoadingScreen()
         {
@@ -22,8 +23,12 @@ namespace EmuSak_Revive.GUI
         {
             UI.ChangeToDarkMode(this);
             AnimateControls();
-            Gif_PictureBox.BorderRadius= 0;
-            Task.Run(() => mainWindow.LoadButtons());
+            Gif_PictureBox.BorderRadius = 0;
+            if (ignoreCache)
+            {
+                Task.Run(() => mainWindow.LoadButtons());
+            }
+            mainWindow.Size = new System.Drawing.Size(Properties.Settings.Default.LastWidth, Properties.Settings.Default.LastHeight);
         }
 
         private void AnimateControls()
@@ -41,7 +46,7 @@ namespace EmuSak_Revive.GUI
                 "Getting things ready.",
                 "Getting things ready..",
                 "Getting things ready..."
-            }; 
+            };
 
             string[] stringsForTitleAnimation = {
                 "Loading",
@@ -63,6 +68,11 @@ namespace EmuSak_Revive.GUI
             mainWindow.Show();
             Gif_PictureBox.Enabled = false;
             Update_Timer.Stop();
+        }
+
+        public void LaunchWithLastSesionCache()
+        {
+            mainWindow.LoadWithCache();
         }
 
         public void LaunchWithYuzuConfig()

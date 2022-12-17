@@ -1,4 +1,5 @@
 ﻿using EmuSak_Revive.EmuFiles;
+using EmuSak_Revive.GUI.Generics;
 using EmuSak_Revive.Network;
 using Glumboi.UI.Toast;
 using System;
@@ -23,8 +24,8 @@ namespace EmuSak_Revive.GUI
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HTCAPTION = 0x2;
 
-        static bool shaderExists = false;//!string.IsNullOrEmpty(dlUrl);
-        static string shaderUrl = string.Empty;
+        private static bool shaderExists = false;//!string.IsNullOrEmpty(dlUrl);
+        private static string shaderUrl = string.Empty;
 
         [DllImport("User32.dll")]
         public static extern bool ReleaseCapture();
@@ -49,8 +50,10 @@ namespace EmuSak_Revive.GUI
 
         private void GameActionsWindow_Load(object sender, EventArgs e)
         {
-            Generics.UI.ChangeToDarkMode(this);
+            UI.ChangeToDarkMode(this);
             Game_PrictureBox.BorderRadius = 0;
+
+            LangLoader.Run();
 
             if (!shaderExists)
             {
@@ -80,7 +83,7 @@ namespace EmuSak_Revive.GUI
 
             if (shaderExists)
             {
-                EmuShader.InstallShader(MainWindow.EmuConfig, Networking.GetShaderDownload(gameName), gameId);
+                EmuShader.InstallShader(New.MainWindow.EmuConfig, Networking.GetShaderDownload(gameName), gameId);
                 return;
             }
             ToastHandler.ShowToast($"There is no shader available for {gameName} at the moment.", "Info");

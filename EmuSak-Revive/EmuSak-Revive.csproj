@@ -41,6 +41,9 @@
   <PropertyGroup>
     <ApplicationIcon>Icon4_Asset.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Glumboi.Debug">
       <HintPath>..\..\..\Glumboi dlls\Glumboi.Debug\Glumboi.Debug\bin\Release\Glumboi.Debug.dll</HintPath>
@@ -221,6 +224,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

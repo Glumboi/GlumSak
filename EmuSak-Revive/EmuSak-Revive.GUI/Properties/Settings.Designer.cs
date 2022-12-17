@@ -85,7 +85,7 @@ namespace EmuSak_Revive.GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool PlaySounds {
             get {
                 return ((bool)(this["PlaySounds"]));
@@ -97,13 +97,61 @@ namespace EmuSak_Revive.GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
         public int MainWindowVolume {
             get {
                 return ((int)(this["MainWindowVolume"]));
             }
             set {
                 this["MainWindowVolume"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseLastSession {
+            get {
+                return ((bool)(this["UseLastSession"]));
+            }
+            set {
+                this["UseLastSession"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int SelectedLanguage {
+            get {
+                return ((int)(this["SelectedLanguage"]));
+            }
+            set {
+                this["SelectedLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1034")]
+        public int LastWidth {
+            get {
+                return ((int)(this["LastWidth"]));
+            }
+            set {
+                this["LastWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("581")]
+        public int LastHeight {
+            get {
+                return ((int)(this["LastHeight"]));
+            }
+            set {
+                this["LastHeight"] = value;
             }
         }
     }

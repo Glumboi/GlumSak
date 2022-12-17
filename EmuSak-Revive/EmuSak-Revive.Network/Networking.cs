@@ -11,15 +11,11 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using Microsoft.WindowsAPICodePack;
 using Telerik.WinControls.UI;
-using System.Threading;
 using Microsoft.WindowsAPICodePack.Taskbar;
-using System.Net.Http.Headers;
-using Octokit;
+using AnonFileAPI;
+using Guna.UI2.WinForms;
 
 namespace EmuSak_Revive.Network
 {
@@ -31,20 +27,28 @@ namespace EmuSak_Revive.Network
         public static string ShaderUrl { get; set; }
         public static RadProgressBar DownloadProgressBar { get; set; }
 
+        /// <summary>
+        /// Variables used for the download progress changed
+        /// </summary>
         private static List<int> versionsList = new List<int>();
+
         private static Stopwatch sw = new Stopwatch();  // The stopwatch which we will be using to calculate the download speed
 
-        /// <summary>
-        /// Variables used fro the download progress changed
-        /// </summary>
-        private static string _unzipPath = string.Empty;
+        private static string _fileSizeTrans = string.Empty;
 
+        private static string _unzipPath = string.Empty;
         private static string _outPathName = string.Empty;
         private static bool _showStartNotification = true;
         private static bool _showFinishNotification = true;
         private static bool _deleteTempAfterDone = true;
         private static bool _downloadDone = false;
-        private static readonly Stopwatch _stopwatch = new System.Diagnostics.Stopwatch();
+        private static long _totalBytesReceived;
+        private static readonly Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
+
+        public static void TransLateFileSize(string strNew)
+        {
+            _fileSizeTrans = strNew;
+        }
 
         public static void ShowDownloadDone(string downloadDoneMsg, string title)
         {
@@ -273,6 +277,16 @@ namespace EmuSak_Revive.Network
             bool showStartedNotification = true,
             bool deleteTempAfterDone = true)
         {
+            //If link in paste is an anonfiles link, convert it to ddl with the AnonFileWrapper
+            if (url.Contains("anonfiles"))
+            {
+                var tempUrl = url;
+                using (AnonFileWrapper afwAnonFileWrapper = new AnonFileWrapper())
+                {
+                    url = (afwAnonFileWrapper.GetDirectDownloadLinkFromLink(tempUrl));
+                }
+            }
+
             if (DownloadProgressBar.Visible)
             {
                 ToastHandler.ShowToast("You are already downloading something, please wait for the download to finish!",
@@ -292,8 +306,9 @@ namespace EmuSak_Revive.Network
                 _showFinishNotification = showFinishedNotification;
                 _showStartNotification = showStartedNotification;
                 _deleteTempAfterDone = deleteTempAfterDone;
-                _stopwatch.Start(); // Start the Stopwatch
+                _stopWatch.Start(); // Start the Stopwatch
                 _downloadDone = false;
+                _totalBytesReceived = 0;
 
                 if (_showStartNotification)
                 {
@@ -385,9 +400,24 @@ namespace EmuSak_Revive.Network
 
             UpdateProgress(0);
             HideProgressBar();
-            _stopwatch.Reset();
+            _stopWatch.Reset();
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
             _downloadDone = true;
+        }
+
+        /// <summary>
+        /// Used to ensure that the filesize is displayed without a . or , in any language
+        /// </summary>
+        /// <param name="totalBytes"></param>
+        /// <returns></returns>
+        private static string GetFileSizeWithoutComma(double totalBytes)
+        {
+            if (totalBytes.ToString().Contains(","))
+            {
+                return totalBytes.ToString().Split(',')[0];
+            }
+
+            return totalBytes.ToString().Split('.')[0];
         }
 
         /// <summary>
@@ -397,8 +427,6 @@ namespace EmuSak_Revive.Network
         /// <param name="e"></param>
         private static void Client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            //DownloadProgressBar.Value = e.ProgressPercentage;
-
             double bytesIn = double.Parse(e.BytesReceived.ToString());
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
@@ -410,13 +438,14 @@ namespace EmuSak_Revive.Network
 
             // Calculate progress values
             double fileSize = totalBytes / 1024.0 / 1024.0;
-            string fileSizeStr = fileSize.ToString().Split(',')[0];
+            var downloadSpeed = e.BytesReceived / 1024.0 / 1024.0 / _stopWatch.Elapsed.TotalSeconds;
 
-            string downloadSpeed = string.Format("{0} MB/s | File size: {1} MB",
-                (e.BytesReceived / 1024.0 / 1024.0 / _stopwatch.Elapsed.TotalSeconds).ToString("0.00"),
-                fileSizeStr);
+            string progressBarText = string.Format("{0} MB/s | {1}: {2} MB",
+                downloadSpeed.ToString("0.00"),
+                _fileSizeTrans,
+                GetFileSizeWithoutComma(fileSize));
 
-            ChangeProgressText(downloadSpeed);
+            ChangeProgressText(progressBarText);
         }
 
         /// <summary>

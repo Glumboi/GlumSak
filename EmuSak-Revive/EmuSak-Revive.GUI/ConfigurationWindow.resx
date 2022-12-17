@@ -3373,8 +3373,26 @@
         RK5CYII=
 </value>
   </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
+  <data name="Title_Label.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 8,9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="Cache_CheckBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVEhL7ZWvj8JAEIUrT1YikUjkSSSu2yZNcLVIZCXu
+        5En+BCTyJBJZiUQikSfhe8PS43dz2QbFSybt29n9drdJZ6KXqSiKjyRJJs65ObEh9k9C+QVRsib2iFuR
+        HDCpIr7TNB3huz51V8oTjrlfrFnzHPrUnzQoaJZlPT/0L+V53mH9UgfyQ8fra8emEzaJ9bE42sQGMKWu
+        YyZQsMawZiez0LcyEyg4fXiVGV52uoaZFgRvf/nSkt7gWm9wrXPwr35rMy3oHLzkBxmYCRScLryNGdUJ
+        TGkmUKpusOZm/C7rNj4HnBXwT28Nbl0jBM56NYjbKgl8SrLi6eqa2iDmxsDUJHTSx6VXHYRJ6mNb4l6f
+        u44d8XNx/SiKDg/Lph22OYooAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Cache_Label.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="Cache_CheckBox.ToolTipText" xml:space="preserve">
+    <value>This feature will use the last session of GlumSak if enabled which will decrease the loading time by a big amount.
+Deactivate it if you want to launch in a different conifguration or if you added a new game to your emu!</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

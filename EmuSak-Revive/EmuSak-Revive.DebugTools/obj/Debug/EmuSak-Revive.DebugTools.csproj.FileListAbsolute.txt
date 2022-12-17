@@ -1,0 +1,16 @@
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak_Revive.DebugTools.exe
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak_Revive.DebugTools.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak-Revive.Emulators.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak-Revive.JSON.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\Glumboi.UI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak-Revive.JSON.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak-Revive.JSON.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak-Revive.Emulators.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\EmuSak-Revive.Emulators.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\bin\Debug\Glumboi.UI.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\obj\Debug\EmuSak-Revive.DebugTools.csproj.AssemblyReference.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\obj\Debug\EmuSak-Revive.DebugTools.csproj.SuggestedBindingRedirects.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\obj\Debug\EmuSak-Revive.DebugTools.csproj.CoreCompileInputs.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\obj\Debug\EmuSak-Revive.DebugTools.csproj.CopyComplete
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\obj\Debug\EmuSak_Revive.DebugTools.exe
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.DebugTools\obj\Debug\EmuSak_Revive.DebugTools.pdb

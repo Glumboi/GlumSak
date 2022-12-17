@@ -15,9 +15,9 @@ namespace EmuSak_Revive.EmuFiles
         {
             if (config == 0)
             {
-                MessageBox.Show("Yuzu is not supported currently!", 
-                    "Info", 
-                    MessageBoxButtons.OK, 
+                MessageBox.Show("Yuzu is not supported currently!",
+                    "Info",
+                    MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 //InstallYuzuShader(url);
             }
@@ -33,34 +33,22 @@ namespace EmuSak_Revive.EmuFiles
             var shadersLoc = Ryujinx.GamesShader;
             var fileName = Temporary.TempPath + $"tempShader_{gameId}.Sak";
 
-            foreach (string str in shadersLoc)
+            for (var index = 0; index < shadersLoc.Count; index++)
             {
+                var str = shadersLoc[index];
                 if (str.ToUpper().Contains(gameId))
                 {
-                    Task.Run(() =>
-                    {
-                        Networking.DownloadAFileFromServer(url, fileName, str);
-                    });
+                    Task.Run(() => { Networking.DownloadAFileFromServer(url, fileName, str); });
                 }
             }
 
             //Network.GDriveDownloader downloader = new Network.GDriveDownloader();
             //downloader.DownloadFile(url, fileName);
-
         }
 
+        //Not developed yet
         private static void InstallYuzuShader(string url)
         {
-            var shadersLoc = Yuzu.FirmwareLoc;
-            var fileName = Temporary.TempPath + $"tempFirmware.Sak";
-
-            //Network.GDriveDownloader downloader = new Network.GDriveDownloader();
-            //downloader.DownloadFile(url, fileName);
-
-            Task.Run(() =>
-            {
-                Networking.DownloadAFileFromServer(url, fileName, shadersLoc);
-            });
         }
     }
 }

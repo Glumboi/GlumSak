@@ -1,0 +1,13 @@
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\EmuSak_Revive.Language.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\EmuSak_Revive.Language.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\EmuSak-Revive.ConfigIni.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\Bunifu.Licensing.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\EmuSak-Revive.ConfigIni.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\EmuSak-Revive.ConfigIni.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\obj\Debug\EmuSak_Revive.Language.csproj.AssemblyReference.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\obj\Debug\EmuSak_Revive.Language.csproj.CoreCompileInputs.cache
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\obj\Debug\EmuSak_Revive.Language.csproj.CopyComplete
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\obj\Debug\EmuSak_Revive.Language.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\obj\Debug\EmuSak_Revive.Language.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak_Revive.Language\bin\Debug\Guna.UI2.dll

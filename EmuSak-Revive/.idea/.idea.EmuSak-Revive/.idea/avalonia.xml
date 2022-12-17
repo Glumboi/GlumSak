@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="EmuSak-Revive.UIRemake/App.axaml" value="EmuSak-Revive.UIRemake/EmuSak-Revive.UIRemake.csproj" />
+        <entry key="EmuSak-Revive.UIRemake/MainWindow.axaml" value="EmuSak-Revive.UIRemake/EmuSak-Revive.UIRemake.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

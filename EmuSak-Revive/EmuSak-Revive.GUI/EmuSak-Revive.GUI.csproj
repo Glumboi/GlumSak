@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon4_Asset.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Licensing, Version=3.2.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
@@ -90,8 +93,9 @@
     <Reference Include="Glumboi.UI">
       <HintPath>..\..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Torrents\Guna_UI_Framework_Ultimate_2.0.0.1_Downloadly.ir\Guna UI Framework Ultimate 2.0.0.1\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Guna\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -300,6 +304,7 @@
     <Compile Include="GangShitWindow.Designer.cs">
       <DependentUpon>GangShitWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generics\LangLoader.cs" />
     <Compile Include="Generics\PlayAudio.cs" />
     <Compile Include="Generics\UI.cs" />
     <Compile Include="Generics\VersionSorter.cs" />
@@ -313,6 +318,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -349,7 +360,13 @@
     <EmbeddedResource Include="LoadingScreen.resx">
       <DependentUpon>LoadingScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.de.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -366,6 +383,7 @@
     <Content Include="Assets\CatDance_Asset.gif" />
     <Content Include="Assets\Close_Asset.png" />
     <Content Include="Assets\Configure_Asset.png" />
+    <Content Include="Assets\Cove_Asset.png" />
     <Content Include="Assets\Discord_Asset.png" />
     <Content Include="Assets\DrogaDog_Asset.png" />
     <Content Include="Assets\enter_back.wav" />
@@ -388,11 +406,14 @@
     <Content Include="Assets\PlaceholderGame_Asset.jpg" />
     <Content Include="Assets\Question_Asset.png" />
     <Content Include="Assets\RabbitVibe_Asset.gif" />
+    <Content Include="Assets\Reset_Asset.png" />
+    <Content Include="Assets\Restart_Asset.png" />
     <Content Include="Assets\Rocket_Asset.png" />
     <Content Include="Assets\Ryujinx_Asset.png" />
     <Content Include="Assets\Save_Asset.png" />
     <Content Include="Assets\Update_Asset.png" />
     <Content Include="Assets\Yuzu_Asset.png" />
+    <Content Include="Icon4_Asset.ico" />
     <None Include="Resources\select.wav" />
     <None Include="Resources\enter_back.wav" />
   </ItemGroup>
@@ -424,6 +445,10 @@
     <ProjectReference Include="..\EmuSak-Revive.Network\EmuSak-Revive.Network.csproj">
       <Project>{1e4a2f94-2f85-4ebd-9bdf-ff20c5df14bb}</Project>
       <Name>EmuSak-Revive.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmuSak_Revive.Language\EmuSak_Revive.Language.csproj">
+      <Project>{a406ce6c-7c5b-43ce-a077-a7bf970e81c0}</Project>
+      <Name>EmuSak_Revive.Language</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

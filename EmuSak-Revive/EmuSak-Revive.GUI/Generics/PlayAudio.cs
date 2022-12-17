@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EmuSak_Revive.GUI.Generics
 {
-    internal class PlayAudio
+    internal static class PlayAudio
     {
         public static void Play(AudioPlayer audioPlayer, bool playAudio, string file)
         {

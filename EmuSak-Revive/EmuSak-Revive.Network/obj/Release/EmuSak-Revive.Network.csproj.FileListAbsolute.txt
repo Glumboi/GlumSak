@@ -43,3 +43,5 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Microsoft
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Microsoft.WindowsAPICodePack.Shell.xml
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Octokit.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Octokit.xml
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\AnonFileAPI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Guna.UI2.dll

@@ -1,4 +1,5 @@
-﻿using EmuSak_Revive.Network;
+﻿using EmuSak_Revive.GUI.Generics;
+using EmuSak_Revive.Network;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,8 @@ namespace EmuSak_Revive.GUI
 
         private void AboutWindow_Load(object sender, EventArgs e)
         {
-            Generics.UI.ChangeToDarkMode(this);
+            UI.ChangeToDarkMode(this);
+            LangLoader.Run();
         }
 
         private void Github_Button_Click(object sender, EventArgs e)
@@ -38,6 +40,22 @@ namespace EmuSak_Revive.GUI
             if (e.CloseReason != CloseReason.UserClosing) return;
             e.Cancel = true;
             Hide();
+        }
+
+        private void bunifuSeparator2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Text_Label_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void About_Label_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void bunifuSeparator1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

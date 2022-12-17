@@ -121,19 +121,6 @@
     <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="PlaySounds_CheckBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL7ZUxa8JAFMcdO3bsFqckKsRAIBQEMZChmWwg
-        kODUTQlkcQqIkK0fox/Hj+DYsWPHbL2+/3mxtr7a5JYuPvghvtz7//PO513v32M8Ht9aljUjqkuYpvlA
-        n31V1i4Gg8GjbduvhOjIO0yVDB94c1r4clo4nU7FfD4XSZKwxHEs14xGo2MNGe1+7YwWSAMUpGkqqqrq
-        xHK5FK7rNmZ7wzBulPQhKJk1BnmesyJtKMtS+L7fdPSs5A9BiTc80OngJ0VRHLduOBzeNQZ9JBzHYYt0
-        wO8ETUyeNFHTJIIgYAt0wLCobkppQp1USGBSuAIdsO3QhPY3E4wkV6ADtK4mrbmadIIzWSERhiFboMPZ
-        /4TOFxcJz/PYAh3wwtAkMmmCI5m+1EjicOOKurDZbHDkf0APDUgTBCXkXYJjervdssVtiaKo2aqdkj+E
-        6maPh5PJRKzXa1bgEuigMSBqOoFtJf8VaI3c5b2Cywv7iin5i8ViIcVPbsWadJ6U7Hlw93wXsEVsB1xQ
-        wT2RYQRbsiJmqvwker1PjWEmmfdGYBEAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="Help_Button.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -702,19 +689,20 @@
   </data>
   <data name="SaveAndClose_Button.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKwAAAAlCAYAAADfjgLIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ5SURBVHhe7dwhbBNRHMfxSmQlshI5iUTieq9JEwypxZBA
-        ghgOgyZBTJAgUBNVCJKp2YmJBVVXN1UYdBuDgIDfv/s3HZe3W+m49X/J9598clnv3buJ397evbtra5Xq
-        9Xp3iqLY7Ha7W9oeuN9AhXlO3ik3L1JKdz1O9VS/379tJ5OJTOWX5H4x4EoK7BdtLUdDBXjDY3b9Umdt
-        jaivvfPsyYHrUMa+aju0QdFjt1rZsK2O7C/h+7xzoEZTDY4PPX7/VgrrU3Vg//5zHQN1OVL2tjyGy5WG
-        6Lc60EbWXIdA3Y7lvcexutTwuTBfxVpp0DyzgdNjmS81uKfGTAMQxdGlc1q7QtPc4VPmIGBtNIh+tnV/
-        j+miFNY32snaKiLa9Ziel4LaUWC5yEJIlk1Z3BnTh8NyIyCYA4/rLLCsCiC6U80E2rO7WUwH0ABT5fSB
-        ja6vhIstNMHQAvuh9CEQ1cgCy7OsaIqJBZY7W2gMC2x2BxCRBZYlLTSGBXZU/hAIamqB3S19CEQ1tsDa
-        i4W5nUA0e/bgSyH2EliuARDFD+X0SWswGNzSD7xkiNAU1hPpzB9+2Ss3AIIZz8JqlVK6zwMwiErZPJbH
-        Htfz0g5WCxDVYnSdl+YHG1x8IRrLpBQe079LDV4KoUUICuqZttsez3ypwY4a/rx4ILAm+7aK5dHMly9z
-        fSS0WLORMtj2WFaXh3ZHeDAGN8qnAftLh/Vi6UD72iKWu3AjFFK7ftq+chpQVerEvr7IhmcuxlCXU5ko
-        Y/nVgFXKOlMdanui7TfJnRhYlr34alPOSUrpmcfs/5cC29FJHondzh1L7pcBLnMo9h7hZvY7syqr1foD
-        TtMSgr8ccMIAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAlYAAAAlCAYAAACAjKdZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALPSURBVHhe7d0tbBVLGAbgSmQlshKJvBKJm7ObNMHc1GJI
+        IEGAw6BJEAgSRBWi6goSFBaBaFB1dajyV/4DAt4p05R72LZn2yLKeb7kyebMzs4e+WZ2dnbhKNX3/bnJ
+        ZHKjlHIvx/XmOwDAKbWbZ1aTb251XfdPiz1/ppaXl8/Wm8VWbMe3GPpjAACnWoLVmxxr3llL0Drf4tDx
+        K4Mt9n1/tw0+eHMAgL9VstDbHNfqJFOLR0erOg2WgWpi+7w7OADAnNru+/7fFpPGVULVtQxQH/sNDQwA
+        MI9eJyPda3FptiqlPMiFdaZqaEAAgHn2Lv5rsengSsebYT0VAMA+Simf6kRUi0/DlQ4X0tnjPwCAw73e
+        d81VXenedd3LgYsAABhQSnlV9/dscWqvEqru56S9qQAAxnnS4tTPSqBaSrCyWB0AYKSaoWJvp/Y0rk13
+        AgBgZustVu0EK28BAgAc3YdSyuLO7uoeAwIAHMt28tSlOlt1JyxaBwA4nrUarB5NNQIAMN5GDVbrU40A
+        AIy3VYOVndYBAE5ADVaDJwAAGKcGK1stAACcgBqsNqYbAQAYbbsGqydTjQAAjLdZg9XqVCMAAOM9rR9g
+        nsTbgZMAAMzmS/LU1YWVlZUz+fF56iQAADNKqHofS7sfYX463QEAgJlt7oSqWl3XXfQhZgCA8ZKh3sWV
+        Fqt+Vk54OxAAYLy92ardKqWct4gdAGB2NTvFpMWp/1c63A7hCgDgEAlUn3J82GLUcKXD43T8+uuFAAD8
+        5lndXaFFqOFq2y88F64AAPa1kay02OLTwdXC1ePwgWYAgKY9/ns2c6j6tXLhzbANAwAw9xKm6jr0h4c+
+        /juoMsiFDFKnuyxqBwDm0YfYShYafvvvKFUHS73I8X2OH2PoxgAAf4NvUZdEbXVdd73FoZOvBKul3ORy
+        1M/gbMbQnwEAOI1exHrc6Pv+XIs/M9bCwg/zoibJqiyWgwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="SaveAndClose_Button.IdleIconLeftImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -1039,17 +1027,9 @@
   </data>
   <data name="bunifuSeparator2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAlYAAAAOCAYAAADt51KsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVHhe7dZBDQAwDAOx8EcVZttnDPqZVFs6DhcAAAAA
-        AAAAAAAAAAAAAACAZdoeSZIkzXt7BQAAAAAAAAAAAAAAAAB8LrlS5ZWUbxnFHwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="PasteBinUrl_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAWQAAAAlCAYAAAB1aJNdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABTSURBVHhe7cMBCQBACASwT3wVP5raQpAN9gAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgqiR/lqqbUw3uqy1yHk5yBgAA
-        AABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAPYAAAAOCAYAAAAc0+G8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAySURBVGhD7dNBDQAwDAOx8EcVZt1nJFrZ0kG4AAAAAAAA
+        wGJtR9Kt/t4AAAAAAHBe8gCz0R64V9DZwwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="Ryujinx_Image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -3502,26 +3482,11 @@
         RK5CYII=
 </value>
   </data>
-  <data name="RyuPath_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANgAAAAlCAYAAAAgLCcqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVHhe7cPBCQAwCASwTnwrdjR1CD9CAnkAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXJfmz1O2pBgZc7WgiSLrwAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="YuzuPath_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAANgAAAAlCAYAAAAgLCcqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVHhe7cPBCQAwCASwTnwrdjR1CD9CAnkAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXJfmz1O2pBgZc7WgiSLrwAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="bunifuSeparator1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAC8CAYAAABISp+vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABdSURBVGhD7cuhDcAwEMDA33+q3ywlxScFhPmQiUd29/x5
-        pxEaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREejDMf
-        t2RiYxg4+EgAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAlYAAAAOCAYAAADt51KsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVHhe7dZBDQAwDAOx8EcVZttnDPqZVFs6DhcAAAAA
+        AAAAAAAAAAAAAACAZdoeSZIkzXt7BQAAAAAAAAAAAAAAAAB8LrlS5ZWUbxnFHwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="MainWindow_AudioSlider.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -3532,7 +3497,104 @@
         rkJggg==
 </value>
   </data>
-  <data name="Action_Label.BaseStylesheet" xml:space="preserve">
+  <data name="MainWindowSound_Label.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="RyuPath_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOIAAAAlCAYAAABf/TXbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVHhe7d2/SsNQFIDxOzr6BnVq869UyJAlECiBEFpC
+        Rx/BxWcRfAZfwdXVR3B2EEERqaCCHeI99YLU3jG3nOE78IMOt90+0mTIMQzDKJwois6yLLtNkuTFfu4B
+        DEOaStP0bjKZnLvc9mc2mx3LoTzP13Vd94vFol+tVgAGIk1JW0VRfNgo722QJy6/v5EI5/O59wcADKtp
+        mt7+83wYjUZHLkFjbJ0XttJ33xcAhFGW5Ze9AF65DH+vhnLJ9B0GEEbbtnLf+OgyNCaO48+u67yHAYQj
+        D3Fchtsnpd5DAMIiREABQgQUIERAAUIEFCBEQAFCBBQgREABQgQUIERAAUIEFCBEQAFCBBQgREABQgQU
+        IERAAUIEFCBEQAFCBBQgREABQgQUIERAAUIEFPgf4ob3mgKHtxOiLMSQd/H7DgIIY7lc9nEcr12G2zd9
+        X5ZlufEdBhCGLH2yF8Ebl6ExspEmTdMnVrEBhyG3glmWve2tZrNlntoYn6uq+uZ+EQhD2pKFT9Pp9NU2
+        17n8dsctK72WpTRyEwlgcBvZyD0ejyOXHcMwOsaYH64nHdwOWy7dAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="YuzuPath_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOIAAAAlCAYAAABf/TXbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVHhe7d2/SsNQFIDxOzr6BnVq869UyJAlECiBEFpC
+        Rx/BxWcRfAZfwdXVR3B2EEERqaCCHeI99YLU3jG3nOE78IMOt90+0mTIMQzDKJwois6yLLtNkuTFfu4B
+        DEOaStP0bjKZnLvc9mc2mx3LoTzP13Vd94vFol+tVgAGIk1JW0VRfNgo722QJy6/v5EI5/O59wcADKtp
+        mt7+83wYjUZHLkFjbJ0XttJ33xcAhFGW5Ze9AF65DH+vhnLJ9B0GEEbbtnLf+OgyNCaO48+u67yHAYQj
+        D3Fchtsnpd5DAMIiREABQgQUIERAAUIEFCBEQAFCBBQgREABQgQUIERAAUIEFCBEQAFCBBQgREABQgQU
+        IERAAUIEFCBEQAFCBBQgREABQgQUIERAAUIEFPgf4ob3mgKHtxOiLMSQd/H7DgIIY7lc9nEcr12G2zd9
+        X5ZlufEdBhCGLH2yF8Ebl6ExspEmTdMnVrEBhyG3glmWve2tZrNlntoYn6uq+uZ+EQhD2pKFT9Pp9NU2
+        17n8dsctK72WpTRyEwlgcBvZyD0ejyOXHcMwOsaYH64nHdwOWy7dAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="PasteBinUrl_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAlYAAAAlCAYAAACAjKdZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH6SURBVHhe7duxitNwAMfxjDfeG+Smpkn+pUKHLoVCKJSS
+        Ejr6CC4+i+Az+Aqut/oINzuIoIic4Al2iIkXOM+m5/J3+/zgAy380/lL+DcxMzMzs/+06XT6PIRwXRTF
+        5+5zCwDAg76RyrJ8l2XZiyGfTjefzy/7Q4vF4naz2bR1XbeHwwEAgD/0jdS30nK5/N5F1k0XWFdDTj2s
+        j6qqqkZ/AACAU9vttg0hvE/T9GJIqiTpautlV13fxh4AAOC81Wr1oyzL10NW3b+t6l9pjR0GAOC83W7X
+        37v6MGRVkuR5ftc0zehhAACe1l9qH7Lq9z8BRw8BAPBvwgoAIBJhBQAQibACAIhEWAEARCKsAAAiEVYA
+        AJEIKwCASIQVAEAkwgoAIBJhBQAQibACAIhEWAEARCKsAAAiEVYAAJEIKwCASIQVAEAkwgoAIBJhBQAQ
+        ibACAIhEWAEARCKsAAAiEVYAAJH8HVbHpmlGDwIA8LRHYVUUxc12ux09CADAefv9vs3z/HbIqiTpvrxa
+        rVbHscMAAJxXVVVbFMXbIauSJE3Ti7IsP9Z1PfoAAACn+qtUIYSvWZZdDVl1v660nnVx9Wm9Xv903woA
+        4Ly+lTabTTubzb50DdUMOfV48/n8sourN3me3/WXsAAAGHUMIVxPJpPpkFFmZmZmFm9J8gt42R4vFCko
+        AAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PlaySounds_CheckBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVEhL7ZW9TsMwFIUzMjIyMkZVpLQbUaomUVKJJoqS
+        RsocxoyMHbsxMvIIPAIjI4/A2JGRsRvmHve6jYhLTAdYuNJRW9vn8/X1T60/iaqq7KIobkjrryrLsl0u
+        l1c8dDiapjkjwx0ZtyRhqMe6ri8Y0Q/KZEyDXpUhz3ORJImYTqc9xXEssizrwt/JXzLqEMiUOjcYlKap
+        mEwmwrbtQTmOI+bzuYJvCX7JyF3Q8h/QuVgsxGg00kK+UxRFCv7EyH22sqau62qNQ0LmKB0Y+6y5trJm
+        OpOpsB8M3tWavtyiAcvRGUzl+74CrxUY51Luts5gKvj/wVK/B6YfKzQEQaA1mKp3KujWXaMBt05nMFUY
+        hhJMaiWYZjjnmU66zkp4Y5gzlmAENTyj8dRL4nmeynbDyF3gUadG+V7MZrMfZQ4oZfkBL8rKyENQR4tO
+        CO8Gaoad1gkbhQTU8ln3jOoH/m5owEtnsInetJnqgidocXSOifpX9BmypROW9QmNQ2NJnuaG2wAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="PlaySounds_CheckBox.ToolTipText" xml:space="preserve">
+    <value>This feature will use the last session of GlumSak if enabled which will decrease the loading time by a big amount.
+Deactivate it if you want to launch in a different conifguration or if you added a new game to your emu!</value>
+  </data>
+  <data name="MainWindowVolume_Label.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuSeparator3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAlYAAAAOCAYAAADt51KsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVHhe7dZBDQAwDAOx8EcVZttnDPqZVFs6DhcAAAAA
+        AAAAAAAAAAAAAACAZdoeSZIkzXt7BQAAAAAAAAAAAAAAAAB8LrlS5ZWUbxnFHwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PortableSettings_Label.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="AudioSettings_Label.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="PasteSettings_Label.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuSeparator4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAlYAAAAOCAYAAADt51KsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABHSURBVHhe7dZBDQAwDAOx8EcVZttnDPqZVFs6DhcAAAAA
+        AAAAAAAAAAAAAACAZdoeSZIkzXt7BQAAAAAAAAAAAAAAAAB8LrlS5ZWUbxnFHwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="LanguageSettings_Label.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
+  </data>
+  <data name="bunifuSeparator5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAASgAAAAOCAYAAACchYGGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA2SURBVHhe7dQxDQBADMPA8EcVZv3lAXTscCeZggMAAAAA
+        AAAAsNR2JOlif1MAAAAAAADAEckDNNLBBp38cUMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="SelectLanguage_Label.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Russo One'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

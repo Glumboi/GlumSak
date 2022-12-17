@@ -29,49 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutWindow));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            this.Text_Label = new Bunifu.UI.WinForms.BunifuLabel();
+            this.About_Label = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.Github_Button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.EmuSakUI_Button = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.SuspendLayout();
             // 
-            // bunifuLabel1
+            // Text_Label
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(13, 84);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(468, 148);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = resources.GetString("bunifuLabel1.Text");
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.Text_Label.AllowParentOverrides = false;
+            this.Text_Label.AutoEllipsis = false;
+            this.Text_Label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Text_Label.CursorType = System.Windows.Forms.Cursors.Default;
+            this.Text_Label.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Text_Label.ForeColor = System.Drawing.Color.White;
+            this.Text_Label.Location = new System.Drawing.Point(13, 84);
+            this.Text_Label.Name = "Text_Label";
+            this.Text_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text_Label.Size = new System.Drawing.Size(468, 148);
+            this.Text_Label.TabIndex = 0;
+            this.Text_Label.Text = resources.GetString("Text_Label.Text");
+            this.Text_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Text_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.Text_Label.Click += new System.EventHandler(this.Text_Label_Click);
             // 
-            // bunifuLabel2
+            // About_Label
             // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Russo One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel2.Location = new System.Drawing.Point(197, 12);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(100, 40);
-            this.bunifuLabel2.TabIndex = 1;
-            this.bunifuLabel2.Text = "About";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.About_Label.AllowParentOverrides = false;
+            this.About_Label.AutoEllipsis = false;
+            this.About_Label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.About_Label.CursorType = System.Windows.Forms.Cursors.Default;
+            this.About_Label.Font = new System.Drawing.Font("Russo One", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.About_Label.ForeColor = System.Drawing.Color.White;
+            this.About_Label.Location = new System.Drawing.Point(197, 12);
+            this.About_Label.Name = "About_Label";
+            this.About_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.About_Label.Size = new System.Drawing.Size(100, 40);
+            this.About_Label.TabIndex = 1;
+            this.About_Label.Text = "About";
+            this.About_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.About_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.About_Label.Click += new System.EventHandler(this.About_Label_Click);
             // 
             // bunifuSeparator1
             // 
@@ -87,6 +89,7 @@
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(477, 14);
             this.bunifuSeparator1.TabIndex = 2;
+            this.bunifuSeparator1.Click += new System.EventHandler(this.bunifuSeparator1_Click);
             // 
             // bunifuSeparator2
             // 
@@ -102,6 +105,7 @@
             this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator2.Size = new System.Drawing.Size(477, 8);
             this.bunifuSeparator2.TabIndex = 3;
+            this.bunifuSeparator2.Click += new System.EventHandler(this.bunifuSeparator2_Click);
             // 
             // Github_Button
             // 
@@ -122,11 +126,11 @@
             this.Github_Button.ColorContrastOnClick = 45;
             this.Github_Button.ColorContrastOnHover = 45;
             this.Github_Button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.Github_Button.CustomizableEdges = borderEdges7;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.Github_Button.CustomizableEdges = borderEdges1;
             this.Github_Button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.Github_Button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Github_Button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -212,11 +216,11 @@
             this.EmuSakUI_Button.ColorContrastOnClick = 45;
             this.EmuSakUI_Button.ColorContrastOnHover = 45;
             this.EmuSakUI_Button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges8.BottomLeft = true;
-            borderEdges8.BottomRight = true;
-            borderEdges8.TopLeft = true;
-            borderEdges8.TopRight = true;
-            this.EmuSakUI_Button.CustomizableEdges = borderEdges8;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.EmuSakUI_Button.CustomizableEdges = borderEdges2;
             this.EmuSakUI_Button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.EmuSakUI_Button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.EmuSakUI_Button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -293,8 +297,8 @@
             this.Controls.Add(this.Github_Button);
             this.Controls.Add(this.bunifuSeparator2);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.bunifuLabel2);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.About_Label);
+            this.Controls.Add(this.Text_Label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -309,8 +313,8 @@
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel Text_Label;
+        private Bunifu.UI.WinForms.BunifuLabel About_Label;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Github_Button;

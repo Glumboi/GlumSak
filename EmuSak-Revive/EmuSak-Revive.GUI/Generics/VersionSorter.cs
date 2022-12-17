@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace EmuSak_Revive.GUI.Generics
 {
-    internal class VersionSorter
+    internal static class VersionSorter
     {
         public static IComparable OrderVersion(string arg)
         {
             //Treat N/A as highest version
-            if (arg == "N/A")
-                return new Version(Int32.MaxValue, Int32.MaxValue);
-            return Version.Parse(arg);
+            return arg == "N/A" ? new Version(Int32.MaxValue, Int32.MaxValue) : Version.Parse(arg);
         }
     }
 }

@@ -120,7 +120,49 @@
   <metadata name="crystalDarkTheme1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="Game_ContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>172, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuSeparator1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAIeCAYAAACLAT5jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVHhe7cuhDcAwEMDA33+q3ywlpTkp3IdMPLK75883
+        jdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAI
+        jdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAI
+        jdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAIjdAI93HmAyEa372NQRdMAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="Filter_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAVkAAAAUCAYAAAAnQ07dAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGBSURBVHhe7d2xSsNAGMDxGx19gzg1SXMhQocsgUAJhJAQ
+        OvoILj6L4DP4Cq6uPoKzgwiKSAUVzBDvqwdSe2ijxun/wQ86XDv+Oa7NVTEMwzD/OEEQHGitz6fT6Z15
+        3QMAvia9jKLowvf9Q5vSzUmSZFcWzWazZVEUfV3X/WKxAAB8Q3op3UzT9MkE99LEds+m9WMksPP53PkB
+        AIDtlGXZa62vPM/bsXlVypT3yBT40fUGAMAwWZa9mI3riU3s+y5WtrquxQCAYaqqknPaa5tYpcIwfG7b
+        1rkYADCcfCFmE7v6RYFzEQDgZ4gsAIyIyALAiIgsAIyIyALAiIgsAIzoc2Q7fsIFAH9nLbLyrK08CuZa
+        CAAYpmmaPgzDpU3s6mGE4yzLOtdiAMAwcg+M2bye2cQqJRcZRFF0w81bAPA7cvSqtX7YuInLVHffhPY2
+        z/NXzmcBYBjpptwBE8fxvelpa9O6PvZO2VO5y0AObQEAW+vkDw8mk0lgk8owDMOMO0q9AawYKBtjcb5U
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Games_ScrollBar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAFbCAYAAADV8K4AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI6SURBVHhe7d29ihNRGIfxKS0tt4vVJJMJSQgMY0IgH4Rg
+        SAi5hG0EG3tLC0srC29CsLO1FSvvwEorhbgurmCK8X3HWdiPg+zsYyP8D/x2l+w5T84cpj/R1dFut49a
+        rdYT+/3GfLG/i4v8s06n87bZbD6N47hVLQsPm/zQJn8dDoeH+XxerNfrYrfbXeKfLRaLYjweFzb3JE3T
+        59Xyy8O/Ncuyb9vt9lrkb0aj0amtfd9oNO5UqXJnj/M8/x5acBO225+20xdlzM7inn3Dvu7Orup2u3s7
+        4/uR/Xhm2z6EJtUxm80K2+Wr8uz8kEOT6litVh78GCVJckYf95y/Vv7IwX/ehoKcgpyCnIKcgpyCnIKc
+        gpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKc
+        gpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKc
+        gpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnILc/xM8/NO7kNI0/bBcLoMT6vCrtfy+Lr/t6uVkMglO
+        qsOvkPKrpPzGq2m/39+HJtWRZdmptY7La7TssV9Pp9NfoYk34UfmR1fGfPiNX/bon28T9Zg96idbf1Tl
+        /oxer3fXdzoYDPZ+HpvNJhhw/lZ4KM/zH76za7GLI47jBzbpXZIkJ/4ahPi1Wx6yM3tULatGFP0GZLS/
+        S1Od8G8AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="Keys_Button.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAJQAAAAgCAYAAAD0Z1G3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -3584,47 +3626,6 @@
         RK5CYII=
 </value>
   </data>
-  <data name="bunifuSeparator1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAICCAYAAAD/FfyDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC/SURBVHhe7cuhDcAwEMDA33+q3ywlxSeFBfiQiUd29/x5
-        pxEaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREa
-        oREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREa
-        oREaoREaoREaoREaoREaoREaoREaoREaoREaoREaoREa4aVx5gMUi4TZQ0rIrgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Games_ScrollBar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAFbCAYAAADV8K4AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI6SURBVHhe7d29ihNRGIfxKS0tt4vVJJMJSQgMY0IgH4Rg
-        SAi5hG0EG3tLC0srC29CsLO1FSvvwEorhbgurmCK8X3HWdiPg+zsYyP8D/x2l+w5T84cpj/R1dFut49a
-        rdYT+/3GfLG/i4v8s06n87bZbD6N47hVLQsPm/zQJn8dDoeH+XxerNfrYrfbXeKfLRaLYjweFzb3JE3T
-        59Xyy8O/Ncuyb9vt9lrkb0aj0amtfd9oNO5UqXJnj/M8/x5acBO225+20xdlzM7inn3Dvu7Orup2u3s7
-        4/uR/Xhm2z6EJtUxm80K2+Wr8uz8kEOT6litVh78GCVJckYf95y/Vv7IwX/ehoKcgpyCnIKcgpyCnIKc
-        gpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKc
-        gpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKc
-        gpyCnIKcgpyCnIKcgpyCnIKcgpyCnIKcgpyCnILc/xM8/NO7kNI0/bBcLoMT6vCrtfy+Lr/t6uVkMglO
-        qsOvkPKrpPzGq2m/39+HJtWRZdmptY7La7TssV9Pp9NfoYk34UfmR1fGfPiNX/bon28T9Zg96idbf1Tl
-        /oxer3fXdzoYDPZ+HpvNJhhw/lZ4KM/zH76za7GLI47jBzbpXZIkJ/4ahPi1Wx6yM3tULatGFP0GZLS/
-        S1Od8G8AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="Filter_TextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAVkAAAAXCAYAAACh1zxzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGOSURBVHhe7d2/SsNAHMDxGx19gzi1+XMlQocsB4EQCKUl
-        dPQRXHwWwWfwFVxdfQRnBxEUkQoq2CHerx5I7aGNek7fH3ygw7Xjl5C2vyiGYRjmHyeO4wOt9Xmapnf2
-        dQcA+Jr0Msuyi+FweOhSujl5nu/KofF4vKjruptOp918PgcAfEN6Kd0siuLJBvfSxnbPpfVjJLBVVXk/
-        AACwnaZpOq31VRRFOy6vStnyHtkCP/reAADoxxjzYi9cT1xi369i5VLXdxgA0M9kMpH7tNcusUolSfLc
-        tq33MACgP/lCzCV29YsC7yEAwM8QWQAIiMgCQEBEFgACIrIAEBCRBYCAiCwABERkASAgIgsAAX2O7JJ/
-        fAHA31mLrKzmks0xvoMAgH5ms1mXJMnCJXa1u+DYGLP0HQYA9CNrY+3F65lLrFKy9zDLshsWdQPA78it
-        V631w8biblvdfRva27IsX7k/CwD9SDdlZexoNLq3PW1dWtfHPYLmVFYfyk1bAMDWlvJ8xMFgELukMgzD
-        MGFHqTd04OtfZWo7lgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="Game_ContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAgAAAAAAAEAIAChJwAAhgAAAICAAAABACAAKAgBACcoAABgYAAAAQAgAKiUAABPMAEAQEAAAAEA

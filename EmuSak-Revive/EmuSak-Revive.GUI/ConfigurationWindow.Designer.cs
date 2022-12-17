@@ -35,7 +35,9 @@
             this.Button_Close = new Bunifu.UI.WinForms.BunifuImageButton();
             this.Button_Minimize = new Bunifu.UI.WinForms.BunifuImageButton();
             this.TitleBar = new System.Windows.Forms.Panel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Title_Label = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Cache_CheckBox = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.Cache_Label = new Bunifu.UI.WinForms.BunifuLabel();
             this.TitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Silver;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(115, 41);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(136, 41);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Vertical;
             this.bunifuSeparator1.Size = new System.Drawing.Size(14, 104);
@@ -74,7 +76,7 @@
             this.Ryujinx_Button.ImageSize = new System.Drawing.Size(64, 64);
             this.Ryujinx_Button.ImageZoomSize = new System.Drawing.Size(104, 104);
             this.Ryujinx_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("Ryujinx_Button.InitialImage")));
-            this.Ryujinx_Button.Location = new System.Drawing.Point(135, 41);
+            this.Ryujinx_Button.Location = new System.Drawing.Point(173, 41);
             this.Ryujinx_Button.Name = "Ryujinx_Button";
             this.Ryujinx_Button.Rotation = 0;
             this.Ryujinx_Button.ShowActiveImage = true;
@@ -109,7 +111,7 @@
             this.Yuzu_Button.ImageSize = new System.Drawing.Size(64, 64);
             this.Yuzu_Button.ImageZoomSize = new System.Drawing.Size(104, 104);
             this.Yuzu_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("Yuzu_Button.InitialImage")));
-            this.Yuzu_Button.Location = new System.Drawing.Point(10, 41);
+            this.Yuzu_Button.Location = new System.Drawing.Point(12, 41);
             this.Yuzu_Button.Name = "Yuzu_Button";
             this.Yuzu_Button.Rotation = 0;
             this.Yuzu_Button.ShowActiveImage = true;
@@ -144,7 +146,7 @@
             this.Button_Close.ImageSize = new System.Drawing.Size(20, 20);
             this.Button_Close.ImageZoomSize = new System.Drawing.Size(20, 20);
             this.Button_Close.InitialImage = ((System.Drawing.Image)(resources.GetObject("Button_Close.InitialImage")));
-            this.Button_Close.Location = new System.Drawing.Point(223, 7);
+            this.Button_Close.Location = new System.Drawing.Point(257, 7);
             this.Button_Close.Name = "Button_Close";
             this.Button_Close.Rotation = 0;
             this.Button_Close.ShowActiveImage = true;
@@ -179,7 +181,7 @@
             this.Button_Minimize.ImageSize = new System.Drawing.Size(20, 20);
             this.Button_Minimize.ImageZoomSize = new System.Drawing.Size(20, 20);
             this.Button_Minimize.InitialImage = ((System.Drawing.Image)(resources.GetObject("Button_Minimize.InitialImage")));
-            this.Button_Minimize.Location = new System.Drawing.Point(197, 7);
+            this.Button_Minimize.Location = new System.Drawing.Point(231, 7);
             this.Button_Minimize.Name = "Button_Minimize";
             this.Button_Minimize.Rotation = 0;
             this.Button_Minimize.ShowActiveImage = true;
@@ -197,39 +199,113 @@
             // TitleBar
             // 
             this.TitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.TitleBar.Controls.Add(this.bunifuLabel1);
+            this.TitleBar.Controls.Add(this.Title_Label);
             this.TitleBar.Controls.Add(this.Button_Minimize);
             this.TitleBar.Controls.Add(this.Button_Close);
             this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar.Location = new System.Drawing.Point(0, 0);
             this.TitleBar.Name = "TitleBar";
-            this.TitleBar.Size = new System.Drawing.Size(246, 35);
+            this.TitleBar.Size = new System.Drawing.Size(289, 35);
             this.TitleBar.TabIndex = 18;
             this.TitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
             // 
-            // bunifuLabel1
+            // Title_Label
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Russo One", 8.9F);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(10, 10);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(85, 14);
-            this.bunifuLabel1.TabIndex = 18;
-            this.bunifuLabel1.Text = "Configuration";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.Title_Label.AllowParentOverrides = false;
+            this.Title_Label.AutoEllipsis = false;
+            this.Title_Label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Title_Label.CursorType = System.Windows.Forms.Cursors.Default;
+            this.Title_Label.Font = new System.Drawing.Font("Russo One", 8.9F);
+            this.Title_Label.ForeColor = System.Drawing.Color.White;
+            this.Title_Label.Location = new System.Drawing.Point(10, 10);
+            this.Title_Label.Name = "Title_Label";
+            this.Title_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Title_Label.Size = new System.Drawing.Size(85, 14);
+            this.Title_Label.TabIndex = 18;
+            this.Title_Label.Text = "Configuration";
+            this.Title_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Title_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // Cache_CheckBox
+            // 
+            this.Cache_CheckBox.AllowBindingControlAnimation = true;
+            this.Cache_CheckBox.AllowBindingControlColorChanges = false;
+            this.Cache_CheckBox.AllowBindingControlLocation = true;
+            this.Cache_CheckBox.AllowCheckBoxAnimation = false;
+            this.Cache_CheckBox.AllowCheckmarkAnimation = true;
+            this.Cache_CheckBox.AllowOnHoverStates = true;
+            this.Cache_CheckBox.AutoCheck = true;
+            this.Cache_CheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.Cache_CheckBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cache_CheckBox.BackgroundImage")));
+            this.Cache_CheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Cache_CheckBox.BindingControl = this.Cache_Label;
+            this.Cache_CheckBox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.Cache_CheckBox.BorderRadius = 12;
+            this.Cache_CheckBox.Checked = false;
+            this.Cache_CheckBox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Unchecked;
+            this.Cache_CheckBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Cache_CheckBox.CustomCheckmarkImage = null;
+            this.Cache_CheckBox.Location = new System.Drawing.Point(91, 161);
+            this.Cache_CheckBox.MinimumSize = new System.Drawing.Size(17, 17);
+            this.Cache_CheckBox.Name = "Cache_CheckBox";
+            this.Cache_CheckBox.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Cache_CheckBox.OnCheck.BorderRadius = 12;
+            this.Cache_CheckBox.OnCheck.BorderThickness = 2;
+            this.Cache_CheckBox.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Cache_CheckBox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.Cache_CheckBox.OnCheck.CheckmarkThickness = 2;
+            this.Cache_CheckBox.OnDisable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Cache_CheckBox.OnDisable.BorderRadius = 12;
+            this.Cache_CheckBox.OnDisable.BorderThickness = 2;
+            this.Cache_CheckBox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.Cache_CheckBox.OnDisable.CheckmarkColor = System.Drawing.Color.White;
+            this.Cache_CheckBox.OnDisable.CheckmarkThickness = 2;
+            this.Cache_CheckBox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Cache_CheckBox.OnHoverChecked.BorderRadius = 12;
+            this.Cache_CheckBox.OnHoverChecked.BorderThickness = 2;
+            this.Cache_CheckBox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Cache_CheckBox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.Cache_CheckBox.OnHoverChecked.CheckmarkThickness = 2;
+            this.Cache_CheckBox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Cache_CheckBox.OnHoverUnchecked.BorderRadius = 12;
+            this.Cache_CheckBox.OnHoverUnchecked.BorderThickness = 1;
+            this.Cache_CheckBox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.Cache_CheckBox.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Cache_CheckBox.OnUncheck.BorderRadius = 12;
+            this.Cache_CheckBox.OnUncheck.BorderThickness = 1;
+            this.Cache_CheckBox.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.Cache_CheckBox.Size = new System.Drawing.Size(22, 22);
+            this.Cache_CheckBox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.Cache_CheckBox.TabIndex = 19;
+            this.Cache_CheckBox.ThreeState = false;
+            this.Cache_CheckBox.ToolTipText = resources.GetString("Cache_CheckBox.ToolTipText");
+            // 
+            // Cache_Label
+            // 
+            this.Cache_Label.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.Cache_Label.AllowParentOverrides = false;
+            this.Cache_Label.AutoEllipsis = false;
+            this.Cache_Label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Cache_Label.CursorType = System.Windows.Forms.Cursors.Default;
+            this.Cache_Label.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Cache_Label.ForeColor = System.Drawing.Color.White;
+            this.Cache_Label.Location = new System.Drawing.Point(116, 165);
+            this.Cache_Label.Name = "Cache_Label";
+            this.Cache_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Cache_Label.Size = new System.Drawing.Size(81, 15);
+            this.Cache_Label.TabIndex = 20;
+            this.Cache_Label.Text = "Use last session";
+            this.Cache_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Cache_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // ConfigurationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(246, 157);
+            this.ClientSize = new System.Drawing.Size(289, 194);
+            this.Controls.Add(this.Cache_Label);
+            this.Controls.Add(this.Cache_CheckBox);
             this.Controls.Add(this.TitleBar);
             this.Controls.Add(this.Yuzu_Button);
             this.Controls.Add(this.Ryujinx_Button);
@@ -238,10 +314,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConfigurationWindow";
             this.Text = "ConfigurationWindow";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfigurationWindow_FormClosing);
             this.Load += new System.EventHandler(this.ConfigureWindow_Load);
             this.TitleBar.ResumeLayout(false);
             this.TitleBar.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -252,6 +330,8 @@
         private Bunifu.UI.WinForms.BunifuImageButton Button_Close;
         private Bunifu.UI.WinForms.BunifuImageButton Button_Minimize;
         private System.Windows.Forms.Panel TitleBar;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel Title_Label;
+        private Bunifu.UI.WinForms.BunifuCheckBox Cache_CheckBox;
+        private Bunifu.UI.WinForms.BunifuLabel Cache_Label;
     }
 }
