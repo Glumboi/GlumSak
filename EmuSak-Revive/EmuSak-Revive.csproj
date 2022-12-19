@@ -45,6 +45,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DarkNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DarkNet-Forms.1.0.0\lib\net472\DarkNet.dll</HintPath>
+    </Reference>
     <Reference Include="Glumboi.Debug">
       <HintPath>..\..\..\Glumboi dlls\Glumboi.Debug\Glumboi.Debug\bin\Release\Glumboi.Debug.dll</HintPath>
     </Reference>
@@ -264,7 +267,7 @@
   </Target>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Reactor_Enabled="0" Reactor_Deploy="0" Reactor_Commands="" Reactor_Project="" Reactor_Configuration="Release" Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyFileName&gt;" />
+      <UserProperties Reactor_Output="&lt;AssemblyLocation&gt;\&lt;AssemblyFileName&gt;" Reactor_Configuration="Release" Reactor_Project="" Reactor_Commands="" Reactor_Deploy="0" Reactor_Enabled="0" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

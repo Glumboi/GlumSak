@@ -90,3 +90,5 @@ F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak-Revive.ConfigIni.dll.confi
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak_Revive.Language.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak_Revive.Language.pdb
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\Guna.UI2.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\DarkNet.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\DarkNet.xml

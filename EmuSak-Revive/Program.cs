@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using Glumboi.Debug;
 using EmuSak_Revive.GUI.New;
+using darknet.forms;
 
 namespace EmuSak_Revive
 {
@@ -13,6 +14,7 @@ namespace EmuSak_Revive
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DarkNet.SetDarkModeAllowedForProcess(true);
             Application.Run(new ConfigurationWindow());
         }
     }

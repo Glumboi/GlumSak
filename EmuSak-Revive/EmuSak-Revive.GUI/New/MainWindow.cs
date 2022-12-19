@@ -14,12 +14,8 @@ using Glumboi.Debug;
 using System.Threading.Tasks;
 using EmuSak_Revive.Discord;
 using EmuSak_Revive.Audio;
-using System.Xml.Linq;
 using System.Diagnostics;
-using System.Runtime.InteropServices;
 using Microsoft.WindowsAPICodePack.Dialogs;
-using Telerik.WinControls.UI;
-using System.Runtime.InteropServices.ComTypes;
 
 namespace EmuSak_Revive.GUI.New
 {
@@ -34,9 +30,6 @@ namespace EmuSak_Revive.GUI.New
         public bool PortableRyujinx { get => Properties.Settings.Default.PortableRyujinx; }
 
         private List<BunifuImageButton> bunifuImageButtons = new List<BunifuImageButton>();
-
-        /*public static int WindowVolume
-        { get => (int)mainWindowPlayer.Volume * 100; set { mainWindowPlayer.Volume = value; } }*/
 
         private ConfigurationWindow configureWindow = new ConfigurationWindow();
         private GangShitWindow gangShitWindow = new GangShitWindow();
@@ -279,9 +272,29 @@ namespace EmuSak_Revive.GUI.New
             btn.MouseHover += Btn_MouseHover; ;
             btn.Tag = tag;
 
-            Games_FlowPanel.Controls.Add(btn);
+            Games_FlowPanel.Invoke((MethodInvoker)delegate //Used to fix a bug that causes infinite loading
+            {
+                Games_FlowPanel.Controls.Add(btn);
+            });
+
             bunifuImageButtons.Add(btn);
+
             debugConsole.Info($"Created a button with the id: {btn.Name}");
+        }
+
+        private void GameContextClick(object sender, EventArgs e)
+        {
+            ShowGameActionsWindow((sender as MenuItem).Name,
+                (sender as MenuItem).Tag.ToString(),
+                null);
+        }
+
+        private void GameButtonClicked(object sender, MouseEventArgs e)
+        {
+            ShowGameActionsWindow(
+                (sender as BunifuImageButton).Name,
+                (sender as BunifuImageButton).Tag.ToString(),
+                (sender as BunifuImageButton).Image);
         }
 
         private void Btn_MouseHover(object sender, EventArgs e)
@@ -372,7 +385,6 @@ namespace EmuSak_Revive.GUI.New
                 ids.Add(item.Name);
                 names.Add(item.Tag.ToString());
             }
-
             GlumSakCache.CreateGlumSakCache(images, names, ids, config);
         }
 
@@ -424,11 +436,15 @@ namespace EmuSak_Revive.GUI.New
         private string gameName = string.Empty;
         private Image gameImg = null;
 
-        private void GameButtonClicked(object sender, MouseEventArgs e)
+        private void ShowGameActionsWindow(string name, string tag, Image image)
         {
-            gameId = (sender as BunifuImageButton).Name;
-            gameName = (sender as BunifuImageButton).Tag.ToString();
-            gameImg = (sender as BunifuImageButton).Image;
+            gameId = name;
+            gameName = tag;
+
+            if (image != null)
+            {
+                gameImg = image;
+            }
 
             PlayAudio.Play(mainWindowPlayer,
             Properties.Settings.Default.PlaySounds,

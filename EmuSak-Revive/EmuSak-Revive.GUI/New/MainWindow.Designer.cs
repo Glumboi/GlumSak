@@ -64,6 +64,7 @@
             this.About_Label = new Bunifu.UI.WinForms.BunifuLabel();
             this.Text_Label = new Bunifu.UI.WinForms.BunifuLabel();
             this.SettingsTab = new System.Windows.Forms.TabPage();
+            this.Restart_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.ResetSettings_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.SelectLanguage_Label = new Bunifu.UI.WinForms.BunifuLabel();
             this.Language_DropDown = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -86,7 +87,6 @@
             this.SelectYuzuPath_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
-            this.Restart_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.TabControl.SuspendLayout();
             this.MainTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Download_ProgressBar)).BeginInit();
@@ -156,7 +156,7 @@
             this.Games_ScrollBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.Games_ScrollBar.InUpdate = false;
             this.Games_ScrollBar.LargeChange = 10;
-            this.Games_ScrollBar.Location = new System.Drawing.Point(884, 82);
+            this.Games_ScrollBar.Location = new System.Drawing.Point(858, 82);
             this.Games_ScrollBar.Name = "Games_ScrollBar";
             this.Games_ScrollBar.ScrollbarSize = 18;
             this.Games_ScrollBar.Size = new System.Drawing.Size(18, 418);
@@ -611,6 +611,41 @@
             this.SettingsTab.Name = "SettingsTab";
             this.SettingsTab.Size = new System.Drawing.Size(910, 534);
             this.SettingsTab.TabIndex = 3;
+            // 
+            // Restart_Button
+            // 
+            this.Restart_Button.ActiveImage = null;
+            this.Restart_Button.AllowAnimations = true;
+            this.Restart_Button.AllowBuffering = false;
+            this.Restart_Button.AllowToggling = false;
+            this.Restart_Button.AllowZooming = false;
+            this.Restart_Button.AllowZoomingOnFocus = false;
+            this.Restart_Button.BackColor = System.Drawing.Color.Transparent;
+            this.Restart_Button.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.Restart_Button.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Restart_Button.ErrorImage")));
+            this.Restart_Button.FadeWhenInactive = true;
+            this.Restart_Button.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.Restart_Button.Image = ((System.Drawing.Image)(resources.GetObject("Restart_Button.Image")));
+            this.Restart_Button.ImageActive = null;
+            this.Restart_Button.ImageLocation = null;
+            this.Restart_Button.ImageMargin = 0;
+            this.Restart_Button.ImageSize = new System.Drawing.Size(45, 45);
+            this.Restart_Button.ImageZoomSize = new System.Drawing.Size(45, 45);
+            this.Restart_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("Restart_Button.InitialImage")));
+            this.Restart_Button.Location = new System.Drawing.Point(61, 7);
+            this.Restart_Button.Name = "Restart_Button";
+            this.Restart_Button.Rotation = 0;
+            this.Restart_Button.ShowActiveImage = true;
+            this.Restart_Button.ShowCursorChanges = true;
+            this.Restart_Button.ShowImageBorders = false;
+            this.Restart_Button.ShowSizeMarkers = false;
+            this.Restart_Button.Size = new System.Drawing.Size(45, 45);
+            this.Restart_Button.TabIndex = 86;
+            this.Restart_Button.ToolTipText = "";
+            this.Restart_Button.WaitOnLoad = false;
+            this.Restart_Button.Zoom = 0;
+            this.Restart_Button.ZoomSpeed = 10;
+            this.Restart_Button.Click += new System.EventHandler(this.Restart_Button_Click);
             // 
             // ResetSettings_Button
             // 
@@ -1378,41 +1413,6 @@
             this.imageList1.Images.SetKeyName(1, "Ryujinx_Asset.png");
             this.imageList1.Images.SetKeyName(2, "About_Asset.png");
             this.imageList1.Images.SetKeyName(3, "Configure_Asset.png");
-            // 
-            // Restart_Button
-            // 
-            this.Restart_Button.ActiveImage = null;
-            this.Restart_Button.AllowAnimations = true;
-            this.Restart_Button.AllowBuffering = false;
-            this.Restart_Button.AllowToggling = false;
-            this.Restart_Button.AllowZooming = false;
-            this.Restart_Button.AllowZoomingOnFocus = false;
-            this.Restart_Button.BackColor = System.Drawing.Color.Transparent;
-            this.Restart_Button.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Restart_Button.ErrorImage = ((System.Drawing.Image)(resources.GetObject("Restart_Button.ErrorImage")));
-            this.Restart_Button.FadeWhenInactive = true;
-            this.Restart_Button.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.Restart_Button.Image = ((System.Drawing.Image)(resources.GetObject("Restart_Button.Image")));
-            this.Restart_Button.ImageActive = null;
-            this.Restart_Button.ImageLocation = null;
-            this.Restart_Button.ImageMargin = 0;
-            this.Restart_Button.ImageSize = new System.Drawing.Size(45, 45);
-            this.Restart_Button.ImageZoomSize = new System.Drawing.Size(45, 45);
-            this.Restart_Button.InitialImage = ((System.Drawing.Image)(resources.GetObject("Restart_Button.InitialImage")));
-            this.Restart_Button.Location = new System.Drawing.Point(61, 7);
-            this.Restart_Button.Name = "Restart_Button";
-            this.Restart_Button.Rotation = 0;
-            this.Restart_Button.ShowActiveImage = true;
-            this.Restart_Button.ShowCursorChanges = true;
-            this.Restart_Button.ShowImageBorders = false;
-            this.Restart_Button.ShowSizeMarkers = false;
-            this.Restart_Button.Size = new System.Drawing.Size(45, 45);
-            this.Restart_Button.TabIndex = 86;
-            this.Restart_Button.ToolTipText = "";
-            this.Restart_Button.WaitOnLoad = false;
-            this.Restart_Button.Zoom = 0;
-            this.Restart_Button.ZoomSpeed = 10;
-            this.Restart_Button.Click += new System.EventHandler(this.Restart_Button_Click);
             // 
             // MainWindow
             // 
