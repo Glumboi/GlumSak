@@ -92,3 +92,16 @@ F:\visual studio\repos\EmuSak-Revive\bin\Debug\EmuSak_Revive.Language.pdb
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\Guna.UI2.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\DarkNet.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Debug\DarkNet.xml
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.Direct3D11.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.DXGI.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.Direct3D11.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.Direct3D11.xml
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.DXGI.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.DXGI.xml
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.Mathematics.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\Glumboi.DirectXWinForms.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.Mathematics.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\SharpDX.Mathematics.xml
+F:\visual studio\repos\EmuSak-Revive\bin\Debug\Glumboi.DirectXWinForms.pdb

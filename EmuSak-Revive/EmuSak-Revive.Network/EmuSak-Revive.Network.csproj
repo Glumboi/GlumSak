@@ -49,6 +49,9 @@
       <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="CustomMarshalers" />
+    <Reference Include="Glumboi.Debug">
+      <HintPath>..\..\..\..\Glumboi dlls\Glumboi.Debug\Glumboi.Debug\bin\Release\Glumboi.Debug.dll</HintPath>
+    </Reference>
     <Reference Include="Glumboi.UI">
       <HintPath>..\..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
     </Reference>

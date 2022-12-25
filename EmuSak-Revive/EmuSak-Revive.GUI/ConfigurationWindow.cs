@@ -31,7 +31,6 @@ namespace EmuSak_Revive.GUI
 
         private void GetSettings()
         {
-            LangLoader.Run();
             Cache_CheckBox.Checked = Properties.Settings.Default.UseLastSession;
         }
 

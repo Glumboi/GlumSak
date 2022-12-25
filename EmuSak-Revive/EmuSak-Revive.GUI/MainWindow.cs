@@ -95,7 +95,6 @@ namespace EmuSak_Revive.GUI
 
         public void InitSettings()
         {
-            LangLoader.Run();
             cooldownTimer.Tick += CooldownTimer_Tick;
             cooldownTimer.Interval = 3000;
             Networking.DownloadProgressBar = Download_ProgressBar;
@@ -110,7 +109,6 @@ namespace EmuSak_Revive.GUI
         {
             if (EmuConfig == 0)
             {
-                
             }
         }
 

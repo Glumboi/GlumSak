@@ -26,6 +26,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Changelogs", "Changelogs", "{90A4863C-80CD-453E-A6B0-0B53416846B5}"
 	ProjectSection(SolutionItems) = preProject
 		3.0.txt = 3.0.txt
+		4.2.txt = 4.2.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuSak-Revive.GUI-WPF", "EmuSak-Revive.GUI-WPF\EmuSak-Revive.GUI-WPF.csproj", "{113109D1-6DC9-4C87-92B0-E300F267B4CF}"

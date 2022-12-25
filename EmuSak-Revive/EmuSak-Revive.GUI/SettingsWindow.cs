@@ -34,7 +34,7 @@ namespace EmuSak_Revive.GUI
 
         public void LoadSettings()
         {
-            YuzuPath_TextBox.Text = Properties.Settings.Default.PortableYuzuPath;
+            /*YuzuPath_TextBox.Text = Properties.Settings.Default.PortableYuzuPath;
             RyuPath_TextBox.Text = Properties.Settings.Default.PortableRyujinxpath;
             PasteBinUrl_TextBox.Text = Properties.Settings.Default.ShaderLinks;
             PlaySounds_CheckBox.Checked = Properties.Settings.Default.PlaySounds;
@@ -42,16 +42,10 @@ namespace EmuSak_Revive.GUI
             Ryujinx_Image.BorderRadius = 0;
             Yuzu_Image.BorderRadius = 0;
             MainWindow_AudioSlider.Value = Properties.Settings.Default.MainWindowVolume;
-            UpdateSliderValLabel();
+            UpdateSliderValLabel();*/
             LoadLanguages();
-            try
-            {
-                Language_DropDown.SelectedIndex = Properties.Settings.Default.SelectedLanguage;
-            }
-            catch (Exception)
-            {
-                return;
-            }
+
+            Language_DropDown.SelectedIndex = Properties.Settings.Default.SelectedLanguage;
         }
 
         private void SaveSettings()
@@ -165,18 +159,18 @@ namespace EmuSak_Revive.GUI
             Network.Networking.TransLateFileSize(Language.Lang.GetSingeString("extraLang", "FileSizeString"));
         }
 
-        private void UpdateLanguage()
+        /*private void UpdateLanguage()
         {
             foreach (Form form in Application.OpenForms)
             {
                 Language.Lang.LoadLanguage(Language_DropDown.SelectedIndex, form);
             }
             UpdateExtraLangs();
-        }
+        }*/
 
         private void Language_DropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateLanguage();
+            //UpdateLanguage();
         }
 
         private void PlaySounds_CheckBox_CheckedChanged(object sender, BunifuCheckBox.CheckedChangedEventArgs e)

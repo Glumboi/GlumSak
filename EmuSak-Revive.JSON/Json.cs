@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using Python.Runtime;
 using System.Threading.Tasks;
 using static System.Windows.Forms.LinkLabel;
+using System.Text.RegularExpressions;
 
 namespace EmuSak_Revive.JSON
 {
@@ -27,7 +28,7 @@ namespace EmuSak_Revive.JSON
         /// </summary>
         /// <param name="URL"></param>
         /// <returns></returns>
-        private static List<string> CreateNsuIdsFile(string URL)
+        /*private static List<string> CreateNsuIdsFile(string URL) ---> Old code kept for testing
         {
             WebClient client = new WebClient();
             Stream stream = client.OpenRead(URL);
@@ -43,7 +44,6 @@ namespace EmuSak_Revive.JSON
                     //nsuId
                     var str = string.Join("", line.Split(',', ':', '\"', 'n', 's', 'u', 'I', 'd')); //Splits the nsuid by chars that we dont want
                     result.Add(str);
-
                 }
             }
             if (!File.Exists("./Python/nsuIds.txt"))
@@ -53,16 +53,46 @@ namespace EmuSak_Revive.JSON
             File.WriteAllLines("./Python/nsuIds.txt", result);
 
             return result;
+        }*/
+
+        private static List<string> CreateNsuIdsFile(string URL)
+        {
+            Regex nsuIdRegex = new Regex(@"""nsuId"": (\d+)");
+
+            using (WebClient client = new WebClient())
+            using (Stream stream = client.OpenRead(URL))
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                StringBuilder sb = new StringBuilder();
+                while (true)
+                {
+                    string line = reader.ReadLine();
+                    if (line == null)
+                    {
+                        break;
+                    }
+
+                    var match = nsuIdRegex.Match(line);
+                    if (match.Success)
+                    {
+                        sb.AppendLine(match.Groups[1].Value);
+                    }
+                }
+
+                File.WriteAllLines("./Python/nsuIds.txt", sb.ToString().Split('\n'));
+
+                return sb.ToString().Split('\n').Select(x => x.TrimEnd('\r')).ToList();
+            }
         }
 
-        public static void Run(string URL)
+        public static async void Run(string URL)
         {
             CreateNsuIdsFile(URL);
 
             RunJsonPython();
         }
 
-        private static void RunJsonPython() //Starts our Json.exe which gathers json info from a titledb 
+        private static void RunJsonPython() //Starts our Json.exe which gathers json info from a titledb
         {
             RunBat();
         }
@@ -80,5 +110,4 @@ namespace EmuSak_Revive.JSON
             p.WaitForExit();
         }
     }
-
 }

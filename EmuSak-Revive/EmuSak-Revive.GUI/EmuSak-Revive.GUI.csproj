@@ -51,6 +51,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
       <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
@@ -68,6 +71,9 @@
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
       <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating">
+      <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
       <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
@@ -89,6 +95,9 @@
     </Reference>
     <Reference Include="Glumboi.Debug">
       <HintPath>..\..\..\..\Glumboi dlls\Glumboi.Debug\Glumboi.Debug\bin\Release\Glumboi.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Glumboi.DirectXWinForms">
+      <HintPath>..\..\..\..\Glumboi dlls\Glumboi.DirectXWinForms\bin\Release\Glumboi.DirectXWinForms.dll</HintPath>
     </Reference>
     <Reference Include="Glumboi.UI">
       <HintPath>..\..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
@@ -304,9 +313,10 @@
     <Compile Include="GangShitWindow.Designer.cs">
       <DependentUpon>GangShitWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generics\LangLoader.cs" />
+    <Compile Include="Generics\TransparentForm.cs" />
     <Compile Include="Generics\PlayAudio.cs" />
     <Compile Include="Generics\UI.cs" />
+    <Compile Include="Generics\UnicodeDecoder.cs" />
     <Compile Include="Generics\VersionSorter.cs" />
     <Compile Include="LoadingScreen.cs">
       <SubType>Form</SubType>
@@ -380,6 +390,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\About_Asset.png" />
+    <Content Include="Assets\Asset_Bug.png" />
+    <Content Include="Assets\Asset_PlaceholderGameBanner.jpg" />
     <Content Include="Assets\CatDance_Asset.gif" />
     <Content Include="Assets\Close_Asset.png" />
     <Content Include="Assets\Configure_Asset.png" />
@@ -399,6 +411,9 @@
     <Content Include="Assets\Icon4_Asset.png" />
     <Content Include="Assets\Icon_Asset.ico" />
     <Content Include="Assets\Key_Asset.png" />
+    <Content Include="Assets\Language_Asset.png" />
+    <Content Include="Assets\Language_Asset_Alternative.png" />
+    <Content Include="Assets\Loading_Asset.png" />
     <Content Include="Assets\Minimize_Asset.png" />
     <Content Include="Assets\OpenFolder_Asset.png" />
     <Content Include="Assets\PeepoHappy_Asset.gif" />
@@ -411,6 +426,7 @@
     <Content Include="Assets\Rocket_Asset.png" />
     <Content Include="Assets\Ryujinx_Asset.png" />
     <Content Include="Assets\Save_Asset.png" />
+    <Content Include="Assets\Send_Asset.png" />
     <Content Include="Assets\Update_Asset.png" />
     <Content Include="Assets\Yuzu_Asset.png" />
     <Content Include="Icon4_Asset.ico" />

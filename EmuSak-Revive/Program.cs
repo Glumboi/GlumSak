@@ -1,8 +1,6 @@
 ﻿using EmuSak_Revive.GUI;
 using System;
 using System.Windows.Forms;
-using Glumboi.Debug;
-using EmuSak_Revive.GUI.New;
 using darknet.forms;
 
 namespace EmuSak_Revive

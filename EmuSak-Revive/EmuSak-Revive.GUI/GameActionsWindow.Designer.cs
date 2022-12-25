@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameActionsWindow));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.Action_Label = new Bunifu.UI.WinForms.BunifuLabel();
             this.GameId_Label = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -110,11 +110,11 @@
             this.DownloadShaders_Button.ColorContrastOnClick = 45;
             this.DownloadShaders_Button.ColorContrastOnHover = 45;
             this.DownloadShaders_Button.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.DownloadShaders_Button.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.DownloadShaders_Button.CustomizableEdges = borderEdges2;
             this.DownloadShaders_Button.DialogResult = System.Windows.Forms.DialogResult.None;
             this.DownloadShaders_Button.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.DownloadShaders_Button.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -201,6 +201,7 @@
             this.Game_PrictureBox.AllowFocused = false;
             this.Game_PrictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Game_PrictureBox.AutoSizeHeight = true;
+            this.Game_PrictureBox.BackColor = System.Drawing.Color.Transparent;
             this.Game_PrictureBox.BorderRadius = 50;
             this.Game_PrictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Game_PrictureBox.Image")));
             this.Game_PrictureBox.IsCircle = true;

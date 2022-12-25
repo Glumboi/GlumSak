@@ -206,6 +206,12 @@
   <ItemGroup>
     <Content Include="Icon3_Asset.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmuSak-Revive.ConfigIni\EmuSak-Revive.ConfigIni.csproj">
+      <Project>{3EDA1E76-4CB3-4BFC-A77D-F43739EECAC7}</Project>
+      <Name>EmuSak-Revive.ConfigIni</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

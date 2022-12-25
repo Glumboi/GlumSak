@@ -45,3 +45,5 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Octokit.d
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Octokit.xml
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\AnonFileAPI.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Guna.UI2.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Glumboi.Debug.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Network\bin\Release\Glumboi.Debug.pdb

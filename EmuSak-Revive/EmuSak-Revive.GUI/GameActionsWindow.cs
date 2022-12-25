@@ -1,16 +1,19 @@
 ﻿using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.GUI.Generics;
 using EmuSak_Revive.Network;
+using Glumboi.UI;
 using Glumboi.UI.Toast;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,16 +48,20 @@ namespace EmuSak_Revive.GUI
             GameID = gameId;
             GameId_Label.Text = GameID;
             shaderUrl = Networking.GetShaderDownload(GameName);
+        }
+
+        private void CheckShader()
+        {
             shaderExists = !string.IsNullOrWhiteSpace(shaderUrl);
         }
 
         private void GameActionsWindow_Load(object sender, EventArgs e)
         {
-            UI.ChangeToDarkMode(this);
             Game_PrictureBox.BorderRadius = 0;
-
-            LangLoader.Run();
-
+            UIChanger.ChangeTitlebarToDark(Handle);
+            EffectBlur effectBlur = new EffectBlur(this);
+            effectBlur.EnableBlur();
+            CheckShader();
             if (!shaderExists)
             {
                 bunifuLabel1.Text = "No shader available for this game!";

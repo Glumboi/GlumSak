@@ -30,3 +30,8 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\Microsoft.
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\Microsoft.WindowsAPICodePack.xml
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\AnonFileAPI.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\Glumboi.Debug.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\Glumboi.Debug.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\EmuSak-Revive.ConfigIni.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\EmuSak-Revive.ConfigIni.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Debug\EmuSak-Revive.ConfigIni.dll.config

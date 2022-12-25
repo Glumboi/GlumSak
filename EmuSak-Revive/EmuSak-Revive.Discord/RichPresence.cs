@@ -1,18 +1,20 @@
 ﻿using DiscordRPC;
 using DiscordRPC.Logging;
+using System.Windows.Forms;
+using Button = DiscordRPC.Button;
 
 namespace EmuSak_Revive.Discord
 {
     public class RichPresence
     {
         public DiscordRpcClient client;
-        bool initalized = false;
+        private bool initalized = false;
 
         public void UpdatePresence(
-            string details, 
-            string state, 
+            string details,
+            string state,
             string largeImageName,
-            string smallImageName, 
+            string smallImageName,
             string smallImageHoverText)
         {
             Button[] buttons =
@@ -47,7 +49,6 @@ namespace EmuSak_Revive.Discord
         {
             initalized = true;
             client = new DiscordRpcClient("1041087529778167948");
-            client.Logger = new ConsoleLogger() { Level = LogLevel.Warning };
             client.Initialize();
         }
     }

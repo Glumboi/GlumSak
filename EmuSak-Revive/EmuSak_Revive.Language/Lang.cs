@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Application = System.Windows.Forms.Application;
 
 namespace EmuSak_Revive.Language
@@ -49,8 +50,10 @@ namespace EmuSak_Revive.Language
             return iniParser.GetSetting(sectioon, key);
         }
 
-        public static void LoadLanguageTabs(int index, TabPage page)
+        public static List<string> GetLangIniSettings(int index)
         {
+            List<string> res = new List<string>();
+
             string LangFile = languageIniPaths[index];
 
             iniParser = new IniParser(LangFile);
@@ -59,49 +62,43 @@ namespace EmuSak_Revive.Language
 
             foreach (var str in section)
             {
-                Control ctn = page.Controls[str];
-
-                if (ctn is Control && page.Contains(ctn))
+                var checkedStr = !str.Contains(';') ? str + " = " + iniParser.GetSetting("language", str) : string.Empty;
+                if (!string.IsNullOrWhiteSpace(checkedStr))
                 {
-                    if (ctn is Guna2TextBox)
-                    {
-                        var tb = (Guna2TextBox)ctn;
-                        tb.PlaceholderText = iniParser.GetSetting("language", str);
-                    }
-                    ctn.Text = iniParser.GetSetting("language", str);
-                }
-                if (!(ctn is Control) && Application.OpenForms[str] != null)
-                {
-                    Application.OpenForms[str].Text = iniParser.GetSetting("language", str);
+                    res.Add(checkedStr);
                 }
             }
+
+            return res;
         }
 
-        public static void LoadLanguage(int index, Form frm)
+        public static void LoadLanguage(Control ctrl, int index)
         {
             string LangFile = languageIniPaths[index];
 
             iniParser = new IniParser(LangFile);
 
             var section = iniParser.EnumSection("language");
+            var langDict = section.ToDictionary(k => k, k => iniParser.GetSetting("language", k));
 
-            foreach (var str in section)
+            SetControlText(ctrl, langDict);
+        }
+
+        private static void SetControlText(Control ctrl, Dictionary<string, string> langDict)
+        {
+            if (langDict.TryGetValue(ctrl.Name, out string text))
             {
-                Control ctn = frm.Controls[str];
+                Type tbType = typeof(BunifuTextBox);
+                if (tbType.IsAssignableFrom(ctrl.GetType()))
+                {
+                    ctrl.GetType().GetProperty("PlaceholderText").SetValue(ctrl, text);
+                }
+                ctrl.Text = text;
+            }
 
-                if (ctn is Control && frm.Contains(ctn))
-                {
-                    if (ctn is BunifuTextBox)
-                    {
-                        var tb = (BunifuTextBox)ctn;
-                        tb.PlaceholderText = iniParser.GetSetting("language", str);
-                    }
-                    ctn.Text = iniParser.GetSetting("language", str);
-                }
-                if (!(ctn is Control) && Application.OpenForms[str] != null)
-                {
-                    Application.OpenForms[str].Text = iniParser.GetSetting("language", str);
-                }
+            foreach (Control child in ctrl.Controls)
+            {
+                SetControlText(child, langDict);
             }
         }
     }

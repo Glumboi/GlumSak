@@ -12,6 +12,7 @@ namespace EmuSak_Revive.Emulators
     public static class Ryujinx
     {
         private static List<string> games = new List<string>();
+
         public static List<string> Games
         {
             get { return games; }
@@ -19,6 +20,7 @@ namespace EmuSak_Revive.Emulators
         }
 
         private static List<string> gamesShader = new List<string>();
+
         public static List<string> GamesShader
         {
             get { return gamesShader; }
@@ -30,6 +32,7 @@ namespace EmuSak_Revive.Emulators
 
         //Properties for portable install of ryu
         public static string PortableRyujinxPath { get => portableRyuFolder; }
+
         public static bool PortableRyujinx { get => !string.IsNullOrWhiteSpace(portableRyuFolder); }
         public static string PortableKeysLoc { get => portableKeysLoc; }
         public static string PortableFirmwareLoc { get => portablefirmwareLoc; }
@@ -37,10 +40,11 @@ namespace EmuSak_Revive.Emulators
         private static string ryuFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Ryujinx";
         private static string ryuGamesLoc = ryuFolder + "\\games";
         private static string keysLoc = ryuFolder + "\\system";
-        static string firmwareLoc = ryuFolder + "\\bis\\system\\contents\\registered";
+        private static string firmwareLoc = ryuFolder + "\\bis\\system\\contents\\registered";
 
         //Variables for portable install of ryu
         private static string portableRyuFolder = string.Empty;
+
         private static string portableGamesLoc = string.Empty;
         private static string portableKeysLoc = string.Empty;
         private static string portablefirmwareLoc = string.Empty;

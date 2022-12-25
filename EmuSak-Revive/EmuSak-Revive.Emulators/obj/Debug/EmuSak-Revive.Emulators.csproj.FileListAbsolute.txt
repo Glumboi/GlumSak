@@ -18,3 +18,6 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Debug\System.Nu
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Debug\Glumboi.UI.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Debug\Glumboi.UI.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Debug\EmuSak-Revive.ConfigIni.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Debug\EmuSak-Revive.ConfigIni.pdb
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.Emulators\bin\Debug\EmuSak-Revive.ConfigIni.dll.config

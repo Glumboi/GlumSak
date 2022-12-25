@@ -16,6 +16,7 @@ using Telerik.WinControls.UI;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using AnonFileAPI;
 using Guna.UI2.WinForms;
+using Glumboi.Debug;
 
 namespace EmuSak_Revive.Network
 {
@@ -26,6 +27,7 @@ namespace EmuSak_Revive.Network
         public static List<int> Versions { get => versionsList; }
         public static string ShaderUrl { get; set; }
         public static RadProgressBar DownloadProgressBar { get; set; }
+        public static DebugConsole DebugConsole { get => _debugConsole; }
 
         /// <summary>
         /// Variables used for the download progress changed
@@ -43,11 +45,17 @@ namespace EmuSak_Revive.Network
         private static bool _deleteTempAfterDone = true;
         private static bool _downloadDone = false;
         private static long _totalBytesReceived;
+        private static DebugConsole _debugConsole = null;
         private static readonly Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
 
         public static void TransLateFileSize(string strNew)
         {
             _fileSizeTrans = strNew;
+        }
+
+        public static void AssignDebugConsole(DebugConsole dbc)
+        {
+            _debugConsole = dbc;
         }
 
         public static void ShowDownloadDone(string downloadDoneMsg, string title)
@@ -314,7 +322,7 @@ namespace EmuSak_Revive.Network
                 {
                     ToastHandler.ShowToast("Started a download!", "Info");
                 }
-
+                _debugConsole.Info($"{DateTime.Now} Started download of: {url}");
                 ShowProgressBar();
             }
         }
@@ -403,6 +411,7 @@ namespace EmuSak_Revive.Network
             _stopWatch.Reset();
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
             _downloadDone = true;
+            _debugConsole.Info($"Finished download of: {_outPathName}");
         }
 
         /// <summary>
@@ -430,7 +439,8 @@ namespace EmuSak_Revive.Network
             double bytesIn = double.Parse(e.BytesReceived.ToString());
             double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
             double percentage = bytesIn / totalBytes * 100;
-            UpdateProgress(int.Parse(Math.Truncate(percentage).ToString()));
+            var percentageString = int.Parse(Math.Truncate(percentage).ToString());
+            UpdateProgress(percentageString);
 
             //Used to display a progressbar on the taskbar
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.Normal, MainWindowHandle);
@@ -444,7 +454,6 @@ namespace EmuSak_Revive.Network
                 downloadSpeed.ToString("0.00"),
                 _fileSizeTrans,
                 GetFileSizeWithoutComma(fileSize));
-
             ChangeProgressText(progressBarText);
         }
 

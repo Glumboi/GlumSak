@@ -1,4 +1,5 @@
-﻿using Glumboi.UI.Toast;
+﻿using EmuSak_Revive.ConfigIni.Core;
+using Glumboi.UI.Toast;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,6 +15,7 @@ namespace EmuSak_Revive.Emulators
     public static class Yuzu
     {
         private static List<string> games = new List<string>();
+
         public static List<string> Games
         {
             get { return games; }
@@ -27,21 +29,21 @@ namespace EmuSak_Revive.Emulators
         public static string PortableYuzuPath { get => portableYuzuPath; }
         public static bool PortableYuzu { get => !string.IsNullOrWhiteSpace(portableYuzuPath); }
 
-        static string portableYuzuPath = string.Empty;
-        static string roaming = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        private static string portableYuzuPath = string.Empty;
+        private static string roaming = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-        static string gamesLoc = roaming + "\\yuzu\\cache\\game_list"; 
-        static string keysLoc = roaming + "\\yuzu\\keys";
-        static string shadersLoc = roaming + "\\yuzu\\shader";
-        static string configIni = roaming + "\\yuzu\\config\\qt-config.ini";
+        private static string gamesLoc = roaming + "\\yuzu\\cache\\game_list";
+        private static string keysLoc = roaming + "\\yuzu\\keys";
+        private static string shadersLoc = roaming + "\\yuzu\\shader";
+        private static string configIni = roaming + "\\yuzu\\config\\qt-config.ini";
 
-        static string portableGamesLoc = portableYuzuPath + "\\cache\\game_list";
-        static string portableKeysLoc = portableYuzuPath + "\\keys";
-        static string portableConfigIni = portableYuzuPath + "\\config\\qt-config.ini";
-        static string portableShadersLoc = roaming + "\\yuzu\\shader";
+        private static string portableGamesLoc = portableYuzuPath + "\\cache\\game_list";
+        private static string portableKeysLoc = portableYuzuPath + "\\keys";
+        private static string portableConfigIni = portableYuzuPath + "\\config\\qt-config.ini";
+        private static string portableShadersLoc = roaming + "\\yuzu\\shader";
 
-        static string customNandLoc = string.Empty;
-        static string firmwareLoc = string.Empty;
+        private static string customNandLoc = string.Empty;
+        private static string firmwareLoc = string.Empty;
 
         public static void ChangePortablePath(string path)
         {
@@ -91,32 +93,17 @@ namespace EmuSak_Revive.Emulators
 
         public static void GetCustomNand()
         {
-            string[] fileContent = new string[] { };
+            string configIniPath = string.IsNullOrWhiteSpace(PortableYuzuPath) ? configIni : portableConfigIni;
+            IniParser iniParser = new IniParser(configIniPath);
 
-            if (!string.IsNullOrWhiteSpace(PortableYuzuPath))
+            customNandLoc = iniParser.GetSetting("Data%20Storage", "nand_directory");
+            if (customNandLoc.Contains(@"\\"))
             {
-                fileContent = File.ReadAllLines(portableConfigIni);
+                var forwardLoc = customNandLoc.Replace(@"\\", @"/");
+                firmwareLoc = forwardLoc + "/system/Contents/registered";
+                return;
             }
-            else
-            {
-                fileContent = File.ReadAllLines(configIni);
-            }
-
-            foreach (string line in fileContent)
-            {
-                if (line.Contains("nand_directory="))
-                {
-                    customNandLoc = line.Split('=')[1];
-                    if (customNandLoc.Contains(@"\\"))
-                    {
-                        var forwardLoc = customNandLoc.Replace(@"\\", @"/");
-                        firmwareLoc = forwardLoc + "/system/Contents/registered";
-                        return;
-                    }
-                    firmwareLoc = customNandLoc + "system/Contents/registered";
-                }
-            }
+            firmwareLoc = customNandLoc + "system/Contents/registered";
         }
-
     }
 }

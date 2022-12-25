@@ -16,6 +16,10 @@ using EmuSak_Revive.Discord;
 using EmuSak_Revive.Audio;
 using System.Diagnostics;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using System.Configuration;
+using System.Reflection;
+using EmuSak_Revive.Language;
+using Glumboi.UI.Toast;
 
 namespace EmuSak_Revive.GUI.New
 {
@@ -31,12 +35,15 @@ namespace EmuSak_Revive.GUI.New
 
         private List<BunifuImageButton> bunifuImageButtons = new List<BunifuImageButton>();
 
-        private ConfigurationWindow configureWindow = new ConfigurationWindow();
         private GangShitWindow gangShitWindow = new GangShitWindow();
         private SettingsWindow settingsWindow = new SettingsWindow();
         private AboutWindow aboutWindow = new AboutWindow();
         public static AudioPlayer mainWindowPlayer = new AudioPlayer(Properties.Settings.Default.MainWindowVolume);
-        public static DebugConsole debugConsole = new DebugConsole(2, "Glumsak debug console", false, false);
+
+        public static DebugConsole debugConsole = new DebugConsole(Properties.Settings.Default.LogLevel,
+                                                      "Glumsak debug console",
+                                                      Properties.Settings.Default.DebugMode,
+                                                      Properties.Settings.Default.CatchErros);
 
         private List<string> iconUrls = new List<string>();
         private List<string> ids = new List<string>();
@@ -46,10 +53,12 @@ namespace EmuSak_Revive.GUI.New
         private int clickCount = 0; //For the lil easter egg
         private string firmwareToDownload = string.Empty;
         private readonly Timer cooldownTimer = new Timer();
+        private Dictionary<BunifuLabel, Point> originalPositions; //Used for label calculation
 
         public MainWindow()
         {
             InitializeComponent();
+            Networking.AssignDebugConsole(debugConsole);
         }
 
         public void LoadPortableEmus()
@@ -69,7 +78,7 @@ namespace EmuSak_Revive.GUI.New
 
         private void LoadSoundFiles()
         {
-            try
+            if (Directory.Exists(Environment.CurrentDirectory + @"\Audio"))
             {
                 mainWindowPlayer.AudioFiles = new List<string>()
                 {
@@ -77,15 +86,26 @@ namespace EmuSak_Revive.GUI.New
                     Environment.CurrentDirectory + @"\Audio\select.wav"
                 };
             }
-            catch (Exception)
+        }
+
+        private void LoadAllTabs()
+        {
+            int origTab = TabControl.SelectedIndex;
+
+            for (int i = 0; i < TabControl.TabCount; i++) // --> Goes through all tabs and opens them
+                                                          // so they load the UI controls
             {
-                //Do nothing
+                TabControl.SelectedIndex = i;
             }
+
+            TabControl.SelectedIndex = origTab;
         }
 
         public void InitSettings()
         {
-            LangLoader.Run();
+            //Other
+            LoadAllTabs();
+            InitLang();
             cooldownTimer.Tick += CooldownTimer_Tick;
             cooldownTimer.Interval = 3000;
             Networking.DownloadProgressBar = Download_ProgressBar;
@@ -94,29 +114,51 @@ namespace EmuSak_Revive.GUI.New
             LoadEmuIcon();
             LoadFirmwares();
             CheckShaderUrl();
+
+            //Window settings
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.Size = new Size(Properties.Settings.Default.LastWidth, Properties.Settings.Default.LastHeight);
+
+            //Settings page
             YuzuPath_TextBox.Text = Properties.Settings.Default.PortableYuzuPath;
             RyuPath_TextBox.Text = Properties.Settings.Default.PortableRyujinxpath;
             PasteBinUrl_TextBox.Text = Properties.Settings.Default.ShaderLinks;
             PlaySounds_CheckBox.Checked = Properties.Settings.Default.PlaySounds;
             MainWindow_AudioSlider.Value = Properties.Settings.Default.MainWindowVolume;
+
+            //Debug settings
+            DebugMode_CheckBox.Checked = Properties.Settings.Default.DebugMode;
+            CatchErros_CheckBox.Checked = Properties.Settings.Default.CatchErros;
+            LogLevel_DropDown.SelectedIndex = Properties.Settings.Default.LogLevel;
+
             UpdateSliderValLabel();
+        }
+
+        public void InitLang()
+        {
             LoadLanguages();
-            try
+
+            /*try --> Old version of the code
             {
                 Language_DropDown.SelectedIndex = Properties.Settings.Default.SelectedLanguage;
             }
             catch (Exception)
             {
                 return;
+            }*/
+
+            int index = Properties.Settings.Default.SelectedLanguage;
+            if (index < 0 || index >= Language_DropDown.Items.Count)
+            {
+                index = 0; // Set to default value
             }
+            Language_DropDown.SelectedIndex = index;
         }
 
         private void LoadLanguages()
         {
-            Language.Lang.LoadLanguageConfigs();
-            foreach (var str in Language.Lang.Languages.Distinct())
+            Lang.LoadLanguageConfigs();
+            foreach (var str in Lang.Languages.Distinct())
             {
                 Language_DropDown.Items.Add(str);
             }
@@ -195,10 +237,36 @@ namespace EmuSak_Revive.GUI.New
         private void MainWindow_Load(object sender, EventArgs e)
         {
             UI.ChangeToDarkMode(this);
+            LoadOriginalLabelLocs();
             LoadSoundFiles();
             LoadStandardPresence();
             InitSettings();
+            LoadControlsAndStrings();
             ReloadScrollBar();
+        }
+
+        private void LoadOriginalLabelLocs()
+        {
+            originalPositions = new Dictionary<BunifuLabel, Point>();
+            originalPositions[About_Label] = About_Label.Location;
+            originalPositions[BugReport_Label] = BugReport_Label.Location;
+            originalPositions[DebugSettings_Label] = DebugSettings_Label.Location;
+        }
+
+        private void LoadControlsAndStrings()
+        {
+            Controls_DataGrid.Rows.Clear();
+
+            foreach (TabPage item in TabControl.TabPages)
+            {
+                System.Collections.IList list = item.Controls;
+                for (int i = 0; i < list.Count; i++)
+                {
+                    Control c = (Control)list[i];
+                    string[] row = new string[] { c.Name, c.Text };
+                    Controls_DataGrid.Rows.Add(row);
+                }
+            }
         }
 
         public void ChangeEmuConfig(int config)
@@ -284,17 +352,21 @@ namespace EmuSak_Revive.GUI.New
 
         private void GameContextClick(object sender, EventArgs e)
         {
-            ShowGameActionsWindow((sender as MenuItem).Name,
-                (sender as MenuItem).Tag.ToString(),
+            var item = sender as MenuItem;
+
+            ShowGameActionsWindow(item.Name,
+                item.Tag.ToString(),
                 null);
         }
 
         private void GameButtonClicked(object sender, MouseEventArgs e)
         {
+            var button = sender as BunifuImageButton;
+
             ShowGameActionsWindow(
-                (sender as BunifuImageButton).Name,
-                (sender as BunifuImageButton).Tag.ToString(),
-                (sender as BunifuImageButton).Image);
+                button.Name,
+                button.Tag.ToString(),
+                button.Image);
         }
 
         private void Btn_MouseHover(object sender, EventArgs e)
@@ -317,46 +389,7 @@ namespace EmuSak_Revive.GUI.New
                     string icon = line.Split('\"')[1];
                     string gameId = fileGameID.Split('|')[0];
                     string gameNameRaw = line.Split('\"')[5];
-                    string[] gameNameSplitted = new string[] { };
-                    string gameName = string.Empty;
-
-                    if (gameNameRaw.Contains(@"\u2122"))
-                    {
-                        gameNameSplitted = gameNameRaw.Split(new string[] { @"\u2122" }, StringSplitOptions.None);
-                    }
-
-                    //This whole branch is intended to clean up pokemon game titles
-                    if (gameNameRaw.Contains(@"Pok\u00e9mon"))
-                    {
-                        string[] pokemon = gameNameRaw.Split(new string[] { @"Pok\u00e9mon\u2122" }, StringSplitOptions.None);
-                        string pokemonNew = "Pokémon";
-
-                        if (gameNameRaw.Contains(@"Let\u2019s"))
-                        {
-                            string[] lets = gameNameRaw.Split(new string[] { @"Let\u2019s" }, StringSplitOptions.None);
-                            string letsNew = "Let's";
-                            gameName = pokemonNew + letsNew + lets[1];
-                        }
-                        else if (gameNameRaw.Contains(@"\u2122"))
-                        {
-                            var pokeSplitted = gameNameRaw.Split(new string[] { @"\u2122" }, StringSplitOptions.None);
-                            gameName = pokemonNew + pokeSplitted[1];
-                        }
-                        else
-                        {
-                            gameName = pokemonNew + pokemon.Last();
-                        }
-                    }
-
-                    if (gameNameSplitted.Length > 0 && !gameNameSplitted.Contains("Pok\\u00e9mon"))
-                    {
-                        gameName = gameNameSplitted[0] + gameNameSplitted[1];
-                    }
-                    else
-                    {
-                        if (!gameName.Contains("Pokémon"))
-                            gameName = gameNameRaw;
-                    }
+                    string cleaned = UnicodeDecoder.Decoder(gameNameRaw);
 
                     bool condition = false;
                     if (config == 0)
@@ -370,7 +403,8 @@ namespace EmuSak_Revive.GUI.New
 
                     if (condition)
                     {
-                        CreateButton(gameId, icon, gameName);
+                        //gameName
+                        CreateButton(gameId, icon, cleaned);
                     }
                 }
             }
@@ -464,11 +498,8 @@ namespace EmuSak_Revive.GUI.New
 
         private void MainWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
-            debugConsole.SaveLog(true, "./GlumSakLog.txt");
-
             SaveSettings();
-
-            Application.Exit();
+            Environment.Exit(0);
         }
 
         private void Configure_Button_Click(object sender, EventArgs e)
@@ -532,11 +563,6 @@ namespace EmuSak_Revive.GUI.New
         private void Firmware_DropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             firmwareToDownload = this.Firmware_DropDown.GetItemText(this.Firmware_DropDown.SelectedItem);
-        }
-
-        public static int Max(params int[] values)
-        {
-            return Enumerable.Max(values);
         }
 
         private void DownloadFirmware_Button_Click(object sender, EventArgs e)
@@ -608,25 +634,35 @@ namespace EmuSak_Revive.GUI.New
         private void Language_DropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateLanguage();
+            LoadControlsAndStrings();
             Properties.Settings.Default.SelectedLanguage = Language_DropDown.SelectedIndex;
         }
 
-        private void CalculateAobutText()
+        private void CalculateLabelLocs()
         {
-            //Here we get the current letter count in our label
-            char[] letterCount = About_Label.Text.ToCharArray();
+            List<BunifuLabel> labels = new List<BunifuLabel>()
+            {
+                About_Label,
+                BugReport_Label,
+                DebugSettings_Label
+            };
 
-            //Substract the X value by the letter count to ensure that the label stays in the middle
-            About_Label.Location = new Point(About_Label.Location.X - letterCount.Length,
-                About_Label.Location.Y);
+            foreach (var label in labels)
+            {
+                var x = originalPositions[label].X;
+                var y = originalPositions[label].Y;
+
+                var chars = label.Text.ToCharArray();
+
+                var newX = x - chars.Length;
+                label.Location = new Point(newX, y);
+            }
         }
 
         private void UpdateLanguage()
         {
-            Language.Lang.LoadLanguageTabs(Language_DropDown.SelectedIndex, MainTab);
-            Language.Lang.LoadLanguageTabs(Language_DropDown.SelectedIndex, InfoTab);
-            Language.Lang.LoadLanguageTabs(Language_DropDown.SelectedIndex, SettingsTab);
-            CalculateAobutText();
+            CalculateLabelLocs();
+            Lang.LoadLanguage(TabControl, Language_DropDown.SelectedIndex);
             UpdateExtraLangs();
         }
 
@@ -668,47 +704,20 @@ namespace EmuSak_Revive.GUI.New
 
         private void SaveSettings()
         {
-            if (!string.IsNullOrWhiteSpace(YuzuPath_TextBox.Text))
-            {
-                Properties.Settings.Default.PortableYuzuPath = YuzuPath_TextBox.Text;
-                Properties.Settings.Default.PortableYuzu = true;
-            }
-
-            if (!string.IsNullOrWhiteSpace(RyuPath_TextBox.Text))
-            {
-                Properties.Settings.Default.PortableRyujinxpath = RyuPath_TextBox.Text;
-                Properties.Settings.Default.PortableRyujinx = true;
-            }
-
-            if (string.IsNullOrWhiteSpace(YuzuPath_TextBox.Text))
-            {
-                Properties.Settings.Default.PortableYuzuPath = string.Empty;
-                Properties.Settings.Default.PortableYuzu = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(RyuPath_TextBox.Text))
-            {
-                Properties.Settings.Default.PortableRyujinxpath = string.Empty;
-                Properties.Settings.Default.PortableRyujinx = false;
-            }
-
+            Properties.Settings.Default.PortableYuzuPath = string.IsNullOrWhiteSpace(YuzuPath_TextBox.Text) ? string.Empty : YuzuPath_TextBox.Text;
+            Properties.Settings.Default.PortableYuzu = !string.IsNullOrWhiteSpace(YuzuPath_TextBox.Text);
+            Properties.Settings.Default.PortableRyujinxpath = string.IsNullOrWhiteSpace(RyuPath_TextBox.Text) ? string.Empty : RyuPath_TextBox.Text;
+            Properties.Settings.Default.PortableRyujinx = !string.IsNullOrWhiteSpace(RyuPath_TextBox.Text);
             Properties.Settings.Default.ShaderLinks = PasteBinUrl_TextBox.Text;
-            Network.Networking.ShaderUrl = ShaderUrl;
+            Networking.ShaderUrl = ShaderUrl;
             Properties.Settings.Default.PlaySounds = PlaySounds_CheckBox.Checked;
             Properties.Settings.Default.MainWindowVolume = MainWindow_AudioSlider.Value;
             Properties.Settings.Default.SelectedLanguage = Language_DropDown.SelectedIndex;
-
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                Properties.Settings.Default.LastWidth = 1034;
-                Properties.Settings.Default.LastHeight = 550;
-            }
-            else
-            {
-                Properties.Settings.Default.LastWidth = this.Size.Width;
-                Properties.Settings.Default.LastHeight = this.Size.Height;
-            }
-
+            Properties.Settings.Default.DebugMode = DebugMode_CheckBox.Checked;
+            Properties.Settings.Default.CatchErros = CatchErros_CheckBox.Checked;
+            Properties.Settings.Default.LogLevel = LogLevel_DropDown.SelectedIndex;
+            Properties.Settings.Default.LastWidth = this.WindowState == FormWindowState.Maximized ? 1034 : this.Size.Width;
+            Properties.Settings.Default.LastHeight = this.WindowState == FormWindowState.Maximized ? 550 : this.Size.Height;
             Properties.Settings.Default.Save();
         }
 
@@ -776,11 +785,13 @@ namespace EmuSak_Revive.GUI.New
                 ConfigurationWindow configurationWindow = new ConfigurationWindow();
                 configurationWindow.Show();
 
-                var exePath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
-                Process process = new Process();
-                process.StartInfo.FileName = exePath + @"\GlumSak.exe";
-                process.StartInfo.Verb = "runas";
-                process.Start();
+                var exePath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                using (Process process = new Process())
+                {
+                    process.StartInfo.FileName = exePath + @"\GlumSak.exe";
+                    process.StartInfo.Verb = "runas";
+                    process.Start();
+                }
                 Close();
             }
         }
@@ -788,6 +799,69 @@ namespace EmuSak_Revive.GUI.New
         private void Restart_Button_Click(object sender, EventArgs e)
         {
             RestartApp();
+        }
+
+        private void SendMail(string title, string content, string emailAddress)
+        {
+            content = content.Replace(System.Environment.NewLine, "%0d%0a");
+
+            Process.Start("mailto:" + emailAddress + "?subject=" + title + "&body="
+             + content + "%0d%0a%0d%0aMail from " + DateTime.Now);
+        }
+
+        private void SendFeedback_Button_Click(object sender, EventArgs e)
+        {
+            var fb = Feedback_TextBox.Text;
+            var str = Rating.Value.ToString();
+
+            SendMail("I gave GlumSak " +
+                str +
+                " stars because:",
+                fb,
+                "glumboi.contact@gmail.com");
+        }
+
+        private void SendBugReport_Button_Click(object sender, EventArgs e)
+        {
+            var rp = BugReport_TextBox.Text;
+            var type = BugType_DropDown.SelectedItem.ToString();
+
+            SendMail("I want to report a bug of the type " +
+                type +
+                " in GlumSak",
+                rp,
+                "glumboi.contact@gmail.com");
+        }
+
+        private void LogLevel_DropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            debugConsole.ChangeLevel(LogLevel_DropDown.SelectedIndex);
+        }
+
+        private void LoadSettingsToConsole_Button_Click(object sender, EventArgs e)
+        {
+            foreach (SettingsProperty currentProperty in Properties.Settings.Default.Properties)
+            {
+                var name = currentProperty.Name;
+                var type = Properties.Settings.Default[currentProperty.Name].GetType();
+                var value = Properties.Settings.Default[currentProperty.Name];
+                var test = string.IsNullOrWhiteSpace(value.ToString()) ? "No Value" : value;
+                debugConsole.Info("Value: " + test + " | Name:" + name + " | Type: " + type);
+            }
+        }
+
+        private void LoadSelectedLangToConsole_button_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Lang.GetLangIniSettings(Language_DropDown.SelectedIndex))
+            {
+                debugConsole.Info(item);
+            }
+        }
+
+        private void SaveLog_Button_Click(object sender, EventArgs e)
+        {
+            debugConsole.SaveLog(true, "./GlumSakLog.txt");
+            ToastHandler.ShowToast("Saved log to exe directory!", "Info");
         }
     }
 }

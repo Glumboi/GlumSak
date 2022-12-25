@@ -57,6 +57,8 @@
             this.bunifuSeparator1.TabIndex = 13;
             // 
             // Ryujinx_Button
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+
             // 
             this.Ryujinx_Button.ActiveImage = null;
             this.Ryujinx_Button.AllowAnimations = true;

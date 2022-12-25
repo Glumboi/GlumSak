@@ -45,6 +45,9 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabControl = new Guna.UI2.WinForms.Guna2TabControl();
             this.MainTab = new System.Windows.Forms.TabPage();
             this.Games_ScrollBar = new Guna.UI2.WinForms.Guna2VScrollBar();
@@ -85,6 +88,36 @@
             this.RyuPath_TextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.SelectRyuPath_Button = new Bunifu.UI.WinForms.BunifuImageButton();
             this.SelectYuzuPath_Button = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.BugTab = new System.Windows.Forms.TabPage();
+            this.DebugSettings_Label = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Controls_DataGrid = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Control_Cloumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.String_Cloumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bunifuSeparator14 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.SaveLog_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.bunifuSeparator13 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator12 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.LoadSelectedLangToConsole_button = new Guna.UI2.WinForms.Guna2Button();
+            this.LoadSettingsToConsole_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.BugType_DropDown = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.bunifuSeparator10 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.BugReport_Label = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuSeparator11 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator9 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.SendBugReport_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.BugReport_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.bunifuSeparator8 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.SendFeedback_Button = new Guna.UI2.WinForms.Guna2Button();
+            this.LogLevel_DropDown = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Feedback_Label = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuSeparator7 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator6 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.Feedback_TextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.CatchAllErrors_Label = new Bunifu.UI.WinForms.BunifuLabel();
+            this.DebugMode_Label = new Bunifu.UI.WinForms.BunifuLabel();
+            this.CatchErros_CheckBox = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.DebugMode_CheckBox = new Bunifu.UI.WinForms.BunifuCheckBox();
+            this.Rating = new Guna.UI2.WinForms.Guna2RatingStar();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.crystalDarkTheme1 = new Telerik.WinControls.Themes.CrystalDarkTheme();
             this.TabControl.SuspendLayout();
@@ -92,6 +125,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Download_ProgressBar)).BeginInit();
             this.InfoTab.SuspendLayout();
             this.SettingsTab.SuspendLayout();
+            this.BugTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Controls_DataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // TabControl
@@ -100,6 +135,7 @@
             this.TabControl.Controls.Add(this.MainTab);
             this.TabControl.Controls.Add(this.InfoTab);
             this.TabControl.Controls.Add(this.SettingsTab);
+            this.TabControl.Controls.Add(this.BugTab);
             this.TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabControl.ImageList = this.imageList1;
             this.TabControl.ItemSize = new System.Drawing.Size(100, 70);
@@ -123,6 +159,7 @@
             this.TabControl.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
             this.TabControl.TabButtonSelectedState.InnerColor = System.Drawing.Color.Tomato;
             this.TabControl.TabButtonSize = new System.Drawing.Size(100, 70);
+            this.TabControl.TabButtonTextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
             this.TabControl.TabIndex = 0;
             this.TabControl.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             // 
@@ -210,6 +247,7 @@
             // 
             this.Filter_TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Filter_TextBox.Animated = true;
             this.Filter_TextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Filter_TextBox.BorderRadius = 10;
             this.Filter_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -257,6 +295,7 @@
             // DownloadFirmware_Button
             // 
             this.DownloadFirmware_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DownloadFirmware_Button.Animated = true;
             this.DownloadFirmware_Button.BorderColor = System.Drawing.Color.Transparent;
             this.DownloadFirmware_Button.BorderRadius = 15;
             this.DownloadFirmware_Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -267,6 +306,7 @@
             this.DownloadFirmware_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.DownloadFirmware_Button.ForeColor = System.Drawing.Color.White;
             this.DownloadFirmware_Button.Image = ((System.Drawing.Image)(resources.GetObject("DownloadFirmware_Button.Image")));
+            this.DownloadFirmware_Button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.DownloadFirmware_Button.Location = new System.Drawing.Point(556, 6);
             this.DownloadFirmware_Button.Name = "DownloadFirmware_Button";
             this.DownloadFirmware_Button.Size = new System.Drawing.Size(170, 38);
@@ -277,6 +317,7 @@
             // Keys_Button
             // 
             this.Keys_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Keys_Button.Animated = true;
             this.Keys_Button.BorderColor = System.Drawing.Color.Transparent;
             this.Keys_Button.BorderRadius = 15;
             this.Keys_Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -287,6 +328,7 @@
             this.Keys_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Keys_Button.ForeColor = System.Drawing.Color.White;
             this.Keys_Button.Image = ((System.Drawing.Image)(resources.GetObject("Keys_Button.Image")));
+            this.Keys_Button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Keys_Button.Location = new System.Drawing.Point(732, 6);
             this.Keys_Button.Name = "Keys_Button";
             this.Keys_Button.Size = new System.Drawing.Size(170, 38);
@@ -1405,6 +1447,683 @@
             this.SelectYuzuPath_Button.ZoomSpeed = 10;
             this.SelectYuzuPath_Button.Click += new System.EventHandler(this.SelectYuzuPath_Button_Click);
             // 
+            // BugTab
+            // 
+            this.BugTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BugTab.Controls.Add(this.DebugSettings_Label);
+            this.BugTab.Controls.Add(this.Controls_DataGrid);
+            this.BugTab.Controls.Add(this.bunifuSeparator14);
+            this.BugTab.Controls.Add(this.SaveLog_Button);
+            this.BugTab.Controls.Add(this.bunifuSeparator13);
+            this.BugTab.Controls.Add(this.bunifuSeparator12);
+            this.BugTab.Controls.Add(this.LoadSelectedLangToConsole_button);
+            this.BugTab.Controls.Add(this.LoadSettingsToConsole_Button);
+            this.BugTab.Controls.Add(this.BugType_DropDown);
+            this.BugTab.Controls.Add(this.bunifuSeparator10);
+            this.BugTab.Controls.Add(this.BugReport_Label);
+            this.BugTab.Controls.Add(this.bunifuSeparator11);
+            this.BugTab.Controls.Add(this.bunifuSeparator9);
+            this.BugTab.Controls.Add(this.SendBugReport_Button);
+            this.BugTab.Controls.Add(this.BugReport_TextBox);
+            this.BugTab.Controls.Add(this.bunifuSeparator8);
+            this.BugTab.Controls.Add(this.SendFeedback_Button);
+            this.BugTab.Controls.Add(this.LogLevel_DropDown);
+            this.BugTab.Controls.Add(this.Feedback_Label);
+            this.BugTab.Controls.Add(this.bunifuSeparator7);
+            this.BugTab.Controls.Add(this.bunifuSeparator6);
+            this.BugTab.Controls.Add(this.Feedback_TextBox);
+            this.BugTab.Controls.Add(this.CatchAllErrors_Label);
+            this.BugTab.Controls.Add(this.DebugMode_Label);
+            this.BugTab.Controls.Add(this.CatchErros_CheckBox);
+            this.BugTab.Controls.Add(this.DebugMode_CheckBox);
+            this.BugTab.Controls.Add(this.Rating);
+            this.BugTab.ImageIndex = 4;
+            this.BugTab.Location = new System.Drawing.Point(104, 4);
+            this.BugTab.Name = "BugTab";
+            this.BugTab.Size = new System.Drawing.Size(910, 534);
+            this.BugTab.TabIndex = 4;
+            // 
+            // DebugSettings_Label
+            // 
+            this.DebugSettings_Label.AllowParentOverrides = false;
+            this.DebugSettings_Label.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DebugSettings_Label.AutoEllipsis = false;
+            this.DebugSettings_Label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DebugSettings_Label.CursorType = System.Windows.Forms.Cursors.Default;
+            this.DebugSettings_Label.Font = new System.Drawing.Font("Russo One", 12.12F);
+            this.DebugSettings_Label.ForeColor = System.Drawing.Color.White;
+            this.DebugSettings_Label.Location = new System.Drawing.Point(696, 7);
+            this.DebugSettings_Label.Name = "DebugSettings_Label";
+            this.DebugSettings_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DebugSettings_Label.Size = new System.Drawing.Size(124, 19);
+            this.DebugSettings_Label.TabIndex = 39;
+            this.DebugSettings_Label.Text = "Debug settings";
+            this.DebugSettings_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.DebugSettings_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // Controls_DataGrid
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            this.Controls_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Controls_DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Controls_DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Controls_DataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Controls_DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Controls_DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Controls_DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Controls_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Controls_DataGrid.ColumnHeadersHeight = 21;
+            this.Controls_DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Control_Cloumn,
+            this.String_Cloumn});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Controls_DataGrid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Controls_DataGrid.EnableHeadersVisualStyles = false;
+            this.Controls_DataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.Controls_DataGrid.Location = new System.Drawing.Point(621, 250);
+            this.Controls_DataGrid.Name = "Controls_DataGrid";
+            this.Controls_DataGrid.RowHeadersVisible = false;
+            this.Controls_DataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Controls_DataGrid.Size = new System.Drawing.Size(276, 215);
+            this.Controls_DataGrid.TabIndex = 38;
+            this.Controls_DataGrid.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Dark;
+            this.Controls_DataGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            this.Controls_DataGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.Controls_DataGrid.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.Controls_DataGrid.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.Controls_DataGrid.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.Controls_DataGrid.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Controls_DataGrid.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
+            this.Controls_DataGrid.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            this.Controls_DataGrid.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Controls_DataGrid.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.Controls_DataGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.Controls_DataGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.Controls_DataGrid.ThemeStyle.HeaderStyle.Height = 21;
+            this.Controls_DataGrid.ThemeStyle.ReadOnly = false;
+            this.Controls_DataGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            this.Controls_DataGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Controls_DataGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.Controls_DataGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.Controls_DataGrid.ThemeStyle.RowsStyle.Height = 22;
+            this.Controls_DataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            this.Controls_DataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            // 
+            // Control_Cloumn
+            // 
+            this.Control_Cloumn.HeaderText = "Control";
+            this.Control_Cloumn.Name = "Control_Cloumn";
+            this.Control_Cloumn.ReadOnly = true;
+            // 
+            // String_Cloumn
+            // 
+            this.String_Cloumn.HeaderText = "String";
+            this.String_Cloumn.Name = "String_Cloumn";
+            this.String_Cloumn.ReadOnly = true;
+            // 
+            // bunifuSeparator14
+            // 
+            this.bunifuSeparator14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator14.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator14.BackgroundImage")));
+            this.bunifuSeparator14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator14.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator14.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator14.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator14.LineThickness = 1;
+            this.bunifuSeparator14.Location = new System.Drawing.Point(616, 79);
+            this.bunifuSeparator14.Name = "bunifuSeparator14";
+            this.bunifuSeparator14.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator14.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator14.TabIndex = 37;
+            // 
+            // SaveLog_Button
+            // 
+            this.SaveLog_Button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveLog_Button.Animated = true;
+            this.SaveLog_Button.BackColor = System.Drawing.Color.Transparent;
+            this.SaveLog_Button.BorderColor = System.Drawing.Color.Transparent;
+            this.SaveLog_Button.BorderRadius = 15;
+            this.SaveLog_Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SaveLog_Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SaveLog_Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SaveLog_Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SaveLog_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.SaveLog_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SaveLog_Button.ForeColor = System.Drawing.Color.White;
+            this.SaveLog_Button.Image = ((System.Drawing.Image)(resources.GetObject("SaveLog_Button.Image")));
+            this.SaveLog_Button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SaveLog_Button.Location = new System.Drawing.Point(616, 481);
+            this.SaveLog_Button.Name = "SaveLog_Button";
+            this.SaveLog_Button.Size = new System.Drawing.Size(281, 38);
+            this.SaveLog_Button.TabIndex = 36;
+            this.SaveLog_Button.Text = "Save log";
+            this.SaveLog_Button.Click += new System.EventHandler(this.SaveLog_Button_Click);
+            // 
+            // bunifuSeparator13
+            // 
+            this.bunifuSeparator13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator13.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator13.BackgroundImage")));
+            this.bunifuSeparator13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator13.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator13.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator13.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator13.LineThickness = 1;
+            this.bunifuSeparator13.Location = new System.Drawing.Point(621, 466);
+            this.bunifuSeparator13.Name = "bunifuSeparator13";
+            this.bunifuSeparator13.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator13.Size = new System.Drawing.Size(276, 14);
+            this.bunifuSeparator13.TabIndex = 35;
+            // 
+            // bunifuSeparator12
+            // 
+            this.bunifuSeparator12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator12.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator12.BackgroundImage")));
+            this.bunifuSeparator12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator12.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator12.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator12.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator12.LineThickness = 1;
+            this.bunifuSeparator12.Location = new System.Drawing.Point(616, 27);
+            this.bunifuSeparator12.Name = "bunifuSeparator12";
+            this.bunifuSeparator12.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator12.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator12.TabIndex = 33;
+            // 
+            // LoadSelectedLangToConsole_button
+            // 
+            this.LoadSelectedLangToConsole_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadSelectedLangToConsole_button.Animated = true;
+            this.LoadSelectedLangToConsole_button.BackColor = System.Drawing.Color.Transparent;
+            this.LoadSelectedLangToConsole_button.BorderColor = System.Drawing.Color.Transparent;
+            this.LoadSelectedLangToConsole_button.BorderRadius = 15;
+            this.LoadSelectedLangToConsole_button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LoadSelectedLangToConsole_button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LoadSelectedLangToConsole_button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoadSelectedLangToConsole_button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LoadSelectedLangToConsole_button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.LoadSelectedLangToConsole_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LoadSelectedLangToConsole_button.ForeColor = System.Drawing.Color.White;
+            this.LoadSelectedLangToConsole_button.Image = ((System.Drawing.Image)(resources.GetObject("LoadSelectedLangToConsole_button.Image")));
+            this.LoadSelectedLangToConsole_button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.LoadSelectedLangToConsole_button.Location = new System.Drawing.Point(616, 204);
+            this.LoadSelectedLangToConsole_button.Name = "LoadSelectedLangToConsole_button";
+            this.LoadSelectedLangToConsole_button.Size = new System.Drawing.Size(281, 38);
+            this.LoadSelectedLangToConsole_button.TabIndex = 32;
+            this.LoadSelectedLangToConsole_button.Text = "Load selected language to console";
+            this.LoadSelectedLangToConsole_button.Click += new System.EventHandler(this.LoadSelectedLangToConsole_button_Click);
+            // 
+            // LoadSettingsToConsole_Button
+            // 
+            this.LoadSettingsToConsole_Button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LoadSettingsToConsole_Button.Animated = true;
+            this.LoadSettingsToConsole_Button.BackColor = System.Drawing.Color.Transparent;
+            this.LoadSettingsToConsole_Button.BorderColor = System.Drawing.Color.Transparent;
+            this.LoadSettingsToConsole_Button.BorderRadius = 15;
+            this.LoadSettingsToConsole_Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LoadSettingsToConsole_Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LoadSettingsToConsole_Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoadSettingsToConsole_Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LoadSettingsToConsole_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.LoadSettingsToConsole_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LoadSettingsToConsole_Button.ForeColor = System.Drawing.Color.White;
+            this.LoadSettingsToConsole_Button.Image = ((System.Drawing.Image)(resources.GetObject("LoadSettingsToConsole_Button.Image")));
+            this.LoadSettingsToConsole_Button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.LoadSettingsToConsole_Button.Location = new System.Drawing.Point(616, 162);
+            this.LoadSettingsToConsole_Button.Name = "LoadSettingsToConsole_Button";
+            this.LoadSettingsToConsole_Button.Size = new System.Drawing.Size(281, 38);
+            this.LoadSettingsToConsole_Button.TabIndex = 31;
+            this.LoadSettingsToConsole_Button.Text = "Load settings to console";
+            this.LoadSettingsToConsole_Button.Click += new System.EventHandler(this.LoadSettingsToConsole_Button_Click);
+            // 
+            // BugType_DropDown
+            // 
+            this.BugType_DropDown.BackColor = System.Drawing.Color.Transparent;
+            this.BugType_DropDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BugType_DropDown.BorderRadius = 10;
+            this.BugType_DropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.BugType_DropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BugType_DropDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BugType_DropDown.FocusedColor = System.Drawing.Color.Silver;
+            this.BugType_DropDown.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.BugType_DropDown.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.BugType_DropDown.ForeColor = System.Drawing.Color.White;
+            this.BugType_DropDown.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.BugType_DropDown.ItemHeight = 30;
+            this.BugType_DropDown.Items.AddRange(new object[] {
+            "UI",
+            "Networking",
+            "Other"});
+            this.BugType_DropDown.Location = new System.Drawing.Point(314, 43);
+            this.BugType_DropDown.Name = "BugType_DropDown";
+            this.BugType_DropDown.Size = new System.Drawing.Size(281, 36);
+            this.BugType_DropDown.StartIndex = 0;
+            this.BugType_DropDown.TabIndex = 30;
+            // 
+            // bunifuSeparator10
+            // 
+            this.bunifuSeparator10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator10.BackgroundImage")));
+            this.bunifuSeparator10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator10.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator10.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator10.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator10.LineThickness = 1;
+            this.bunifuSeparator10.Location = new System.Drawing.Point(314, 79);
+            this.bunifuSeparator10.Name = "bunifuSeparator10";
+            this.bunifuSeparator10.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator10.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator10.TabIndex = 29;
+            // 
+            // BugReport_Label
+            // 
+            this.BugReport_Label.AllowParentOverrides = false;
+            this.BugReport_Label.AutoEllipsis = false;
+            this.BugReport_Label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BugReport_Label.CursorType = System.Windows.Forms.Cursors.Default;
+            this.BugReport_Label.Font = new System.Drawing.Font("Russo One", 12.12F);
+            this.BugReport_Label.ForeColor = System.Drawing.Color.White;
+            this.BugReport_Label.Location = new System.Drawing.Point(410, 7);
+            this.BugReport_Label.Name = "BugReport_Label";
+            this.BugReport_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BugReport_Label.Size = new System.Drawing.Size(87, 19);
+            this.BugReport_Label.TabIndex = 28;
+            this.BugReport_Label.Text = "Bug report";
+            this.BugReport_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.BugReport_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuSeparator11
+            // 
+            this.bunifuSeparator11.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator11.BackgroundImage")));
+            this.bunifuSeparator11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator11.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator11.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator11.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator11.LineThickness = 1;
+            this.bunifuSeparator11.Location = new System.Drawing.Point(314, 27);
+            this.bunifuSeparator11.Name = "bunifuSeparator11";
+            this.bunifuSeparator11.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator11.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator11.TabIndex = 27;
+            // 
+            // bunifuSeparator9
+            // 
+            this.bunifuSeparator9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuSeparator9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator9.BackgroundImage")));
+            this.bunifuSeparator9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator9.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator9.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator9.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator9.LineThickness = 1;
+            this.bunifuSeparator9.Location = new System.Drawing.Point(314, 466);
+            this.bunifuSeparator9.Name = "bunifuSeparator9";
+            this.bunifuSeparator9.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator9.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator9.TabIndex = 26;
+            // 
+            // SendBugReport_Button
+            // 
+            this.SendBugReport_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SendBugReport_Button.Animated = true;
+            this.SendBugReport_Button.BackColor = System.Drawing.Color.Transparent;
+            this.SendBugReport_Button.BorderColor = System.Drawing.Color.Transparent;
+            this.SendBugReport_Button.BorderRadius = 15;
+            this.SendBugReport_Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SendBugReport_Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SendBugReport_Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SendBugReport_Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SendBugReport_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.SendBugReport_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SendBugReport_Button.ForeColor = System.Drawing.Color.White;
+            this.SendBugReport_Button.Image = ((System.Drawing.Image)(resources.GetObject("SendBugReport_Button.Image")));
+            this.SendBugReport_Button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SendBugReport_Button.Location = new System.Drawing.Point(314, 481);
+            this.SendBugReport_Button.Name = "SendBugReport_Button";
+            this.SendBugReport_Button.Size = new System.Drawing.Size(281, 38);
+            this.SendBugReport_Button.TabIndex = 25;
+            this.SendBugReport_Button.Text = "Send report";
+            this.SendBugReport_Button.Click += new System.EventHandler(this.SendBugReport_Button_Click);
+            // 
+            // BugReport_TextBox
+            // 
+            this.BugReport_TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.BugReport_TextBox.Animated = true;
+            this.BugReport_TextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BugReport_TextBox.BorderRadius = 10;
+            this.BugReport_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.BugReport_TextBox.DefaultText = "";
+            this.BugReport_TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.BugReport_TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.BugReport_TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.BugReport_TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.BugReport_TextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BugReport_TextBox.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.BugReport_TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BugReport_TextBox.ForeColor = System.Drawing.Color.White;
+            this.BugReport_TextBox.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.BugReport_TextBox.Location = new System.Drawing.Point(314, 94);
+            this.BugReport_TextBox.Multiline = true;
+            this.BugReport_TextBox.Name = "BugReport_TextBox";
+            this.BugReport_TextBox.PasswordChar = '\0';
+            this.BugReport_TextBox.PlaceholderText = "I would like to report a bug of type ...";
+            this.BugReport_TextBox.SelectedText = "";
+            this.BugReport_TextBox.Size = new System.Drawing.Size(281, 369);
+            this.BugReport_TextBox.TabIndex = 23;
+            // 
+            // bunifuSeparator8
+            // 
+            this.bunifuSeparator8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuSeparator8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator8.BackgroundImage")));
+            this.bunifuSeparator8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator8.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator8.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator8.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator8.LineThickness = 1;
+            this.bunifuSeparator8.Location = new System.Drawing.Point(12, 466);
+            this.bunifuSeparator8.Name = "bunifuSeparator8";
+            this.bunifuSeparator8.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator8.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator8.TabIndex = 22;
+            // 
+            // SendFeedback_Button
+            // 
+            this.SendFeedback_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.SendFeedback_Button.Animated = true;
+            this.SendFeedback_Button.BackColor = System.Drawing.Color.Transparent;
+            this.SendFeedback_Button.BorderColor = System.Drawing.Color.Transparent;
+            this.SendFeedback_Button.BorderRadius = 15;
+            this.SendFeedback_Button.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SendFeedback_Button.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SendFeedback_Button.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SendFeedback_Button.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SendFeedback_Button.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.SendFeedback_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.SendFeedback_Button.ForeColor = System.Drawing.Color.White;
+            this.SendFeedback_Button.Image = ((System.Drawing.Image)(resources.GetObject("SendFeedback_Button.Image")));
+            this.SendFeedback_Button.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SendFeedback_Button.Location = new System.Drawing.Point(12, 481);
+            this.SendFeedback_Button.Name = "SendFeedback_Button";
+            this.SendFeedback_Button.Size = new System.Drawing.Size(281, 38);
+            this.SendFeedback_Button.TabIndex = 21;
+            this.SendFeedback_Button.Text = "Send feedback";
+            this.SendFeedback_Button.Click += new System.EventHandler(this.SendFeedback_Button_Click);
+            // 
+            // LogLevel_DropDown
+            // 
+            this.LogLevel_DropDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogLevel_DropDown.BackColor = System.Drawing.Color.Transparent;
+            this.LogLevel_DropDown.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.LogLevel_DropDown.BorderRadius = 10;
+            this.LogLevel_DropDown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.LogLevel_DropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LogLevel_DropDown.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.LogLevel_DropDown.FocusedColor = System.Drawing.Color.Silver;
+            this.LogLevel_DropDown.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.LogLevel_DropDown.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.LogLevel_DropDown.ForeColor = System.Drawing.Color.White;
+            this.LogLevel_DropDown.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.LogLevel_DropDown.ItemHeight = 30;
+            this.LogLevel_DropDown.Items.AddRange(new object[] {
+            "Error",
+            "Warning",
+            "Trace"});
+            this.LogLevel_DropDown.Location = new System.Drawing.Point(616, 43);
+            this.LogLevel_DropDown.Name = "LogLevel_DropDown";
+            this.LogLevel_DropDown.Size = new System.Drawing.Size(281, 36);
+            this.LogLevel_DropDown.TabIndex = 20;
+            this.LogLevel_DropDown.SelectedIndexChanged += new System.EventHandler(this.LogLevel_DropDown_SelectedIndexChanged);
+            // 
+            // Feedback_Label
+            // 
+            this.Feedback_Label.AllowParentOverrides = false;
+            this.Feedback_Label.AutoEllipsis = false;
+            this.Feedback_Label.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Feedback_Label.CursorType = System.Windows.Forms.Cursors.Default;
+            this.Feedback_Label.Font = new System.Drawing.Font("Russo One", 12.12F);
+            this.Feedback_Label.ForeColor = System.Drawing.Color.White;
+            this.Feedback_Label.Location = new System.Drawing.Point(109, 7);
+            this.Feedback_Label.Name = "Feedback_Label";
+            this.Feedback_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Feedback_Label.Size = new System.Drawing.Size(79, 19);
+            this.Feedback_Label.TabIndex = 19;
+            this.Feedback_Label.Text = "Feedback";
+            this.Feedback_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.Feedback_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuSeparator7
+            // 
+            this.bunifuSeparator7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator7.BackgroundImage")));
+            this.bunifuSeparator7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator7.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator7.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator7.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator7.LineThickness = 1;
+            this.bunifuSeparator7.Location = new System.Drawing.Point(12, 27);
+            this.bunifuSeparator7.Name = "bunifuSeparator7";
+            this.bunifuSeparator7.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator7.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator7.TabIndex = 9;
+            // 
+            // bunifuSeparator6
+            // 
+            this.bunifuSeparator6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator6.BackgroundImage")));
+            this.bunifuSeparator6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator6.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator6.LineColor = System.Drawing.Color.Silver;
+            this.bunifuSeparator6.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator6.LineThickness = 1;
+            this.bunifuSeparator6.Location = new System.Drawing.Point(12, 79);
+            this.bunifuSeparator6.Name = "bunifuSeparator6";
+            this.bunifuSeparator6.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator6.Size = new System.Drawing.Size(281, 14);
+            this.bunifuSeparator6.TabIndex = 8;
+            // 
+            // Feedback_TextBox
+            // 
+            this.Feedback_TextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.Feedback_TextBox.Animated = true;
+            this.Feedback_TextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Feedback_TextBox.BorderRadius = 10;
+            this.Feedback_TextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Feedback_TextBox.DefaultText = "";
+            this.Feedback_TextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Feedback_TextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Feedback_TextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Feedback_TextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Feedback_TextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Feedback_TextBox.FocusedState.BorderColor = System.Drawing.Color.Silver;
+            this.Feedback_TextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Feedback_TextBox.ForeColor = System.Drawing.Color.White;
+            this.Feedback_TextBox.HoverState.BorderColor = System.Drawing.Color.Silver;
+            this.Feedback_TextBox.Location = new System.Drawing.Point(12, 94);
+            this.Feedback_TextBox.Multiline = true;
+            this.Feedback_TextBox.Name = "Feedback_TextBox";
+            this.Feedback_TextBox.PasswordChar = '\0';
+            this.Feedback_TextBox.PlaceholderText = "I gave ... stars because:";
+            this.Feedback_TextBox.SelectedText = "";
+            this.Feedback_TextBox.Size = new System.Drawing.Size(281, 369);
+            this.Feedback_TextBox.TabIndex = 7;
+            // 
+            // CatchAllErrors_Label
+            // 
+            this.CatchAllErrors_Label.AllowParentOverrides = false;
+            this.CatchAllErrors_Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CatchAllErrors_Label.AutoEllipsis = false;
+            this.CatchAllErrors_Label.CursorType = null;
+            this.CatchAllErrors_Label.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CatchAllErrors_Label.ForeColor = System.Drawing.Color.White;
+            this.CatchAllErrors_Label.Location = new System.Drawing.Point(648, 134);
+            this.CatchAllErrors_Label.Name = "CatchAllErrors_Label";
+            this.CatchAllErrors_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CatchAllErrors_Label.Size = new System.Drawing.Size(79, 15);
+            this.CatchAllErrors_Label.TabIndex = 6;
+            this.CatchAllErrors_Label.Text = "Catch all errors";
+            this.CatchAllErrors_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.CatchAllErrors_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // DebugMode_Label
+            // 
+            this.DebugMode_Label.AllowParentOverrides = false;
+            this.DebugMode_Label.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DebugMode_Label.AutoEllipsis = false;
+            this.DebugMode_Label.CursorType = null;
+            this.DebugMode_Label.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DebugMode_Label.ForeColor = System.Drawing.Color.White;
+            this.DebugMode_Label.Location = new System.Drawing.Point(648, 103);
+            this.DebugMode_Label.Name = "DebugMode_Label";
+            this.DebugMode_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DebugMode_Label.Size = new System.Drawing.Size(69, 15);
+            this.DebugMode_Label.TabIndex = 5;
+            this.DebugMode_Label.Text = "Debug mode";
+            this.DebugMode_Label.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.DebugMode_Label.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // CatchErros_CheckBox
+            // 
+            this.CatchErros_CheckBox.AllowBindingControlAnimation = true;
+            this.CatchErros_CheckBox.AllowBindingControlColorChanges = false;
+            this.CatchErros_CheckBox.AllowBindingControlLocation = true;
+            this.CatchErros_CheckBox.AllowCheckBoxAnimation = false;
+            this.CatchErros_CheckBox.AllowCheckmarkAnimation = true;
+            this.CatchErros_CheckBox.AllowOnHoverStates = true;
+            this.CatchErros_CheckBox.AutoCheck = true;
+            this.CatchErros_CheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.CatchErros_CheckBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CatchErros_CheckBox.BackgroundImage")));
+            this.CatchErros_CheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CatchErros_CheckBox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.CatchErros_CheckBox.BorderRadius = 12;
+            this.CatchErros_CheckBox.Checked = true;
+            this.CatchErros_CheckBox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.CatchErros_CheckBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.CatchErros_CheckBox.CustomCheckmarkImage = null;
+            this.CatchErros_CheckBox.Location = new System.Drawing.Point(621, 130);
+            this.CatchErros_CheckBox.MinimumSize = new System.Drawing.Size(17, 17);
+            this.CatchErros_CheckBox.Name = "CatchErros_CheckBox";
+            this.CatchErros_CheckBox.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.CatchErros_CheckBox.OnCheck.BorderRadius = 12;
+            this.CatchErros_CheckBox.OnCheck.BorderThickness = 2;
+            this.CatchErros_CheckBox.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.CatchErros_CheckBox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.CatchErros_CheckBox.OnCheck.CheckmarkThickness = 2;
+            this.CatchErros_CheckBox.OnDisable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.CatchErros_CheckBox.OnDisable.BorderRadius = 12;
+            this.CatchErros_CheckBox.OnDisable.BorderThickness = 2;
+            this.CatchErros_CheckBox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CatchErros_CheckBox.OnDisable.CheckmarkColor = System.Drawing.Color.White;
+            this.CatchErros_CheckBox.OnDisable.CheckmarkThickness = 2;
+            this.CatchErros_CheckBox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.CatchErros_CheckBox.OnHoverChecked.BorderRadius = 12;
+            this.CatchErros_CheckBox.OnHoverChecked.BorderThickness = 2;
+            this.CatchErros_CheckBox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.CatchErros_CheckBox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.CatchErros_CheckBox.OnHoverChecked.CheckmarkThickness = 2;
+            this.CatchErros_CheckBox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.CatchErros_CheckBox.OnHoverUnchecked.BorderRadius = 12;
+            this.CatchErros_CheckBox.OnHoverUnchecked.BorderThickness = 1;
+            this.CatchErros_CheckBox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CatchErros_CheckBox.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.CatchErros_CheckBox.OnUncheck.BorderRadius = 12;
+            this.CatchErros_CheckBox.OnUncheck.BorderThickness = 1;
+            this.CatchErros_CheckBox.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.CatchErros_CheckBox.Size = new System.Drawing.Size(21, 21);
+            this.CatchErros_CheckBox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.CatchErros_CheckBox.TabIndex = 4;
+            this.CatchErros_CheckBox.ThreeState = false;
+            this.CatchErros_CheckBox.ToolTipText = null;
+            // 
+            // DebugMode_CheckBox
+            // 
+            this.DebugMode_CheckBox.AllowBindingControlAnimation = true;
+            this.DebugMode_CheckBox.AllowBindingControlColorChanges = false;
+            this.DebugMode_CheckBox.AllowBindingControlLocation = true;
+            this.DebugMode_CheckBox.AllowCheckBoxAnimation = false;
+            this.DebugMode_CheckBox.AllowCheckmarkAnimation = true;
+            this.DebugMode_CheckBox.AllowOnHoverStates = true;
+            this.DebugMode_CheckBox.AutoCheck = true;
+            this.DebugMode_CheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.DebugMode_CheckBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DebugMode_CheckBox.BackgroundImage")));
+            this.DebugMode_CheckBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DebugMode_CheckBox.BindingControlPosition = Bunifu.UI.WinForms.BunifuCheckBox.BindingControlPositions.Right;
+            this.DebugMode_CheckBox.BorderRadius = 12;
+            this.DebugMode_CheckBox.Checked = true;
+            this.DebugMode_CheckBox.CheckState = Bunifu.UI.WinForms.BunifuCheckBox.CheckStates.Checked;
+            this.DebugMode_CheckBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DebugMode_CheckBox.CustomCheckmarkImage = null;
+            this.DebugMode_CheckBox.Location = new System.Drawing.Point(621, 99);
+            this.DebugMode_CheckBox.MinimumSize = new System.Drawing.Size(17, 17);
+            this.DebugMode_CheckBox.Name = "DebugMode_CheckBox";
+            this.DebugMode_CheckBox.OnCheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DebugMode_CheckBox.OnCheck.BorderRadius = 12;
+            this.DebugMode_CheckBox.OnCheck.BorderThickness = 2;
+            this.DebugMode_CheckBox.OnCheck.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.DebugMode_CheckBox.OnCheck.CheckmarkColor = System.Drawing.Color.White;
+            this.DebugMode_CheckBox.OnCheck.CheckmarkThickness = 2;
+            this.DebugMode_CheckBox.OnDisable.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DebugMode_CheckBox.OnDisable.BorderRadius = 12;
+            this.DebugMode_CheckBox.OnDisable.BorderThickness = 2;
+            this.DebugMode_CheckBox.OnDisable.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.DebugMode_CheckBox.OnDisable.CheckmarkColor = System.Drawing.Color.White;
+            this.DebugMode_CheckBox.OnDisable.CheckmarkThickness = 2;
+            this.DebugMode_CheckBox.OnHoverChecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DebugMode_CheckBox.OnHoverChecked.BorderRadius = 12;
+            this.DebugMode_CheckBox.OnHoverChecked.BorderThickness = 2;
+            this.DebugMode_CheckBox.OnHoverChecked.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.DebugMode_CheckBox.OnHoverChecked.CheckmarkColor = System.Drawing.Color.White;
+            this.DebugMode_CheckBox.OnHoverChecked.CheckmarkThickness = 2;
+            this.DebugMode_CheckBox.OnHoverUnchecked.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DebugMode_CheckBox.OnHoverUnchecked.BorderRadius = 12;
+            this.DebugMode_CheckBox.OnHoverUnchecked.BorderThickness = 1;
+            this.DebugMode_CheckBox.OnHoverUnchecked.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.DebugMode_CheckBox.OnUncheck.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DebugMode_CheckBox.OnUncheck.BorderRadius = 12;
+            this.DebugMode_CheckBox.OnUncheck.BorderThickness = 1;
+            this.DebugMode_CheckBox.OnUncheck.CheckBoxColor = System.Drawing.Color.Transparent;
+            this.DebugMode_CheckBox.Size = new System.Drawing.Size(21, 21);
+            this.DebugMode_CheckBox.Style = Bunifu.UI.WinForms.BunifuCheckBox.CheckBoxStyles.Bunifu;
+            this.DebugMode_CheckBox.TabIndex = 3;
+            this.DebugMode_CheckBox.ThreeState = false;
+            this.DebugMode_CheckBox.ToolTipText = null;
+            // 
+            // Rating
+            // 
+            this.Rating.Location = new System.Drawing.Point(27, 42);
+            this.Rating.Name = "Rating";
+            this.Rating.Size = new System.Drawing.Size(248, 36);
+            this.Rating.TabIndex = 0;
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -1413,16 +2132,16 @@
             this.imageList1.Images.SetKeyName(1, "Ryujinx_Asset.png");
             this.imageList1.Images.SetKeyName(2, "About_Asset.png");
             this.imageList1.Images.SetKeyName(3, "Configure_Asset.png");
+            this.imageList1.Images.SetKeyName(4, "Asset_Bug.png");
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1018, 542);
             this.Controls.Add(this.TabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(607, 547);
+            this.MinimumSize = new System.Drawing.Size(789, 547);
             this.Name = "MainWindow";
             this.Text = "MainWindow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainWindow_FormClosing);
@@ -1435,6 +2154,9 @@
             this.InfoTab.PerformLayout();
             this.SettingsTab.ResumeLayout(false);
             this.SettingsTab.PerformLayout();
+            this.BugTab.ResumeLayout(false);
+            this.BugTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Controls_DataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1482,5 +2204,35 @@
         private ns1.SiticoneCircleButton RemoveFilter_Button;
         private Guna.UI2.WinForms.Guna2VScrollBar Games_ScrollBar;
         private Bunifu.UI.WinForms.BunifuImageButton Restart_Button;
+        private System.Windows.Forms.TabPage BugTab;
+        private Guna.UI2.WinForms.Guna2RatingStar Rating;
+        private Bunifu.UI.WinForms.BunifuLabel CatchAllErrors_Label;
+        private Bunifu.UI.WinForms.BunifuLabel DebugMode_Label;
+        private Bunifu.UI.WinForms.BunifuCheckBox CatchErros_CheckBox;
+        private Bunifu.UI.WinForms.BunifuCheckBox DebugMode_CheckBox;
+        private Guna.UI2.WinForms.Guna2TextBox Feedback_TextBox;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator6;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator7;
+        private Bunifu.UI.WinForms.BunifuLabel Feedback_Label;
+        private Guna.UI2.WinForms.Guna2ComboBox LogLevel_DropDown;
+        private Guna.UI2.WinForms.Guna2Button SendFeedback_Button;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator8;
+        private Bunifu.UI.WinForms.BunifuLabel BugReport_Label;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator11;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator9;
+        private Guna.UI2.WinForms.Guna2Button SendBugReport_Button;
+        private Guna.UI2.WinForms.Guna2TextBox BugReport_TextBox;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator10;
+        private Guna.UI2.WinForms.Guna2ComboBox BugType_DropDown;
+        private Guna.UI2.WinForms.Guna2Button LoadSettingsToConsole_Button;
+        private Guna.UI2.WinForms.Guna2Button LoadSelectedLangToConsole_button;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator12;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator14;
+        private Guna.UI2.WinForms.Guna2Button SaveLog_Button;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator13;
+        private Guna.UI2.WinForms.Guna2DataGridView Controls_DataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Control_Cloumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn String_Cloumn;
+        private Bunifu.UI.WinForms.BunifuLabel DebugSettings_Label;
     }
 }

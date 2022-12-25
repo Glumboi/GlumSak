@@ -92,6 +92,16 @@ namespace EmuSak_Revive.GUI.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GangShit_Asset {
+            get {
+                object obj = ResourceManager.GetObject("GangShit_Asset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HappyBird_Asset {
             get {
                 object obj = ResourceManager.GetObject("HappyBird_Asset", resourceCulture);
@@ -112,9 +122,29 @@ namespace EmuSak_Revive.GUI.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HappyDog_Asset {
+            get {
+                object obj = ResourceManager.GetObject("HappyDog_Asset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PeepoHappy_Asset {
             get {
                 object obj = ResourceManager.GetObject("PeepoHappy_Asset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pepe_Asset {
+            get {
+                object obj = ResourceManager.GetObject("Pepe_Asset", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

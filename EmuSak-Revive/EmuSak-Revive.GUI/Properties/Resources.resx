@@ -127,14 +127,23 @@
   <data name="enter_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enter_back.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="GangShit_Asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\GangShit_Asset.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HappyBird_Asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\happybird_asset.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HappyCat_Asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\happycat_asset.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HappyDog_Asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\HappyDog_Asset.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PeepoHappy_Asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\peepohappy_asset.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pepe_Asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Pepe_Asset.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PlaceholderGame_Asset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\assets\placeholdergame_asset.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -41,6 +41,7 @@
             this.Gif_PictureBox.AllowFocused = false;
             this.Gif_PictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Gif_PictureBox.AutoSizeHeight = true;
+            this.Gif_PictureBox.BackColor = System.Drawing.Color.Transparent;
             this.Gif_PictureBox.BorderRadius = 89;
             this.Gif_PictureBox.Image = ((System.Drawing.Image)(resources.GetObject("Gif_PictureBox.Image")));
             this.Gif_PictureBox.IsCircle = true;

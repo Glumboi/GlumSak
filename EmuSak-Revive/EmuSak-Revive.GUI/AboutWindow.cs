@@ -22,7 +22,6 @@ namespace EmuSak_Revive.GUI
         private void AboutWindow_Load(object sender, EventArgs e)
         {
             UI.ChangeToDarkMode(this);
-            LangLoader.Run();
         }
 
         private void Github_Button_Click(object sender, EventArgs e)
