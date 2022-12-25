@@ -28,35 +28,6 @@ Since this is a BETA I want to gather as much feedback as possible, thus I advis
 # Restart is recommended after install
   
 # Changelog
-  # Beta 1.0:
-    First ever public release of GlumSak
-  # Beta 1.1:
-    - Custom shader links file support added!
-    - Users now have to set a links file in the settings for shaders to work
-    - Documentation on how to do your own shader file soon (you can get mine from a place ya'll should know)+
-  # Beta 1.1.1:
-    - Made it so you can't resize the Mainwindow
-    - Updated the icon to look better
-  # Beta 1.2:
-    - Added a button to the settings window that saves the settings
-    - Added a little info when no emu files/folders are found
-  # Beta 1.2.1:
-    - Fixed an issue that caused Pokémon to display the name wrong
-  # Beta 2.0:
-    - Added a new feature that let's you filter the games (can be laggy)
-    - Fixed some small scaling issues on higher dpi's
-    - Increased the size of the Mainwindow
-    - Fixed other small bugs
-    - Improved scrolling performance
-    - New scrollbar
-    - New installer images
-    - New game button animation
-  # Beta 2.1:
-    - Added a new feature that plays a sound when doing certain actions (needs to be activated in the settings)
-    - Separated keys from the app, that means you now need a valid paste in order to downlaod keys!
-  # Beta 2.1.1:
-    - Re worked the audio system to work better
-    - Fixed custom install locations from the installer
   # Beta 2.2:
     - Improved small error feedbacks
     - Fixed small bugs with the audio that caused to crash
@@ -78,6 +49,17 @@ Since this is a BETA I want to gather as much feedback as possible, thus I advis
   # Beta 4.1:
     - Added russian translation
     - Fixed infinite loading bug
+  # Beta 4.2:
+     - Added a new tab dedicated to bugs and user experience + debugging/translations
+     - Added transparent background to the game actions
+     - Added transparent background to the loading screen
+     - Added more gifs to the loading screen
+     - Improved performance of the loading by a bit
+     - Improved scaling on higher dpi's/resolutions (needs more testing to be confirmed)
+     - New way the app loads causes an incompatibility between old pastes and new versions and vice versa
+     - Removed old changelogs from readme to save space
+     - Russian and turkish translations are not included due to them not being finished yet
+     - Temporarily removed a couple translation lines to fix crashing
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
