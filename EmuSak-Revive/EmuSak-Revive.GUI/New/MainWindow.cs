@@ -125,6 +125,7 @@ namespace EmuSak_Revive.GUI.New
             PasteBinUrl_TextBox.Text = Properties.Settings.Default.ShaderLinks;
             PlaySounds_CheckBox.Checked = Properties.Settings.Default.PlaySounds;
             MainWindow_AudioSlider.Value = Properties.Settings.Default.MainWindowVolume;
+            CheckOnStartup_CheckBox.Checked = Properties.Settings.Default.CheckForUpdatesOnStartup;
 
             //Debug settings
             DebugMode_CheckBox.Checked = Properties.Settings.Default.DebugMode;
@@ -718,6 +719,7 @@ namespace EmuSak_Revive.GUI.New
             Properties.Settings.Default.LogLevel = LogLevel_DropDown.SelectedIndex;
             Properties.Settings.Default.LastWidth = this.WindowState == FormWindowState.Maximized ? 1034 : this.Size.Width;
             Properties.Settings.Default.LastHeight = this.WindowState == FormWindowState.Maximized ? 550 : this.Size.Height;
+            Properties.Settings.Default.CheckForUpdatesOnStartup = CheckOnStartup_CheckBox.Checked;
             Properties.Settings.Default.Save();
         }
 

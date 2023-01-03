@@ -1,7 +1,5 @@
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\EmuSak-Revive.JSON.dll
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\EmuSak-Revive.JSON.pdb
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Newtonsoft.Json.dll
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Newtonsoft.Json.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\obj\Debug\EmuSak-Revive.JSON.csproj.AssemblyReference.cache
 F:\visual studio\repos\EmuSak-Revive.JSON\obj\Debug\EmuSak-Revive.JSON.csproj.CoreCompileInputs.cache
 F:\visual studio\repos\EmuSak-Revive.JSON\obj\Debug\EmuSak-Revive.JSON.csproj.CopyComplete
@@ -32,5 +30,3 @@ F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Microsoft.Scripting.Metadata
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Microsoft.Dynamic.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Microsoft.Scripting.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Microsoft.Scripting.Metadata.xml
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Python.Runtime.dll
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Debug\Python.Runtime.xml

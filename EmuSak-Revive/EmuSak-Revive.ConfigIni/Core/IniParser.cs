@@ -78,7 +78,6 @@ namespace EmuSak_Revive.ConfigIni.Core
 
                     strLine = reader.ReadLine();
                 }
-
             }
             catch (Exception ex)
             {

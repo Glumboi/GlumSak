@@ -1,15 +1,10 @@
-﻿using EmuSak_Revive.Discord;
-using EmuSak_Revive.Emulators;
+﻿using EmuSak_Revive.Emulators;
 using EmuSak_Revive.GUI.Generics;
 using EmuSak_Revive.GUI.Properties;
 using Glumboi.UI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Resources;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transitions;
@@ -51,37 +46,55 @@ namespace EmuSak_Revive.GUI
             EffectBlur effectBlur = new EffectBlur(this);
             effectBlur.EnableBlur();
             AnimateControls();
-            Gif_PictureBox.BorderRadius = 0;
+            Gif_PictureBox.BorderRadius = 0; //Cant be set with the properties in designer
             if (ignoreCache)
             {
                 Task.Run(() => mainWindow.LoadButtons());
             }
-            mainWindow.Size = new System.Drawing.Size(Properties.Settings.Default.LastWidth, Properties.Settings.Default.LastHeight);
+            mainWindow.Size = new Size(Settings.Default.LastWidth, Settings.Default.LastHeight);
         }
 
         private void AnimateControls()
         {
+            // Get the current screen resolution
+            Rectangle screen = Screen.PrimaryScreen.Bounds;
+
+            // Calculate the center of the screen
+            int x = screen.Width / 2 - this.Width / 2;
+            int y = screen.Height / 2 - this.Height / 2;
+
+            // Set the position of the form to the center of the screen
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(x, y);
+
+            // Center the controls on the form
+            int gifX = this.Width / 2 - Gif_PictureBox.Width / 2;
+            int gifY = this.Height / 4 - Gif_PictureBox.Height / 2; // Decrease the value of gifY to position the control further up
+
+            // Position the label below the picture box
+            int labelX = this.Width / 2 - bunifuLabel1.Width / 2;
+            int labelY = gifY + Gif_PictureBox.Height; // Decrease the value of labelY to position the control further up
+
+            // Animate the controls using the Transition library
             Transition transition1 = new Transition(new TransitionType_EaseInEaseOut(1000));
-
-            transition1.add(Gif_PictureBox, "Left", 138);
-            transition1.add(bunifuLabel1, "Left", 46);
-
+            transition1.add(Gif_PictureBox, "Left", gifX);
+            transition1.add(bunifuLabel1, "Left", labelX);
             transition1.run();
 
-            //Animates the label
+            // Animate the label
             string[] stringsForLabelAnimation = {
-                "Getting things ready",
-                "Getting things ready.",
-                "Getting things ready..",
-                "Getting things ready..."
-            };
+        "Getting things ready",
+        "Getting things ready.",
+        "Getting things ready..",
+        "Getting things ready..."
+    };
 
             string[] stringsForTitleAnimation = {
-                "Loading",
-                "Loading.",
-                "Loading..",
-                "Loading..."
-            };
+        "Loading",
+        "Loading.",
+        "Loading..",
+        "Loading..."
+    };
 
             AnimateText textAnimator = new AnimateText(bunifuLabel1, stringsForLabelAnimation, 300);
             AnimateText textAnimator2 = new AnimateText(this, stringsForTitleAnimation, 300);

@@ -6,7 +6,6 @@ F:\visual studio\repos\EmuSak-Revive\bin\Release\System.Numerics.Vectors.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\Bunifu.UI.WinForms.BunifuSeparator.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\Bunifu.UI.WinForms.BunifuImageButton.dll
-F:\visual studio\repos\EmuSak-Revive\bin\Release\Bunifu.UI.WinForms.BunifuLabel.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\Bunifu.UI.WinForms.BunifuPictureBox.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\EmuSak-Revive.Network.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\Telerik.WinControls.UI.dll
@@ -92,13 +91,8 @@ F:\visual studio\repos\EmuSak-Revive\bin\Release\de\EmuSak-Revive.GUI.resources.
 F:\visual studio\repos\EmuSak-Revive\bin\Release\Guna.UI2.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\DarkNet.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\DarkNet.xml
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.dll
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.Direct3D11.dll
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.DXGI.dll
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.pdb
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.Direct3D11.pdb
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.Direct3D11.xml
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.DXGI.pdb
-F:\visual studio\repos\EmuSak-Revive\bin\Release\SharpDX.DXGI.xml
 F:\visual studio\repos\EmuSak-Revive\bin\Release\Glumboi.DirectXWinForms.dll
 F:\visual studio\repos\EmuSak-Revive\bin\Release\Glumboi.DirectXWinForms.pdb
+F:\visual studio\repos\EmuSak-Revive\bin\Release\Octokit.dll
+F:\visual studio\repos\EmuSak-Revive\bin\Release\Octokit.xml
+F:\visual studio\repos\EmuSak-Revive\obj\Release\GlumSak.exe.config

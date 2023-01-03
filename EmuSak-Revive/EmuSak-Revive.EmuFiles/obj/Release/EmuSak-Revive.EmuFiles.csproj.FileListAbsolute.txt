@@ -35,3 +35,5 @@ F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Glumboi.
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.ConfigIni.dll
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.ConfigIni.pdb
 F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\EmuSak-Revive.ConfigIni.dll.config
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Octokit.dll
+F:\visual studio\repos\EmuSak-Revive\EmuSak-Revive.EmuFiles\bin\Release\Octokit.xml

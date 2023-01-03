@@ -11,50 +11,15 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Collections;
 using System.Collections.ObjectModel;
-using Python.Runtime;
 using System.Threading.Tasks;
 using static System.Windows.Forms.LinkLabel;
 using System.Text.RegularExpressions;
+using System.Security.Policy;
 
 namespace EmuSak_Revive.JSON
 {
     public class Json
     {
-        /// <summary>
-        /// Creates a file with all nsuids of the games in the titledb in this format:
-        ///         000000000
-        ///         000000001
-        ///         000000002
-        /// </summary>
-        /// <param name="URL"></param>
-        /// <returns></returns>
-        /*private static List<string> CreateNsuIdsFile(string URL) ---> Old code kept for testing
-        {
-            WebClient client = new WebClient();
-            Stream stream = client.OpenRead(URL);
-            StreamReader reader = new StreamReader(stream);
-            string content = reader.ReadToEnd();
-
-            List<string> result = new List<string>();
-
-            foreach (string line in content.Split(new[] { '\n' }))
-            {
-                if (line.Contains("\"nsuId\": 700"))
-                {
-                    //nsuId
-                    var str = string.Join("", line.Split(',', ':', '\"', 'n', 's', 'u', 'I', 'd')); //Splits the nsuid by chars that we dont want
-                    result.Add(str);
-                }
-            }
-            if (!File.Exists("./Python/nsuIds.txt"))
-            {
-                File.Create("./Python/nsuIds.txt").Close();
-            }
-            File.WriteAllLines("./Python/nsuIds.txt", result);
-
-            return result;
-        }*/
-
         private static List<string> CreateNsuIdsFile(string URL)
         {
             Regex nsuIdRegex = new Regex(@"""nsuId"": (\d+)");

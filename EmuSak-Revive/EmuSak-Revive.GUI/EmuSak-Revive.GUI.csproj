@@ -96,9 +96,6 @@
     <Reference Include="Glumboi.Debug">
       <HintPath>..\..\..\..\Glumboi dlls\Glumboi.Debug\Glumboi.Debug\bin\Release\Glumboi.Debug.dll</HintPath>
     </Reference>
-    <Reference Include="Glumboi.DirectXWinForms">
-      <HintPath>..\..\..\..\Glumboi dlls\Glumboi.DirectXWinForms\bin\Release\Glumboi.DirectXWinForms.dll</HintPath>
-    </Reference>
     <Reference Include="Glumboi.UI">
       <HintPath>..\..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
     </Reference>
@@ -121,7 +118,9 @@
     <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" />
+    <Reference Include="Octokit, Version=4.0.3.0, Culture=neutral, PublicKeyToken=0be8860aee462442, processorArchitecture=MSIL">
+      <HintPath>..\packages\Octokit.4.0.3\lib\netstandard2.0\Octokit.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="Siticone.UI">
       <HintPath>..\..\..\..\Sitcone UI\Siticone.UI.dll</HintPath>
@@ -313,6 +312,7 @@
     <Compile Include="GangShitWindow.Designer.cs">
       <DependentUpon>GangShitWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generics\GetSettings.cs" />
     <Compile Include="Generics\TransparentForm.cs" />
     <Compile Include="Generics\PlayAudio.cs" />
     <Compile Include="Generics\UI.cs" />
@@ -353,6 +353,12 @@
     <Compile Include="SettingsWindow.Designer.cs">
       <DependentUpon>SettingsWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateWindow.Designer.cs">
+      <DependentUpon>UpdateWindow.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutWindow.resx">
@@ -387,15 +393,20 @@
     <EmbeddedResource Include="SettingsWindow.resx">
       <DependentUpon>SettingsWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateWindow.resx">
+      <DependentUpon>UpdateWindow.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\About_Asset.png" />
     <Content Include="Assets\Asset_Bug.png" />
     <Content Include="Assets\Asset_PlaceholderGameBanner.jpg" />
     <Content Include="Assets\CatDance_Asset.gif" />
+    <Content Include="Assets\check-mark.png" />
     <Content Include="Assets\Close_Asset.png" />
     <Content Include="Assets\Configure_Asset.png" />
     <Content Include="Assets\Cove_Asset.png" />
+    <Content Include="Assets\cross.png" />
     <Content Include="Assets\Discord_Asset.png" />
     <Content Include="Assets\DrogaDog_Asset.png" />
     <Content Include="Assets\enter_back.wav" />

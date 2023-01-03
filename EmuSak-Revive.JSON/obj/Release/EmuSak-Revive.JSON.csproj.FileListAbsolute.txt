@@ -5,8 +5,6 @@ F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Bcl.AsyncInterfa
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Dynamic.dll
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Scripting.dll
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Scripting.Metadata.dll
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Newtonsoft.Json.dll
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Python.Runtime.dll
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\System.Buffers.dll
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\System.Memory.dll
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\System.Numerics.Vectors.dll
@@ -19,8 +17,6 @@ F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Bcl.AsyncInterfa
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Dynamic.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Scripting.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Microsoft.Scripting.Metadata.xml
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Newtonsoft.Json.xml
-F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\Python.Runtime.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\System.Buffers.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\System.Memory.xml
 F:\visual studio\repos\EmuSak-Revive.JSON\bin\Release\System.Numerics.Vectors.xml

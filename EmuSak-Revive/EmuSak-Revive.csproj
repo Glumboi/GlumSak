@@ -45,6 +45,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
     <Reference Include="DarkNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\DarkNet-Forms.1.0.0\lib\net472\DarkNet.dll</HintPath>
     </Reference>
@@ -250,9 +251,17 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="EmuSak-Revive.ConfigIni\EmuSak-Revive.ConfigIni.csproj">
+      <Project>{3eda1e76-4cb3-4bfc-a77d-f43739eecac7}</Project>
+      <Name>EmuSak-Revive.ConfigIni</Name>
+    </ProjectReference>
     <ProjectReference Include="EmuSak-Revive.GUI\EmuSak-Revive.GUI.csproj">
       <Project>{754bf13d-45a1-4d4f-a0e5-6b0200f7f69a}</Project>
       <Name>EmuSak-Revive.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="EmuSak-Revive.Network\EmuSak-Revive.Network.csproj">
+      <Project>{1e4a2f94-2f85-4ebd-9bdf-ff20c5df14bb}</Project>
+      <Name>EmuSak-Revive.Network</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
