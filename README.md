@@ -28,38 +28,11 @@ Since this is a BETA I want to gather as much feedback as possible, thus I advis
 # Restart is recommended after install
   
 # Changelog
-  # Beta 2.2:
-    - Improved small error feedbacks
-    - Fixed small bugs with the audio that caused to crash
-    - Added a new feature that sorts the firmwares correctly now
-  # Beta 2.3:
-    - Added anonfiles support
-  # Beta 3.0:
-    - New feature (cache/use last session)
-    - Re aligned some small UI controls
-    - Added rounded corners to the settings textboxes
-    - Improved loading time by a tiny bit
-    - Settings window redesign
-  # Beta 4.0:
-    - Remade/Remastered the current Winforms UI. UI is now divided in tabs and resizable
-    - Added a restart feature in the settings tab
-    - Added a translation feature (current included langs: en-us, ger-de, tr-turk)
-    - App now saves the last size of the form and re applys it
-    - New dynamic scrollbar that adjusts itself depending on the current formsize and games in the flowpanel
-  # Beta 4.1:
-    - Added russian translation
-    - Fixed infinite loading bug
-  # Beta 4.2:
-     - Added a new tab dedicated to bugs and user experience + debugging/translations
-     - Added transparent background to the game actions
-     - Added transparent background to the loading screen
-     - Added more gifs to the loading screen
-     - Improved performance of the loading by a bit
-     - Improved scaling on higher dpi's/resolutions (needs more testing to be confirmed)
-     - New way the app loads causes an incompatibility between old pastes and new versions and vice versa
-     - Removed old changelogs from readme to save space
-     - Russian and turkish translations are not included due to them not being finished yet
-     - Temporarily removed a couple translation lines to fix crashing
+   # 1.0:
+     - First complete release of GlumSak
+     - Added auto update feature
+     - Fixed performance issues
+     - Removed beta changelogs from readme
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
