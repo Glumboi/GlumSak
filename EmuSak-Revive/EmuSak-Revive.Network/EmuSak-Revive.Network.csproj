@@ -36,27 +36,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AnonFileAPI">
-      <HintPath>..\..\..\..\AnonFileAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="AnonFileAPI, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\knaxk\Downloads\AnonFileAPI.dll</HintPath>
+      <HintPath>..\Dependancies\AnonFile\AnonFileAPI.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
-      <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+      <HintPath>..\Dependancies\Bunifu\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
-      <HintPath>..\..\..\..\Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+      <HintPath>..\Dependancies\Bunifu\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\Dependancies\Bunifu\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
     </Reference>
     <Reference Include="CustomMarshalers" />
     <Reference Include="Glumboi.Debug">
-      <HintPath>..\..\..\..\Glumboi dlls\Glumboi.Debug\Glumboi.Debug\bin\Release\Glumboi.Debug.dll</HintPath>
+      <HintPath>..\Dependancies\Glumboi\Glumboi.Debug.dll</HintPath>
     </Reference>
     <Reference Include="Glumboi.UI">
-      <HintPath>..\..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
+      <HintPath>..\Dependancies\Glumboi\Glumboi.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Guna\Guna.UI2.dll</HintPath>
+      <HintPath>..\Dependancies\Guna\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.11.46.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll</HintPath>
@@ -81,7 +80,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Siticone.UI">
-      <HintPath>..\..\..\..\Sitcone UI\Siticone.UI.dll</HintPath>
+      <HintPath>..\Dependancies\Siticone UI\Siticone.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -231,9 +230,15 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.WinControls, Version=2022.1.118.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-    <Reference Include="Telerik.WinControls.UI, Version=2022.1.118.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
-    <Reference Include="TelerikCommon, Version=2022.1.118.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls, Version=2022.1.118.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <HintPath>..\Dependancies\Telerik\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2022.1.118.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\Dependancies\Telerik\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2022.1.118.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e">
+      <HintPath>..\Dependancies\Telerik\TelerikCommon.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>

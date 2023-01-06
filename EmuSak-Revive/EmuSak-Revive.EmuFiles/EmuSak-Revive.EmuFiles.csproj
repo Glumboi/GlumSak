@@ -35,10 +35,10 @@
   <ItemGroup>
     <Reference Include="Glumboi.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
+      <HintPath>..\Dependancies\Glumboi\Glumboi.UI.dll</HintPath>
     </Reference>
     <Reference Include="Siticone.UI">
-      <HintPath>..\..\..\..\Sitcone UI\Siticone.UI.dll</HintPath>
+      <HintPath>..\Dependancies\Siticone UI\Siticone.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
