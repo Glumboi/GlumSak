@@ -33,6 +33,10 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Added auto update feature
      - Fixed performance issues
      - Removed beta changelogs from readme
+   # 1.1:
+     - Added a new tab called "News" which shows you news about Yuzu and GlumSak via Twitter
+     - News tab also can be used to update your installed yuzu ea version, you can also download it from there if you don't have it already\
+     - Source code for this version wont be available due to some cleanup I have to do first
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
