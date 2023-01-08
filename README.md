@@ -37,6 +37,9 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Added a new tab called "News" which shows you news about Yuzu and GlumSak via Twitter
      - News tab also can be used to update your installed yuzu ea version, you can also download it from there if you don't have it already
      - Source code for this version wont be available due to some cleanup I have to do first
+   # 1.1.1.0:
+     - Fixed an issue that lead to GlumSak crashing all the time  
+     
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
 # What is GlumSak?
