@@ -1,0 +1,101 @@
+# Don't track config and temporary files
+EmuSak-Revive/.idea/
+EmuSak-Revive/.vs/
+
+# Don't track downloaded packages and build objects
+EmuSak-Revive/packages/
+EmuSak-Revive/obj/
+
+# Don't track downloaded packages and build objects (for json componant)
+EmuSak-Revive.JSON/bin/
+EmuSak-Revive.JSON/obj/
+
+# Don't track downloaded packages and build objects (for network componant)
+EmuSak-Revive/EmuSak-Revive.Network/bin/
+EmuSak-Revive/EmuSak-Revive.Network/obj/
+
+# Don't track downloaded packages and build objects (for language componant)
+EmuSak-Revive/EmuSak_Revive.Language/bin/
+EmuSak-Revive/EmuSak_Revive.Language/obj/
+
+# Don't track downloaded packages and build objects (for audio componant)
+EmuSak-Revive/EmuSak-Revive.Audio/bin/
+EmuSak-Revive/EmuSak-Revive.Audio/obj/
+
+# Don't track downloaded packages and build objects (for config componant)
+EmuSak-Revive/EmuSak-Revive.ConfigIni/bin/
+EmuSak-Revive/EmuSak-Revive.ConfigIni/obj/
+
+# Don't track downloaded packages and build objects (for debug tools componant)
+EmuSak-Revive/EmuSak-Revive.DebugTools/bin/
+EmuSak-Revive/EmuSak-Revive.DebugTools/obj/
+
+# Don't track downloaded packages and build objects (for discord componant)
+EmuSak-Revive/EmuSak-Revive.Discord/bin/
+EmuSak-Revive/EmuSak-Revive.Discord/obj/
+
+# Don't track downloaded packages and build objects (for emufiles componant)
+EmuSak-Revive/EmuSak-Revive.EmuFiles/bin/
+EmuSak-Revive/EmuSak-Revive.EmuFiles/obj/
+
+# Don't track downloaded packages and build objects (for emulators componant)
+EmuSak-Revive/EmuSak-Revive.Emulators/bin/
+EmuSak-Revive/EmuSak-Revive.Emulators/obj/
+
+# Don't track downloaded packages and build objects (for gui componant)
+EmuSak-Revive/EmuSak-Revive.GUI/bin/
+EmuSak-Revive/EmuSak-Revive.GUI/obj/
+
+# Don't track downloaded packages and build objects (for gui-wpf componant)
+EmuSak-Revive/EmuSak-Revive.GUI-WPF/bin/
+EmuSak-Revive/EmuSak-Revive.GUI-WPF/obj/
+
+# Don't track builds of componant projects (for debug folder)
+EmuSak-Revive/bin/Debug/de/EmuSak-Revive.GUI.resources.dll
+EmuSak-Revive/bin/Debug/EmuSak_Revive.Language.dll
+EmuSak-Revive/bin/Debug/EmuSak_Revive.Language.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Audio.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Audio.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.ConfigIni.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.ConfigIni.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Discord.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Discord.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.EmuFiles.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.EmuFiles.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Emulators.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Emulators.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.GUI.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.GUI.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.JSON.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.JSON.pdb
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Network.dll
+EmuSak-Revive/bin/Debug/EmuSak-Revive.Network.pdb
+EmuSak-Revive/bin/Debug/Python/gameIcons_Ids.txt
+EmuSak-Revive/bin/Debug/Python/nsuIds.txt
+EmuSak-Revive/bin/Debug/GlumSak.exe
+EmuSak-Revive/bin/Debug/GlumSak.pdb
+
+# Don't track builds of componant projects (for release folder)
+EmuSak-Revive/bin/Release/de/EmuSak-Revive.GUI.resources.dll
+EmuSak-Revive/bin/Release/EmuSak_Revive.Language.dll
+EmuSak-Revive/bin/Release/EmuSak_Revive.Language.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.Audio.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.Audio.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.ConfigIni.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.ConfigIni.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.Discord.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.Discord.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.EmuFiles.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.EmuFiles.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.Emulators.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.Emulators.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.GUI.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.GUI.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.JSON.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.JSON.pdb
+EmuSak-Revive/bin/Release/EmuSak-Revive.Network.dll
+EmuSak-Revive/bin/Release/EmuSak-Revive.Network.pdb
+EmuSak-Revive/bin/Release/Python/gameIcons_Ids.txt
+EmuSak-Revive/bin/Release/Python/nsuIds.txt
+EmuSak-Revive/bin/Release/GlumSak.exe
+EmuSak-Revive/bin/Release/GlumSak.pdb
