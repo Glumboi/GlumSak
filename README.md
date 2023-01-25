@@ -39,6 +39,12 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Source code for this version wont be available due to some cleanup I have to do first
    # 1.1.1.0:
      - Fixed an issue that lead to GlumSak crashing all the time  
+   # 1.2.0.0:
+     - Overhauled the way sound gets played, this is to reduce issues if the sound files aren't available
+     - Removed transparency from the game actions window to improve performance when dragging the window
+     - Removed the webviews in the news tab, working on a re work that takes less resources
+     - Re worked the game actions window, it now uses a custom layout instead of the standard one
+     - Sound files are now baked into the app's resources
      
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
