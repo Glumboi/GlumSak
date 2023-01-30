@@ -1,2075 +1,0 @@
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Loaded portable Ryujinx config, path: sdsd
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Loaded portable Ryujinx config, path: sdsd
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Loaded portable Ryujinx config, path: sdsd
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Loaded portable Ryujinx config, path: sdsd
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[Initializing console...]: Logging level: 2
-
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[Initializing console...]: Logging level: 2
-
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[ERROR]: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[ERROR]: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[ERROR]: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[ERROR]: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:29:26 Started download of: https://cdn-101.anonfiles.com/p816mcJ6y4/0ee81e84-1671464363/Mario%20Kart%208%20Deluxe.zip
-[PERCENTAGE]: 0,2
-[PERCENTAGE]: 0,4
-[PERCENTAGE]: 
-[PERCENTAGE]: 0,70,5
-[PERCENTAGE]: 0,9
-[PERCENTAGE]: 1,1
-[PERCENTAGE]: 1,3
-[PERCENTAGE]: 1,5
-[PERCENTAGE]: 1,6
-[PERCENTAGE]: 1,8
-[PERCENTAGE]: 2,0
-[PERCENTAGE]: 2,2
-[PERCENTAGE]: 2,4
-[PERCENTAGE]: 2,5
-[PERCENTAGE]: 2,7
-[PERCENTAGE]: 2,9
-[PERCENTAGE]: 3,1
-[PERCENTAGE]: 3,3
-[PERCENTAGE]: 3,5
-[PERCENTAGE]: 3,6
-[PERCENTAGE]: 3,8
-[PERCENTAGE]: 4,0
-[PERCENTAGE]: 4,2
-[PERCENTAGE]: 4,4
-[PERCENTAGE]: 4,5
-[PERCENTAGE]: 4,7
-[PERCENTAGE]: 4,9
-[PERCENTAGE]: 5,1
-[PERCENTAGE]: 5,3
-[PERCENTAGE]: 5,5
-[PERCENTAGE]: 5,6
-[PERCENTAGE]: 5,8
-[PERCENTAGE]: 6,0
-[PERCENTAGE]: 6,2
-[PERCENTAGE]: 6,4
-[PERCENTAGE]: 6,5
-[PERCENTAGE]: 6,7
-[PERCENTAGE]: 6,9
-[PERCENTAGE]: 7,1
-[PERCENTAGE]: 7,3
-[PERCENTAGE]: 7,5
-[PERCENTAGE]: 7,6
-[PERCENTAGE]: 7,8
-[PERCENTAGE]: 8,0
-[PERCENTAGE]: 8,2
-[PERCENTAGE]: 8,4
-[PERCENTAGE]: 8,5
-[PERCENTAGE]: 8,7
-[PERCENTAGE]: 8,9
-[PERCENTAGE]: 9,1
-[PERCENTAGE]: 9,3
-[PERCENTAGE]: 9,5
-[PERCENTAGE]: 9,6
-[PERCENTAGE]: 9,8
-[PERCENTAGE]: 10,0
-[PERCENTAGE]: 10,2
-[PERCENTAGE]: 10,4
-[PERCENTAGE]: 10,5
-[PERCENTAGE]: 10,7
-[PERCENTAGE]: 10,9
-[PERCENTAGE]: 11,1
-[PERCENTAGE]: 11,3
-[PERCENTAGE]: 11,5
-[PERCENTAGE]: 11,6
-[PERCENTAGE]: 11,8
-[PERCENTAGE]: 12,0
-[PERCENTAGE]: 12,2
-[PERCENTAGE]: 12,4
-[PERCENTAGE]: 12,5
-[PERCENTAGE]: 12,7
-[PERCENTAGE]: 12,9
-[PERCENTAGE]: 13,1
-[PERCENTAGE]: 13,3
-[PERCENTAGE]: 13,5
-[PERCENTAGE]: 13,6
-[PERCENTAGE]: 13,8
-[PERCENTAGE]: 14,0
-[PERCENTAGE]: 14,2
-[PERCENTAGE]: 14,4
-[PERCENTAGE]: 14,5
-[PERCENTAGE]: 14,7
-[PERCENTAGE]: 14,9
-[PERCENTAGE]: 15,1
-[PERCENTAGE]: 15,3
-[PERCENTAGE]: 15,5
-[PERCENTAGE]: 15,6
-[PERCENTAGE]: 15,8
-[PERCENTAGE]: 16,0
-[PERCENTAGE]: 16,2
-[PERCENTAGE]: 16,4
-[PERCENTAGE]: 16,5
-[PERCENTAGE]: 16,7
-[PERCENTAGE]: 16,9
-[PERCENTAGE]: 17,1
-[PERCENTAGE]: 17,3
-[PERCENTAGE]: 17,5
-[PERCENTAGE]: 17,6
-[PERCENTAGE]: 17,8
-[PERCENTAGE]: 18,0
-[PERCENTAGE]: 18,2
-[PERCENTAGE]: 18,4
-[PERCENTAGE]: 18,6
-[PERCENTAGE]: 18,7
-[PERCENTAGE]: 18,9
-[PERCENTAGE]: 19,1
-[PERCENTAGE]: 19,3
-[PERCENTAGE]: 19,5
-[PERCENTAGE]: 19,6
-[PERCENTAGE]: 19,8
-[PERCENTAGE]: 20,0
-[PERCENTAGE]: 20,2
-[PERCENTAGE]: 20,4
-[PERCENTAGE]: 20,6
-[PERCENTAGE]: 20,7
-[PERCENTAGE]: 
-[PERCENTAGE]: 21,120,9
-[PERCENTAGE]: 21,3
-[PERCENTAGE]: 21,5
-[PERCENTAGE]: 21,6
-[PERCENTAGE]: 21,8
-[PERCENTAGE]: 22,0
-[PERCENTAGE]: 22,2
-[PERCENTAGE]: 22,4
-[PERCENTAGE]: 22,6
-[PERCENTAGE]: 22,7
-[PERCENTAGE]: 22,9
-[PERCENTAGE]: 23,1
-[PERCENTAGE]: 23,3
-[PERCENTAGE]: 23,5
-[PERCENTAGE]: 23,6
-[PERCENTAGE]: 23,8
-[PERCENTAGE]: 24,0
-[PERCENTAGE]: 24,2
-[PERCENTAGE]: 24,4
-[PERCENTAGE]: 24,6
-[PERCENTAGE]: 24,7
-[PERCENTAGE]: 24,9
-[PERCENTAGE]: 25,1
-[PERCENTAGE]: 25,3
-[PERCENTAGE]: 25,5
-[PERCENTAGE]: 25,6
-[PERCENTAGE]: 25,8
-[PERCENTAGE]: 26,0
-[PERCENTAGE]: 26,2
-[PERCENTAGE]: 26,4
-[PERCENTAGE]: 26,6
-[PERCENTAGE]: 26,7
-[PERCENTAGE]: 26,9
-[PERCENTAGE]: 27,1
-[PERCENTAGE]: 27,3
-[PERCENTAGE]: 27,5
-[PERCENTAGE]: 27,6
-[PERCENTAGE]: 27,8
-[PERCENTAGE]: 28,0
-[PERCENTAGE]: 28,2
-[PERCENTAGE]: 28,4
-[PERCENTAGE]: 28,6
-[PERCENTAGE]: 28,7
-[PERCENTAGE]: 28,9
-[PERCENTAGE]: 29,1
-[PERCENTAGE]: 29,3
-[PERCENTAGE]: 29,5
-[PERCENTAGE]: 29,6
-[PERCENTAGE]: 29,8
-[PERCENTAGE]: 30,0
-[PERCENTAGE]: 30,2
-[PERCENTAGE]: 30,4
-[PERCENTAGE]: 30,6
-[PERCENTAGE]: 30,7
-[PERCENTAGE]: 30,9
-[PERCENTAGE]: 31,1
-[PERCENTAGE]: 31,3
-[PERCENTAGE]: 31,5
-[PERCENTAGE]: 31,6
-[PERCENTAGE]: 31,8
-[PERCENTAGE]: 32,0
-[PERCENTAGE]: 32,2
-[PERCENTAGE]: 32,4
-[PERCENTAGE]: 32,6
-[PERCENTAGE]: 32,7
-[PERCENTAGE]: 32,9
-[PERCENTAGE]: 33,1
-[PERCENTAGE]: 33,3
-[PERCENTAGE]: 33,5
-[PERCENTAGE]: 33,7
-[PERCENTAGE]: 33,8
-[PERCENTAGE]: 34,0
-[PERCENTAGE]: 34,2
-[PERCENTAGE]: 34,4
-[PERCENTAGE]: 34,6
-[PERCENTAGE]: 34,7
-[PERCENTAGE]: 34,9
-[PERCENTAGE]: 35,1
-[PERCENTAGE]: 35,3
-[PERCENTAGE]: 35,5
-[PERCENTAGE]: 35,7
-[PERCENTAGE]: 35,8
-[PERCENTAGE]: 36,0
-[PERCENTAGE]: 36,2
-[PERCENTAGE]: 36,4
-[PERCENTAGE]: 36,6
-[PERCENTAGE]: 36,7
-[PERCENTAGE]: 36,9
-[PERCENTAGE]: 37,1
-[PERCENTAGE]: 37,3
-[PERCENTAGE]: 37,5
-[PERCENTAGE]: 37,7
-[PERCENTAGE]: 37,8
-[PERCENTAGE]: 38,0
-[PERCENTAGE]: 38,2
-[PERCENTAGE]: 38,4
-[PERCENTAGE]: 38,6
-[PERCENTAGE]: 38,7
-[PERCENTAGE]: 38,9
-[PERCENTAGE]: 39,1
-[PERCENTAGE]: 39,3
-[PERCENTAGE]: 39,5
-[PERCENTAGE]: 39,7
-[PERCENTAGE]: 39,8
-[PERCENTAGE]: 40,0
-[PERCENTAGE]: 40,2
-[PERCENTAGE]: 40,4
-[PERCENTAGE]: 40,6
-[PERCENTAGE]: 40,7
-[PERCENTAGE]: 40,9
-[PERCENTAGE]: 41,1
-[PERCENTAGE]: 41,3
-[PERCENTAGE]: 41,5
-[PERCENTAGE]: 41,7
-[PERCENTAGE]: 41,8
-[PERCENTAGE]: 42,0
-[PERCENTAGE]: 42,2
-[PERCENTAGE]: 42,4
-[PERCENTAGE]: 42,6
-[PERCENTAGE]: 42,7
-[PERCENTAGE]: 42,9
-[PERCENTAGE]: 43,1
-[PERCENTAGE]: 43,3
-[PERCENTAGE]: 43,5
-[PERCENTAGE]: 43,7
-[PERCENTAGE]: 43,8
-[PERCENTAGE]: 44,0
-[PERCENTAGE]: 44,2
-[PERCENTAGE]: 44,4
-[PERCENTAGE]: 44,6
-[PERCENTAGE]: 44,7
-[PERCENTAGE]: 44,9
-[PERCENTAGE]: 45,1
-[PERCENTAGE]: 45,3
-[PERCENTAGE]: 45,5
-[PERCENTAGE]: 45,7
-[PERCENTAGE]: 45,8
-[PERCENTAGE]: 46,0
-[PERCENTAGE]: 46,2
-[PERCENTAGE]: 46,4
-[PERCENTAGE]: 46,6
-[PERCENTAGE]: 46,7
-[PERCENTAGE]: 46,9
-[PERCENTAGE]: 47,1
-[PERCENTAGE]: 47,3
-[PERCENTAGE]: 47,5
-[PERCENTAGE]: 47,7
-[PERCENTAGE]: 
-[PERCENTAGE]: 47,8
-[PERCENTAGE]: 
-[PERCENTAGE]: 48,248,048,4
-[PERCENTAGE]: 48,6
-[PERCENTAGE]: 48,7
-[PERCENTAGE]: 48,9
-[PERCENTAGE]: 49,1
-[PERCENTAGE]: 49,3
-[PERCENTAGE]: 49,5
-[PERCENTAGE]: 49,7
-[PERCENTAGE]: 49,8
-[PERCENTAGE]: 50,0
-[PERCENTAGE]: 50,2
-[PERCENTAGE]: 50,4
-[PERCENTAGE]: 50,6
-[PERCENTAGE]: 50,8
-[PERCENTAGE]: 50,9
-[PERCENTAGE]: 51,1
-[PERCENTAGE]: 51,3
-[PERCENTAGE]: 51,5
-[PERCENTAGE]: 51,7
-[PERCENTAGE]: 51,8
-[PERCENTAGE]: 52,0
-[PERCENTAGE]: 52,2
-[PERCENTAGE]: 52,4
-[PERCENTAGE]: 52,6
-[PERCENTAGE]: 52,8
-[PERCENTAGE]: 52,9
-[PERCENTAGE]: 53,1
-[PERCENTAGE]: 
-[PERCENTAGE]: 53,353,5
-[PERCENTAGE]: 53,7
-[PERCENTAGE]: 53,8
-[PERCENTAGE]: 54,0
-[PERCENTAGE]: 54,2
-[PERCENTAGE]: 
-[PERCENTAGE]: 54,4
-[PERCENTAGE]: 54,654,8
-[PERCENTAGE]: 54,9
-[PERCENTAGE]: 55,1
-[PERCENTAGE]: 55,3
-[PERCENTAGE]: 55,5
-[PERCENTAGE]: 55,7
-[PERCENTAGE]: 55,8
-[PERCENTAGE]: 56,0
-[PERCENTAGE]: 56,2
-[PERCENTAGE]: 56,4
-[PERCENTAGE]: 56,6
-[PERCENTAGE]: 56,8
-[PERCENTAGE]: 56,9
-[PERCENTAGE]: 57,1
-[PERCENTAGE]: 57,3
-[PERCENTAGE]: 57,5
-[PERCENTAGE]: 57,7
-[PERCENTAGE]: 57,8
-[PERCENTAGE]: 58,0
-[PERCENTAGE]: 58,2
-[PERCENTAGE]: 58,4
-[PERCENTAGE]: 58,6
-[PERCENTAGE]: 58,8
-[PERCENTAGE]: 58,9
-[PERCENTAGE]: 59,1
-[PERCENTAGE]: 59,3
-[PERCENTAGE]: 59,5
-[PERCENTAGE]: 59,7
-[PERCENTAGE]: 59,8
-[PERCENTAGE]: 60,0
-[PERCENTAGE]: 60,2
-[PERCENTAGE]: 60,4
-[PERCENTAGE]: 60,6
-[PERCENTAGE]: 60,8
-[PERCENTAGE]: 60,9
-[PERCENTAGE]: 61,1
-[PERCENTAGE]: 61,3
-[PERCENTAGE]: 61,5
-[PERCENTAGE]: 61,7
-[PERCENTAGE]: 61,8
-[PERCENTAGE]: 62,0
-[PERCENTAGE]: 62,2
-[PERCENTAGE]: 62,4
-[PERCENTAGE]: 62,6
-[PERCENTAGE]: 62,8
-[PERCENTAGE]: 62,9
-[PERCENTAGE]: 63,1
-[PERCENTAGE]: 63,3
-[PERCENTAGE]: 63,5
-[PERCENTAGE]: 63,7
-[PERCENTAGE]: 63,8
-[PERCENTAGE]: 64,0
-[PERCENTAGE]: 64,2
-[PERCENTAGE]: 64,4
-[PERCENTAGE]: 64,6
-[PERCENTAGE]: 64,8
-[PERCENTAGE]: 64,9
-[PERCENTAGE]: 65,1
-[PERCENTAGE]: 65,3
-[PERCENTAGE]: 65,5
-[PERCENTAGE]: 65,7
-[PERCENTAGE]: 65,8
-[PERCENTAGE]: 66,0
-[PERCENTAGE]: 66,2
-[PERCENTAGE]: 66,4
-[PERCENTAGE]: 66,6
-[PERCENTAGE]: 66,8
-[PERCENTAGE]: 66,9
-[PERCENTAGE]: 67,1
-[PERCENTAGE]: 67,3
-[PERCENTAGE]: 67,5
-[PERCENTAGE]: 67,7
-[PERCENTAGE]: 67,9
-[PERCENTAGE]: 68,0
-[PERCENTAGE]: 68,2
-[PERCENTAGE]: 68,4
-[PERCENTAGE]: 68,6
-[PERCENTAGE]: 68,8
-[PERCENTAGE]: 68,9
-[PERCENTAGE]: 69,1
-[PERCENTAGE]: 69,3
-[PERCENTAGE]: 69,5
-[PERCENTAGE]: 69,7
-[PERCENTAGE]: 69,9
-[PERCENTAGE]: 70,0
-[PERCENTAGE]: 70,2
-[PERCENTAGE]: 70,4
-[PERCENTAGE]: 70,6
-[PERCENTAGE]: 70,8
-[PERCENTAGE]: 70,9
-[PERCENTAGE]: 71,1
-[PERCENTAGE]: 71,3
-[PERCENTAGE]: 71,5
-[PERCENTAGE]: 71,7
-[PERCENTAGE]: 71,9
-[PERCENTAGE]: 72,0
-[PERCENTAGE]: 72,2
-[PERCENTAGE]: 72,4
-[PERCENTAGE]: 72,6
-[PERCENTAGE]: 72,8
-[PERCENTAGE]: 72,9
-[PERCENTAGE]: 73,1
-[PERCENTAGE]: 
-[PERCENTAGE]: 73,573,3
-[PERCENTAGE]: 73,7
-[PERCENTAGE]: 73,9
-[PERCENTAGE]: 74,0
-[PERCENTAGE]: 74,2
-[PERCENTAGE]: 74,4
-[PERCENTAGE]: 74,6
-[PERCENTAGE]: 74,8
-[PERCENTAGE]: 74,9
-[PERCENTAGE]: 75,1
-[PERCENTAGE]: 75,3
-[PERCENTAGE]: 75,5
-[PERCENTAGE]: 75,7
-[PERCENTAGE]: 75,9
-[PERCENTAGE]: 76,0
-[PERCENTAGE]: 76,2
-[PERCENTAGE]: 76,4
-[PERCENTAGE]: 76,6
-[PERCENTAGE]: 76,8
-[PERCENTAGE]: 76,9
-[PERCENTAGE]: 77,1
-[PERCENTAGE]: 77,3
-[PERCENTAGE]: 77,5
-[PERCENTAGE]: 77,7
-[PERCENTAGE]: 77,9
-[PERCENTAGE]: 78,0
-[PERCENTAGE]: 78,2
-[PERCENTAGE]: 78,4
-[PERCENTAGE]: 78,6
-[PERCENTAGE]: 78,8
-[PERCENTAGE]: 78,9
-[PERCENTAGE]: 79,1
-[PERCENTAGE]: 79,3
-[PERCENTAGE]: 79,5
-[PERCENTAGE]: 79,7
-[PERCENTAGE]: 79,9
-[PERCENTAGE]: 80,0
-[PERCENTAGE]: 80,2
-[PERCENTAGE]: 80,4
-[PERCENTAGE]: 80,6
-[PERCENTAGE]: 80,8
-[PERCENTAGE]: 80,9
-[PERCENTAGE]: 81,1
-[PERCENTAGE]: 81,3
-[PERCENTAGE]: 81,5
-[PERCENTAGE]: 81,7
-[PERCENTAGE]: 81,9
-[PERCENTAGE]: 82,0
-[PERCENTAGE]: 82,2
-[PERCENTAGE]: 82,4
-[PERCENTAGE]: 82,6
-[PERCENTAGE]: 82,8
-[PERCENTAGE]: 83,0
-[PERCENTAGE]: 83,1
-[PERCENTAGE]: 83,3
-[PERCENTAGE]: 83,5
-[PERCENTAGE]: 83,7
-[PERCENTAGE]: 83,9
-[PERCENTAGE]: 84,0
-[PERCENTAGE]: 84,2
-[PERCENTAGE]: 84,4
-[PERCENTAGE]: 84,6
-[PERCENTAGE]: 84,8
-[PERCENTAGE]: 85,0
-[PERCENTAGE]: 85,1
-[PERCENTAGE]: 85,3
-[PERCENTAGE]: 85,5
-[PERCENTAGE]: 85,7
-[PERCENTAGE]: 85,9
-[PERCENTAGE]: 86,0
-[PERCENTAGE]: 86,2
-[PERCENTAGE]: 86,4
-[PERCENTAGE]: 86,6
-[PERCENTAGE]: 86,8
-[PERCENTAGE]: 87,0
-[PERCENTAGE]: 87,1
-[PERCENTAGE]: 87,3
-[PERCENTAGE]: 87,5
-[PERCENTAGE]: 87,7
-[PERCENTAGE]: 87,9
-[PERCENTAGE]: 88,0
-[PERCENTAGE]: 88,2
-[PERCENTAGE]: 88,4
-[PERCENTAGE]: 88,6
-[PERCENTAGE]: 88,8
-[PERCENTAGE]: 89,0
-[PERCENTAGE]: 89,1
-[PERCENTAGE]: 89,3
-[PERCENTAGE]: 89,5
-[PERCENTAGE]: 89,7
-[PERCENTAGE]: 89,9
-[PERCENTAGE]: 90,0
-[PERCENTAGE]: 90,2
-[PERCENTAGE]: 90,4
-[PERCENTAGE]: 90,6
-[PERCENTAGE]: 90,8
-[PERCENTAGE]: 91,0
-[PERCENTAGE]: 91,1
-[PERCENTAGE]: 91,3
-[PERCENTAGE]: 91,5
-[PERCENTAGE]: 91,7
-[PERCENTAGE]: 91,9
-[PERCENTAGE]: 92,0
-[PERCENTAGE]: 92,2
-[PERCENTAGE]: 92,4
-[PERCENTAGE]: 92,6
-[PERCENTAGE]: 92,8
-[PERCENTAGE]: 93,0
-[PERCENTAGE]: 93,1
-[PERCENTAGE]: 93,3
-[PERCENTAGE]: 93,5
-[PERCENTAGE]: 93,7
-[PERCENTAGE]: 93,9
-[PERCENTAGE]: 94,0
-[PERCENTAGE]: 94,2
-[PERCENTAGE]: 94,4
-[PERCENTAGE]: 94,6
-[PERCENTAGE]: 94,8
-[PERCENTAGE]: 95,0
-[PERCENTAGE]: 95,1
-[PERCENTAGE]: 95,3
-[PERCENTAGE]: 95,5
-[PERCENTAGE]: 95,7
-[PERCENTAGE]: 95,9
-[PERCENTAGE]: 96,0
-[PERCENTAGE]: 96,2
-[PERCENTAGE]: 96,4
-[PERCENTAGE]: 96,6
-[PERCENTAGE]: 96,8
-[PERCENTAGE]: 97,0
-[PERCENTAGE]: 97,1
-[PERCENTAGE]: 97,3
-[PERCENTAGE]: 97,5
-[PERCENTAGE]: 97,7
-[PERCENTAGE]: 97,9
-[PERCENTAGE]: 98,0
-[PERCENTAGE]: 98,2
-[PERCENTAGE]: 98,4
-[PERCENTAGE]: 98,6
-[PERCENTAGE]: 98,8
-[PERCENTAGE]: 99,0
-[PERCENTAGE]: 99,1
-[PERCENTAGE]: 99,3
-[PERCENTAGE]: 99,5
-[PERCENTAGE]: 99,7
-[PERCENTAGE]: 99,9
-[PERCENTAGE]: 
-[PERCENTAGE]: 100,0100,0
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:29:26 Started download of: https://cdn-101.anonfiles.com/p816mcJ6y4/0ee81e84-1671464363/Mario%20Kart%208%20Deluxe.zip
-[PERCENTAGE]: 0,2
-[PERCENTAGE]: 0,4
-[PERCENTAGE]: 
-[PERCENTAGE]: 0,70,5
-[PERCENTAGE]: 0,9
-[PERCENTAGE]: 1,1
-[PERCENTAGE]: 1,3
-[PERCENTAGE]: 1,5
-[PERCENTAGE]: 1,6
-[PERCENTAGE]: 1,8
-[PERCENTAGE]: 2,0
-[PERCENTAGE]: 2,2
-[PERCENTAGE]: 2,4
-[PERCENTAGE]: 2,5
-[PERCENTAGE]: 2,7
-[PERCENTAGE]: 2,9
-[PERCENTAGE]: 3,1
-[PERCENTAGE]: 3,3
-[PERCENTAGE]: 3,5
-[PERCENTAGE]: 3,6
-[PERCENTAGE]: 3,8
-[PERCENTAGE]: 4,0
-[PERCENTAGE]: 4,2
-[PERCENTAGE]: 4,4
-[PERCENTAGE]: 4,5
-[PERCENTAGE]: 4,7
-[PERCENTAGE]: 4,9
-[PERCENTAGE]: 5,1
-[PERCENTAGE]: 5,3
-[PERCENTAGE]: 5,5
-[PERCENTAGE]: 5,6
-[PERCENTAGE]: 5,8
-[PERCENTAGE]: 6,0
-[PERCENTAGE]: 6,2
-[PERCENTAGE]: 6,4
-[PERCENTAGE]: 6,5
-[PERCENTAGE]: 6,7
-[PERCENTAGE]: 6,9
-[PERCENTAGE]: 7,1
-[PERCENTAGE]: 7,3
-[PERCENTAGE]: 7,5
-[PERCENTAGE]: 7,6
-[PERCENTAGE]: 7,8
-[PERCENTAGE]: 8,0
-[PERCENTAGE]: 8,2
-[PERCENTAGE]: 8,4
-[PERCENTAGE]: 8,5
-[PERCENTAGE]: 8,7
-[PERCENTAGE]: 8,9
-[PERCENTAGE]: 9,1
-[PERCENTAGE]: 9,3
-[PERCENTAGE]: 9,5
-[PERCENTAGE]: 9,6
-[PERCENTAGE]: 9,8
-[PERCENTAGE]: 10,0
-[PERCENTAGE]: 10,2
-[PERCENTAGE]: 10,4
-[PERCENTAGE]: 10,5
-[PERCENTAGE]: 10,7
-[PERCENTAGE]: 10,9
-[PERCENTAGE]: 11,1
-[PERCENTAGE]: 11,3
-[PERCENTAGE]: 11,5
-[PERCENTAGE]: 11,6
-[PERCENTAGE]: 11,8
-[PERCENTAGE]: 12,0
-[PERCENTAGE]: 12,2
-[PERCENTAGE]: 12,4
-[PERCENTAGE]: 12,5
-[PERCENTAGE]: 12,7
-[PERCENTAGE]: 12,9
-[PERCENTAGE]: 13,1
-[PERCENTAGE]: 13,3
-[PERCENTAGE]: 13,5
-[PERCENTAGE]: 13,6
-[PERCENTAGE]: 13,8
-[PERCENTAGE]: 14,0
-[PERCENTAGE]: 14,2
-[PERCENTAGE]: 14,4
-[PERCENTAGE]: 14,5
-[PERCENTAGE]: 14,7
-[PERCENTAGE]: 14,9
-[PERCENTAGE]: 15,1
-[PERCENTAGE]: 15,3
-[PERCENTAGE]: 15,5
-[PERCENTAGE]: 15,6
-[PERCENTAGE]: 15,8
-[PERCENTAGE]: 16,0
-[PERCENTAGE]: 16,2
-[PERCENTAGE]: 16,4
-[PERCENTAGE]: 16,5
-[PERCENTAGE]: 16,7
-[PERCENTAGE]: 16,9
-[PERCENTAGE]: 17,1
-[PERCENTAGE]: 17,3
-[PERCENTAGE]: 17,5
-[PERCENTAGE]: 17,6
-[PERCENTAGE]: 17,8
-[PERCENTAGE]: 18,0
-[PERCENTAGE]: 18,2
-[PERCENTAGE]: 18,4
-[PERCENTAGE]: 18,6
-[PERCENTAGE]: 18,7
-[PERCENTAGE]: 18,9
-[PERCENTAGE]: 19,1
-[PERCENTAGE]: 19,3
-[PERCENTAGE]: 19,5
-[PERCENTAGE]: 19,6
-[PERCENTAGE]: 19,8
-[PERCENTAGE]: 20,0
-[PERCENTAGE]: 20,2
-[PERCENTAGE]: 20,4
-[PERCENTAGE]: 20,6
-[PERCENTAGE]: 20,7
-[PERCENTAGE]: 
-[PERCENTAGE]: 21,120,9
-[PERCENTAGE]: 21,3
-[PERCENTAGE]: 21,5
-[PERCENTAGE]: 21,6
-[PERCENTAGE]: 21,8
-[PERCENTAGE]: 22,0
-[PERCENTAGE]: 22,2
-[PERCENTAGE]: 22,4
-[PERCENTAGE]: 22,6
-[PERCENTAGE]: 22,7
-[PERCENTAGE]: 22,9
-[PERCENTAGE]: 23,1
-[PERCENTAGE]: 23,3
-[PERCENTAGE]: 23,5
-[PERCENTAGE]: 23,6
-[PERCENTAGE]: 23,8
-[PERCENTAGE]: 24,0
-[PERCENTAGE]: 24,2
-[PERCENTAGE]: 24,4
-[PERCENTAGE]: 24,6
-[PERCENTAGE]: 24,7
-[PERCENTAGE]: 24,9
-[PERCENTAGE]: 25,1
-[PERCENTAGE]: 25,3
-[PERCENTAGE]: 25,5
-[PERCENTAGE]: 25,6
-[PERCENTAGE]: 25,8
-[PERCENTAGE]: 26,0
-[PERCENTAGE]: 26,2
-[PERCENTAGE]: 26,4
-[PERCENTAGE]: 26,6
-[PERCENTAGE]: 26,7
-[PERCENTAGE]: 26,9
-[PERCENTAGE]: 27,1
-[PERCENTAGE]: 27,3
-[PERCENTAGE]: 27,5
-[PERCENTAGE]: 27,6
-[PERCENTAGE]: 27,8
-[PERCENTAGE]: 28,0
-[PERCENTAGE]: 28,2
-[PERCENTAGE]: 28,4
-[PERCENTAGE]: 28,6
-[PERCENTAGE]: 28,7
-[PERCENTAGE]: 28,9
-[PERCENTAGE]: 29,1
-[PERCENTAGE]: 29,3
-[PERCENTAGE]: 29,5
-[PERCENTAGE]: 29,6
-[PERCENTAGE]: 29,8
-[PERCENTAGE]: 30,0
-[PERCENTAGE]: 30,2
-[PERCENTAGE]: 30,4
-[PERCENTAGE]: 30,6
-[PERCENTAGE]: 30,7
-[PERCENTAGE]: 30,9
-[PERCENTAGE]: 31,1
-[PERCENTAGE]: 31,3
-[PERCENTAGE]: 31,5
-[PERCENTAGE]: 31,6
-[PERCENTAGE]: 31,8
-[PERCENTAGE]: 32,0
-[PERCENTAGE]: 32,2
-[PERCENTAGE]: 32,4
-[PERCENTAGE]: 32,6
-[PERCENTAGE]: 32,7
-[PERCENTAGE]: 32,9
-[PERCENTAGE]: 33,1
-[PERCENTAGE]: 33,3
-[PERCENTAGE]: 33,5
-[PERCENTAGE]: 33,7
-[PERCENTAGE]: 33,8
-[PERCENTAGE]: 34,0
-[PERCENTAGE]: 34,2
-[PERCENTAGE]: 34,4
-[PERCENTAGE]: 34,6
-[PERCENTAGE]: 34,7
-[PERCENTAGE]: 34,9
-[PERCENTAGE]: 35,1
-[PERCENTAGE]: 35,3
-[PERCENTAGE]: 35,5
-[PERCENTAGE]: 35,7
-[PERCENTAGE]: 35,8
-[PERCENTAGE]: 36,0
-[PERCENTAGE]: 36,2
-[PERCENTAGE]: 36,4
-[PERCENTAGE]: 36,6
-[PERCENTAGE]: 36,7
-[PERCENTAGE]: 36,9
-[PERCENTAGE]: 37,1
-[PERCENTAGE]: 37,3
-[PERCENTAGE]: 37,5
-[PERCENTAGE]: 37,7
-[PERCENTAGE]: 37,8
-[PERCENTAGE]: 38,0
-[PERCENTAGE]: 38,2
-[PERCENTAGE]: 38,4
-[PERCENTAGE]: 38,6
-[PERCENTAGE]: 38,7
-[PERCENTAGE]: 38,9
-[PERCENTAGE]: 39,1
-[PERCENTAGE]: 39,3
-[PERCENTAGE]: 39,5
-[PERCENTAGE]: 39,7
-[PERCENTAGE]: 39,8
-[PERCENTAGE]: 40,0
-[PERCENTAGE]: 40,2
-[PERCENTAGE]: 40,4
-[PERCENTAGE]: 40,6
-[PERCENTAGE]: 40,7
-[PERCENTAGE]: 40,9
-[PERCENTAGE]: 41,1
-[PERCENTAGE]: 41,3
-[PERCENTAGE]: 41,5
-[PERCENTAGE]: 41,7
-[PERCENTAGE]: 41,8
-[PERCENTAGE]: 42,0
-[PERCENTAGE]: 42,2
-[PERCENTAGE]: 42,4
-[PERCENTAGE]: 42,6
-[PERCENTAGE]: 42,7
-[PERCENTAGE]: 42,9
-[PERCENTAGE]: 43,1
-[PERCENTAGE]: 43,3
-[PERCENTAGE]: 43,5
-[PERCENTAGE]: 43,7
-[PERCENTAGE]: 43,8
-[PERCENTAGE]: 44,0
-[PERCENTAGE]: 44,2
-[PERCENTAGE]: 44,4
-[PERCENTAGE]: 44,6
-[PERCENTAGE]: 44,7
-[PERCENTAGE]: 44,9
-[PERCENTAGE]: 45,1
-[PERCENTAGE]: 45,3
-[PERCENTAGE]: 45,5
-[PERCENTAGE]: 45,7
-[PERCENTAGE]: 45,8
-[PERCENTAGE]: 46,0
-[PERCENTAGE]: 46,2
-[PERCENTAGE]: 46,4
-[PERCENTAGE]: 46,6
-[PERCENTAGE]: 46,7
-[PERCENTAGE]: 46,9
-[PERCENTAGE]: 47,1
-[PERCENTAGE]: 47,3
-[PERCENTAGE]: 47,5
-[PERCENTAGE]: 47,7
-[PERCENTAGE]: 
-[PERCENTAGE]: 47,8
-[PERCENTAGE]: 
-[PERCENTAGE]: 48,248,048,4
-[PERCENTAGE]: 48,6
-[PERCENTAGE]: 48,7
-[PERCENTAGE]: 48,9
-[PERCENTAGE]: 49,1
-[PERCENTAGE]: 49,3
-[PERCENTAGE]: 49,5
-[PERCENTAGE]: 49,7
-[PERCENTAGE]: 49,8
-[PERCENTAGE]: 50,0
-[PERCENTAGE]: 50,2
-[PERCENTAGE]: 50,4
-[PERCENTAGE]: 50,6
-[PERCENTAGE]: 50,8
-[PERCENTAGE]: 50,9
-[PERCENTAGE]: 51,1
-[PERCENTAGE]: 51,3
-[PERCENTAGE]: 51,5
-[PERCENTAGE]: 51,7
-[PERCENTAGE]: 51,8
-[PERCENTAGE]: 52,0
-[PERCENTAGE]: 52,2
-[PERCENTAGE]: 52,4
-[PERCENTAGE]: 52,6
-[PERCENTAGE]: 52,8
-[PERCENTAGE]: 52,9
-[PERCENTAGE]: 53,1
-[PERCENTAGE]: 
-[PERCENTAGE]: 53,353,5
-[PERCENTAGE]: 53,7
-[PERCENTAGE]: 53,8
-[PERCENTAGE]: 54,0
-[PERCENTAGE]: 54,2
-[PERCENTAGE]: 
-[PERCENTAGE]: 54,4
-[PERCENTAGE]: 54,654,8
-[PERCENTAGE]: 54,9
-[PERCENTAGE]: 55,1
-[PERCENTAGE]: 55,3
-[PERCENTAGE]: 55,5
-[PERCENTAGE]: 55,7
-[PERCENTAGE]: 55,8
-[PERCENTAGE]: 56,0
-[PERCENTAGE]: 56,2
-[PERCENTAGE]: 56,4
-[PERCENTAGE]: 56,6
-[PERCENTAGE]: 56,8
-[PERCENTAGE]: 56,9
-[PERCENTAGE]: 57,1
-[PERCENTAGE]: 57,3
-[PERCENTAGE]: 57,5
-[PERCENTAGE]: 57,7
-[PERCENTAGE]: 57,8
-[PERCENTAGE]: 58,0
-[PERCENTAGE]: 58,2
-[PERCENTAGE]: 58,4
-[PERCENTAGE]: 58,6
-[PERCENTAGE]: 58,8
-[PERCENTAGE]: 58,9
-[PERCENTAGE]: 59,1
-[PERCENTAGE]: 59,3
-[PERCENTAGE]: 59,5
-[PERCENTAGE]: 59,7
-[PERCENTAGE]: 59,8
-[PERCENTAGE]: 60,0
-[PERCENTAGE]: 60,2
-[PERCENTAGE]: 60,4
-[PERCENTAGE]: 60,6
-[PERCENTAGE]: 60,8
-[PERCENTAGE]: 60,9
-[PERCENTAGE]: 61,1
-[PERCENTAGE]: 61,3
-[PERCENTAGE]: 61,5
-[PERCENTAGE]: 61,7
-[PERCENTAGE]: 61,8
-[PERCENTAGE]: 62,0
-[PERCENTAGE]: 62,2
-[PERCENTAGE]: 62,4
-[PERCENTAGE]: 62,6
-[PERCENTAGE]: 62,8
-[PERCENTAGE]: 62,9
-[PERCENTAGE]: 63,1
-[PERCENTAGE]: 63,3
-[PERCENTAGE]: 63,5
-[PERCENTAGE]: 63,7
-[PERCENTAGE]: 63,8
-[PERCENTAGE]: 64,0
-[PERCENTAGE]: 64,2
-[PERCENTAGE]: 64,4
-[PERCENTAGE]: 64,6
-[PERCENTAGE]: 64,8
-[PERCENTAGE]: 64,9
-[PERCENTAGE]: 65,1
-[PERCENTAGE]: 65,3
-[PERCENTAGE]: 65,5
-[PERCENTAGE]: 65,7
-[PERCENTAGE]: 65,8
-[PERCENTAGE]: 66,0
-[PERCENTAGE]: 66,2
-[PERCENTAGE]: 66,4
-[PERCENTAGE]: 66,6
-[PERCENTAGE]: 66,8
-[PERCENTAGE]: 66,9
-[PERCENTAGE]: 67,1
-[PERCENTAGE]: 67,3
-[PERCENTAGE]: 67,5
-[PERCENTAGE]: 67,7
-[PERCENTAGE]: 67,9
-[PERCENTAGE]: 68,0
-[PERCENTAGE]: 68,2
-[PERCENTAGE]: 68,4
-[PERCENTAGE]: 68,6
-[PERCENTAGE]: 68,8
-[PERCENTAGE]: 68,9
-[PERCENTAGE]: 69,1
-[PERCENTAGE]: 69,3
-[PERCENTAGE]: 69,5
-[PERCENTAGE]: 69,7
-[PERCENTAGE]: 69,9
-[PERCENTAGE]: 70,0
-[PERCENTAGE]: 70,2
-[PERCENTAGE]: 70,4
-[PERCENTAGE]: 70,6
-[PERCENTAGE]: 70,8
-[PERCENTAGE]: 70,9
-[PERCENTAGE]: 71,1
-[PERCENTAGE]: 71,3
-[PERCENTAGE]: 71,5
-[PERCENTAGE]: 71,7
-[PERCENTAGE]: 71,9
-[PERCENTAGE]: 72,0
-[PERCENTAGE]: 72,2
-[PERCENTAGE]: 72,4
-[PERCENTAGE]: 72,6
-[PERCENTAGE]: 72,8
-[PERCENTAGE]: 72,9
-[PERCENTAGE]: 73,1
-[PERCENTAGE]: 
-[PERCENTAGE]: 73,573,3
-[PERCENTAGE]: 73,7
-[PERCENTAGE]: 73,9
-[PERCENTAGE]: 74,0
-[PERCENTAGE]: 74,2
-[PERCENTAGE]: 74,4
-[PERCENTAGE]: 74,6
-[PERCENTAGE]: 74,8
-[PERCENTAGE]: 74,9
-[PERCENTAGE]: 75,1
-[PERCENTAGE]: 75,3
-[PERCENTAGE]: 75,5
-[PERCENTAGE]: 75,7
-[PERCENTAGE]: 75,9
-[PERCENTAGE]: 76,0
-[PERCENTAGE]: 76,2
-[PERCENTAGE]: 76,4
-[PERCENTAGE]: 76,6
-[PERCENTAGE]: 76,8
-[PERCENTAGE]: 76,9
-[PERCENTAGE]: 77,1
-[PERCENTAGE]: 77,3
-[PERCENTAGE]: 77,5
-[PERCENTAGE]: 77,7
-[PERCENTAGE]: 77,9
-[PERCENTAGE]: 78,0
-[PERCENTAGE]: 78,2
-[PERCENTAGE]: 78,4
-[PERCENTAGE]: 78,6
-[PERCENTAGE]: 78,8
-[PERCENTAGE]: 78,9
-[PERCENTAGE]: 79,1
-[PERCENTAGE]: 79,3
-[PERCENTAGE]: 79,5
-[PERCENTAGE]: 79,7
-[PERCENTAGE]: 79,9
-[PERCENTAGE]: 80,0
-[PERCENTAGE]: 80,2
-[PERCENTAGE]: 80,4
-[PERCENTAGE]: 80,6
-[PERCENTAGE]: 80,8
-[PERCENTAGE]: 80,9
-[PERCENTAGE]: 81,1
-[PERCENTAGE]: 81,3
-[PERCENTAGE]: 81,5
-[PERCENTAGE]: 81,7
-[PERCENTAGE]: 81,9
-[PERCENTAGE]: 82,0
-[PERCENTAGE]: 82,2
-[PERCENTAGE]: 82,4
-[PERCENTAGE]: 82,6
-[PERCENTAGE]: 82,8
-[PERCENTAGE]: 83,0
-[PERCENTAGE]: 83,1
-[PERCENTAGE]: 83,3
-[PERCENTAGE]: 83,5
-[PERCENTAGE]: 83,7
-[PERCENTAGE]: 83,9
-[PERCENTAGE]: 84,0
-[PERCENTAGE]: 84,2
-[PERCENTAGE]: 84,4
-[PERCENTAGE]: 84,6
-[PERCENTAGE]: 84,8
-[PERCENTAGE]: 85,0
-[PERCENTAGE]: 85,1
-[PERCENTAGE]: 85,3
-[PERCENTAGE]: 85,5
-[PERCENTAGE]: 85,7
-[PERCENTAGE]: 85,9
-[PERCENTAGE]: 86,0
-[PERCENTAGE]: 86,2
-[PERCENTAGE]: 86,4
-[PERCENTAGE]: 86,6
-[PERCENTAGE]: 86,8
-[PERCENTAGE]: 87,0
-[PERCENTAGE]: 87,1
-[PERCENTAGE]: 87,3
-[PERCENTAGE]: 87,5
-[PERCENTAGE]: 87,7
-[PERCENTAGE]: 87,9
-[PERCENTAGE]: 88,0
-[PERCENTAGE]: 88,2
-[PERCENTAGE]: 88,4
-[PERCENTAGE]: 88,6
-[PERCENTAGE]: 88,8
-[PERCENTAGE]: 89,0
-[PERCENTAGE]: 89,1
-[PERCENTAGE]: 89,3
-[PERCENTAGE]: 89,5
-[PERCENTAGE]: 89,7
-[PERCENTAGE]: 89,9
-[PERCENTAGE]: 90,0
-[PERCENTAGE]: 90,2
-[PERCENTAGE]: 90,4
-[PERCENTAGE]: 90,6
-[PERCENTAGE]: 90,8
-[PERCENTAGE]: 91,0
-[PERCENTAGE]: 91,1
-[PERCENTAGE]: 91,3
-[PERCENTAGE]: 91,5
-[PERCENTAGE]: 91,7
-[PERCENTAGE]: 91,9
-[PERCENTAGE]: 92,0
-[PERCENTAGE]: 92,2
-[PERCENTAGE]: 92,4
-[PERCENTAGE]: 92,6
-[PERCENTAGE]: 92,8
-[PERCENTAGE]: 93,0
-[PERCENTAGE]: 93,1
-[PERCENTAGE]: 93,3
-[PERCENTAGE]: 93,5
-[PERCENTAGE]: 93,7
-[PERCENTAGE]: 93,9
-[PERCENTAGE]: 94,0
-[PERCENTAGE]: 94,2
-[PERCENTAGE]: 94,4
-[PERCENTAGE]: 94,6
-[PERCENTAGE]: 94,8
-[PERCENTAGE]: 95,0
-[PERCENTAGE]: 95,1
-[PERCENTAGE]: 95,3
-[PERCENTAGE]: 95,5
-[PERCENTAGE]: 95,7
-[PERCENTAGE]: 95,9
-[PERCENTAGE]: 96,0
-[PERCENTAGE]: 96,2
-[PERCENTAGE]: 96,4
-[PERCENTAGE]: 96,6
-[PERCENTAGE]: 96,8
-[PERCENTAGE]: 97,0
-[PERCENTAGE]: 97,1
-[PERCENTAGE]: 97,3
-[PERCENTAGE]: 97,5
-[PERCENTAGE]: 97,7
-[PERCENTAGE]: 97,9
-[PERCENTAGE]: 98,0
-[PERCENTAGE]: 98,2
-[PERCENTAGE]: 98,4
-[PERCENTAGE]: 98,6
-[PERCENTAGE]: 98,8
-[PERCENTAGE]: 99,0
-[PERCENTAGE]: 99,1
-[PERCENTAGE]: 99,3
-[PERCENTAGE]: 99,5
-[PERCENTAGE]: 99,7
-[PERCENTAGE]: 99,9
-[PERCENTAGE]: 
-[PERCENTAGE]: 100,0100,0
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:31:09 Started download of: https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2015.0.0.zip[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 11[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:31:09 Started download of: https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2015.0.0.zip[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 11[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3[PERCENTAGE]: 3
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:46:07 Started download of: https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2015.0.0.zip[PERCENTAGE]: [PERCENTAGE]: 00[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: [PERCENTAGE]: 00[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1111111[PERCENTAGE]: [PERCENTAGE]: 111111[PERCENTAGE]: [PERCENTAGE]: 11111111111111111[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1111[PERCENTAGE]: [PERCENTAGE]: 111111[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 111111[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1111[PERCENTAGE]: 11[PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:46:07 Started download of: https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2015.0.0.zip[PERCENTAGE]: [PERCENTAGE]: 00[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: [PERCENTAGE]: 00[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 0[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1111111[PERCENTAGE]: [PERCENTAGE]: 111111[PERCENTAGE]: [PERCENTAGE]: 11111111111111111[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1111[PERCENTAGE]: [PERCENTAGE]: 111111[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1[PERCENTAGE]: 111111[PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: [PERCENTAGE]: 1111[PERCENTAGE]: 11[PERCENTAGE]: 11[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 1[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2[PERCENTAGE]: 2
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:48:11 Started download of: https://cdn-103.anonfiles.com/y8H3m9J8y9/48603676-1671465488/Splatoon%203%20-%207047.zip
-[INFO]: Finished download of: C:\Users\knaxk\AppData\Local\Temp\tempShader_0100C2500FC20000.Sak
-[INFO]: 19.12.2022 16:48:47 Started download of: https://cdn-131.anonfiles.com/v3zfm5J2y5/bcc523c2-1671465525/SwitchKeys.zip
-[INFO]: Finished download of: C:\Users\knaxk\AppData\Local\Temp\tempKeys.Sak
-[INFO]: 19.12.2022 16:48:50 Started download of: https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2015.0.0.zip
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 19.12.2022 16:48:11 Started download of: https://cdn-103.anonfiles.com/y8H3m9J8y9/48603676-1671465488/Splatoon%203%20-%207047.zip
-[INFO]: Finished download of: C:\Users\knaxk\AppData\Local\Temp\tempShader_0100C2500FC20000.Sak
-[INFO]: 19.12.2022 16:48:47 Started download of: https://cdn-131.anonfiles.com/v3zfm5J2y5/bcc523c2-1671465525/SwitchKeys.zip
-[INFO]: Finished download of: C:\Users\knaxk\AppData\Local\Temp\tempKeys.Sak
-[INFO]: 19.12.2022 16:48:50 Started download of: https://archive.org/download/nintendo-switch-global-firmwares/Firmware%2015.0.0.zip
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 21.12.2022 09:54:05 Started download of: https://cdn-119.anonfiles.com/y8H3m9J8y9/ee7523f4-1671613442/Splatoon%203%20-%207047.zip
-[INFO]: Finished download of: C:\Users\knaxk\AppData\Local\Temp\tempShader_0100C2500FC20000.Sak
-[Initializing console...]: Logging level: 2
-
-[INFO]: Created a button with the id: 0100152000022000
-[INFO]: Created a button with the id: 01006A800016E000
-[INFO]: Created a button with the id: 01006FE013472000
-[INFO]: Created a button with the id: 0100C2500FC20000
-[INFO]: Created a button with the id: 010019401051C000
-[INFO]: Created a button with the id: 0100A3D008C5C000
-[INFO]: Firmwares loaded!, Amount of combobox items: 51
-[INFO]: 21.12.2022 09:54:05 Started download of: https://cdn-119.anonfiles.com/y8H3m9J8y9/ee7523f4-1671613442/Splatoon%203%20-%207047.zip
-[INFO]: Finished download of: C:\Users\knaxk\AppData\Local\Temp\tempShader_0100C2500FC20000.Sak
