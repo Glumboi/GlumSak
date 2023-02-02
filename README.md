@@ -45,6 +45,11 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Removed the webviews in the news tab, working on a re work that takes less resources
      - Re worked the game actions window, it now uses a custom layout instead of the standard one
      - Sound files are now baked into the app's resources
+   # 1.2.1.0:
+     - Baked my modified version of the anon files api (unofficial) into the network part of GlumSak, 
+        this is to reduce false postives (Credits to L33tMasta for giving me the idea to do that)
+     - Added an ETA to the download bar
+     - Changed filter icon size to 15;15
      
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
