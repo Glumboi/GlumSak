@@ -50,6 +50,11 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
         this is to reduce false postives (Credits to L33tMasta for giving me the idea to do that)
      - Added an ETA to the download bar
      - Changed filter icon size to 15;15
+   # 1.3.0.0-Preview1:
+     - Added change log to the update window
+     - Added new save manager feature which sits in the game actions window
+     - Fixed small bugs
+     - No source code provided since its a preview and the cleanup isnt quite done yet
      
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
