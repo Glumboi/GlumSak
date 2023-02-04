@@ -55,6 +55,11 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Added new save manager feature which sits in the game actions window
      - Fixed small bugs
      - No source code provided since its a preview and the cleanup isnt quite done yet
+   # 1.3.0.2-(1.3 Preview2):
+     - Updated the update changelog to be displayed in a webbrowser control, this is to display larger changelogs
+     - Fixed an issue that caused GlumSak to launch in ryujinx mode even though yuzu mode was activated with the last session
+     
+For this build, only an installer is provided!
      
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
