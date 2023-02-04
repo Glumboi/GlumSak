@@ -89,11 +89,11 @@ by buying me a server to test around with and for having such a cool community.
   
 # UI screenshots (UI could differ from the image depending on how fast I update it)
   ![alt text](https://i.imgur.com/vzyujna.png)
-  ![alt text](https://i.imgur.com/HF9xw6Y.png)
-  ![alt text](https://i.imgur.com/LpfhAUn.png)
-  ![alt text](https://i.imgur.com/z0l8M0h.png)
-  ![alt text](https://i.imgur.com/b2oQfnc.png)
-  
+  ![alt text](https://i.imgur.com/eHJjjY9.png)
+  ![alt text](https://i.imgur.com/kwvJZdI.png)
+  ![alt text](https://i.imgur.com/CgwzBho.png)
+  ![alt text](https://i.imgur.com/HxJ6VjU.png)
+  ![alt text](https://i.imgur.com/71tTgsZ.png)
   
 # This is for education, use at your own risk!
   
