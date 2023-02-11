@@ -58,6 +58,12 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
    # 1.3.0.2-(1.3 Preview2):
      - Updated the update changelog to be displayed in a webbrowser control, this is to display larger changelogs
      - Fixed an issue that caused GlumSak to launch in ryujinx mode even though yuzu mode was activated with the last session
+   #  1.3.1.0:
+     - Re made the way game meta info gets loaded (re did the python part in c#) this is to reduce potential errors
+     - Lots of small performance improvements
+     - Due to the new meta loading, performance may decreased by a small amount, higher ram usage is expected
+     - No source code or portable version available for this build!
+     - Version 1.3.0.0 got skipped, save manager will remain a somewhat preview feature though
           
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
