@@ -64,7 +64,7 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Due to the new meta loading, performance may decreased by a small amount, higher ram usage is expected
      - No source code or portable version available for this build!
      - Version 1.3.0.0 got skipped, save manager will remain a somewhat preview feature though
-   #  1.3.3.0:
+   #  1.3.2.0:
      - Added image compression to the game buttons, this drastically reduces the ram usage and improves the main forms rendering
      - Added mediafire support for shader downloads
      - Minor performance improvements here and there
