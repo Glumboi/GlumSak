@@ -111,5 +111,5 @@ by buying me a server to test around with and for having such a cool community.
 Released under [GPL-2.0](/LICENSE) by [@Glumboi](https://github.com/Glumboi).
 My biggest and most fun project. 
   
-Donate me via crypto (BTC): bc1qrfdct0ryhtf209z9xegqqafylyrv8ssnq5vmyu
+Donate me via crypto (BTC): bc1qrfdct0ryhtf209z9xegqqafylyrv8ssnq5vmyu. 
 My Ko-fi: https://ko-fi.com/glumboi
