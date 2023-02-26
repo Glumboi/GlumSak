@@ -2,7 +2,7 @@
 
 # UI Rework in the works, updates may delay
   
-<img src="https://i.imgur.com/fCp9uRh.png" width="312" height="100" />
+<img src="https://i.imgur.com/c7783EU.png" width="312" height="100" />
 
 Since this is an ongoing project I want to gather as much feedback as possible, thus I advise everyone to share their experience with GlumSak
 
