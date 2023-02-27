@@ -71,6 +71,10 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Added mediafire support for shader downloads
      - Minor performance improvements here and there
      - Reduced image button flicker when scrolling with the mouse wheel
+   #  2.0.0.0:
+     - Re made the whole UI in WPF and did other improvements
+     - No source code or portable version for this!
+     - This version still misses some features like the auto updater of GlumSak itself and save manager!
           
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
