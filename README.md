@@ -1,6 +1,4 @@
 <div align="center">
-
-# UI Rework in the works, updates may delay
   
 <img src="https://i.imgur.com/c7783EU.png" width="312" height="100" />
 
