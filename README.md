@@ -71,10 +71,14 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Added mediafire support for shader downloads
      - Minor performance improvements here and there
      - Reduced image button flicker when scrolling with the mouse wheel
-   #  2.0.0.0 -Pre 1:
-     - Re made the whole UI in WPF and did other improvements
-     - No source code or portable version for this!
-     - This version still misses some features like the auto updater of GlumSak itself and save manager!
+   #  2.0.0.0
+     - New GUI from the ground up in WPF
+     - Fixed many bugs due to the UI being more modern
+     - Fixed extreme memory usage (can be reduced furter by using the last session)
+     - Fixed a Crash that lead to GlumSak crashing if the default emu Location wasnt detected
+     - New color theme throughout the Project
+     - This build misses minor features such as disabling the auto updating of GlumSak or the save manager, but don't worry I am on it
+     - No source code for this build due to cleanup I have to make, expect the source at version 2.2
           
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
