@@ -38,27 +38,8 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             InitializeComponent();
         }
 
-        private void CheckForUpdates()
-        {
-            /*var updateExe = iniParser.GetSetting("config", "exePath");
-            if (File.Exists(updateExe))
-            {
-                File.Delete(updateExe);
-            }
-
-            bool isUpdateAvailable = VersionControl.CheckGitHubNewerVersion(Assembly.GetExecutingAssembly()).Result;//VersionControl.CheckGitHubNewerVersion(Assembly.GetExecutingAssembly()).Result;
-            if (isUpdateAvailable && Settings.Default.CheckForUpdatesOnStartup)
-            {
-                AutoUpdateWindow updateWindow = new AutoUpdateWindow();
-                updateWindow.Show();*/
-            // updateWindow.CurrentVersion_Label.Text = Network.VersionControl.InstalledVersion.ToString();
-            //updateWindow.NewVersion_Label.Text = Network.VersionControl.NewVersion.ToString();
-            //}
-        }
-
         private void UiWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            CheckForUpdates();
             GetSettings();
         }
 
