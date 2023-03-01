@@ -54,7 +54,6 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Fixed a Crash that lead to GlumSak crashing if the default emu Location wasnt detected
      - New color theme throughout the Project
      - This build misses minor features such as disabling the auto updating of GlumSak or the save manager, but don't worry I am on it
-     - No source code for this build due to cleanup I have to make, expect the source at version 2.2
    #  2.0.0.1
      - Fixed an issue that lead to the paste to be ignored
           
