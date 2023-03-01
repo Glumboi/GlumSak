@@ -1,0 +1,5 @@
+1.2.1:
+- Baked my modified version of the anon files api (unofficial) into the network part of GlumSak, 
+  this is to reduce false postives (Credits to L33tMasta for giving me the idea to do that)
+- Added an ETA to the download bar
+- Changed filter icon size to 15;15

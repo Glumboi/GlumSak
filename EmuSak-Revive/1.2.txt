@@ -1,0 +1,7 @@
+1.2:
+
+- Overhauled the way sound gets played, this is to reduce issues if the sound files aren't available
+- Removed transparency from the game actions window to improve performance when dragging the window
+- Removed the webviews in the news tab, working on a re work that takes less resources
+- Re worked the game actions window, it now uses a custom layout instead of the standard one
+- Sound files are now baked into the app's resources

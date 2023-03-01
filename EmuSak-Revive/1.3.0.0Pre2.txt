@@ -1,0 +1,2 @@
+- Updated the update changelog to be displayed in a webbrowser, this is to display larger changelogs
+- Fixed an issue that caused GlumSak to launch in ryujinx mode even though yuzu mod was activated with the last session

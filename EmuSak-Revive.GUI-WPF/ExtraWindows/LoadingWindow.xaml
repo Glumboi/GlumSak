@@ -1,0 +1,47 @@
+﻿<ui:UiWindow x:Class="EmuSak_Revive.GUI_WPF.ExtraWindows.LoadingWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:EmuSak_Revive.GUI_WPF.ExtraWindows"
+             mc:Ignorable="d"
+             Title="LoadingWindow"
+             Height="250"
+             Width="450"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             MinHeight="219"
+             MinWidth="600"
+             ExtendsContentIntoTitleBar="True"
+             WindowBackdropType="Mica"
+             WindowCornerPreference="Round"
+             WindowStartupLocation="CenterScreen"
+             Background="#2d2d2d"
+             ResizeMode="NoResize"
+             Loaded="UiWindow_Loaded"
+             Closing="UiWindow_Closing">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="Loading"
+            UseSnapLayout="True"
+            CanMaximize="False"
+            ShowMaximize="False"
+            Icon="/Assets/Icon.png" />
+
+        <Border Grid.Row="1" Padding="10">
+            <ui:LoadingScreen Grid.Row="1"
+                              Background="Transparent">
+                <TextBlock Text="Getting things ready..."
+                           FontSize="23"
+                           FontWeight="Bold"
+                           Margin="-80 0 0 0" />
+            </ui:LoadingScreen>
+        </Border>
+    </Grid>
+</ui:UiWindow>

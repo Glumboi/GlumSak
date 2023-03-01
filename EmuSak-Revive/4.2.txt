@@ -1,0 +1,10 @@
+- Added a new tab dedicated to bugs and user experience + debugging/translations
+- Added transparent background to the game actions
+- Added transparent background to the loading screen
+- Added more gifs to the loading screen
+- Improved performance of the loading by a bit
+- Improved scaling on higher dpi's/resolutions (needs more testing to be confirmed)
+- New way the app loads causes an incompatibility between old pastes and new versions and vice versa
+- Removed old changelogs from readme to save space
+- Russian and turkish translations are not included due to them not being finished yet
+- Temporarily removed a couple translation lines to fix crashing

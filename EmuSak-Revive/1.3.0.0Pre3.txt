@@ -1,0 +1,3 @@
+- Added a debug feature that puts out info about your system and glumsak
+- Fixed a crash when closing the app right after it got launched
+- Added a new debug feature (create systeminfo button)

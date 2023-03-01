@@ -1,0 +1,125 @@
+﻿<ui:UiWindow x:Class="EmuSak_Revive.GUI_WPF.ExtraWindows.AutoUpdateWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:EmuSak_Revive.GUI_WPF.ExtraWindows"
+             xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+             mc:Ignorable="d"
+             Title="AutoUpdateWindow"
+             Height="550"
+             Width="800"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             ExtendsContentIntoTitleBar="True"
+             WindowBackdropType="Mica"
+             WindowCornerPreference="Round"
+             WindowStartupLocation="CenterScreen"
+             Background="#2d2d2d"
+             Loaded="UiWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="Update found!"
+            UseSnapLayout="True"
+            CanMaximize="False"
+            ShowMaximize="False"
+            Icon="/Assets/Icon.png" />
+
+        <Border Grid.Row="1"
+                Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock FontSize="20"
+                           FontWeight="Bold">
+                    There is an update available for GlumSak!
+                    <LineBreak />
+                    Current Version installed: <TextBlock x:Name="CurrentVersion_TextBlock" Text="0.0.0.0" />
+                    <LineBreak />
+                    Available Version: <TextBlock x:Name="AvailableVersion_TextBlock" Text="0.0.0.0" />
+                    <LineBreak />
+                    Do you want to update?
+                    </TextBlock>
+
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <ui:ProgressRing x:Name="Progress_CircleBar"
+                                         Visibility="Hidden"
+                                         Progress="0"
+                                         Foreground="Silver" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="Please wait..."
+                                   FontWeight="Bold"
+                                   FontSize="20"
+                                   HorizontalAlignment="Center"
+                                   Visibility="Hidden"
+                                   x:Name="PleaseWait_TextBlock" />
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0 20 0 0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="Changelog"
+                                   FontWeight="Bold"
+                                   FontSize="17"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Top"
+                                   Margin="0 0 0 4" />
+
+                        <wv2:WebView2 Grid.Row="1"
+                                      Name="Changelog_Browser" />
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="2" Margin="0 5 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:Button Content="Yes"
+                               Icon="Checkmark24"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Stretch"
+                               Margin="0 0 4 0"
+                               x:Name="Yes_Button"
+                               Click="Yes_Button_Click" />
+
+                    <ui:Button Grid.Column="1"
+                               Content="No"
+                               Icon="Circle24"
+                               HorizontalAlignment="Stretch"
+                               VerticalAlignment="Stretch"
+                               Margin="4 0 0 0"
+                               x:Name="No_Button"
+                               Click="No_Button_Click" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</ui:UiWindow>

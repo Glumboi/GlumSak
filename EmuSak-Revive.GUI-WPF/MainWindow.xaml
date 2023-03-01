@@ -1,0 +1,436 @@
+﻿<ui:UiWindow x:Class="EmuSak_Revive.GUI_WPF.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:EmuSak_Revive.GUI_WPF"
+             mc:Ignorable="d"
+             Title="MainWindow"
+             Height="625"
+             Width="900"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             ExtendsContentIntoTitleBar="True"
+             WindowBackdropType="Mica"
+             WindowCornerPreference="Round"
+             WindowStartupLocation="CenterScreen"
+             Background="#2d2d2d"
+             Loaded="UiWindow_Loaded"
+             Closing="UiWindow_Closing">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="GlumSak"
+            UseSnapLayout="True"
+            Icon="/Assets/Icon.png" />
+
+        <Border Padding="10" Grid.Row="1">
+            <TabControl>
+                <TabItem Header="Home" Cursor="">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="12*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Border Padding="5" Grid.Row="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition Height="7*" />
+                                </Grid.RowDefinitions>
+                                <StackPanel>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <ComboBox x:Name="Firmware_ComboBox"
+                                                  Grid.Column="0"
+                                                  Margin="0 0 5 0 "
+                                                  SelectionChanged="Firmware_ComboBox_SelectionChanged" />
+
+                                        <ui:Button VerticalAlignment="Stretch"
+                                                   HorizontalAlignment="Stretch"
+                                                   Grid.Column="1"
+                                                   Margin="5 0 2 0"
+                                                   Content="Download Firmware"
+                                                   Icon="ArrowDownload24"
+                                                   x:Name="DownloadFirmware_Button"
+                                                   Click="DownloadFirmware_Button_Click" />
+
+                                        <ui:Button VerticalAlignment="Stretch"
+                                                   HorizontalAlignment="Stretch"
+                                                   Grid.Column="2"
+                                                   Margin="2 0 0 0"
+                                                   Content="Download Keys"
+                                                   Icon="Key24"
+                                                   x:Name="Keys_Button"
+                                                   Click="Keys_Button_Click" />
+                                    </Grid>
+                                </StackPanel>
+
+                                <StackPanel Grid.Row="1">
+                                    <Border Margin="0 4 0 0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+                                            <ui:TextBox x:Name="Filter_TextBox"
+                                                        Grid.Column="0"
+                                                        Margin="0 0 4 0"
+                                                        TextChanged="Filter_TextBox_TextChanged"
+                                                        Icon="Filter28"
+                                                        ClearButtonEnabled="False"
+                                                        PlaceholderText="Enter a Filter" />
+
+                                            <ui:Button Content="Clear Filter"
+                                                       Margin="4 0 0 0"
+                                                       Grid.Column="1"
+                                                       VerticalAlignment="Stretch"
+                                                       HorizontalAlignment="Stretch"
+                                                       x:Name="ClearFilter_Button"
+                                                       Click="ClearFilter_Button_Click"
+                                                       Icon="FilterDismiss24" />
+                                        </Grid>
+                                    </Border>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <Border Padding="5" Grid.Row="1">
+                            <ScrollViewer>
+                                <WrapPanel x:Name="Games_Panel"
+                                           Margin="0 4 0 0">
+                                </WrapPanel>
+                            </ScrollViewer>
+                        </Border>
+
+                        <Border Padding="5"
+                                Grid.Row="2"
+                                x:Name="Progress_Border">
+                            <Grid>
+                                <ProgressBar VerticalAlignment="Bottom"
+                                             Grid.Row="2"
+                                             Height="20"
+                                             x:Name="Download_ProgressBar" />
+
+                                <TextBlock Text="Download starting..."
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Bottom"
+                                           Margin="0 0 0 2"
+                                           x:Name="DownloadProgress_TextBlock" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Info">
+                    <Border Padding="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="6*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <StackPanel>
+                                <TextBlock HorizontalAlignment="Center"
+                                           Text="Info"
+                                           FontSize="20"
+                                           FontWeight="Bold" />
+                                <Rectangle HorizontalAlignment="Stretch"
+                                           Fill="DarkGray"
+                                           Height="2"
+                                           Margin="0 15 0 0" />
+                            </StackPanel>
+
+                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                                <TextBlock
+                                       TextWrapping="Wrap">
+                                GlumSak 2.x.x.x is a re defined experience of the Tool "GlumSak" made by Glumboi.
+                                <LineBreak />
+                                GlumSak is a Tool made by Glumboi that helps you to set up your Emulators. This Project took big inspiration of the Tool "emusak-ui" and is a sort of revive for it.
+                                <LineBreak />
+                                I spent much time developing and improving this tool over the past 4 Months to bring ya'll the best experience of this Project and it's Visions.
+                                <LineBreak />
+                                <LineBreak />
+                                If you have something to report such as a Bug or a new Feature, then you can do that with Discord or write me an E-Mail, I surely take a read sometimes.
+                                <LineBreak />
+                                <LineBreak />
+                                What is new in GlumSak 2.x.x.x and higher?
+                                <LineBreak />
+                                <LineBreak />
+                                - A new GUI built from the Ground up in WPF and C#
+                                <LineBreak />
+                                - Much improved Performance over the older versions
+                                <LineBreak />
+                                - Better Window resizing
+                                <LineBreak />
+                                - A new, clean and fresh looking UI design flow as I call it
+                                <LineBreak />
+                                <LineBreak />
+                                Old Versions (Versions using Windows Forms) are officially out of Support but can still work for some time.
+                                </TextBlock>
+                            </ScrollViewer>
+
+                            <Grid Grid.Row="2">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <ui:Button Grid.Column="0"
+                                           Content="emusak-ui project"
+                                           VerticalAlignment="Bottom"
+                                           x:Name="EmuSakUIGithub_Button"
+                                           Click="EmuSakUIGithub_Button_Click"
+                                           Icon="Link24" />
+
+                                <ui:Button HorizontalAlignment="Right"
+                                           Grid.Column="1"
+                                           Content="Github of GlumSak"
+                                           VerticalAlignment="Bottom"
+                                           x:Name="GlumSakGithub_Button"
+                                           Click="GlumSakGithub_Button_Click"
+                                           Icon="Link24" />
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <TabItem Header="Settings">
+                    <Border Padding="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="2*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+
+                                        <ui:Button Margin="0 0 4 0"
+                                                   HorizontalAlignment="Stretch"
+                                                   Grid.Column="0"
+                                                   Content="Reset"
+                                                   Icon="ArrowReset48"
+                                                   x:Name="ResetApp_Button"
+                                                   Click="ResetApp_Button_Click" />
+
+                                        <ui:Button Margin="4 0 0 0"
+                                                   HorizontalAlignment="Stretch"
+                                                   Grid.Column="1"
+                                                   Content="Restart"
+                                                   Icon="GridDots28"
+                                                   x:Name="RestartApp_Button"
+                                                   Click="RestartApp_Button_Click" />
+                                    </Grid>
+
+                                    <ui:Button Grid.Column="2"
+                                               Content="Delete temporary Files"
+                                               Icon="Delete28"
+                                               VerticalAlignment="Stretch"
+                                               HorizontalAlignment="Stretch"
+                                               x:Name="DeleteTempFiles_Button"
+                                               Click="DeleteTempFiles_Button_Click" />
+                                </Grid>
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <StackPanel>
+                                    <TextBlock FontWeight="Bold"
+                                               Text="Portable Settings"
+                                               Margin="0 10 0 4" />
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="6*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <ui:TextBox Grid.Row="0"
+                                                 Grid.Column="0"
+                                                 Margin="0 0 0 10"
+                                                 x:Name="YuzuPath_TextBox"
+                                                 PlaceholderText="Portable Yuzu path ('User')" />
+
+                                        <ui:TextBox Grid.Row="1"
+                                                 Grid.Column="0"
+                                                 x:Name="RyuPath_TextBox"
+                                                 PlaceholderText="Portable Ryujinx path ('Portable')" />
+
+                                        <ui:Button Grid.Column="1"
+                                                   Grid.Row="0"
+                                                   Content="Browse"
+                                                   HorizontalAlignment="Stretch"
+                                                   VerticalAlignment="Stretch"
+                                                   Margin="4 0 0 10"
+                                                   Icon="Folder28"
+                                                   x:Name="SelectYuzuPath_Button"
+                                                   Click="SelectYuzuPath_Button_Click" />
+
+                                        <ui:Button Grid.Column="1"
+                                                   Grid.Row="1"
+                                                   Content="Browse"
+                                                   HorizontalAlignment="Stretch"
+                                                   VerticalAlignment="Stretch"
+                                                   Margin="4 0 0 0"
+                                                   Icon="Folder28"
+                                                   x:Name="SelectRyujinxPath_Button"
+                                                   Click="SelectRyujinxPath_Button_Click" />
+                                    </Grid>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="2" Margin="0 25 0 0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Grid.Row="0"
+                                           Text="Paste Settings"
+                                           FontWeight="Bold"
+                                           Margin="0,-10,0,4" />
+
+                                <ui:TextBox Grid.Row="1"
+                                            PlaceholderText="Your paste here"
+                                            x:Name="PasteBinUrl_TextBox" />
+                            </Grid>
+                            <ui:Button Grid.Row="3"
+                                           VerticalAlignment="Bottom"
+                                           HorizontalAlignment="Stretch"
+                                           Content="Save Settings"
+                                           Icon="Save28"
+                                           x:Name="SaveSettings_Button"
+                                           Click="SaveSettings_Button_Click" Height="31" />
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <TabItem Header="News">
+                    <Border Padding="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <ComboBox VerticalAlignment="Top"
+                                              x:Name="YuzuVersions_DropDown" />
+
+                                    <ui:TextBox Margin="0 6 0 0"
+                                                PlaceholderText="Yuzu Binaries Path"
+                                                x:Name="YuzuBinariesPath_TextBox" />
+                                </StackPanel>
+
+                                <StackPanel Margin="0 2 0 0" Grid.Column="1">
+                                    <Grid>
+                                    </Grid>
+                                    <StackPanel Margin="6 0 0 0"
+                                                Orientation="Horizontal">
+
+                                        <ui:Button Content="Check for Updates"
+                                                   Icon="ArrowReset24"
+                                                   x:Name="CheckForYuzuUpdates_Button"
+                                                   Click="CheckForYuzuUpdates_Button_Click" />
+
+                                        <ui:Button Content="Download Yuzu Version"
+                                                   Icon="ArrowDownload24"
+                                                   Margin="8 0 0 0"
+                                                   x:Name="DownloadYuzuVersion_Button"
+                                                   Click="DownloadYuzuVersion_Button_Click" />
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <ui:Button Width="35"
+                                               Height="35"
+                                               Margin="6 8 0 0"
+                                               x:Name="SelectYuzuBinariesFolder_Button"
+                                               Click="SelectYuzuBinariesFolder_Button_Click">
+
+                                            <Image Source="Assets/OpenFolder_Asset.png"
+                                               Height="20"
+                                               Width="20"
+                                               Margin="-9 0 -10 0" />
+                                        </ui:Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0" Margin="0 6 0 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="4*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <CheckBox Content="Check for Yuzu updates on startup"
+                                              VerticalAlignment="Top"
+                                              Grid.Column="0"
+                                              x:Name="YuzuStartupUpdateCheck_CheckBox" />
+
+                                    <StackPanel Grid.Column="1">
+                                        <TextBlock Text="News"
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Top"
+                                               HorizontalAlignment="Center"
+                                               FontSize="18" />
+
+                                        <TextBlock Text="This section is getting worked on..."
+                                                   FontWeight="Bold"
+                                                   VerticalAlignment="Top"
+                                                   HorizontalAlignment="Center"
+                                                   FontSize="18"
+                                                   Margin="0 30 0 0" />
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </TabItem>
+            </TabControl>
+        </Border>
+    </Grid>
+</ui:UiWindow>
