@@ -56,6 +56,11 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - This build misses minor features such as disabling the auto updating of GlumSak or the save manager, but don't worry I am on it
    #  2.0.0.1
      - Fixed an issue that lead to the paste to be ignored
+   #  2.0.1.0
+     - Re aligned multiple UI controls to look better and to make it more user friendly
+     - Added a new Feature, users now have the option to disable the automatic Update checks
+     - The MainWindow now resets to the default size if exited in a maximized state
+     - Updated the Github API Token again, release only downloadable through Github!
           
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
