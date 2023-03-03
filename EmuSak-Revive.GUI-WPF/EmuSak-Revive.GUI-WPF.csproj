@@ -117,6 +117,7 @@
     <Compile Include="Extensions\Decode.cs" />
     <Compile Include="Extensions\GetSettingsProperty.cs" />
     <Compile Include="Extensions\Imaging.cs" />
+    <Compile Include="Extensions\SetWindowSize.cs" />
     <Compile Include="Extensions\VersionSorter.cs" />
     <Compile Include="ExtraWindows\AutoUpdateWindow.xaml.cs">
       <DependentUpon>AutoUpdateWindow.xaml</DependentUpon>

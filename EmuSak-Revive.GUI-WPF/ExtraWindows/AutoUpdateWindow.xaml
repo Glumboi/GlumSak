@@ -54,6 +54,8 @@
                     Available Version: <TextBlock x:Name="AvailableVersion_TextBlock" Text="0.0.0.0" />
                     <LineBreak />
                     Do you want to update?
+                    <LineBreak />
+                    (This feature can be turned off in the Settings!)
                     </TextBlock>
 
                     <Grid Grid.Column="1">
@@ -91,8 +93,12 @@
                                    VerticalAlignment="Top"
                                    Margin="0 0 0 4" />
 
-                        <wv2:WebView2 Grid.Row="1"
-                                      Name="Changelog_Browser" />
+                        <ui:Card Grid.Row="1" VerticalAlignment="Stretch"
+                                 HorizontalAlignment="Stretch">
+                        </ui:Card>
+                        <Border Padding="4" Grid.Row="1">
+                            <wv2:WebView2 Name="Changelog_Browser" />
+                        </Border>
                     </Grid>
                 </Grid>
 

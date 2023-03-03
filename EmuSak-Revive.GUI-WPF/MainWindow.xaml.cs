@@ -101,12 +101,7 @@ namespace EmuSak_Revive.GUI_WPF
             YuzuPath_TextBox.Text = Properties.Settings.Default.PortableYuzuPath;
             RyuPath_TextBox.Text = Properties.Settings.Default.PortableRyujinxpath;
             PasteBinUrl_TextBox.Text = Properties.Settings.Default.ShaderLinks;
-            //CheckOnStartup_CheckBox.Checked = Properties.Settings.Default.CheckForUpdatesOnStartup;
-
-            //Debug settings
-            /*DebugMode_CheckBox.Checked = Properties.Settings.Default.DebugMode;
-            CatchErros_CheckBox.Checked = Properties.Settings.Default.CatchErros;
-            LogLevel_DropDown.SelectedIndex = Properties.Settings.Default.LogLevel;*/
+            CheckForAppUpdates_CheckBox.IsChecked = Properties.Settings.Default.CheckForUpdatesOnStartup;
 
             //Yuzu updater
             YuzuBinariesPath_TextBox.Text = Properties.Settings.Default.YuzuBinariesPath;
@@ -131,12 +126,9 @@ namespace EmuSak_Revive.GUI_WPF
                 Properties.Settings.Default.ShaderLinks = PasteBinUrl_TextBox.Text;
             }
 
-            Networking.ShaderUrl = ShaderUrl;
+            Extensions.SetWindowSize.ChangeLastSizeOfMainWindow(this);
 
-            Properties.Settings.Default.LastWidth = (int)this.Width;
-            Properties.Settings.Default.LastHeight = (int)this.Height;
-
-            //Properties.Settings.Default.CheckForUpdatesOnStartup = CheckOnStartup_CheckBox.Checked;
+            Properties.Settings.Default.CheckForUpdatesOnStartup = (bool)CheckForAppUpdates_CheckBox.IsChecked;
             Properties.Settings.Default.YuzuBinariesPath = YuzuBinariesPath_TextBox.Text;
             Properties.Settings.Default.CheckForYuzuUpdateOnStartup = (bool)YuzuStartupUpdateCheck_CheckBox.IsChecked;
 
