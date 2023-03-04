@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              Title="MainWindow"
              Height="625"
-             Width="900"
+             Width="1000"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
              ExtendsContentIntoTitleBar="True"
              WindowBackdropType="Mica"
@@ -435,6 +435,33 @@
                                     </StackPanel>
                                 </Grid>
                             </Grid>
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <TabItem Header="Paste Creator">
+                    <Border Padding="5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <ListBox Grid.Column="0" Margin="0 0 10 0">
+                                <ListBoxItem Content="Demo Game" />
+                                <ListBoxItem Content="Demo Game" />
+                                <ListBoxItem Content="Demo Game" />
+                                <ListBoxItem Content="Demo Game" />
+                                <ListBoxItem Content="Demo Game" />
+                            </ListBox>
+
+                            <ListBox Grid.Column="1" Margin="10 0 0 0">
+                                <ListBoxItem Content="Demo Shader link.zip" />
+                                <ListBoxItem Content="Demo Shader link.zip" />
+                                <ListBoxItem Content="Demo Shader link.zip" />
+                                <ListBoxItem Content="Demo Shader link.zip" />
+                                <ListBoxItem Content="Demo Shader link.zip" />
+                            </ListBox>
                         </Grid>
                     </Border>
                 </TabItem>
