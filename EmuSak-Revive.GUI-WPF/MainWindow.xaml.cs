@@ -650,5 +650,10 @@ namespace EmuSak_Revive.GUI_WPF
         {
             Networking.LaunchURLInBrowser("https://github.com/CapitaineJSparrow/emusak-ui");
         }
+
+        private void PasteBinUrl_TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Networking.ShaderUrl = PasteBinUrl_TextBox.Text;
+        }
     }
 }

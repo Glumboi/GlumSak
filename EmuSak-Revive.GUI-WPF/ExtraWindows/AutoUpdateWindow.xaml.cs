@@ -30,6 +30,7 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             await Changelog_Browser.EnsureCoreWebView2Async();
             Changelog_Browser.NavigateToString(VersionControl.Changelog);
             Changelog_Browser.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            CheckForAppUpdates_CheckBox.IsChecked = Properties.Settings.Default.CheckForUpdatesOnStartup;
         }
 
         private async void StartUpdateProcess()
@@ -113,6 +114,16 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             ConfigurationWindow configurationWindow = new ConfigurationWindow();
             configurationWindow.Show();
             Close();
+        }
+
+        private void CheckForAppUpdates_CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.CheckForUpdatesOnStartup = true;
+        }
+
+        private void CheckForAppUpdates_CheckBox_UnChecked(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.CheckForUpdatesOnStartup = false;
         }
     }
 }

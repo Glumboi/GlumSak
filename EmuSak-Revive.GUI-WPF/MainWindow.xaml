@@ -52,7 +52,6 @@
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-
                                         <ComboBox x:Name="Firmware_ComboBox"
                                                   Grid.Column="0"
                                                   Margin="0 0 4 0 "
@@ -314,7 +313,8 @@
 
                                 <ui:TextBox Grid.Row="1"
                                             PlaceholderText="Your paste here"
-                                            x:Name="PasteBinUrl_TextBox" />
+                                            x:Name="PasteBinUrl_TextBox"
+                                            TextChanged="PasteBinUrl_TextBox_TextChanged" />
                             </Grid>
                             <Grid Grid.Row="3">
                                 <Grid.RowDefinitions>
