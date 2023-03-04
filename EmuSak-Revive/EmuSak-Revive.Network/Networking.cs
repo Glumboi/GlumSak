@@ -10,12 +10,12 @@ using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using AnonFileAPI;
 using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using System.Windows;
 
 namespace EmuSak_Revive.Network
 {
@@ -96,12 +96,28 @@ namespace EmuSak_Revive.Network
 
                     return result;
                 }
-                catch (Exception e)
+                catch
                 {
-                    MessageBox.Show("Couldn't load a shader from the given url in the settings!\n\nDetailed error: " + e,
+                    //File could not be read from the web, try to see if the file is local
+                    if (File.Exists(ShaderUrl))
+                    {
+                        var content = File.ReadAllLines(ShaderUrl);
+
+                        foreach (var line in content)
+                        {
+                            if (line.Contains(name))
+                            {
+                                result = line.Split('=')[1];
+                            }
+                        }
+
+                        return result;
+                    }
+
+                    MessageBox.Show($"Somethimg went wrong while trying to get the shader of {name}.\nMake sure that you have a valid paste!",
                         "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Error);
                 }
             }
 
@@ -458,11 +474,12 @@ namespace EmuSak_Revive.Network
                 ToastHandler.ShowToast("A download finished!", "Info");
             }
 
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
+
             UpdateProgress(0);
             HideProgressBar();
             _stopWatch.Reset();
 
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
             _downloadDone = true;
         }
 

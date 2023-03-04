@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              Title="MainWindow"
              Height="625"
-             Width="900"
+             Width="1000"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
              ExtendsContentIntoTitleBar="True"
              WindowBackdropType="Mica"
@@ -52,7 +52,6 @@
                                             <ColumnDefinition Width="*" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-
                                         <ComboBox x:Name="Firmware_ComboBox"
                                                   Grid.Column="0"
                                                   Margin="0 0 4 0 "
@@ -314,7 +313,8 @@
 
                                 <ui:TextBox Grid.Row="1"
                                             PlaceholderText="Your paste here"
-                                            x:Name="PasteBinUrl_TextBox" />
+                                            x:Name="PasteBinUrl_TextBox"
+                                            TextChanged="PasteBinUrl_TextBox_TextChanged" />
                             </Grid>
                             <Grid Grid.Row="3">
                                 <Grid.RowDefinitions>
@@ -437,6 +437,96 @@
                             </Grid>
                         </Grid>
                     </Border>
+                </TabItem>
+
+                <TabItem Header="Paste Creator" Visibility="Collapsed">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Menu>
+                            <MenuItem Header="File">
+                                <ui:MenuItem Header="Open local Paste"
+                                                 SymbolIcon="OpenFolder24" />
+
+                                <ui:MenuItem Header="Open web Paste"
+                                                 SymbolIcon="Globe24" />
+
+                                <Separator />
+
+                                <ui:MenuItem Header="Save"
+                                                 SymbolIcon="Save28" />
+
+                                <ui:MenuItem Header="Save as..."
+                                                 SymbolIcon="Rename24" />
+                            </MenuItem>
+                        </Menu>
+                        <Border Padding="5" Grid.Row="1">
+                            <Grid>
+                                <Grid Grid.Row="1" Margin="0 5 0 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0" Margin="0 0 10 0">
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition Height="3.2*" />
+                                        </Grid.RowDefinitions>
+
+                                        <StackPanel>
+                                            <ui:TextBox VerticalAlignment="Top"
+                                                x:Name="Game_TextBox" />
+
+                                            <ui:Button Content="Add to Games"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 4 0 0"
+                                               x:Name="AddGames_Button"
+                                               Click="AddGames_Button_Click" />
+
+                                            <ui:Button Content="Remove selected"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 6 0 0"
+                                               x:Name="RemoveGames_Buttton"
+                                               Click="RemoveGames_Buttton_Click" />
+                                        </StackPanel>
+
+                                        <ListBox Grid.Row="1"
+                                         x:Name="Games_ListBox" />
+                                    </Grid>
+
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition Height="3*" />
+                                        </Grid.RowDefinitions>
+
+                                        <StackPanel>
+                                            <ui:TextBox VerticalAlignment="Top"
+                                                x:Name="Shader_TextBox" />
+
+                                            <ui:Button Content="Add to Shader Links"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 4 0 0"
+                                               x:Name="AddShader_Button"
+                                               Click="AddShader_Button_Click" />
+
+                                            <ui:Button Content="Remove selected"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 6 0 0"
+                                               x:Name="RemoveShader_Button"
+                                               Click="RemoveShader_Button_Click" />
+                                        </StackPanel>
+
+                                        <ListBox Grid.Row="1" x:Name="Shaders_ListBox" />
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
                 </TabItem>
             </TabControl>
         </Border>

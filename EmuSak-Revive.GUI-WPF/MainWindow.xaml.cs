@@ -1,39 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Drawing2D;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Wpf.Ui.Controls;
-using static System.Net.Mime.MediaTypeNames;
-using System.Drawing.Imaging;
+using System.Collections.Generic;
 using System.IO;
+using System.Diagnostics;
+using System.Reflection;
+using Microsoft.WindowsAPICodePack.Dialogs;
+
 using EmuSak_Revive.GUI_WPF.Extensions;
 using EmuSak_Revive.GUI_WPF.ExtraWindows;
-using System.Diagnostics;
 using EmuSak_Revive.Network;
 using EmuSak_Revive.Emulators;
 using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.JSON;
-using System.Windows.Interop;
-using System.Reflection.Emit;
-using Microsoft.WindowsAPICodePack.Dialogs;
-using System.Windows.Threading;
+
 using Glumboi.UI.Toast;
-using System.Reflection;
-using System.Runtime.Remoting.Messaging;
-using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
-using System.Net.NetworkInformation;
+using Wpf.Ui.Controls;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -220,6 +206,15 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void UpdateYuzu()
         {
+            if (string.IsNullOrWhiteSpace(YuzuBinariesPath_TextBox.Text))
+            {
+                System.Windows.MessageBox.Show("The Yuzu Binaries Path can't be empty!",
+                    "Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                return;
+            }
+
             int index = YuzuVersions_DropDown.SelectedIndex;
             var fileLink = Yuzu.GetYuzuEADDL(Yuzu.YuzuEAVersionsLinks[index]);
             Networking.DownloadAFileFromServer(fileLink,
@@ -649,6 +644,33 @@ namespace EmuSak_Revive.GUI_WPF
         private void EmuSakUIGithub_Button_Click(object sender, RoutedEventArgs e)
         {
             Networking.LaunchURLInBrowser("https://github.com/CapitaineJSparrow/emusak-ui");
+        }
+
+        private void PasteBinUrl_TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Networking.ShaderUrl = PasteBinUrl_TextBox.Text;
+        }
+
+        private void AddGames_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var text = Game_TextBox.Text;
+            if (!string.IsNullOrWhiteSpace(text)) Games_ListBox.Items.Add(text);
+        }
+
+        private void RemoveGames_Buttton_Click(object sender, RoutedEventArgs e)
+        {
+            Games_ListBox.Items.Remove(Games_ListBox.SelectedItem);
+        }
+
+        private void AddShader_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var text = Shader_TextBox.Text;
+            if (!string.IsNullOrWhiteSpace(text)) Shaders_ListBox.Items.Add(text);
+        }
+
+        private void RemoveShader_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Shaders_ListBox.Items.Remove(Shaders_ListBox.SelectedItem);
         }
     }
 }

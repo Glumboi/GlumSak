@@ -37,6 +37,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="2*" />
                     <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
 
                 <Grid>
@@ -54,8 +55,6 @@
                     Available Version: <TextBlock x:Name="AvailableVersion_TextBlock" Text="0.0.0.0" />
                     <LineBreak />
                     Do you want to update?
-                    <LineBreak />
-                    (This feature can be turned off in the Settings!)
                     </TextBlock>
 
                     <Grid Grid.Column="1">
@@ -102,7 +101,14 @@
                     </Grid>
                 </Grid>
 
-                <Grid Grid.Row="2" Margin="0 5 0 0">
+                <Grid Grid.Row="2">
+                    <CheckBox Content="Check for App Updates on startup"
+                              x:Name="CheckForAppUpdates_CheckBox"
+                              Checked="CheckForAppUpdates_CheckBox_Checked"
+                              Unchecked="CheckForAppUpdates_CheckBox_UnChecked" />
+                </Grid>
+
+                <Grid Grid.Row="3" Margin="0 5 0 0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
