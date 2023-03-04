@@ -10,12 +10,12 @@ using System.IO.Compression;
 using System.Linq;
 using System.Net;
 using System.Text.RegularExpressions;
-using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Taskbar;
 using AnonFileAPI;
 using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using System.Windows;
 
 namespace EmuSak_Revive.Network
 {
@@ -98,23 +98,26 @@ namespace EmuSak_Revive.Network
                 }
                 catch
                 {
-                    /*MessageBox.Show("Couldn't load a shader from the given url in the settings!\n\nDetailed error: " + e,
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);*/
                     //File could not be read from the web, try to see if the file is local
-
-                    var content = File.ReadAllLines(ShaderUrl);
-
-                    foreach (var line in content)
+                    if (File.Exists(ShaderUrl))
                     {
-                        if (line.Contains(name))
+                        var content = File.ReadAllLines(ShaderUrl);
+
+                        foreach (var line in content)
                         {
-                            result = line.Split('=')[1];
+                            if (line.Contains(name))
+                            {
+                                result = line.Split('=')[1];
+                            }
                         }
+
+                        return result;
                     }
 
-                    return result;
+                    MessageBox.Show($"Somethimg went wrong while trying to get the shader of {name}.\nMake sure that you have a valid paste!",
+                        "Error",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Error);
                 }
             }
 
