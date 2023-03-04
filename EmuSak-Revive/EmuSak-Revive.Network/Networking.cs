@@ -96,12 +96,25 @@ namespace EmuSak_Revive.Network
 
                     return result;
                 }
-                catch (Exception e)
+                catch
                 {
-                    MessageBox.Show("Couldn't load a shader from the given url in the settings!\n\nDetailed error: " + e,
+                    /*MessageBox.Show("Couldn't load a shader from the given url in the settings!\n\nDetailed error: " + e,
                         "Error",
                         MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                        MessageBoxIcon.Error);*/
+                    //File could not be read from the web, try to see if the file is local
+
+                    var content = File.ReadAllLines(ShaderUrl);
+
+                    foreach (var line in content)
+                    {
+                        if (line.Contains(name))
+                        {
+                            result = line.Split('=')[1];
+                        }
+                    }
+
+                    return result;
                 }
             }
 

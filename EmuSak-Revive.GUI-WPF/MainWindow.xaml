@@ -447,21 +447,60 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
-                            <ListBox Grid.Column="0" Margin="0 0 10 0">
-                                <ListBoxItem Content="Demo Game" />
-                                <ListBoxItem Content="Demo Game" />
-                                <ListBoxItem Content="Demo Game" />
-                                <ListBoxItem Content="Demo Game" />
-                                <ListBoxItem Content="Demo Game" />
-                            </ListBox>
+                            <Grid Grid.Column="0" Margin="0 0 10 0">
 
-                            <ListBox Grid.Column="1" Margin="10 0 0 0">
-                                <ListBoxItem Content="Demo Shader link.zip" />
-                                <ListBoxItem Content="Demo Shader link.zip" />
-                                <ListBoxItem Content="Demo Shader link.zip" />
-                                <ListBoxItem Content="Demo Shader link.zip" />
-                                <ListBoxItem Content="Demo Shader link.zip" />
-                            </ListBox>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition Height="3*" />
+                                </Grid.RowDefinitions>
+
+                                <StackPanel>
+                                    <ui:TextBox VerticalAlignment="Top" />
+
+                                    <ui:Button Content="Add to Games"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 4 0 0" />
+
+                                    <ui:Button Content="Remove selected"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 6 0 0" />
+                                </StackPanel>
+
+                                <ListBox Grid.Row="1">
+                                    <ListBoxItem Content="Demo Game" />
+                                    <ListBoxItem Content="Demo Game" />
+                                    <ListBoxItem Content="Demo Game" />
+                                    <ListBoxItem Content="Demo Game" />
+                                    <ListBoxItem Content="Demo Game" />
+                                </ListBox>
+                            </Grid>
+
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition Height="3*" />
+                                </Grid.RowDefinitions>
+
+                                <StackPanel>
+                                    <ui:TextBox VerticalAlignment="Top" />
+
+                                    <ui:Button Content="Add to Shader Links"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 4 0 0" />
+
+                                    <ui:Button Content="Remove selected"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 6 0 0" />
+                                </StackPanel>
+
+                                <ListBox Grid.Row="1">
+                                    <ListBoxItem Content="Demo Shader.zip" />
+                                    <ListBoxItem Content="Demo Shader.zip" />
+                                    <ListBoxItem Content="Demo Shader.zip" />
+                                    <ListBoxItem Content="Demo Shader.zip" />
+                                    <ListBoxItem Content="Demo Shader.zip" />
+                                </ListBox>
+                            </Grid>
                         </Grid>
                     </Border>
                 </TabItem>
