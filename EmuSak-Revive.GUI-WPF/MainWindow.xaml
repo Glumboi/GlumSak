@@ -439,70 +439,94 @@
                     </Border>
                 </TabItem>
 
-                <TabItem Header="Paste Creator">
-                    <Border Padding="5">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
+                <TabItem Header="Paste Creator" Visibility="Collapsed">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Menu>
+                            <MenuItem Header="File">
+                                <ui:MenuItem Header="Open local Paste"
+                                                 SymbolIcon="OpenFolder24" />
 
-                            <Grid Grid.Column="0" Margin="0 0 10 0">
+                                <ui:MenuItem Header="Open web Paste"
+                                                 SymbolIcon="Globe24" />
 
-                                <Grid.RowDefinitions>
-                                    <RowDefinition />
-                                    <RowDefinition Height="3*" />
-                                </Grid.RowDefinitions>
+                                <Separator />
 
-                                <StackPanel>
-                                    <ui:TextBox VerticalAlignment="Top" />
+                                <ui:MenuItem Header="Save"
+                                                 SymbolIcon="Save28" />
 
-                                    <ui:Button Content="Add to Games"
+                                <ui:MenuItem Header="Save as..."
+                                                 SymbolIcon="Rename24" />
+                            </MenuItem>
+                        </Menu>
+                        <Border Padding="5" Grid.Row="1">
+                            <Grid>
+                                <Grid Grid.Row="1" Margin="0 5 0 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0" Margin="0 0 10 0">
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition Height="3.2*" />
+                                        </Grid.RowDefinitions>
+
+                                        <StackPanel>
+                                            <ui:TextBox VerticalAlignment="Top"
+                                                x:Name="Game_TextBox" />
+
+                                            <ui:Button Content="Add to Games"
                                                HorizontalAlignment="Stretch"
-                                               Margin="0 4 0 0" />
+                                               Margin="0 4 0 0"
+                                               x:Name="AddGames_Button"
+                                               Click="AddGames_Button_Click" />
 
-                                    <ui:Button Content="Remove selected"
+                                            <ui:Button Content="Remove selected"
                                                HorizontalAlignment="Stretch"
-                                               Margin="0 6 0 0" />
-                                </StackPanel>
+                                               Margin="0 6 0 0"
+                                               x:Name="RemoveGames_Buttton"
+                                               Click="RemoveGames_Buttton_Click" />
+                                        </StackPanel>
 
-                                <ListBox Grid.Row="1">
-                                    <ListBoxItem Content="Demo Game" />
-                                    <ListBoxItem Content="Demo Game" />
-                                    <ListBoxItem Content="Demo Game" />
-                                    <ListBoxItem Content="Demo Game" />
-                                    <ListBoxItem Content="Demo Game" />
-                                </ListBox>
+                                        <ListBox Grid.Row="1"
+                                         x:Name="Games_ListBox" />
+                                    </Grid>
+
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition Height="3*" />
+                                        </Grid.RowDefinitions>
+
+                                        <StackPanel>
+                                            <ui:TextBox VerticalAlignment="Top"
+                                                x:Name="Shader_TextBox" />
+
+                                            <ui:Button Content="Add to Shader Links"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 4 0 0"
+                                               x:Name="AddShader_Button"
+                                               Click="AddShader_Button_Click" />
+
+                                            <ui:Button Content="Remove selected"
+                                               HorizontalAlignment="Stretch"
+                                               Margin="0 6 0 0"
+                                               x:Name="RemoveShader_Button"
+                                               Click="RemoveShader_Button_Click" />
+                                        </StackPanel>
+
+                                        <ListBox Grid.Row="1" x:Name="Shaders_ListBox" />
+                                    </Grid>
+                                </Grid>
                             </Grid>
-
-                            <Grid Grid.Column="1">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition />
-                                    <RowDefinition Height="3*" />
-                                </Grid.RowDefinitions>
-
-                                <StackPanel>
-                                    <ui:TextBox VerticalAlignment="Top" />
-
-                                    <ui:Button Content="Add to Shader Links"
-                                               HorizontalAlignment="Stretch"
-                                               Margin="0 4 0 0" />
-
-                                    <ui:Button Content="Remove selected"
-                                               HorizontalAlignment="Stretch"
-                                               Margin="0 6 0 0" />
-                                </StackPanel>
-
-                                <ListBox Grid.Row="1">
-                                    <ListBoxItem Content="Demo Shader.zip" />
-                                    <ListBoxItem Content="Demo Shader.zip" />
-                                    <ListBoxItem Content="Demo Shader.zip" />
-                                    <ListBoxItem Content="Demo Shader.zip" />
-                                    <ListBoxItem Content="Demo Shader.zip" />
-                                </ListBox>
-                            </Grid>
-                        </Grid>
-                    </Border>
+                        </Border>
+                    </Grid>
                 </TabItem>
             </TabControl>
         </Border>

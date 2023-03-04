@@ -474,11 +474,12 @@ namespace EmuSak_Revive.Network
                 ToastHandler.ShowToast("A download finished!", "Info");
             }
 
+            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
+
             UpdateProgress(0);
             HideProgressBar();
             _stopWatch.Reset();
 
-            TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
             _downloadDone = true;
         }
 
