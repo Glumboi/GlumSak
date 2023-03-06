@@ -61,6 +61,11 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
      - Added a new Feature, users now have the option to disable the automatic Update checks
      - The MainWindow now resets to the default size if exited in a maximized state
      - Updated the Github API Token again, release only downloadable through Github!
+   #  2.0.1.1
+    - Fixed an issue that lead to pastes not updating properly at runtime
+    - Introduced local paste support
+    - Added a messagebox that appears when no Yuzu Binaries Path is specified (thanks to sin for bringing this up to me)
+    - Added a CheckBox to the AutoUpdaterWindow that lets you disable the checking for updates
    #  2.0.1.2
     - Switched the browser control from webview2 to CEF.Wpf, this is to reduce crashes on dirs that require elevated permissions
           
