@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.props" Condition="Exists('..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.props')" />
+  <Import Project="..\EmuSak-Revive\packages\cef.redist.x86.110.0.30\build\cef.redist.x86.props" Condition="Exists('..\EmuSak-Revive\packages\cef.redist.x86.110.0.30\build\cef.redist.x86.props')" />
+  <Import Project="..\EmuSak-Revive\packages\cef.redist.x64.110.0.30\build\cef.redist.x64.props" Condition="Exists('..\EmuSak-Revive\packages\cef.redist.x64.110.0.30\build\cef.redist.x64.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -41,18 +44,26 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CefSharp, Version=110.0.300.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\lib\net452\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess.Core, Version=110.0.300.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\CefSharp\x64\CefSharp.BrowserSubprocess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core, Version=110.0.300.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\lib\net452\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core.Runtime, Version=110.0.300.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\CefSharp\x64\CefSharp.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Wpf, Version=110.0.300.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=MSIL">
+      <HintPath>..\EmuSak-Revive\packages\CefSharp.Wpf.110.0.300\lib\net462\CefSharp.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Glumboi.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Glumboi dlls\Glumboi.UI\Glumboi.UI\bin\Release\Glumboi.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1671.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\EmuSak-Revive\packages\Microsoft.Web.WebView2.1.0.1671-prerelease\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.1671.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\EmuSak-Revive\packages\Microsoft.Web.WebView2.1.0.1671-prerelease\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1671.0, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
-      <HintPath>..\EmuSak-Revive\packages\Microsoft.Web.WebView2.1.0.1671-prerelease\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\EmuSak-Revive\packages\WindowsAPICodePack-Core.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
@@ -205,11 +216,14 @@
     <Resource Include="Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\EmuSak-Revive\packages\Microsoft.Web.WebView2.1.0.1671-prerelease\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\EmuSak-Revive\packages\Microsoft.Web.WebView2.1.0.1671-prerelease\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\EmuSak-Revive\packages\Microsoft.Web.WebView2.1.0.1671-prerelease\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\EmuSak-Revive\packages\Microsoft.Web.WebView2.1.0.1671-prerelease\build\Microsoft.Web.WebView2.targets'))" />
+    <Error Condition="!Exists('..\EmuSak-Revive\packages\cef.redist.x64.110.0.30\build\cef.redist.x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\EmuSak-Revive\packages\cef.redist.x64.110.0.30\build\cef.redist.x64.props'))" />
+    <Error Condition="!Exists('..\EmuSak-Revive\packages\cef.redist.x86.110.0.30\build\cef.redist.x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\EmuSak-Revive\packages\cef.redist.x86.110.0.30\build\cef.redist.x86.props'))" />
+    <Error Condition="!Exists('..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.targets'))" />
   </Target>
+  <Import Project="..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.targets" Condition="Exists('..\EmuSak-Revive\packages\CefSharp.Common.110.0.300\build\CefSharp.Common.targets')" />
 </Project>
