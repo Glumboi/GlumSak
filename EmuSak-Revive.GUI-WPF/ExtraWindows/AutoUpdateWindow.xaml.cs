@@ -1,4 +1,5 @@
-﻿using EmuSak_Revive.ConfigIni.Core;
+﻿using CefSharp;
+using EmuSak_Revive.ConfigIni.Core;
 using EmuSak_Revive.Network;
 using Octokit;
 using System;
@@ -25,11 +26,9 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             InitializeComponent();
         }
 
-        private async void UiWindow_Loaded(object sender, RoutedEventArgs e)
+        private void UiWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            await Changelog_Browser.EnsureCoreWebView2Async();
-            Changelog_Browser.NavigateToString(VersionControl.Changelog);
-            Changelog_Browser.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            Changelog_Browser.LoadHtml(VersionControl.Changelog);
             CheckForAppUpdates_CheckBox.IsChecked = Properties.Settings.Default.CheckForUpdatesOnStartup;
         }
 

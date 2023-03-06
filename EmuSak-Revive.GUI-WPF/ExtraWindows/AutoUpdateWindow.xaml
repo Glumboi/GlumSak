@@ -4,7 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:EmuSak_Revive.GUI_WPF.ExtraWindows"
-             xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+             xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
              mc:Ignorable="d"
              Title="AutoUpdateWindow"
              Height="550"
@@ -96,7 +96,9 @@
                                  HorizontalAlignment="Stretch">
                         </ui:Card>
                         <Border Padding="4" Grid.Row="1">
-                            <wv2:WebView2 Name="Changelog_Browser" />
+                            <wpf:ChromiumWebBrowser x:Name="Changelog_Browser" />
+
+                            <!--<wv2:WebView2 Name="Changelog_Browser" />-->
                         </Border>
                     </Grid>
                 </Grid>
