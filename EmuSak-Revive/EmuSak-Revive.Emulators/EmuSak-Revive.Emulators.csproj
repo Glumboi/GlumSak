@@ -207,6 +207,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Wpf.Ui, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ryujinx.cs" />

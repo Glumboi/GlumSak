@@ -1,16 +1,12 @@
-﻿using CefSharp;
-using EmuSak_Revive.ConfigIni.Core;
+﻿using EmuSak_Revive.ConfigIni.Core;
 using EmuSak_Revive.Network;
-using HTMLConverter;
 using Octokit;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Reflection;
 using System.Windows;
-using System.Windows.Controls;
 using Wpf.Ui.Controls;
 
 namespace EmuSak_Revive.GUI_WPF.ExtraWindows
@@ -31,7 +27,7 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
 
         private void UiWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            Changelog_Browser.LoadHtml(VersionControl.Changelog);
+            Changelog_Browser.NavigateToString(VersionControl.Changelog);
             CheckForAppUpdates_CheckBox.IsChecked = Properties.Settings.Default.CheckForUpdatesOnStartup;
         }
 

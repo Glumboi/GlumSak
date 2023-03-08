@@ -16,6 +16,9 @@ using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using System.Windows.Threading;
 using System.Windows;
+using Wpf.Ui.Controls;
+using static System.Net.Mime.MediaTypeNames;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace EmuSak_Revive.Network
 {
@@ -31,6 +34,7 @@ namespace EmuSak_Revive.Network
         public static TextBlock DownloadProgressText { get; set; }
         public static Border DownloadBorder { get; set; }
         public static string LastDownloadMeta => _lastDownloadMeta + "\n";
+        public static Snackbar NotificationSnackBar { get; set; }
 
         #endregion Public properties
 
@@ -51,14 +55,26 @@ namespace EmuSak_Revive.Network
         private static long _totalBytesReceived;
         private static bool _filesInFolder;
         private static string _childFolderName;
+        private static string _currentWebFile;
         private static readonly Stopwatch _stopWatch = new System.Diagnostics.Stopwatch();
         private static string _lastDownloadMeta;
+        private static WebClient _client;
 
         #endregion Private variables
 
         public static void ShowDownloadDone(string downloadDoneMsg, string title)
         {
             ToastHandler.ShowToast(downloadDoneMsg, title);
+        }
+
+        public static void ShowNotification(string content, Wpf.Ui.Common.SymbolRegular icon = Wpf.Ui.Common.SymbolRegular.Info28)
+        {
+            NotificationSnackBar.Dispatcher.Invoke(new Action(delegate
+            {
+                NotificationSnackBar.Icon = icon;
+                NotificationSnackBar.Content = content;
+                NotificationSnackBar.Show();
+            }), DispatcherPriority.Normal);
         }
 
         /// <summary>
@@ -114,10 +130,8 @@ namespace EmuSak_Revive.Network
                         return result;
                     }
 
-                    MessageBox.Show($"Somethimg went wrong while trying to get the shader of {name}.\nMake sure that you have a valid paste!",
-                        "Error",
-                        MessageBoxButton.OK,
-                        MessageBoxImage.Error);
+                    ShowNotification($"Somethimg went wrong while trying to get the shader of {name}.\nMake sure that you have a valid paste!",
+                        Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
                 }
             }
 
@@ -219,11 +233,11 @@ namespace EmuSak_Revive.Network
             catch (Win32Exception noBrowser)
             {
                 if (noBrowser.ErrorCode == -2147467259)
-                    MessageBox.Show(noBrowser.Message);
+                    System.Windows.MessageBox.Show(noBrowser.Message);
             }
             catch (Exception other)
             {
-                MessageBox.Show(other.Message);
+                System.Windows.MessageBox.Show(other.Message);
             }
         }
 
@@ -384,35 +398,42 @@ namespace EmuSak_Revive.Network
 
             if (DownloadBorder.Visibility == System.Windows.Visibility.Visible)
             {
-                ToastHandler.ShowToast("You are already downloading something, please wait for the download to finish!",
-                    "Info");
+                ShowNotification("You are already downloading something, please wait for the download to finish!");
                 _downloadDone = false;
                 return;
             }
 
-            using (var client = new WebClient())
+            _client = new WebClient();
+
+            _client.DownloadProgressChanged += Client_DownloadProgressChanged;
+            _client.DownloadFileCompleted += Client_DownloadFileCompleted;
+            _client.DownloadFileAsync(new Uri(url, UriKind.Absolute), outPathName);
+
+            _unzipPath = unzipPath;
+            _outPathName = outPathName;
+            _showFinishNotification = showFinishedNotification;
+            _showStartNotification = showStartedNotification;
+            _deleteTempAfterDone = deleteTempAfterDone;
+            _stopWatch.Start(); // Start the Stopwatch
+            _downloadDone = false;
+            _totalBytesReceived = 0;
+            _filesInFolder = filesInFolder;
+            _childFolderName = unzipPath + "\\" + childFolderName;
+            _currentWebFile = url.Split('/').Last();
+
+            if (_showStartNotification)
             {
-                client.DownloadProgressChanged += Client_DownloadProgressChanged;
-                client.DownloadFileCompleted += Client_DownloadFileCompleted;
-                client.DownloadFileAsync(new Uri(url, UriKind.Absolute), outPathName);
-
-                _unzipPath = unzipPath;
-                _outPathName = outPathName;
-                _showFinishNotification = showFinishedNotification;
-                _showStartNotification = showStartedNotification;
-                _deleteTempAfterDone = deleteTempAfterDone;
-                _stopWatch.Start(); // Start the Stopwatch
-                _downloadDone = false;
-                _totalBytesReceived = 0;
-                _filesInFolder = filesInFolder;
-                _childFolderName = unzipPath + "\\" + childFolderName;
-
-                if (_showStartNotification)
-                {
-                    ToastHandler.ShowToast("Started a download!", "Info");
-                }
-                ShowProgressBar();
+                ShowNotification($"Started download of the file: {_currentWebFile}", Wpf.Ui.Common.SymbolRegular.ArrowDownload24);
             }
+            ShowProgressBar();
+        }
+
+        /// <summary>
+        /// Cancels the current File Download
+        /// </summary>
+        public static void CancelDownload()
+        {
+            _client.CancelAsync();
         }
 
         /// <summary>
@@ -468,19 +489,37 @@ namespace EmuSak_Revive.Network
         /// <param name="e"></param>
         private static void Client_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
+            if (e.Cancelled)
+            {
+                ResetProgress();
+                File.Delete(_outPathName);
+                ShowNotification($"Cancelled the Download of {_currentWebFile}", Wpf.Ui.Common.SymbolRegular.Delete28);
+                HideProgressBar();
+                return;
+            }
+
             Unzip(_outPathName, _unzipPath, _deleteTempAfterDone, _filesInFolder, _childFolderName);
             if (_showFinishNotification)
             {
-                ToastHandler.ShowToast("A download finished!", "Info");
+                ShowNotification($"Finished the Installation of {_currentWebFile}", Wpf.Ui.Common.SymbolRegular.Checkmark28);
             }
 
+            ResetProgress();
+        }
+
+        /// <summary>
+        /// Resets all Values that interact with the UI
+        /// </summary>
+        private static void ResetProgress()
+        {
             TaskbarManager.Instance.SetProgressState(TaskbarProgressBarState.NoProgress, MainWindowHandle);
 
             UpdateProgress(0);
             HideProgressBar();
-            _stopWatch.Reset();
 
+            _stopWatch.Reset();
             _downloadDone = true;
+            _client.Dispose();
         }
 
         /// <summary>

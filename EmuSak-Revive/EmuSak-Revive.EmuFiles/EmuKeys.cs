@@ -63,7 +63,7 @@ namespace EmuSak_Revive.EmuFiles
             }
             catch (System.Exception)
             {
-                ToastHandler.ShowToast("Could not install keys, make sure your paste is right!", "Error");
+                Networking.ShowNotification("Could not install keys, make sure your paste is right!", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
             }
         }
     }

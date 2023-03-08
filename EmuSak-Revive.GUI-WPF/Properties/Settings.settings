@@ -35,5 +35,8 @@
     <Setting Name="CheckForUpdatesOnStartup" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="SnackBarTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

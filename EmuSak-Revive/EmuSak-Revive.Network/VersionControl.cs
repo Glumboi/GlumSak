@@ -33,6 +33,7 @@ namespace EmuSak_Revive.Network
                     "font-family: Russo One;\r\n    " +
                     "color: White;\r\n" +
                     "font-size: 13px; \r\n" +
+                    "background-color: rgb(40, 40, 40); \r\n" +
                 "}\r\n" +
                 "</style>" + MarkDown.MarkDownToHtml.GetHtmlOfMarkDown(release.Body);
 

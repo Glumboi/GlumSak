@@ -18,10 +18,7 @@ using EmuSak_Revive.Emulators;
 using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.JSON;
 
-using Glumboi.UI.Toast;
 using Wpf.Ui.Controls;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -94,6 +91,11 @@ namespace EmuSak_Revive.GUI_WPF
             //Yuzu updater
             YuzuBinariesPath_TextBox.Text = Properties.Settings.Default.YuzuBinariesPath;
             YuzuStartupUpdateCheck_CheckBox.IsChecked = Properties.Settings.Default.CheckForYuzuUpdateOnStartup;
+
+            //Snack
+            SnackDuration_Slider.Value = Properties.Settings.Default.SnackBarTimeout;
+
+            Networking.NotificationSnackBar = Notification_SnackBar;
         }
 
         private void SaveSettings() //--> Saves a bunch of settings
@@ -120,7 +122,11 @@ namespace EmuSak_Revive.GUI_WPF
             Properties.Settings.Default.YuzuBinariesPath = YuzuBinariesPath_TextBox.Text;
             Properties.Settings.Default.CheckForYuzuUpdateOnStartup = (bool)YuzuStartupUpdateCheck_CheckBox.IsChecked;
 
+            //Snack
+            Properties.Settings.Default.SnackBarTimeout = Notification_SnackBar.Timeout;
             Properties.Settings.Default.Save();
+
+            Networking.ShowNotification("Saved the Settings with Success!");
         }
 
         private void CheckShaderUrl()
@@ -129,16 +135,17 @@ namespace EmuSak_Revive.GUI_WPF
             {
                 System.Threading.Tasks.Task.Run(() =>
                 {
-                    System.Windows.MessageBox.Show("There is no link given in the settings to download shaders from!\n" +
+                    /*System.Windows.MessageBox.Show("There is no link given in the settings to download shaders from!\n" +
                     "This will result into non working shaders. Make sure to set a pastebin link up in the settings," +
                     " or any raw file on the web.\n\n" +
                     "If you have a working link verify the format. It has to look like this: " +
                     "Gamename=https://linktoshader.zip\nImportant is that it needs to be in the exact format.",
                     "Important",
                     MessageBoxButton.OK,
-                    MessageBoxImage.Error);
+                    MessageBoxImage.Error);*/
                 });
-
+                Notification_SnackBar.Content = "No Paste detected in the Settings!";
+                Notification_SnackBar.Show();
                 return;
             }
             if (string.IsNullOrWhiteSpace(Networking.ShaderUrl))
@@ -202,7 +209,8 @@ namespace EmuSak_Revive.GUI_WPF
 
             if (showUptodateNotification)
             {
-                ToastHandler.ShowToast("Congrats, your yuzu version is up to date!", "Yuzu is up to date");
+                Networking.ShowNotification("Congrats, your yuzu version is up to date!");
+                //ToastHandler.ShowToast("Congrats, your yuzu version is up to date!", "Yuzu is up to date");
             }
         }
 
@@ -210,10 +218,13 @@ namespace EmuSak_Revive.GUI_WPF
         {
             if (string.IsNullOrWhiteSpace(YuzuBinariesPath_TextBox.Text))
             {
-                System.Windows.MessageBox.Show("The Yuzu Binaries Path can't be empty!",
+                /*System.Windows.MessageBox.Show("The Yuzu Binaries Path can't be empty!",
                     "Error",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
+                */
+                Networking.ShowNotification("The Yuzu Binaries Path can't be empty!", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
+
                 return;
             }
 
@@ -583,7 +594,8 @@ namespace EmuSak_Revive.GUI_WPF
             if (dialogResult == MessageBoxResult.Yes)
             {
                 Temporary.DeleteTemporaryFiles();
-                ToastHandler.ShowToast("Deleted all temp files of GlumSak!", "Info");
+                //ToastHandler.ShowToast("Deleted all temp files of GlumSak!", "Info");
+                Networking.ShowNotification("Deleted all temp files of GlumSak!", Wpf.Ui.Common.SymbolRegular.Delete28);
             }
         }
 
@@ -623,6 +635,7 @@ namespace EmuSak_Revive.GUI_WPF
                 Properties.Settings.Default.Save();
                 InitSettings();
                 Temporary.DeleteTemporaryFiles();
+                Networking.ShowNotification("GlumSak got reset!", Wpf.Ui.Common.SymbolRegular.ArrowReset24);
             }
 
             return;
@@ -673,6 +686,23 @@ namespace EmuSak_Revive.GUI_WPF
         private void RemoveShader_Button_Click(object sender, RoutedEventArgs e)
         {
             Shaders_ListBox.Items.Remove(Shaders_ListBox.SelectedItem);
+        }
+
+        private void CancelDownload_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Networking.CancelDownload();
+        }
+
+        private void SnackDuration_Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (Notification_SnackBar != null)
+            {
+                var sliderInSecs = SnackDuration_Slider.Value / 1000;
+                var sliderInSecsString = sliderInSecs.ToString("00");
+
+                SnackDuration_TextBlock.Text = $"Snackbar display Duration: {sliderInSecsString} Seconds";
+                Notification_SnackBar.Timeout = (int)SnackDuration_Slider.Value;
+            }
         }
     }
 }

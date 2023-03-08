@@ -154,5 +154,17 @@ namespace EmuSak_Revive.GUI_WPF.Properties {
                 this["CheckForUpdatesOnStartup"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4000")]
+        public int SnackBarTimeout {
+            get {
+                return ((int)(this["SnackBarTimeout"]));
+            }
+            set {
+                this["SnackBarTimeout"] = value;
+            }
+        }
     }
 }
