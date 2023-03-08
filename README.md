@@ -68,6 +68,8 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
     - Added a CheckBox to the AutoUpdaterWindow that lets you disable the checking for updates
    #  2.0.1.2
     - Switched the browser control from webview2 to CEF.Wpf, this is to reduce crashes on dirs that require elevated permissions
+   #  2.0.1.3
+    - Fixed an issue that lead to GlumSak not launching if an Update is available 
           
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
