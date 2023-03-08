@@ -215,7 +215,7 @@
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
                                 <RowDefinition Height="Auto" />
-                                <RowDefinition Height="2*" />
+                                <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
 
                             <Grid>
@@ -242,8 +242,6 @@
                                         <ui:Button Margin="8 0 0 0"
                                                    Content="Delete temporary Files"
                                                    Icon="Delete28"
-                                                   VerticalAlignment="Stretch"
-                                                   HorizontalAlignment="Stretch"
                                                    x:Name="DeleteTempFiles_Button"
                                                    Click="DeleteTempFiles_Button_Click" />
                                     </StackPanel>
@@ -319,7 +317,7 @@
                             <Grid Grid.Row="3">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
-                                    <RowDefinition />
+                                    <RowDefinition Height="*" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
 
@@ -332,7 +330,7 @@
                                           VerticalAlignment="Top"
                                           x:Name="CheckForAppUpdates_CheckBox" />
 
-                                <ui:Button Grid.Row="1"
+                                <ui:Button Grid.Row="2"
                                            VerticalAlignment="Bottom"
                                            HorizontalAlignment="Stretch"
                                            Content="Save Settings"

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Drawing2D;
+﻿using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
+using System.Windows;
 
 namespace EmuSak_Revive.GUI_WPF.Extensions
 {
@@ -50,7 +46,7 @@ namespace EmuSak_Revive.GUI_WPF.Extensions
             }
         }
 
-        public static Image ConvertButtonImageToSystemImage(System.Windows.Controls.Button btn)
+        public static System.Drawing.Image ConvertButtonImageToSystemImage(System.Windows.Controls.Button btn)
         {
             // Get the image from the WPF Image control
             System.Windows.Controls.Image wpfImage = btn.Content as System.Windows.Controls.Image;
@@ -67,7 +63,7 @@ namespace EmuSak_Revive.GUI_WPF.Extensions
                 bitmapSource.CopyPixels(pixels, stride, 0);
 
                 bitmap = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppRgb);
-                BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height),
+                BitmapData bitmapData = bitmap.LockBits(new System.Drawing.Rectangle(0, 0, bitmap.Width, bitmap.Height),
                                                                                 ImageLockMode.WriteOnly,
                                                                                 bitmap.PixelFormat);
                 System.Runtime.InteropServices.Marshal.Copy(pixels, 0, bitmapData.Scan0, pixels.Length);
