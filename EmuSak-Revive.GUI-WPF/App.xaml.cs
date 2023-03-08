@@ -28,6 +28,7 @@ namespace EmuSak_Revive.GUI_WPF
             {
                 File.Delete(iniParser.GetSetting("config", "exePath"));
             }
+
             bool isUpdateAvailable = Network.VersionControl.CheckGitHubNewerVersion(Assembly.GetExecutingAssembly()).Result;
             if (isUpdateAvailable && Extensions.GetSettingsProperty.GetAutoUpdate())
             {

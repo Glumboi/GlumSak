@@ -20,6 +20,8 @@ using EmuSak_Revive.JSON;
 
 using Glumboi.UI.Toast;
 using Wpf.Ui.Controls;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -360,10 +362,10 @@ namespace EmuSak_Revive.GUI_WPF
         }
 
         private System.Windows.Controls.Button CreateButton(string name,
-                    string imageUrl,
-                    string tag,
-                    bool useImage = false, //--> Not used in any way yet...
-                    System.Drawing.Image btnImage = null)
+            string imageUrl,
+            string tag,
+            bool useImage = false, //--> Not used in any way yet...
+            System.Drawing.Image btnImage = null)
         {
             System.Drawing.Image img = null;
             if (!useImage)

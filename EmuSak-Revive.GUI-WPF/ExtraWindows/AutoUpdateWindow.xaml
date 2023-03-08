@@ -97,7 +97,6 @@
                         </ui:Card>
                         <Border Padding="4" Grid.Row="1">
                             <wpf:ChromiumWebBrowser x:Name="Changelog_Browser" />
-
                             <!--<wv2:WebView2 Name="Changelog_Browser" />-->
                         </Border>
                     </Grid>
