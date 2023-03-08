@@ -199,10 +199,8 @@ namespace EmuSak_Revive.Emulators
             }
             catch (Exception)
             {
-                MessageBox.Show("Could not check for yuzu updates, did you select a valid yuzu folder?",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                Networking.ShowNotification("Could not check for yuzu updates, did you select a valid yuzu folder?", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
+
                 return string.Empty;
             }
         }

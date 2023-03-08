@@ -1,4 +1,5 @@
-﻿using Glumboi.UI.Toast;
+﻿using EmuSak_Revive.Network;
+using Glumboi.UI.Toast;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -89,21 +90,17 @@ namespace EmuSak_Revive.Emulators
                 }
                 catch
                 {
-                    ToastHandler.ShowToast("Selected portable path doesn't contain Ryujinx related files! " +
-                        "Please revert to standard settings or select a true Ryujinx folder.",
-                        "Ryujinx portable folder error!");
+                    Networking.ShowNotification("Selected portable path doesn't contain Ryujinx related files!", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
                 }
             }
             else
             {
                 if (!Directory.Exists(ryuGamesLoc))
                 {
-                    MessageBox.Show("Could not load Ryujinx, " +
+                    Networking.ShowNotification("Could not load Ryujinx, " +
                         "please make sure that you ran Ryujinx before or if you have a portable Version, " +
                         "set the Path of it in the Setting.",
-                        "Info",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                        Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
 
                     return;
                 }
@@ -145,10 +142,7 @@ namespace EmuSak_Revive.Emulators
             }
             catch (Exception)
             {
-                MessageBox.Show("Could not get the saves, make sure that you played the game before!",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                Networking.ShowNotification("Could not get the saves, make sure that you played the game before!", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
             }
 
             List<string> gameIds = new List<string>();

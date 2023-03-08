@@ -21,6 +21,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <ui:TitleBar
             x:Name="TitleBar"
@@ -118,17 +119,34 @@
                         <Border Padding="5"
                                 Grid.Row="2"
                                 x:Name="Progress_Border">
+
                             <Grid>
-                                <ProgressBar VerticalAlignment="Bottom"
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <ProgressBar VerticalAlignment="Stretch"
                                              Grid.Row="2"
-                                             Height="20"
-                                             x:Name="Download_ProgressBar" />
+                                             Height="30"
+                                             x:Name="Download_ProgressBar"
+                                             Margin="0 0 2 0"
+                                             Foreground="Silver" />
 
                                 <TextBlock Text="Download starting..."
                                            HorizontalAlignment="Center"
-                                           VerticalAlignment="Bottom"
+                                           VerticalAlignment="Center"
                                            Margin="0 0 0 2"
                                            x:Name="DownloadProgress_TextBlock" />
+
+                                <ui:Button Grid.Column="1"
+                                           HorizontalAlignment="Stretch"
+                                           Content="Cancel Download"
+                                           Margin="2 0 0 0"
+                                           Icon="Delete24"
+                                           x:Name="CancelDownload_Button"
+                                           Click="CancelDownload_Button_Click"
+                                           Height="28" />
                             </Grid>
                         </Border>
                     </Grid>
@@ -325,10 +343,29 @@
                                            Text="Other"
                                            Margin="0 10 0 10" />
 
-                                <CheckBox Content="Check for App Updates on startup"
-                                          Grid.Row="1"
-                                          VerticalAlignment="Top"
-                                          x:Name="CheckForAppUpdates_CheckBox" />
+                                <Grid Grid.Row="1">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <CheckBox Content="Check for App Updates on startup"
+                                              VerticalAlignment="Top"
+                                              x:Name="CheckForAppUpdates_CheckBox" />
+
+                                    <StackPanel Grid.Row="1">
+                                        <TextBlock x:Name="SnackDuration_TextBlock"
+                                                   Text="Snackbar display Duration: {duration}"
+                                                   FontWeight="Bold"
+                                                   HorizontalAlignment="Center" />
+
+                                        <Slider x:Name="SnackDuration_Slider"
+                                                ValueChanged="SnackDuration_Slider_ValueChanged"
+                                                Minimum="1000"
+                                                Maximum="20000" />
+                                    </StackPanel>
+                                </Grid>
 
                                 <ui:Button Grid.Row="2"
                                            VerticalAlignment="Bottom"
@@ -528,5 +565,11 @@
                 </TabItem>
             </TabControl>
         </Border>
+
+        <ui:Snackbar  Grid.Row="1"
+                      Grid.RowSpan="2"
+                      Icon="Info28"
+                      Timeout="4000"
+                      x:Name="Notification_SnackBar" />
     </Grid>
 </ui:UiWindow>
