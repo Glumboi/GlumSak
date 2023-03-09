@@ -77,11 +77,11 @@ namespace EmuSak_Revive.EmuFiles
 
         private static void RunRyuDownloadAsync(string fileName, string destination, string url)
         {
-            UninstallOldFirmware(destination);
             Networking.DownloadAFileFromServer(url, fileName, destination);
-            while(!Networking.DownloadDone)
+            while (!Networking.DownloadDone)
             {
             }
+            UninstallOldFirmware(destination);
             RyuFirmwareExtraction(destination);
         }
 

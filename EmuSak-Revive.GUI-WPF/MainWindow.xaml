@@ -131,7 +131,7 @@
                                              Height="30"
                                              x:Name="Download_ProgressBar"
                                              Margin="0 0 2 0"
-                                             Foreground="Silver" />
+                                             Foreground="Gray" />
 
                                 <TextBlock Text="Download starting..."
                                            HorizontalAlignment="Center"
@@ -363,7 +363,9 @@
                                         <Slider x:Name="SnackDuration_Slider"
                                                 ValueChanged="SnackDuration_Slider_ValueChanged"
                                                 Minimum="1000"
-                                                Maximum="20000" />
+                                                Maximum="20000"
+                                                IsSnapToTickEnabled="True"
+                                                TickFrequency="1000" />
                                     </StackPanel>
                                 </Grid>
 
