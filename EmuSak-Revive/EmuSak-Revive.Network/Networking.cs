@@ -15,10 +15,7 @@ using AnonFileAPI;
 using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using System.Windows.Threading;
-using System.Windows;
 using Wpf.Ui.Controls;
-using static System.Net.Mime.MediaTypeNames;
-using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace EmuSak_Revive.Network
 {

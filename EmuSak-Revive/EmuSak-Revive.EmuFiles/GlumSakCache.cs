@@ -11,10 +11,16 @@ namespace EmuSak_Revive.EmuFiles
 {
     public static class GlumSakCache
     {
+        #region Properties
+
         public static List<Image> GameImgs { get => _gameImgs; }
         public static List<string> GameNames { get => _gameNames; }
         public static List<string> GameIds { get => _gameIds; }
         public static string EmuConfig { get; private set; }
+
+        #endregion Properties
+
+        #region Variables
 
         private static List<Image> _gameImgs = new List<Image>();
         private static List<string> _gameNames = new List<string>();
@@ -22,6 +28,8 @@ namespace EmuSak_Revive.EmuFiles
 
         private static string tempPath = Temporary.TempPath;
         private static string metaPath = Temporary.TempPath + "glumCacheMeta.glumMeta";
+
+        #endregion Variables
 
         public static void CreateGlumSakCache(
             List<Image> imgs,
@@ -78,9 +86,24 @@ namespace EmuSak_Revive.EmuFiles
             return File.Exists(metaPath);
         }
 
+        private static void ReadContent(List<string> target, string line, string fileContent)
+        {
+            if (line == fileContent)
+            {
+                string[] tempLines = line.Split(',');
+                for (int i = 0; i < tempLines.Length; i++)
+                {
+                    if (tempLines[i] != string.Empty)
+                    {
+                        target.Add(tempLines[i]);
+                    }
+                }
+            }
+        }
+
         public static void GetCacheContent()
         {
-            var content = File.ReadAllLines(metaPath);
+            string[] content = File.ReadAllLines(metaPath);
 
             List<string> imgPaths = new List<string>();
             List<string> gameNames = new List<string>();
@@ -88,43 +111,15 @@ namespace EmuSak_Revive.EmuFiles
 
             foreach (string line in content)
             {
-                if (line == content[0])
-                {
-                    var imgs = line.Split(',');
-                    for (int i = 0; i < imgs.Length; i++)
-                    {
-                        imgPaths.Add(imgs[i]);
-                    }
-                }
-
-                if (line == content[1])
-                {
-                    var names = line.Split(',');
-                    for (int i = 0; i < names.Length; i++)
-                    {
-                        gameNames.Add(names[i]);
-                    }
-                }
-
-                if (line == content[2])
-                {
-                    var ids = line.Split(',');
-                    for (int i = 0; i < ids.Length; i++)
-                    {
-                        gameIds.Add(ids[i]);
-                    }
-                }
+                ReadContent(imgPaths, line, content[0]);
+                ReadContent(gameNames, line, content[1]);
+                ReadContent(gameIds, line, content[2]);
 
                 if (line == content[3])
                 {
                     EmuConfig = line.Split('=').Last().Split(',').First();
                 }
             }
-
-            //Removes empty strings from lists
-            imgPaths.RemoveAll(s => string.IsNullOrWhiteSpace(s));
-            gameIds.RemoveAll(s => string.IsNullOrWhiteSpace(s));
-            gameNames.RemoveAll(s => string.IsNullOrWhiteSpace(s));
 
             foreach (var imgPath in imgPaths) //gets the images from the meta file and converts them to Image
             {

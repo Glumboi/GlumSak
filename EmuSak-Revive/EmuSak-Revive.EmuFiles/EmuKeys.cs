@@ -26,8 +26,8 @@ namespace EmuSak_Revive.EmuFiles
             if (File.Exists(path))
             {
                 Networking.Unzip(path, keysLoc, false);
-                Networking.ShowDownloadDone("Installed keys from temp folder successfully to: \n"
-                + keysLoc + ".", "Info");
+                Networking.ShowNotification("Installed keys from temp folder successfully to: \n"
+                + keysLoc + ".");
                 return;
             }
 
