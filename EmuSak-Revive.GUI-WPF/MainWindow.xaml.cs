@@ -133,17 +133,6 @@ namespace EmuSak_Revive.GUI_WPF
         {
             if (string.IsNullOrWhiteSpace(Properties.Settings.Default.ShaderLinks))
             {
-                System.Threading.Tasks.Task.Run(() =>
-                {
-                    /*System.Windows.MessageBox.Show("There is no link given in the settings to download shaders from!\n" +
-                    "This will result into non working shaders. Make sure to set a pastebin link up in the settings," +
-                    " or any raw file on the web.\n\n" +
-                    "If you have a working link verify the format. It has to look like this: " +
-                    "Gamename=https://linktoshader.zip\nImportant is that it needs to be in the exact format.",
-                    "Important",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Error);*/
-                });
                 Notification_SnackBar.Content = "No Paste detected in the Settings!";
                 Notification_SnackBar.Show();
                 return;
@@ -218,11 +207,6 @@ namespace EmuSak_Revive.GUI_WPF
         {
             if (string.IsNullOrWhiteSpace(YuzuBinariesPath_TextBox.Text))
             {
-                /*System.Windows.MessageBox.Show("The Yuzu Binaries Path can't be empty!",
-                    "Error",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Error);
-                */
                 Networking.ShowNotification("The Yuzu Binaries Path can't be empty!", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
 
                 return;
@@ -594,7 +578,6 @@ namespace EmuSak_Revive.GUI_WPF
             if (dialogResult == MessageBoxResult.Yes)
             {
                 Temporary.DeleteTemporaryFiles();
-                //ToastHandler.ShowToast("Deleted all temp files of GlumSak!", "Info");
                 Networking.ShowNotification("Deleted all temp files of GlumSak!", Wpf.Ui.Common.SymbolRegular.Delete28);
             }
         }
