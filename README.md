@@ -26,46 +26,6 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 <div align="center">
 
 # Restart is recommended after install
-  
-# Changelog
-   #  1.3.1.0:
-     - Re made the way game meta info gets loaded (re did the python part in c#) this is to reduce potential errors
-     - Lots of small performance improvements
-     - Due to the new meta loading, performance may decreased by a small amount, higher ram usage is expected
-     - No source code or portable version available for this build!
-     - Version 1.3.0.0 got skipped, save manager will remain a somewhat preview feature though
-   #  1.3.2.0:
-     - Added image compression to the game buttons, this drastically reduces the ram usage and improves the main forms rendering
-     - Added mediafire support for shader downloads
-     - Minor performance improvements here and there
-     - Reduced image button flicker when scrolling with the mouse wheel
-   #  2.0.0.0
-     - New GUI from the ground up in WPF
-     - Fixed many bugs due to the UI being more modern
-     - Fixed extreme memory usage (can be reduced furter by using the last session)
-     - Fixed a Crash that lead to GlumSak crashing if the default emu Location wasnt detected
-     - New color theme throughout the Project
-     - This build misses minor features such as disabling the auto updating of GlumSak or the save manager, but don't worry I am on it
-   #  2.0.0.1
-     - Fixed an issue that lead to the paste to be ignored
-   #  2.0.1.0
-     - Re aligned multiple UI controls to look better and to make it more user friendly
-     - Added a new Feature, users now have the option to disable the automatic Update checks
-     - The MainWindow now resets to the default size if exited in a maximized state
-     - Updated the Github API Token again, release only downloadable through Github!
-   #  2.0.1.1
-    - Fixed an issue that lead to pastes not updating properly at runtime
-    - Introduced local paste support
-    - Added a messagebox that appears when no Yuzu Binaries Path is specified (thanks to sin for bringing this up to me)
-    - Added a CheckBox to the AutoUpdaterWindow that lets you disable the checking for updates
-   #  2.0.1.2
-    - Switched the browser control from webview2 to CEF.Wpf, this is to reduce crashes on dirs that require elevated permissions
-   #  2.0.1.3
-    - Fixed an issue that lead to GlumSak not launching if an Update is available 
-   #  2.1.0.0
-    - Reverted the Changelog display method to the WPF Webbrowser again to reduce file size
-    - Overhauled the way the app gives Feedback to the user, instead of sending Toast notifications it makes use of a Snackbar
-    - Added "Cancel Download" feature       
           
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
