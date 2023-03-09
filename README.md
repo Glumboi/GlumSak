@@ -28,14 +28,6 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 # Restart is recommended after install
   
 # Changelog
-   # 1.3.0.0-Preview1:
-     - Added change log to the update window
-     - Added new save manager feature which sits in the game actions window
-     - Fixed small bugs
-     - No source code provided since its a preview and the cleanup isnt quite done yet
-   # 1.3.0.2-(1.3 Preview2):
-     - Updated the update changelog to be displayed in a webbrowser control, this is to display larger changelogs
-     - Fixed an issue that caused GlumSak to launch in ryujinx mode even though yuzu mode was activated with the last session
    #  1.3.1.0:
      - Re made the way game meta info gets loaded (re did the python part in c#) this is to reduce potential errors
      - Lots of small performance improvements
@@ -70,6 +62,10 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
     - Switched the browser control from webview2 to CEF.Wpf, this is to reduce crashes on dirs that require elevated permissions
    #  2.0.1.3
     - Fixed an issue that lead to GlumSak not launching if an Update is available 
+   #  2.1.0.0
+    - Reverted the Changelog display method to the WPF Webbrowser again to reduce file size
+    - Overhauled the way the app gives Feedback to the user, instead of sending Toast notifications it makes use of a Snackbar
+    - Added "Cancel Download" feature       
           
 # I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
     
