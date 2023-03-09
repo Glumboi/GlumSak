@@ -2,6 +2,7 @@
 using System.IO;
 using EmuSak_Revive.Network;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace EmuSak_Revive.EmuFiles
 {
@@ -75,11 +76,12 @@ namespace EmuSak_Revive.EmuFiles
             }
         }
 
-        private static void RunRyuDownloadAsync(string fileName, string destination, string url)
+        private static async void RunRyuDownloadAsync(string fileName, string destination, string url)
         {
             Networking.DownloadAFileFromServer(url, fileName, destination);
             while (!Networking.DownloadDone)
             {
+                await Task.Delay(1500);
             }
             UninstallOldFirmware(destination);
             RyuFirmwareExtraction(destination);
