@@ -482,7 +482,7 @@ namespace EmuSak_Revive.GUI.New
                 ids.Add(item.Name);
                 names.Add(item.Tag.ToString());
             }
-            GlumSakCache.CreateGlumSakCache(images, names, ids, config);
+            GlumSakCache.CreateGlumSakCache(switchGames, config);
         }
 
         public void LoadWithCache()

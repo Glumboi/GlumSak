@@ -355,14 +355,7 @@ namespace EmuSak_Revive.GUI_WPF
         {
             ImageSource imgSrc = null;
 
-            if (string.IsNullOrEmpty(game.ImageURL))
-            {
-                imgSrc = Extensions.Imaging.ConvertToImageSource(btnImage);
-            }
-            else
-            {
-                imgSrc = game.GameImageSource;
-            }
+            imgSrc = game.GameImageSource;
 
             System.Windows.Controls.Image btnImg = new System.Windows.Controls.Image();
             btnImg.Source = imgSrc;
