@@ -1,4 +1,5 @@
 ﻿using EmuSak_Revive.EmuFiles;
+using EmuSak_Revive.Emulators;
 using EmuSak_Revive.Network;
 using Glumboi.UI.Toast;
 using System.Windows;
@@ -12,32 +13,71 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
     /// </summary>
     public partial class GameActionsWindow : UiWindow
     {
-        public string GameName { get; private set; }
-        public string GameID { get; private set; }
-        public ImageSource GameImage { get; private set; }
+        public string GameName
+        {
+            get
+            {
+                return _gameName;
+            }
+            private set
+            {
+                _gameName = value;
+
+                TitleBar.Title = _gameName;
+                this.Title = _gameName;
+                shaderUrl = Networking.GetShaderDownload(_gameName);
+            }
+        }
+
+        public string GameID
+        {
+            get
+            {
+                return _gameId;
+            }
+            private set
+            {
+                _gameId = value;
+                GameID_TextBlock.Text = _gameId;
+            }
+        }
+
+        public ImageSource GameImage
+        {
+            get
+            {
+                return _gameImg;
+            }
+
+            private set
+            {
+                _gameImg = value;
+                Game_Image.Source = _gameImg;
+            }
+        }
 
         private static bool shaderExists = false;
         private static string shaderUrl = string.Empty;
 
-        public GameActionsWindow(string gameName, string gameID, ImageSource image)
+        private static SwitchGame switchGame;
+
+        private static string _gameName;
+        private static string _gameId;
+        private static ImageSource _gameImg;
+
+        public GameActionsWindow(SwitchGame game)
         {
             InitializeComponent();
-            GameName = gameName;
-            GameID = gameID;
-            GameImage = image;
+
+            switchGame = game;
+            GameName = switchGame.GameName;
+            GameID = switchGame.GameID;
+            GameImage = switchGame.GameImageSource;
         }
 
         private void LoadContent()
         {
-            GameID_TextBlock.Text = GameID;
-            Game_Image.Source = GameImage;
-            TitleBar.Title = GameName;
-            this.Title = GameName;
-
             SaveManager_Button.Content = "Save manager is coming soon!";
-
-            shaderUrl = Networking.GetShaderDownload(GameName);
-
             CheckShader();
         }
 
@@ -54,10 +94,7 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
                 return;
             }
 
-            System.Windows.MessageBox.Show("Can you read?\nThere is no Shader available for this Game!",
-                "Info",
-                MessageBoxButton.OK,
-                MessageBoxImage.Information);
+            Networking.ShowNotification("Can you read?\nThere is no Shader available for this Game!");
         }
 
         private void CheckShader()
@@ -78,14 +115,18 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
                 return;
             }
             ToastHandler.ShowToast($"There is no shader available for {gameName} at the moment.", "Info");
+            //  ^
+            //  |
+            //Sends message if game exists in paste but the url is not valid
         }
 
         private void SaveManager_Button_Click(object sender, RoutedEventArgs e)
         {
-            System.Windows.MessageBox.Show("Can you read?\nThis feature is not developed yet!",
-                "Info",
-                MessageBoxButton.OK,
-                MessageBoxImage.Information);
+            Networking.ShowNotification("Can you read?\nThis feature is not done yet!");
+
+            /*SaveManagerWindow saveManagerWindow = new SaveManagerWindow(switchGame);
+
+            saveManagerWindow.Show();*/
         }
     }
 }

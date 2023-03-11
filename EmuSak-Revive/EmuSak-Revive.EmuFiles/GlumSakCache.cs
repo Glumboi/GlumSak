@@ -31,17 +31,13 @@ namespace EmuSak_Revive.EmuFiles
 
         #endregion Variables
 
-        public static void CreateGlumSakCache(
-            List<Image> imgs,
-            List<string> imgNames,
-            List<string> gameIds,
-            int config)
+        public static void CreateGlumSakCache(List<SwitchGame> switchGames, int config)
         {
             CreateCacheMetaData();
 
-            for (int i = 0; i < imgs.Count; i++)
+            for (int i = 0; i < switchGames.Count; i++)
             {
-                Image img = imgs[i];
+                Image img = switchGames[i].GameImage;
 
                 var saveString = tempPath + i + ".glumImg";
 
@@ -54,16 +50,16 @@ namespace EmuSak_Revive.EmuFiles
 
             WriteToMetaData("", "wl");
 
-            for (int i = 0; i < gameIds.Count; i++)
+            for (int i = 0; i < switchGames.Count; i++)
             {
-                WriteToMetaData(gameIds[i] + ",", "w");
+                WriteToMetaData(switchGames[i].GameID + ",", "w");
             }
 
             WriteToMetaData("", "wl");
 
-            for (int i = 0; i < imgNames.Count; i++)
+            for (int i = 0; i < switchGames.Count; i++)
             {
-                WriteToMetaData(imgNames[i] + ",", "w");
+                WriteToMetaData(switchGames[i].GameName + ",", "w");
             }
 
             WriteToMetaData("", "wl");
@@ -112,8 +108,8 @@ namespace EmuSak_Revive.EmuFiles
             foreach (string line in content)
             {
                 ReadContent(imgPaths, line, content[0]);
-                ReadContent(gameNames, line, content[1]);
-                ReadContent(gameIds, line, content[2]);
+                ReadContent(gameIds, line, content[1]);
+                ReadContent(gameNames, line, content[2]);
 
                 if (line == content[3])
                 {
