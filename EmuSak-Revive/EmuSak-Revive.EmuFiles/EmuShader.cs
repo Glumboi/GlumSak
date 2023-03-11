@@ -16,10 +16,6 @@ namespace EmuSak_Revive.EmuFiles
             if (config == 0)
             {
                 Networking.ShowNotification("Yuzu is not supported currently!");
-                MessageBox.Show("Yuzu is not supported currently!",
-                    "Info",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
                 //InstallYuzuShader(url);
             }
 

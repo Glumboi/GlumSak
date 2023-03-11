@@ -19,6 +19,7 @@ using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.JSON;
 
 using Wpf.Ui.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -45,6 +46,7 @@ namespace EmuSak_Revive.GUI_WPF
         private List<string> ids = new List<string>();
         private List<string> names = new List<string>();
         private List<string> firmwareVersions = new List<string>();
+        private List<SwitchGame> switchGames = new List<SwitchGame>();
         private List<System.Windows.Controls.Button> imageButtons = new List<System.Windows.Controls.Button>();
 
         #endregion List variables
@@ -199,7 +201,6 @@ namespace EmuSak_Revive.GUI_WPF
             if (showUptodateNotification)
             {
                 Networking.ShowNotification("Congrats, your yuzu version is up to date!");
-                //ToastHandler.ShowToast("Congrats, your yuzu version is up to date!", "Yuzu is up to date");
             }
         }
 
@@ -239,13 +240,16 @@ namespace EmuSak_Revive.GUI_WPF
         private void GameButton_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.Button btn = (System.Windows.Controls.Button)sender;
-            System.Windows.Controls.Image myButtonImage = btn.Content as System.Windows.Controls.Image;
-            ImageSource imgSource = myButtonImage.Source;
 
-            string gameID = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString();
-            string gameName = btn.Tag.GetType().GetProperty("GameID").GetValue(btn.Tag, null).ToString();
+            string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString(); //Get GameName from Button
 
-            ShowGameActionsWindow(gameName, gameID, imgSource);
+            foreach (var item in switchGames)
+            {
+                if (item.GameName == gameName)
+                {
+                    ShowGameActionsWindow(item);
+                }
+            }
         }
 
         private void Filter_TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -273,7 +277,6 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void LoadFirmwares()
         {
-            //https://archive.org/download/nintendo-switch-global-firmwares/Firmware%201.0.0.zip
             firmwareVersions = Networking.GetFirmwareVersions().Distinct().ToList();
 
             foreach (var v in firmwareVersions.OrderByDescending(VersionSorter.OrderVersion))
@@ -316,8 +319,12 @@ namespace EmuSak_Revive.GUI_WPF
 
                     if (condition)
                     {
-                        currentBtn = CreateButton(gameId, icon, gameName);
+                        SwitchGame game = new SwitchGame(gameName, gameId, icon);
+
+                        currentBtn = CreateButton(game);
+
                         imageButtons.Add(currentBtn);
+                        switchGames.Add(game);
                     }
                 }
             }
@@ -331,49 +338,31 @@ namespace EmuSak_Revive.GUI_WPF
                 ids.Add(gameID);
                 names.Add(gameName);
             }
-            GlumSakCache.CreateGlumSakCache(images, names, ids, config);
+            GlumSakCache.CreateGlumSakCache(switchGames, config);
         }
 
-        private string gameId = string.Empty;
-        private string gameName = string.Empty;
-        private ImageSource gameImg = null;
-
-        private void ShowGameActionsWindow(string name, string tag, ImageSource image)
+        private void ShowGameActionsWindow(SwitchGame game)
         {
-            gameId = name;
-            gameName = tag;
-
-            if (image != null)
-            {
-                gameImg = image;
-            }
-
             /* PlayAudio.PlayFromByteArr(mainWindowPlayer,
              Properties.Settings.Default.PlaySounds,
              Properties.Resources.enter_back);*/
 
-            GameActionsWindow gameActionsWindow = new GameActionsWindow(name, tag, image);
+            GameActionsWindow gameActionsWindow = new GameActionsWindow(game);
             gameActionsWindow.Show();
         }
 
-        private System.Windows.Controls.Button CreateButton(string name,
-            string imageUrl,
-            string tag,
-            bool useImage = false, //--> Not used in any way yet...
-            System.Drawing.Image btnImage = null)
+        private System.Windows.Controls.Button CreateButton(SwitchGame game, System.Drawing.Image btnImage = null)
         {
-            System.Drawing.Image img = null;
-            if (!useImage)
+            ImageSource imgSrc = null;
+
+            if (string.IsNullOrEmpty(game.ImageURL))
             {
-                img = Networking.LoadImageFromUrl(imageUrl, 150, 150);
+                imgSrc = Extensions.Imaging.ConvertToImageSource(btnImage);
             }
             else
             {
-                img = btnImage;
+                imgSrc = game.GameImageSource;
             }
-
-            //var rounded = Imaging.RoundCorners(img, 15, System.Drawing.Color.Transparent);
-            var imgSrc = Extensions.Imaging.ConvertToImageSource(img);
 
             System.Windows.Controls.Image btnImg = new System.Windows.Controls.Image();
             btnImg.Source = imgSrc;
@@ -397,7 +386,7 @@ namespace EmuSak_Revive.GUI_WPF
             btn.Height = 150;
             btn.Width = 150;
             btn.Margin = m;
-            btn.Tag = new { GameName = name, GameID = tag };
+            btn.Tag = new { GameName = game.GameName, GameID = game.GameID };
             btn.Click += GameButton_Click;
 
             Games_Panel.Children.Add(btn);
@@ -501,7 +490,9 @@ namespace EmuSak_Revive.GUI_WPF
 
             for (int i = 0; i < gameNames.Count; i++)
             {
-                CreateButton(gameNames[i], "", gameIds[i], true, gameImgs[i]);
+                SwitchGame game = new SwitchGame(gameNames[i], gameIds[i], "", gameImgs[i]);
+                CreateButton(game, gameImgs[i]);
+                switchGames.Add(game);
             }
             DoneLoading = true;
         }
@@ -680,8 +671,8 @@ namespace EmuSak_Revive.GUI_WPF
         {
             if (Notification_SnackBar != null)
             {
-                var sliderInSecs = SnackDuration_Slider.Value / 1000;
-                var sliderInSecsString = sliderInSecs.ToString("00");
+                double sliderInSecs = SnackDuration_Slider.Value / 1000;
+                string sliderInSecsString = sliderInSecs.ToString("00");
 
                 SnackDuration_TextBlock.Text = $"Snackbar display Duration: {sliderInSecsString} Seconds";
                 Notification_SnackBar.Timeout = (int)SnackDuration_Slider.Value;
