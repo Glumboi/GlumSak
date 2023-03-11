@@ -32,7 +32,7 @@ namespace EmuSak_Revive.Emulators
             {
                 if (_localImage == null)
                 {
-                    return Network.Networking.LoadImageFromUrl(_imageUrl, 150, 150);
+                    return Network.Networking.LoadImageFromUrl(ImageURL, 150, 150);
                 }
 
                 return _localImage;
