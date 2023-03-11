@@ -1,0 +1,90 @@
+﻿<ui:UiWindow x:Class="EmuSak_Revive.CrashReporter.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:EmuSak_Revive.CrashReporter"
+             mc:Ignorable="d"
+             Title="MainWindow"
+             Height="450"
+             Width="800"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             ExtendsContentIntoTitleBar="True"
+             WindowBackdropType="Mica"
+             WindowCornerPreference="Round"
+             WindowStartupLocation="CenterScreen"
+             Background="#2d2d2d"
+             Loaded="UiWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="Crashed!"
+            UseSnapLayout="True"
+            CanMaximize="False"
+            ShowMaximize="False"
+            Icon="Assets/Icon.png" />
+
+        <Border Grid.Row="1" Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Ah damn, I'm such a bad dev. Here's the Error:"
+                               FontWeight="Bold"
+                               FontSize="20"
+                               x:Name="CrashWords_TextBlock"
+                               TextWrapping="Wrap" />
+
+                    <ui:Card Grid.Row="1"
+                             Margin="0 10 0 0"
+                             VerticalAlignment="Stretch">
+
+                        <ScrollViewer Padding="10">
+                            <TextBlock VerticalAlignment="Stretch"
+                                   x:Name="CrashReport_TextBox"
+                                   TextWrapping="Wrap" />
+                        </ScrollViewer>
+                    </ui:Card>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0 10 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="0.5*" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:Button HorizontalAlignment="Stretch"
+                               VerticalAlignment="Stretch"
+                               Margin="0 0 4 0"
+                               Content="Save to File"
+                               Icon="Save28"
+                               x:Name="SaveErrorToFile_Button"
+                               Click="SaveErrorToFile_Button_Click" />
+
+                    <ui:Button HorizontalAlignment="Stretch"
+                               VerticalAlignment="Stretch"
+                               Grid.Column="2"
+                               Margin="4 0 0 0"
+                               Content="Copy error to Clipboard"
+                               Icon="Clipboard32"
+                               x:Name="CopyToClipBord_Button"
+                               Click="CopyToClipBord_Button_Click" />
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</ui:UiWindow>
