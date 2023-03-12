@@ -60,10 +60,12 @@ by buying me a server to test around with and for having such a cool community.
   
 # UI screenshots (UI could differ from the image depending on how fast I update it)
   ![alt text](https://i.imgur.com/tpNUGRm.png)
-  ![alt text](https://i.imgur.com/fTNmr26.png)
-  ![alt text](https://i.imgur.com/YcxcKtr.png)
-  ![alt text](https://i.imgur.com/tSLNqb4.png)
-  ![alt text](https://i.imgur.com/jIjiXUH.png)
+  ![alt text](https://i.imgur.com/O83SbE7.png)
+  ![alt text](https://i.imgur.com/RwBaeSC.png)
+  ![alt text](https://i.imgur.com/KJvf9gO.png)
+  ![alt text](https://i.imgur.com/ZGcBrZY.png)
+  ![alt text](https://i.imgur.com/x46UvqE.png)
+
   
 # This is for education, use at your own risk!
   
