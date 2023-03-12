@@ -68,7 +68,6 @@ namespace EmuSak_Revive.ConfigIni.Core
             }
             catch (Exception ex)
             {
-                throw ex;
             }
         }
 

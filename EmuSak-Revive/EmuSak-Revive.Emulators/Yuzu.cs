@@ -133,15 +133,20 @@ namespace EmuSak_Revive.Emulators
         public static void GetCustomNand()
         {
             string configIniPath = string.IsNullOrWhiteSpace(PortableYuzuPath) ? configIni : portableConfigIni;
+
             IniParser iniParser = new IniParser(configIniPath);
 
             customNandLoc = iniParser.GetSetting("Data%20Storage", "nand_directory");
+
+            if (customNandLoc == null) return;
+
             if (customNandLoc.Contains(@"\\"))
             {
                 var forwardLoc = customNandLoc.Replace(@"\\", @"/");
                 firmwareLoc = forwardLoc + "/system/Contents/registered";
                 return;
             }
+
             firmwareLoc = customNandLoc + "system/Contents/registered";
         }
 
