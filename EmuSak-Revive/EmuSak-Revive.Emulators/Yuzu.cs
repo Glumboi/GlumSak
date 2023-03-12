@@ -102,12 +102,10 @@ namespace EmuSak_Revive.Emulators
             {
                 if (!Directory.Exists(gamesLoc))
                 {
-                    MessageBox.Show("Could not load Yuzu, " +
+                    ToastHandler.ShowToast("Could not load Yuzu, " +
                         "please make sure that you ran Yuzu before or if you have a portable Version, " +
                         "set the Path of it in the Setting.",
-                        "Info",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                        "Info");
 
                     return;
                 }
