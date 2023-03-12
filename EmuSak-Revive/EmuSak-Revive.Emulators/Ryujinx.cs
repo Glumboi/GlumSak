@@ -90,22 +90,17 @@ namespace EmuSak_Revive.Emulators
                 }
                 catch
                 {
-                    MessageBox.Show("Selected portable path doesn't contain Ryujinx related files!",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    ToastHandler.ShowToast("Selected portable path doesn't contain Ryujinx related files!", "Error");
                 }
             }
             else
             {
                 if (!Directory.Exists(ryuGamesLoc))
                 {
-                    MessageBox.Show("Could not load Ryujinx, " +
+                    ToastHandler.ShowToast("Could not load Ryujinx, " +
                         "please make sure that you ran Ryujinx before or if you have a portable Version, " +
                         "set the Path of it in the Setting.",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                        "Error");
 
                     return;
                 }
