@@ -16,11 +16,10 @@ namespace EmuSak_Revive.CrashReporter
 
         private string[] crashWords = new string[]
         {
-            "Ah damn, I'm such a bad dev. Here's the Error:",
-            "Damn, did you see that? Just like that what the hell? Anyways here's the error:",
-            "Nah but like why did he do that like that like cmon. Seems like this is the error:",
-            "Let's say that this was your fault ok? I don't know but that looks like the error:",
-            "Is this your first time using a software? Or is the dev just plain stupid? Looks like an error:"
+            "Something went wrong in GlumSak, here is the Error:",
+            "Seems like an exception occured:",
+            "Houston, we have a problem:",
+            "Oh no, GlumSak crashed! Please report the following to the Dev:"
         };
 
         public MainWindow(string[] args)
