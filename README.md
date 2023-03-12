@@ -56,7 +56,6 @@ by buying me a server to test around with and for having such a cool community.
   
 # What is it written in?
   - C# Winforms/WPF in .NET Framework 4.8.1
-  - A little part is written in Python
   
 # UI screenshots (UI could differ from the image depending on how fast I update it)
   ![alt text](https://i.imgur.com/tpNUGRm.png)
