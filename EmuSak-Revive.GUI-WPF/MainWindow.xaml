@@ -31,7 +31,25 @@
 
         <Border Padding="10" Grid.Row="1">
             <TabControl>
-                <TabItem Header="Home" Cursor="">
+                <TabItem>
+                    <TabItem.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Assets/Home_Asset.png"
+                                   Height="25"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   HorizontalAlignment="Left" />
+
+                            <TextBlock Grid.Column="1"
+                                       Text="Home"
+                                       VerticalAlignment="Center"
+                                       Margin="4 0 0 0" />
+                        </Grid>
+                    </TabItem.Header>
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
@@ -152,7 +170,27 @@
                     </Grid>
                 </TabItem>
 
-                <TabItem Header="Info">
+                <TabItem>
+
+                    <TabItem.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Assets/Info_Asset.png"
+                                   Height="25"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   HorizontalAlignment="Left" />
+
+                            <TextBlock Grid.Column="1"
+                                       Text="Info"
+                                       VerticalAlignment="Center"
+                                       Margin="4 0 0 0" />
+                        </Grid>
+                    </TabItem.Header>
+
                     <Border Padding="5">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -226,7 +264,27 @@
                     </Border>
                 </TabItem>
 
-                <TabItem Header="Settings">
+                <TabItem>
+
+                    <TabItem.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Assets/Settings_Asset.png"
+                                   Height="25"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   HorizontalAlignment="Left" />
+
+                            <TextBlock Grid.Column="1"
+                                       Text="Settings"
+                                       VerticalAlignment="Center"
+                                       Margin="4 0 0 0" />
+                        </Grid>
+                    </TabItem.Header>
+
                     <Border Padding="5">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -381,7 +439,27 @@
                     </Border>
                 </TabItem>
 
-                <TabItem Header="News">
+                <TabItem>
+
+                    <TabItem.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Assets/News_Asset.png"
+                                   Height="25"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   HorizontalAlignment="Left" />
+
+                            <TextBlock Grid.Column="1"
+                                       Text="News"
+                                       VerticalAlignment="Center"
+                                       Margin="4 0 0 0" />
+                        </Grid>
+                    </TabItem.Header>
+
                     <Border Padding="5">
                         <Grid>
                             <Grid.RowDefinitions>
