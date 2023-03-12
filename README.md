@@ -55,7 +55,7 @@ by buying me a server to test around with and for having such a cool community.
   - All as long as you use a valid shaders file
   
 # What is it written in?
-  - C# Winforms in .NET Framework 4.8.1
+  - C# Winforms/WPF in .NET Framework 4.8.1
   - A little part is written in Python
   
 # UI screenshots (UI could differ from the image depending on how fast I update it)
