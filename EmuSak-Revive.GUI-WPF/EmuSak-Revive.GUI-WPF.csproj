@@ -257,5 +257,11 @@
   <ItemGroup>
     <Resource Include="Assets\News_Asset.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Paste_Asset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Other_Asset.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

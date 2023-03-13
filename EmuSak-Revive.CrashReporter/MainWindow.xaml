@@ -47,14 +47,6 @@
                                FontSize="20"
                                x:Name="CrashWords_TextBlock"
                                TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5" >
-                        <TextBlock.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform/>
-                            </TransformGroup>
-                        </TextBlock.RenderTransform>
                     </TextBlock>
 
                     <ui:Card Grid.Row="1"
