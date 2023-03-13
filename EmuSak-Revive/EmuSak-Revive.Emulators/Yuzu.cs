@@ -132,11 +132,11 @@ namespace EmuSak_Revive.Emulators
         {
             string configIniPath = string.IsNullOrWhiteSpace(PortableYuzuPath) ? configIni : portableConfigIni;
 
+            if (!File.Exists(configIniPath)) return;
+
             IniParser iniParser = new IniParser(configIniPath);
 
             customNandLoc = iniParser.GetSetting("Data%20Storage", "nand_directory");
-
-            if (customNandLoc == null) return;
 
             if (customNandLoc.Contains(@"\\"))
             {

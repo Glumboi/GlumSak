@@ -82,7 +82,7 @@ namespace EmuSak_Revive.GUI_WPF
                 StartInfo =
               {
                   FileName = "EmuSak-Revive.CrashReporter.exe",
-                  Arguments = $"\"Short version: {TranslateShort()}\n\nDetailed Error: {TranslateLong()}\""
+                  Arguments = $"\"\nGlumSak Version {Assembly.GetExecutingAssembly().GetName().Version} Crashed:\n\nShort version: {TranslateShort()}\n\nDetailed Error: {TranslateLong()}\""
               }
             };
             process.Start();
