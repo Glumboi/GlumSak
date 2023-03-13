@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
+using System.Windows.Media.Animation;
 using Wpf.Ui.Controls;
 
 namespace EmuSak_Revive.CrashReporter

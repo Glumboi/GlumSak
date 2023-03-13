@@ -245,5 +245,17 @@
   <ItemGroup>
     <Resource Include="Icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Home_Asset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Info_Asset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Settings_Asset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\News_Asset.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

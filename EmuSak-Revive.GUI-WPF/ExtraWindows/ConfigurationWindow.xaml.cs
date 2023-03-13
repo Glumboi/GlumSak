@@ -18,6 +18,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Wpf.Ui.Controls;
@@ -40,6 +41,9 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
 
         private void UiWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            Storyboard s = (Storyboard)TryFindResource("GrowIn");
+            s.Begin();
+
             GetSettings();
         }
 

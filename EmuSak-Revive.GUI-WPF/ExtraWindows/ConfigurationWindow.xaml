@@ -17,7 +17,18 @@
              ResizeMode="NoResize"
              Loaded="UiWindow_Loaded"
              Closing="UiWindow_Closing">
-
+    <ui:UiWindow.Resources>
+        <Storyboard x:Key="GrowIn">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:00.7000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </ui:UiWindow.Resources>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -33,7 +44,15 @@
             ShowMaximize="False"
             Icon="/Assets/Icon.png" />
 
-        <Border Grid.Row="1" Padding="10">
+        <Border x:Name="border" Grid.Row="1" Padding="10" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
             <Grid>
 
                 <Grid.RowDefinitions>

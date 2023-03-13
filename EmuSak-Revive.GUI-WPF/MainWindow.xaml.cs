@@ -20,6 +20,8 @@ using EmuSak_Revive.JSON;
 
 using Wpf.Ui.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Media.Animation;
+using System.Web.UI.WebControls;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -240,7 +242,6 @@ namespace EmuSak_Revive.GUI_WPF
         private void GameButton_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.Button btn = (System.Windows.Controls.Button)sender;
-
             string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString(); //Get GameName from Button
 
             foreach (var item in switchGames)
@@ -257,7 +258,7 @@ namespace EmuSak_Revive.GUI_WPF
             IEnumerable<System.Windows.Controls.Button> buttons = Games_Panel.Children.OfType<System.Windows.Controls.Button>();
             foreach (var btn in buttons)
             {
-                string gameName = btn.Tag.GetType().GetProperty("GameID").GetValue(btn.Tag, null).ToString();
+                string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString();
 
                 if (!gameName.ToLower().Contains(Filter_TextBox.Text.ToLower()))
                 {
@@ -380,6 +381,8 @@ namespace EmuSak_Revive.GUI_WPF
             btn.Width = 150;
             btn.Margin = m;
             btn.Tag = new { GameName = game.GameName, GameID = game.GameID };
+            btn.RenderTransform = new TranslateTransform();
+
             btn.Click += GameButton_Click;
 
             Games_Panel.Children.Add(btn);
@@ -670,6 +673,34 @@ namespace EmuSak_Revive.GUI_WPF
                 SnackDuration_TextBlock.Text = $"Snackbar display Duration: {sliderInSecsString} Seconds";
                 Notification_SnackBar.Timeout = (int)SnackDuration_Slider.Value;
             }
+        }
+
+        private void MainTabs_TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (MainTabs_TabControl.SelectedIndex)
+            {
+                case 0:
+                    AnimateControl("SpinHomeImage");
+                    break;
+
+                case 1:
+                    AnimateControl("SpinInfoImage");
+                    break;
+
+                case 2:
+                    AnimateControl("SpinSettingsImage");
+                    break;
+
+                case 3:
+                    AnimateControl("SpinNewsImage");
+                    break;
+            }
+        }
+
+        private void AnimateControl(string storyBoardName)
+        {
+            Storyboard s = (Storyboard)TryFindResource(storyBoardName);
+            s.Begin();
         }
     }
 }
