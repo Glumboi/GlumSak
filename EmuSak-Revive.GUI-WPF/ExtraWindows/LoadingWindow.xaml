@@ -19,8 +19,21 @@
              ResizeMode="NoResize"
              Loaded="UiWindow_Loaded"
              Closing="UiWindow_Closing">
-    <Grid>
 
+    <ui:UiWindow.Resources>
+        <Storyboard x:Key="UpdateDots" RepeatBehavior="Forever">
+            <StringAnimationUsingKeyFrames Storyboard.TargetName="textBlock" Storyboard.TargetProperty="(TextBlock.Text)">
+                <DiscreteStringKeyFrame KeyTime="00:00:00" Value="Getting things ready" />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.3000000" Value="Getting things ready." />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.6000000" Value="Getting things ready.." />
+                <DiscreteStringKeyFrame KeyTime="00:00:00.9000000" Value="Getting things ready..." />
+                <DiscreteStringKeyFrame KeyTime="00:00:01.2000000" Value="Getting things ready.." />
+                <DiscreteStringKeyFrame KeyTime="00:00:01.4000000" Value="Getting things ready." />
+                <DiscreteStringKeyFrame KeyTime="00:00:01.7000000" Value="Getting things ready" />
+            </StringAnimationUsingKeyFrames>
+        </Storyboard>
+    </ui:UiWindow.Resources>
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
@@ -34,10 +47,26 @@
             ShowMaximize="False"
             Icon="/Assets/Icon.png" />
 
-        <Border Grid.Row="1" Padding="10">
-            <ui:LoadingScreen Grid.Row="1"
-                              Background="Transparent">
-                <TextBlock Text="Getting things ready..."
+        <Border x:Name="border" Grid.Row="1" Padding="10" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Border.RenderTransform>
+            <ui:LoadingScreen x:Name="loadingScreen" Grid.Row="1"
+                              Background="Transparent" RenderTransformOrigin="0.5,0.5">
+                <ui:LoadingScreen.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </ui:LoadingScreen.RenderTransform>
+                <TextBlock x:Name="textBlock" Text="Getting things ready..."
                            FontSize="23"
                            FontWeight="Bold"
                            Margin="-80 0 0 0" />

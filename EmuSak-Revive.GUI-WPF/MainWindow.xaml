@@ -16,6 +16,32 @@
              Background="#2d2d2d"
              Loaded="UiWindow_Loaded"
              Closing="UiWindow_Closing">
+    <ui:UiWindow.Resources>
+        <Storyboard x:Key="SpinHomeImage">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Home_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SpinInfoImage">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Info_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SpinSettingsImage">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Settings_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SpinNewsImage">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="News_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </ui:UiWindow.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -30,7 +56,8 @@
             Icon="/Assets/Icon.png" />
 
         <Border Padding="10" Grid.Row="1">
-            <TabControl>
+            <TabControl x:Name="MainTabs_TabControl"
+                        SelectionChanged="MainTabs_TabControl_SelectionChanged">
                 <TabItem>
                     <TabItem.Header>
                         <Grid>
@@ -39,10 +66,19 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="/Assets/Home_Asset.png"
+                            <Image x:Name="Home_Image" Source="/Assets/Home_Asset.png"
                                    Height="25"
                                    RenderOptions.BitmapScalingMode="HighQuality"
-                                   HorizontalAlignment="Left" />
+                                   HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform />
+                                        <SkewTransform />
+                                        <RotateTransform />
+                                        <TranslateTransform />
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
 
                             <TextBlock Grid.Column="1"
                                        Text="Home"
@@ -57,7 +93,7 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
-                        <Border Padding="5" Grid.Row="0">
+                        <Border x:Name="border" Padding="5" Grid.Row="0" RenderTransformOrigin="0.5,0.5">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition />
@@ -182,7 +218,17 @@
                             <Image Source="/Assets/Info_Asset.png"
                                    Height="25"
                                    RenderOptions.BitmapScalingMode="HighQuality"
-                                   HorizontalAlignment="Left" />
+                                   HorizontalAlignment="Left"
+                                   x:Name="Info_Image" RenderTransformOrigin="0.5,0.5" >
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
 
                             <TextBlock Grid.Column="1"
                                        Text="Info"
@@ -276,7 +322,17 @@
                             <Image Source="/Assets/Settings_Asset.png"
                                    Height="25"
                                    RenderOptions.BitmapScalingMode="HighQuality"
-                                   HorizontalAlignment="Left" />
+                                   HorizontalAlignment="Left"
+                                   x:Name="Settings_Image" RenderTransformOrigin="0.5,0.5" >
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
 
                             <TextBlock Grid.Column="1"
                                        Text="Settings"
@@ -451,7 +507,17 @@
                             <Image Source="/Assets/News_Asset.png"
                                    Height="25"
                                    RenderOptions.BitmapScalingMode="HighQuality"
-                                   HorizontalAlignment="Left" />
+                                   HorizontalAlignment="Left"
+                                   x:Name="News_Image" RenderTransformOrigin="0.5,0.5" >
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
 
                             <TextBlock Grid.Column="1"
                                        Text="News"

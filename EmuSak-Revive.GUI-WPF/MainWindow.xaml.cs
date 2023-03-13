@@ -20,6 +20,7 @@ using EmuSak_Revive.JSON;
 
 using Wpf.Ui.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Media.Animation;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -670,6 +671,34 @@ namespace EmuSak_Revive.GUI_WPF
                 SnackDuration_TextBlock.Text = $"Snackbar display Duration: {sliderInSecsString} Seconds";
                 Notification_SnackBar.Timeout = (int)SnackDuration_Slider.Value;
             }
+        }
+
+        private void MainTabs_TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (MainTabs_TabControl.SelectedIndex)
+            {
+                case 0:
+                    AnimateControl("SpinHomeImage");
+                    break;
+
+                case 1:
+                    AnimateControl("SpinInfoImage");
+                    break;
+
+                case 2:
+                    AnimateControl("SpinSettingsImage");
+                    break;
+
+                case 3:
+                    AnimateControl("SpinNewsImage");
+                    break;
+            }
+        }
+
+        private void AnimateControl(string storyBoardName)
+        {
+            Storyboard s = (Storyboard)TryFindResource(storyBoardName);
+            s.Begin();
         }
     }
 }

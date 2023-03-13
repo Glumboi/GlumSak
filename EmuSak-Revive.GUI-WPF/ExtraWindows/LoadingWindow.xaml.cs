@@ -12,6 +12,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Wpf.Ui.Controls;
@@ -49,8 +50,16 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             mainWindow.ChangeEmuConfig(1);
         }
 
+        private void AnimateControls()
+        {
+            Storyboard s = (Storyboard)TryFindResource("UpdateDots");
+            s.Begin();
+        }
+
         private void UiWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            AnimateControls();
+
             if (ignoreCache)
             {
                 mainWindow.LoadButtons();
