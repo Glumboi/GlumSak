@@ -258,7 +258,7 @@ namespace EmuSak_Revive.GUI_WPF
             IEnumerable<System.Windows.Controls.Button> buttons = Games_Panel.Children.OfType<System.Windows.Controls.Button>();
             foreach (var btn in buttons)
             {
-                string gameName = btn.Tag.GetType().GetProperty("GameID").GetValue(btn.Tag, null).ToString();
+                string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString();
 
                 if (!gameName.ToLower().Contains(Filter_TextBox.Text.ToLower()))
                 {
