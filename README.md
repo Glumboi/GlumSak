@@ -65,7 +65,7 @@ by buying me a server to test around with and for having such a cool community.
   ![alt text](https://i.imgur.com/x46UvqE.png)
 
   
-# This is for education, use at your own risk!
+# This is for education, use at your own risk! GlumSak is a Tool and doesn't provide any pirated things on its own! 
   
 ## License
 
