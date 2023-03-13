@@ -62,7 +62,6 @@ by buying me a server to test around with and for having such a cool community.
   ![alt text](https://i.imgur.com/aweITq7.png)
   ![alt text](https://i.imgur.com/3rOOFX4.png)
   ![alt text](https://i.imgur.com/g9NjMfS.png)
-  ![alt text](https://i.imgur.com/ZGcBrZY.png)
   ![alt text](https://i.imgur.com/x46UvqE.png)
 
   
