@@ -21,6 +21,7 @@ using EmuSak_Revive.JSON;
 using Wpf.Ui.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media.Animation;
+using System.Web.UI.WebControls;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -241,7 +242,6 @@ namespace EmuSak_Revive.GUI_WPF
         private void GameButton_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Controls.Button btn = (System.Windows.Controls.Button)sender;
-
             string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString(); //Get GameName from Button
 
             foreach (var item in switchGames)
@@ -381,6 +381,8 @@ namespace EmuSak_Revive.GUI_WPF
             btn.Width = 150;
             btn.Margin = m;
             btn.Tag = new { GameName = game.GameName, GameID = game.GameID };
+            btn.RenderTransform = new TranslateTransform();
+
             btn.Click += GameButton_Click;
 
             Games_Panel.Children.Add(btn);
