@@ -75,7 +75,7 @@ namespace EmuSak_Revive.GUI
             }
 
             Properties.Settings.Default.ShaderLinks = PasteBinUrl_TextBox.Text;
-            Network.Networking.ShaderUrl = ShaderUrl;
+            Network.Networking.PasteURL = ShaderUrl;
             Properties.Settings.Default.PlaySounds = PlaySounds_CheckBox.Checked;
             Properties.Settings.Default.MainWindowVolume = MainWindow_AudioSlider.Value;
             Properties.Settings.Default.SelectedLanguage = Language_DropDown.SelectedIndex;

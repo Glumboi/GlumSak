@@ -2,7 +2,10 @@
 using EmuSak_Revive.Network;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,6 +14,9 @@ namespace EmuSak_Revive.EmuFiles
 {
     public static class EmuShader
     {
+        public static List<string> RyuGameShaderLocations { get => Ryujinx.GamesShader; }
+        private static string lastCheckedGame = string.Empty;
+
         public static void InstallShader(int config, string url, string gameId)
         {
             if (config == 0)
@@ -25,25 +31,53 @@ namespace EmuSak_Revive.EmuFiles
             }
         }
 
-        private static void InstallRyujinxShader(string url, string gameId)
+        private static bool IsGameIDEqualToShader(string gameID)
         {
-            var shadersLoc = Ryujinx.GamesShader;
-            var fileName = Temporary.TempPath + $"tempShader_{gameId}.Sak";
-
-            for (var index = 0; index < shadersLoc.Count; index++)
+            for (var index = 0; index < RyuGameShaderLocations.Count; index++)
             {
-                var str = shadersLoc[index];
-                if (str.ToUpper().Contains(gameId))
+                var str = RyuGameShaderLocations[index];
+                if (str.ToUpper().Contains(gameID))
                 {
-                    Task.Run(() => { Networking.DownloadAFileFromServer(url, fileName, str); });
+                    lastCheckedGame = str;
+                    return true;
                 }
             }
-
-            //Network.GDriveDownloader downloader = new Network.GDriveDownloader();
-            //downloader.DownloadFile(url, fileName);
+            return false;
         }
 
-        //Not developed yet
+        private static void InstallRyujinxShader(string url, string gameID)
+        {
+            string fileName = Temporary.TempPath + $"tempShader_{gameID}.Sak";
+
+            if (IsGameIDEqualToShader(gameID))
+            {
+                Task.Run(() => { Networking.DownloadAFileFromServer(url, fileName, lastCheckedGame); });
+            }
+        }
+
+        /// <summary>
+        /// This only supports Ryujinx, same as the shader installation
+        /// </summary>
+        /// <param name="gameID"></param>
+        /// <returns></returns>
+        public static string GetShaderCount(string gameID)
+        {
+            bool match = IsGameIDEqualToShader(gameID);
+            string tocPath = $"{lastCheckedGame}\\shared.toc";
+
+            if (match && File.Exists(tocPath))
+            {
+                FileInfo rileInfo = new FileInfo(tocPath);
+                long fileSize = rileInfo.Length;
+                long shaderCount = Math.Max(+((fileSize - 32) / 8), 0);
+
+                return shaderCount.ToString();
+            }
+
+            return "0";
+        }
+
+        //Not developed yet and maybe not going to be developed at all
         private static void InstallYuzuShader(string url)
         {
         }

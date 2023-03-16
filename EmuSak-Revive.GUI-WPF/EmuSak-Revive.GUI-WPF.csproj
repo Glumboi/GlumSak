@@ -263,5 +263,8 @@
   <ItemGroup>
     <Resource Include="Assets\Other_Asset.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Update_Asset.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

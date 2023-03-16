@@ -126,9 +126,9 @@ namespace EmuSak_Revive.GUI
                     MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(Networking.ShaderUrl))
+            if (string.IsNullOrWhiteSpace(Networking.PasteURL))
             {
-                Networking.ShaderUrl = Properties.Settings.Default.ShaderLinks;
+                Networking.PasteURL = Properties.Settings.Default.ShaderLinks;
             }
         }
 
