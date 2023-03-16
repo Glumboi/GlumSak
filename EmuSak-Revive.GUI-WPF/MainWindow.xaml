@@ -399,7 +399,7 @@
                                     </ui:CardExpander.Header>
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="6*" />
+                                            <ColumnDefinition Width="10*" />
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
@@ -420,27 +420,35 @@
 
                                         <ui:Button Grid.Column="1"
                                                    Grid.Row="0"
-                                                   Content="Browse"
                                                    HorizontalAlignment="Stretch"
                                                    VerticalAlignment="Stretch"
                                                    Margin="4 0 0 10"
-                                                   Icon="Folder28"
                                                    x:Name="SelectYuzuPath_Button"
-                                                   Click="SelectYuzuPath_Button_Click" />
+                                                   Click="SelectYuzuPath_Button_Click">
+
+                                            <Image Source="Assets/OpenFolder_Asset.png"
+                                               Height="20"
+                                               Width="20"
+                                               Margin="-9 0 -10 0" />
+                                        </ui:Button>
 
                                         <ui:Button Grid.Column="1"
                                                    Grid.Row="1"
-                                                   Content="Browse"
                                                    HorizontalAlignment="Stretch"
                                                    VerticalAlignment="Stretch"
                                                    Margin="4 0 0 0"
-                                                   Icon="Folder28"
                                                    x:Name="SelectRyujinxPath_Button"
-                                                   Click="SelectRyujinxPath_Button_Click" />
+                                                   Click="SelectRyujinxPath_Button_Click">
+
+                                            <Image Source="Assets/OpenFolder_Asset.png"
+                                               Height="20"
+                                               Width="20"
+                                               Margin="-9 0 -10 0" />
+                                        </ui:Button>
                                     </Grid>
                                 </ui:CardExpander>
 
-                                <ui:CardExpander Grid.Row="2" Margin="0 5 0 5 ">
+                                <ui:CardExpander Grid.Row="2" Margin="0 5 0 5">
 
                                     <ui:CardExpander.Header>
 
@@ -540,7 +548,7 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
-                            <Image Source="/Assets/News_Asset.png"
+                            <Image Source="/Assets/Update_Asset.png"
                                    Height="25"
                                    RenderOptions.BitmapScalingMode="HighQuality"
                                    HorizontalAlignment="Left"
@@ -556,7 +564,7 @@
                             </Image>
 
                             <TextBlock Grid.Column="1"
-                                       Text="News"
+                                       Text="Yuzu Updater"
                                        VerticalAlignment="Center"
                                        Margin="4 0 0 0" />
                         </Grid>
@@ -635,115 +643,10 @@
                                               VerticalAlignment="Top"
                                               Grid.Column="0"
                                               x:Name="YuzuStartupUpdateCheck_CheckBox" />
-
-                                    <StackPanel Grid.Column="1">
-                                        <TextBlock Text="News"
-                                               FontWeight="Bold"
-                                               VerticalAlignment="Top"
-                                               HorizontalAlignment="Center"
-                                               FontSize="18" />
-
-                                        <TextBlock Text="This section is getting worked on..."
-                                                   FontWeight="Bold"
-                                                   VerticalAlignment="Top"
-                                                   HorizontalAlignment="Center"
-                                                   FontSize="18"
-                                                   Margin="0 30 0 0" />
-                                    </StackPanel>
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Border>
-                </TabItem>
-
-                <TabItem Header="Paste Creator" Visibility="Collapsed">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Menu>
-                            <MenuItem Header="File">
-                                <ui:MenuItem Header="Open local Paste"
-                                                 SymbolIcon="OpenFolder24" />
-
-                                <ui:MenuItem Header="Open web Paste"
-                                                 SymbolIcon="Globe24" />
-
-                                <Separator />
-
-                                <ui:MenuItem Header="Save"
-                                                 SymbolIcon="Save28" />
-
-                                <ui:MenuItem Header="Save as..."
-                                                 SymbolIcon="Rename24" />
-                            </MenuItem>
-                        </Menu>
-                        <Border Padding="5" Grid.Row="1">
-                            <Grid>
-                                <Grid Grid.Row="1" Margin="0 5 0 0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition />
-                                        <ColumnDefinition />
-                                    </Grid.ColumnDefinitions>
-
-                                    <Grid Grid.Column="0" Margin="0 0 10 0">
-
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition />
-                                            <RowDefinition Height="3.2*" />
-                                        </Grid.RowDefinitions>
-
-                                        <StackPanel>
-                                            <ui:TextBox VerticalAlignment="Top"
-                                                x:Name="Game_TextBox" />
-
-                                            <ui:Button Content="Add to Games"
-                                               HorizontalAlignment="Stretch"
-                                               Margin="0 4 0 0"
-                                               x:Name="AddGames_Button"
-                                               Click="AddGames_Button_Click" />
-
-                                            <ui:Button Content="Remove selected"
-                                               HorizontalAlignment="Stretch"
-                                               Margin="0 6 0 0"
-                                               x:Name="RemoveGames_Buttton"
-                                               Click="RemoveGames_Buttton_Click" />
-                                        </StackPanel>
-
-                                        <ListBox Grid.Row="1"
-                                         x:Name="Games_ListBox" />
-                                    </Grid>
-
-                                    <Grid Grid.Column="1">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition />
-                                            <RowDefinition Height="3*" />
-                                        </Grid.RowDefinitions>
-
-                                        <StackPanel>
-                                            <ui:TextBox VerticalAlignment="Top"
-                                                x:Name="Shader_TextBox" />
-
-                                            <ui:Button Content="Add to Shader Links"
-                                               HorizontalAlignment="Stretch"
-                                               Margin="0 4 0 0"
-                                               x:Name="AddShader_Button"
-                                               Click="AddShader_Button_Click" />
-
-                                            <ui:Button Content="Remove selected"
-                                               HorizontalAlignment="Stretch"
-                                               Margin="0 6 0 0"
-                                               x:Name="RemoveShader_Button"
-                                               Click="RemoveShader_Button_Click" />
-                                        </StackPanel>
-
-                                        <ListBox Grid.Row="1" x:Name="Shaders_ListBox" />
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Border>
-                    </Grid>
                 </TabItem>
             </TabControl>
         </Border>

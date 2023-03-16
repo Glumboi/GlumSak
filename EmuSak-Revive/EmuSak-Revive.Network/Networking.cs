@@ -16,6 +16,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Controls;
 using System.Windows.Threading;
 using Wpf.Ui.Controls;
+using System.Xml.Linq;
 
 namespace EmuSak_Revive.Network
 {
@@ -26,7 +27,7 @@ namespace EmuSak_Revive.Network
         public static bool DownloadDone => _downloadDone;
         public static IntPtr MainWindowHandle { get; set; }
         public static List<int> Versions => versionsList;
-        public static string ShaderUrl { get; set; }
+        public static string PasteURL { get; set; }
         public static System.Windows.Controls.ProgressBar DownloadProgressBar { get; set; }
         public static TextBlock DownloadProgressText { get; set; }
         public static Border DownloadBorder { get; set; }
@@ -74,6 +75,57 @@ namespace EmuSak_Revive.Network
             }), DispatcherPriority.Normal);
         }
 
+        private static string GetPasteContent()
+        {
+            using (WebClient client = new WebClient())
+            {
+                if (!string.IsNullOrWhiteSpace(PasteURL))
+                {
+                    try
+                    {
+                        var contentBytes = client.OpenRead(PasteURL);
+                        StreamReader reader = new StreamReader(contentBytes);
+                        string content = reader.ReadToEnd();
+                        return content;
+                    }
+                    catch
+                    {
+                        //File could not be read from the web, try to see if the file is local
+                        if (File.Exists(PasteURL))
+                        {
+                            var content = File.ReadAllText(PasteURL);
+
+                            return content;
+                        }
+
+                        ShowNotification($"Somethimg went wrong while trying to get something from the Paste.\nMake sure that you have a valid Paste!",
+                            Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        private static string GetPasteValue(char splitChar, string gameName, int index)
+        {
+            var result = string.Empty;
+
+            using (var sr = new StringReader(GetPasteContent()))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line.Contains(gameName) && line.Contains(splitChar))
+                    {
+                        result = line.Split(splitChar)[index];
+                    }
+                }
+            }
+
+            return result;
+        }
+
         /// <summary>
         /// Gets all shader files from a raw text file
         /// format of the trxt file has to be:
@@ -81,58 +133,20 @@ namespace EmuSak_Revive.Network
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static string GetShaderDownload(string name)
+        public static string GetShaderDownload(string gameName)
         {
-            var result = string.Empty;
+            return GetPasteValue('=', gameName, 1);
+        }
 
-            WebClient client = new WebClient();
-
-            if (!string.IsNullOrWhiteSpace(ShaderUrl))
+        public static string GetPasteGameShaderCount(string gameName)
+        {
+            string count = GetPasteValue('|', gameName, 1);
+            if (count == string.Empty)
             {
-                try
-                {
-                    var contentBytes = client.OpenRead(ShaderUrl);
-                    StreamReader reader = new StreamReader(contentBytes);
-                    string content = reader.ReadToEnd();
-
-                    using (var sr = new StringReader(content))
-                    {
-                        string line;
-                        while ((line = sr.ReadLine()) != null)
-                        {
-                            if (line.Contains(name))
-                            {
-                                result = line.Split('=')[1];
-                            }
-                        }
-                    }
-
-                    return result;
-                }
-                catch
-                {
-                    //File could not be read from the web, try to see if the file is local
-                    if (File.Exists(ShaderUrl))
-                    {
-                        var content = File.ReadAllLines(ShaderUrl);
-
-                        foreach (var line in content)
-                        {
-                            if (line.Contains(name))
-                            {
-                                result = line.Split('=')[1];
-                            }
-                        }
-
-                        return result;
-                    }
-
-                    ShowNotification($"Somethimg went wrong while trying to get the shader of {name}.\nMake sure that you have a valid paste!",
-                        Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
-                }
+                return "0 or not specified";
             }
 
-            return string.Empty;
+            return count;
         }
 
         /// <summary>

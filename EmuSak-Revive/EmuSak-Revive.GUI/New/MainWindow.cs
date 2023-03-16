@@ -133,7 +133,7 @@ namespace EmuSak_Revive.GUI.New
                 Properties.Settings.Default.ShaderLinks = PasteBinUrl_TextBox.Text;
             }
 
-            Networking.ShaderUrl = ShaderUrl;
+            Networking.PasteURL = ShaderUrl;
 
             Properties.Settings.Default.PlaySounds = PlaySounds_CheckBox.Checked;
             Properties.Settings.Default.MainWindowVolume = MainWindow_AudioSlider.Value;
@@ -253,9 +253,9 @@ namespace EmuSak_Revive.GUI.New
                     MessageBoxIcon.Warning);
                 return;
             }
-            if (string.IsNullOrWhiteSpace(Networking.ShaderUrl))
+            if (string.IsNullOrWhiteSpace(Networking.PasteURL))
             {
-                Networking.ShaderUrl = Properties.Settings.Default.ShaderLinks;
+                Networking.PasteURL = Properties.Settings.Default.ShaderLinks;
             }
         }
 

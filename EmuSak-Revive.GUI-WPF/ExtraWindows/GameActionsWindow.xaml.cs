@@ -56,14 +56,31 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             }
         }
 
+        public string ShaderCount
+        {
+            get
+            {
+                return _shaderCount;
+            }
+            set
+            {
+                _shaderCount = value;
+                ShaderCount_TextBlock.Text = "Your Shadercount is: " +
+                    value +
+                    " | Paste Count: " +
+                    Networking.GetPasteGameShaderCount(GameName);
+            }
+        }
+
         private static bool shaderExists = false;
-        private static string shaderUrl = string.Empty;
+        private string shaderUrl = string.Empty;
 
         private static SwitchGame switchGame;
 
-        private static string _gameName;
-        private static string _gameId;
-        private static ImageSource _gameImg;
+        private string _gameName;
+        private string _gameId;
+        private string _shaderCount;
+        private ImageSource _gameImg;
 
         public GameActionsWindow(SwitchGame game)
         {
@@ -99,6 +116,8 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
 
         private void CheckShader()
         {
+            ShaderCount = EmuShader.GetShaderCount(GameID);
+
             shaderExists = !string.IsNullOrWhiteSpace(shaderUrl);
 
             if (!shaderExists)

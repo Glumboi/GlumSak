@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
         Title="GameActionsWindow"
-        Height="219"
+        Height="235"
         Width="600"
-        MinHeight="219"
+        MinHeight="235"
         MinWidth="600"
         ExtendsContentIntoTitleBar="True"
         WindowBackdropType="Mica"
@@ -60,10 +60,15 @@
 
                     <ui:Button HorizontalAlignment="Stretch"
                                Content="Open Save Manager"
-                               Margin=" 5 10 0 0"
+                               Margin=" 5 10 0 6"
                                Icon="Save24"
                                x:Name="SaveManager_Button"
                                Click="SaveManager_Button_Click" />
+
+                    <TextBlock Text="Your Shadercount is: | Paste Count: "
+                               HorizontalAlignment="Center"
+                               FontWeight="Bold"
+                               x:Name="ShaderCount_TextBlock" />
                 </StackPanel>
 
                 <StackPanel Grid.Column="1">

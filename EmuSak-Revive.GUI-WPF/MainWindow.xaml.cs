@@ -141,9 +141,9 @@ namespace EmuSak_Revive.GUI_WPF
                 Notification_SnackBar.Show();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(Networking.ShaderUrl))
+            if (string.IsNullOrWhiteSpace(Networking.PasteURL))
             {
-                Networking.ShaderUrl = Properties.Settings.Default.ShaderLinks;
+                Networking.PasteURL = Properties.Settings.Default.ShaderLinks;
             }
         }
 
@@ -633,29 +633,7 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void PasteBinUrl_TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Networking.ShaderUrl = PasteBinUrl_TextBox.Text;
-        }
-
-        private void AddGames_Button_Click(object sender, RoutedEventArgs e)
-        {
-            var text = Game_TextBox.Text;
-            if (!string.IsNullOrWhiteSpace(text)) Games_ListBox.Items.Add(text);
-        }
-
-        private void RemoveGames_Buttton_Click(object sender, RoutedEventArgs e)
-        {
-            Games_ListBox.Items.Remove(Games_ListBox.SelectedItem);
-        }
-
-        private void AddShader_Button_Click(object sender, RoutedEventArgs e)
-        {
-            var text = Shader_TextBox.Text;
-            if (!string.IsNullOrWhiteSpace(text)) Shaders_ListBox.Items.Add(text);
-        }
-
-        private void RemoveShader_Button_Click(object sender, RoutedEventArgs e)
-        {
-            Shaders_ListBox.Items.Remove(Shaders_ListBox.SelectedItem);
+            Networking.PasteURL = PasteBinUrl_TextBox.Text;
         }
 
         private void CancelDownload_Button_Click(object sender, RoutedEventArgs e)
