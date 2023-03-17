@@ -65,7 +65,7 @@
                                x:Name="SaveManager_Button"
                                Click="SaveManager_Button_Click" />
 
-                    <TextBlock Text="Your Shadercount is: | Paste Count: "
+                    <TextBlock Text="Your Shadercount is: | Pastecount: "
                                HorizontalAlignment="Center"
                                FontWeight="Bold"
                                x:Name="ShaderCount_TextBlock" />

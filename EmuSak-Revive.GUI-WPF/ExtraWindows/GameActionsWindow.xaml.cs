@@ -67,7 +67,7 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
                 _shaderCount = value;
                 ShaderCount_TextBlock.Text = "Your Shadercount is: " +
                     value +
-                    " | Paste Count: " +
+                    " | Pastecount: " +
                     Networking.GetPasteGameShaderCount(GameName);
             }
         }
