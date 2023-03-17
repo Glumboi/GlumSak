@@ -109,16 +109,21 @@ namespace EmuSak_Revive.Network
 
         private static string GetPasteValue(char splitChar, string gameName, int index)
         {
-            var result = string.Empty;
+            string result = string.Empty;
+            string pasteResult = GetPasteContent();
+            string pasteContent = !string.IsNullOrWhiteSpace(pasteResult) ? pasteResult : string.Empty;
 
-            using (var sr = new StringReader(GetPasteContent()))
+            if (pasteContent != string.Empty)
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                using (var sr = new StringReader(pasteContent))
                 {
-                    if (line.Contains(gameName) && line.Contains(splitChar))
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
                     {
-                        result = line.Split(splitChar)[index];
+                        if (line.Contains(gameName) && line.Contains(splitChar))
+                        {
+                            result = line.Split(splitChar)[index];
+                        }
                     }
                 }
             }
