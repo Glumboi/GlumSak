@@ -76,7 +76,6 @@
                                    x:Name="PleaseWait_TextBlock" />
                     </Grid>
                 </Grid>
-
                 <Grid Grid.Row="1" Margin="0 20 0 0">
                     <Grid>
                         <Grid.RowDefinitions>

@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:EmuSak_Revive.GUI_WPF"
              mc:Ignorable="d"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:VM="clr-namespace:EmuSak_Revive.GUI_WPF.ViewModels"
              Title="MainWindow"
              Height="625"
              Width="1000"
@@ -16,6 +17,12 @@
              Background="#2d2d2d"
              Loaded="UiWindow_Loaded"
              Closing="UiWindow_Closing">
+
+    <Window.DataContext>
+        <VM:HomeViewModel />
+    </Window.DataContext>
+
+    <!-- #region ControlAnimations-->
     <ui:UiWindow.Resources>
         <Storyboard x:Key="SpinHomeImage">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Home_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
@@ -42,22 +49,29 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </ui:UiWindow.Resources>
+    <!--#endregion-->
 
+    <!--#region Main Grid-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+
+        <!--Title Bar-->
         <ui:TitleBar
             x:Name="TitleBar"
             Title="GlumSak"
             UseSnapLayout="True"
             Icon="/Assets/Icon.png" />
 
+        <!--Main Border-->
         <Border Padding="10" Grid.Row="1">
+            <!--Mian TabControl-->
             <TabControl x:Name="MainTabs_TabControl"
                         SelectionChanged="MainTabs_TabControl_SelectionChanged">
+                <!--Home Tab-->
                 <TabItem>
                     <TabItem.Header>
                         <Grid>
@@ -81,7 +95,7 @@
                             </Image>
 
                             <TextBlock Grid.Column="1"
-                                       Text="Home"
+                                       Text="{Binding Path=HomeTabString, Mode=TwoWay}"
                                        VerticalAlignment="Center"
                                        Margin="4 0 0 0" />
                         </Grid>
@@ -116,7 +130,7 @@
                                                    HorizontalAlignment="Stretch"
                                                    Grid.Column="1"
                                                    Margin="0 0 2 0"
-                                                   Content="Download Firmware"
+                                                   Content="{Binding Path=DownloadFirmwareString, Mode=TwoWay}"
                                                    Icon="ArrowDownload24"
                                                    x:Name="DownloadFirmware_Button"
                                                    Click="DownloadFirmware_Button_Click" />
@@ -125,7 +139,7 @@
                                                    HorizontalAlignment="Stretch"
                                                    Grid.Column="2"
                                                    Margin="2 0 0 0"
-                                                   Content="Download Keys"
+                                                   Content="{Binding Path=DownloadKeysString, Mode=TwoWay}"
                                                    Icon="Key24"
                                                    x:Name="Keys_Button"
                                                    Click="Keys_Button_Click" />
@@ -146,9 +160,9 @@
                                                         TextChanged="Filter_TextBox_TextChanged"
                                                         Icon="Filter28"
                                                         ClearButtonEnabled="False"
-                                                        PlaceholderText="Enter a Filter" />
+                                                        PlaceholderText="{Binding Path=FilterPlaceHolderString, Mode=TwoWay}" />
 
-                                            <ui:Button Content="Clear Filter"
+                                            <ui:Button Content="{Binding Path=ClearFilterString, Mode=TwoWay}"
                                                        Margin="0 0 0 0"
                                                        Grid.Column="1"
                                                        VerticalAlignment="Stretch"
@@ -195,7 +209,7 @@
 
                                 <ui:Button Grid.Column="1"
                                            HorizontalAlignment="Stretch"
-                                           Content="Cancel Download"
+                                           Content="{Binding Path=CancelDownloadString, Mode=TwoWay}"
                                            Margin="2 0 0 0"
                                            Icon="Delete24"
                                            x:Name="CancelDownload_Button"
@@ -206,6 +220,7 @@
                     </Grid>
                 </TabItem>
 
+                <!--Info Tab-->
                 <TabItem>
 
                     <TabItem.Header>
@@ -310,6 +325,7 @@
                     </Border>
                 </TabItem>
 
+                <!--Settings Tab-->
                 <TabItem>
                     <TabItem.Header>
                         <Grid>
@@ -539,6 +555,7 @@
                     </Border>
                 </TabItem>
 
+                <!--Yuzu Updater Tab-->
                 <TabItem>
 
                     <TabItem.Header>
@@ -657,4 +674,5 @@
                       Timeout="4000"
                       x:Name="Notification_SnackBar" />
     </Grid>
+    <!--#endregion-->
 </ui:UiWindow>

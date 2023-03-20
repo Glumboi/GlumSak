@@ -37,8 +37,10 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             string repositoryName = iniParser.GetSetting("config", "repo");//"GlumSak";
 
             GitHubClient client = new GitHubClient(new Octokit.ProductHeaderValue(repositoryName));
+
             string GitHubToken = string.Empty;
             string configToken = iniParser.GetSetting("config", "githubToken");
+
             if (!string.IsNullOrWhiteSpace(configToken))
             {
                 GitHubToken = configToken;
