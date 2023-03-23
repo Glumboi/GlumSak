@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuSak-Revive.GUI-WPF", "..
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuSak-Revive.CrashReporter", "..\EmuSak-Revive.CrashReporter\EmuSak-Revive.CrashReporter.csproj", "{EE75CA15-F4A3-455A-BA24-2DFB82DFE0DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmuSak-Revive.Plugins", "..\EmuSak-Revive.Plugins\EmuSak-Revive.Plugins.csproj", "{57968FBC-07C1-4752-AF1E-70B979E015FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -221,6 +223,18 @@ Global
 		{EE75CA15-F4A3-455A-BA24-2DFB82DFE0DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EE75CA15-F4A3-455A-BA24-2DFB82DFE0DD}.Release|x86.ActiveCfg = Release|Any CPU
 		{EE75CA15-F4A3-455A-BA24-2DFB82DFE0DD}.Release|x86.Build.0 = Release|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.All|Any CPU.ActiveCfg = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.All|Any CPU.Build.0 = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.All|x86.ActiveCfg = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.All|x86.Build.0 = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Debug|x86.Build.0 = Debug|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Release|x86.ActiveCfg = Release|Any CPU
+		{57968FBC-07C1-4752-AF1E-70B979E015FA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -212,6 +212,10 @@
       <Project>{D2A09B1E-1038-4F16-94D6-BCBCA502234B}</Project>
       <Name>EmuSak-Revive.JSON</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EmuSak-Revive.Plugins\EmuSak-Revive.Plugins.csproj">
+      <Project>{57968fbc-07c1-4752-af1e-70b979e015fa}</Project>
+      <Name>EmuSak-Revive.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmuSak-Revive\EmuSak-Revive.ConfigIni\EmuSak-Revive.ConfigIni.csproj">
       <Project>{3EDA1E76-4CB3-4BFC-A77D-F43739EECAC7}</Project>
       <Name>EmuSak-Revive.ConfigIni</Name>
@@ -265,6 +269,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Update_Asset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Plugin_Asset.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
