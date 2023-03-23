@@ -17,26 +17,37 @@
              Loaded="UiWindow_Loaded"
              Closing="UiWindow_Closing">
     <ui:UiWindow.Resources>
+
         <Storyboard x:Key="SpinHomeImage">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Home_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
         <Storyboard x:Key="SpinInfoImage">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Info_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
         <Storyboard x:Key="SpinSettingsImage">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Settings_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
         <Storyboard x:Key="SpinNewsImage">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetName="News_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="SpinPluginsImage">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Plugins_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
@@ -496,6 +507,7 @@
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="*" />
                                             <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
                                         <Grid Grid.Row="1">
@@ -516,13 +528,18 @@
                                                    HorizontalAlignment="Center" />
 
                                                 <Slider x:Name="SnackDuration_Slider"
-                                                ValueChanged="SnackDuration_Slider_ValueChanged"
-                                                Minimum="1000"
-                                                Maximum="20000"
-                                                IsSnapToTickEnabled="True"
-                                                TickFrequency="1000" />
+                                                        ValueChanged="SnackDuration_Slider_ValueChanged"
+                                                        Minimum="1000"
+                                                        Maximum="20000"
+                                                        IsSnapToTickEnabled="True"
+                                                        TickFrequency="1000" />
                                             </StackPanel>
                                         </Grid>
+
+                                        <ui:ToggleSwitch Grid.Row="3"
+                                                         Content="Allow Plugins"
+                                                         Margin="0 10 0 0"
+                                                         x:Name="AllowPlugins_Switch" />
                                     </Grid>
                                 </ui:CardExpander>
 
@@ -645,6 +662,94 @@
                                               x:Name="YuzuStartupUpdateCheck_CheckBox" />
                                 </Grid>
                             </Grid>
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <TabItem x:Name="Plugins_Tab">
+                    <TabItem.Header>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="/Assets/Plugin_Asset.png"
+                                   Height="25"
+                                   RenderOptions.BitmapScalingMode="HighQuality"
+                                   HorizontalAlignment="Left"
+                                   x:Name="Plugins_Image" RenderTransformOrigin="0.5,0.5">
+
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform />
+                                        <SkewTransform />
+                                        <RotateTransform />
+                                        <TranslateTransform />
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+
+                            <TextBlock Grid.Column="1"
+                                       Text="Plugins (BETA)"
+                                       VerticalAlignment="Center"
+                                       Margin="4 0 0 0" />
+                        </Grid>
+                    </TabItem.Header>
+
+                    <Border Padding="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="Installed Plugins"
+                                       HorizontalAlignment="Center"
+                                       FontWeight="Bold"
+                                       FontSize="24"
+                                       Margin="0 0 0 20" />
+
+                            <ListView Grid.Row="1"
+                                      x:Name="Plugins_ListView">
+
+                                <ListViewItem Focusable="False"
+                                              Visibility="Collapsed">
+                                    <ui:Card>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition />
+                                                <ColumnDefinition />
+                                            </Grid.ColumnDefinitions>
+
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="./Assets/Info_Asset.png"
+                                                       Height="35"
+                                                       Width="35"
+                                                       Margin="0 0 10 0"
+                                                       RenderOptions.BitmapScalingMode="HighQuality" />
+
+                                                <TextBlock Text="DummyPlugin.dll"
+                                                           VerticalAlignment="Center"
+                                                           FontWeight="Bold" />
+                                            </StackPanel>
+
+                                            <StackPanel Grid.Column="1"
+                                                    Orientation="Horizontal"
+                                                    HorizontalAlignment="Right">
+
+                                                <ui:ToggleSwitch>
+                                                    <TextBlock Text="Launch on Startup" />
+                                                </ui:ToggleSwitch>
+
+                                                <ui:Button Content="Launch Plugin"
+                                                       Icon="PlugConnected24"
+                                                       Margin="10 0 0 0" />
+                                            </StackPanel>
+                                        </Grid>
+                                    </ui:Card>
+                                </ListViewItem>
+                            </ListView>
                         </Grid>
                     </Border>
                 </TabItem>

@@ -22,6 +22,9 @@ using Wpf.Ui.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media.Animation;
 using System.Web.UI.WebControls;
+using System.Threading.Tasks;
+using EmuSak_Revive.Plugins;
+using System.Windows.Media.Imaging;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -50,6 +53,8 @@ namespace EmuSak_Revive.GUI_WPF
         private List<string> firmwareVersions = new List<string>();
         private List<SwitchGame> switchGames = new List<SwitchGame>();
         private List<System.Windows.Controls.Button> imageButtons = new List<System.Windows.Controls.Button>();
+        private List<Plugin> plugins = new List<Plugin>();
+        private List<Plugin> autorunPlugins = new List<Plugin>();
 
         #endregion List variables
 
@@ -100,6 +105,10 @@ namespace EmuSak_Revive.GUI_WPF
             SnackDuration_Slider.Value = Properties.Settings.Default.SnackBarTimeout;
 
             Networking.NotificationSnackBar = Notification_SnackBar;
+
+            AllowPlugins_Switch.IsChecked = Properties.Settings.Default.AllowPlugins;
+
+            LoadPlugins();
         }
 
         private void SaveSettings() //--> Saves a bunch of settings
@@ -129,6 +138,9 @@ namespace EmuSak_Revive.GUI_WPF
             //Snack
             Properties.Settings.Default.SnackBarTimeout = Notification_SnackBar.Timeout;
             Properties.Settings.Default.Save();
+
+            //Plugins
+            Properties.Settings.Default.AllowPlugins = (bool)AllowPlugins_Switch.IsChecked;
 
             Networking.ShowNotification("Saved the Settings with Success!");
         }
@@ -672,6 +684,10 @@ namespace EmuSak_Revive.GUI_WPF
                 case 3:
                     AnimateControl("SpinNewsImage");
                     break;
+
+                case 4:
+                    AnimateControl("SpinPluginsImage");
+                    break;
             }
         }
 
@@ -679,6 +695,129 @@ namespace EmuSak_Revive.GUI_WPF
         {
             Storyboard s = (Storyboard)TryFindResource(storyBoardName);
             s.Begin();
+        }
+
+        private void LoadPlugins()
+        {
+            if (!Properties.Settings.Default.AllowPlugins)
+            {
+                Plugins_Tab.Visibility = Visibility.Collapsed;
+                return;
+            }
+
+            string pluginsLocation = AppDomain.CurrentDomain.RelativeSearchPath ??
+                AppDomain.CurrentDomain.BaseDirectory + "Plugins";
+
+            if (Directory.Exists(pluginsLocation))
+            {
+                string[] dirs = Directory.GetDirectories(pluginsLocation);
+                foreach (string item in dirs)
+                {
+                    string[] files = Directory.GetFiles(item);
+                    string pathOfPlugin = string.Empty;
+                    string iniOfPlugin = string.Empty;
+
+                    foreach (string file in files)
+                    {
+                        if (file.Contains(".dll"))
+                        {
+                            pathOfPlugin = file;
+                        }
+
+                        if (file.Contains(".ini"))
+                        {
+                            iniOfPlugin = file;
+                        }
+                    }
+
+                    Plugin plugIn = new Plugin(pathOfPlugin, iniOfPlugin);
+                    plugins.Add(plugIn);
+                    CreatePluginListItem(plugIn.PluginName, plugIn.PluginIcon);
+                }
+            }
+        }
+
+        private void CreatePluginListItem(string nameOfPlugin, string pathOfIcon)
+        {
+            ListViewItem item = new ListViewItem();
+            item.Focusable = false;
+            item.Visibility = Visibility.Visible;
+
+            Card card = new Card();
+            Grid grid = new Grid();
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+
+            StackPanel infoStackPanel = new StackPanel();
+            infoStackPanel.Orientation = System.Windows.Controls.Orientation.Horizontal;
+
+            System.Windows.Controls.Image image = new System.Windows.Controls.Image();
+            image.Margin = new Thickness(0, 0, 10, 0);
+            image.Height = 35;
+            image.Width = 35;
+
+            if (File.Exists(pathOfIcon))
+            {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(pathOfIcon);
+                bitmap.EndInit();
+                image.Source = bitmap;
+            }
+            else
+            {
+                image.Visibility = Visibility.Collapsed;
+            }
+
+            infoStackPanel.Children.Add(image);
+
+            TextBlock textBlock = new TextBlock();
+            textBlock.Text = nameOfPlugin;
+            textBlock.VerticalAlignment = VerticalAlignment.Center;
+            textBlock.FontWeight = FontWeights.Bold;
+            infoStackPanel.Children.Add(textBlock);
+
+            StackPanel stackPanel = new StackPanel();
+            stackPanel.Orientation = System.Windows.Controls.Orientation.Horizontal;
+            stackPanel.HorizontalAlignment = HorizontalAlignment.Right;
+
+            /*ToggleSwitch toggleSwitch = new ToggleSwitch();
+            toggleSwitch.Name = nameOfPlugin;*/
+
+            TextBlock toggleTextBlock = new TextBlock();
+            toggleTextBlock.Text = "Launch on Startup";
+            //toggleSwitch.Content = toggleTextBlock;
+            //stackPanel.Children.Add(toggleSwitch);
+
+            Wpf.Ui.Controls.Button button = new Wpf.Ui.Controls.Button();
+            button.Content = "Launch Plugin";
+            button.Icon = Wpf.Ui.Common.SymbolRegular.PlugConnected24;
+            button.Margin = new Thickness(10, 0, 0, 0);
+            button.Name = nameOfPlugin;
+            button.Click += LaunchPluginButton_Click;
+            stackPanel.Children.Add(button);
+
+            Grid.SetColumn(infoStackPanel, 0);
+            Grid.SetColumn(stackPanel, 1);
+            grid.Children.Add(infoStackPanel);
+            grid.Children.Add(stackPanel);
+
+            card.Content = grid;
+            item.Content = card;
+            Plugins_ListView.Items.Add(item);
+        }
+
+        private void LaunchPluginButton_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Wpf.Ui.Controls.Button;
+
+            foreach (var item in plugins)
+            {
+                if (item.PluginName == btn.Name)
+                {
+                    item.ExecutePlugin();
+                }
+            }
         }
     }
 }
