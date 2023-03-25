@@ -18,7 +18,6 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/GlumSak.svg?style=social&label=Follow%20%40GlumSak)](https://twitter.com/GlumSak)
 
 
-[![GitHub tag](https://img.shields.io/github/tag/Glumboi/GlumSak?include_prereleases=&sort=semver&color=blue)](https://github.com/Glumboi/GlumSak/releases/)
 [![License](https://img.shields.io/badge/License-GPL20-blue)](#license)
 [![issues - GlumSak](https://img.shields.io/github/issues/Glumboi/GlumSak)](https://github.com/Glumboi/GlumSak/issues)
 
