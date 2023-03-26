@@ -26,7 +26,7 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 
 # Restart is recommended after install
           
-# I recommend to not install GlumSak in a directory that needs admin rights to acces it, it can cause multiple errors!
+# I recommend to not install GlumSak in a directory that needs admin rights to access it, it can cause multiple errors!
     
 # What is GlumSak?
 This project originally was a joke and I never thought that I'll do this some day.
