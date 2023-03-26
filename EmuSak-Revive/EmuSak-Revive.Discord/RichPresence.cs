@@ -17,12 +17,6 @@ namespace EmuSak_Revive.Discord
             string smallImageName,
             string smallImageHoverText)
         {
-            Button[] buttons =
-            {
-                new Button() {Label = "Github", Url = "https://github.com/Glumboi"},
-                new Button() { Label = "Participate here", Url = "https://phoebe.feralhosting.com/carltschober/#" }
-            };
-
             if (!initalized)
             {
                 return;
@@ -34,12 +28,10 @@ namespace EmuSak_Revive.Discord
                     Details = details,
                     State = state,
                     Timestamps = Timestamps.Now,
-                    //Buttons = buttons,
                     Assets = new Assets()
                     {
                         LargeImageKey = largeImageName,
                         LargeImageText = smallImageHoverText,
-                        //SmallImageKey = smallImageName
                     }
                 });
             }

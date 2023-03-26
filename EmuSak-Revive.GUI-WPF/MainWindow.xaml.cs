@@ -25,6 +25,7 @@ using System.Web.UI.WebControls;
 using System.Threading.Tasks;
 using EmuSak_Revive.Plugins;
 using System.Windows.Media.Imaging;
+using log4net.Plugin;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -61,6 +62,7 @@ namespace EmuSak_Revive.GUI_WPF
         #region Private local variables
 
         private string firmwareToDownload = string.Empty;
+        private string autorunFile = "./AutorunPlugins.txt";
 
         #endregion Private local variables
 
@@ -141,8 +143,16 @@ namespace EmuSak_Revive.GUI_WPF
 
             //Plugins
             Properties.Settings.Default.AllowPlugins = (bool)AllowPlugins_Switch.IsChecked;
+            CreatePluginAutorunFile();
 
             Networking.ShowNotification("Saved the Settings with Success!");
+        }
+
+        private void CreatePluginAutorunFile()
+        {
+            List<string> pluginNames = autorunPlugins.Select(s => s.PluginName).ToList();
+            File.Delete(autorunFile);
+            File.WriteAllLines(autorunFile, pluginNames);
         }
 
         private void CheckShaderUrl()
@@ -697,6 +707,21 @@ namespace EmuSak_Revive.GUI_WPF
             s.Begin();
         }
 
+        private void LoadAutorunPlugins()
+        {
+            if (!File.Exists(autorunFile)) return;
+
+            foreach (var line in File.ReadAllLines(autorunFile))
+            {
+                autorunPlugins.Add(GetPluginByName(line));
+            }
+
+            foreach (var item in autorunPlugins)
+            {
+                item.ExecutePlugin();
+            }
+        }
+
         private void LoadPlugins()
         {
             if (!Properties.Settings.Default.AllowPlugins)
@@ -732,12 +757,22 @@ namespace EmuSak_Revive.GUI_WPF
 
                     Plugin plugIn = new Plugin(pathOfPlugin, iniOfPlugin);
                     plugins.Add(plugIn);
-                    CreatePluginListItem(plugIn.PluginName, plugIn.PluginIcon);
                 }
+                LoadAutorunPlugins();
+                CreatePluginListItems();
             }
         }
 
-        private void CreatePluginListItem(string nameOfPlugin, string pathOfIcon)
+        private void CreatePluginListItems()
+        {
+            foreach (Plugin plugIn in plugins)
+            {
+                bool isAutorun = autorunPlugins.Contains(plugIn);
+                CreatePluginListItem(plugIn.PluginName, plugIn.PluginIcon, isAutorun);
+            }
+        }
+
+        private void CreatePluginListItem(string nameOfPlugin, string pathOfIcon, bool autoRun)
         {
             ListViewItem item = new ListViewItem();
             item.Focusable = false;
@@ -781,21 +816,33 @@ namespace EmuSak_Revive.GUI_WPF
             stackPanel.Orientation = System.Windows.Controls.Orientation.Horizontal;
             stackPanel.HorizontalAlignment = HorizontalAlignment.Right;
 
-            /*ToggleSwitch toggleSwitch = new ToggleSwitch();
-            toggleSwitch.Name = nameOfPlugin;*/
+            ToggleSwitch toggleSwitch = new ToggleSwitch();
+            toggleSwitch.Name = nameOfPlugin;
+            toggleSwitch.IsChecked = autoRun;
+            toggleSwitch.Checked += AutoRun_SwitchChecked;
+            toggleSwitch.Unchecked += AutoRun_SwitchUnchecked;
 
             TextBlock toggleTextBlock = new TextBlock();
             toggleTextBlock.Text = "Launch on Startup";
-            //toggleSwitch.Content = toggleTextBlock;
-            //stackPanel.Children.Add(toggleSwitch);
+            toggleSwitch.Content = toggleTextBlock;
 
-            Wpf.Ui.Controls.Button button = new Wpf.Ui.Controls.Button();
-            button.Content = "Launch Plugin";
-            button.Icon = Wpf.Ui.Common.SymbolRegular.PlugConnected24;
-            button.Margin = new Thickness(10, 0, 0, 0);
-            button.Name = nameOfPlugin;
-            button.Click += LaunchPluginButton_Click;
-            stackPanel.Children.Add(button);
+            Wpf.Ui.Controls.Button buttonStart = new Wpf.Ui.Controls.Button();
+            buttonStart.Content = "Launch Plugin";
+            buttonStart.Icon = Wpf.Ui.Common.SymbolRegular.PlayCircle24;
+            buttonStart.Margin = new Thickness(10, 0, 0, 0);
+            buttonStart.Name = nameOfPlugin;
+            buttonStart.Click += LaunchPluginButton_Click;
+
+            Wpf.Ui.Controls.Button buttonStop = new Wpf.Ui.Controls.Button();
+            buttonStop.Content = "Stop Plugin";
+            buttonStop.Icon = Wpf.Ui.Common.SymbolRegular.Stop24;
+            buttonStop.Margin = new Thickness(10, 0, 0, 0);
+            buttonStop.Name = nameOfPlugin;
+            buttonStop.Click += StopPluginButton_Click;
+
+            stackPanel.Children.Add(toggleSwitch);
+            stackPanel.Children.Add(buttonStop);
+            stackPanel.Children.Add(buttonStart);
 
             Grid.SetColumn(infoStackPanel, 0);
             Grid.SetColumn(stackPanel, 1);
@@ -807,17 +854,55 @@ namespace EmuSak_Revive.GUI_WPF
             Plugins_ListView.Items.Add(item);
         }
 
+        private void AutoRun_SwitchUnchecked(object sender, RoutedEventArgs e)
+        {
+            var ts = (ToggleSwitch)sender;
+            autorunPlugins.Remove(GetPluginByName(ts.Name));
+        }
+
+        private void AutoRun_SwitchChecked(object sender, RoutedEventArgs e)
+        {
+            var ts = (ToggleSwitch)sender;
+            autorunPlugins.Add(GetPluginByName(ts.Name));
+        }
+
+        private void ChangePluginState(Plugin plugin, bool state)
+        {
+            if (state)
+            {
+                if (plugin.IsRunning) return;
+                plugin.ExecutePlugin();
+                return;
+            }
+
+            plugin.StopPlugin();
+        }
+
+        private Plugin GetPluginByName(string nameOfPlugin)
+        {
+            foreach (var item in plugins)
+            {
+                if (item.PluginName == nameOfPlugin)
+                {
+                    return item;
+                }
+            }
+
+            return null;
+        }
+
         private void LaunchPluginButton_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as Wpf.Ui.Controls.Button;
 
-            foreach (var item in plugins)
-            {
-                if (item.PluginName == btn.Name)
-                {
-                    item.ExecutePlugin();
-                }
-            }
+            ChangePluginState(GetPluginByName(btn.Name), true);
+        }
+
+        private void StopPluginButton_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Wpf.Ui.Controls.Button;
+
+            ChangePluginState(GetPluginByName(btn.Name), false);
         }
     }
 }

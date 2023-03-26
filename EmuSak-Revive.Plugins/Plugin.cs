@@ -4,12 +4,29 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Security.Permissions;
 using System.Threading;
 
 namespace EmuSak_Revive.Plugins
 {
     public class Plugin
     {
+        private Thread _hookThread;
+
+        private bool _isRunning;
+
+        public bool IsRunning
+        {
+            get => _isRunning;
+            set
+            {
+                if (value != _isRunning)
+                {
+                    _isRunning = value;
+                }
+            }
+        }
+
         private string _pluginName;
 
         public string PluginName
@@ -192,13 +209,20 @@ namespace EmuSak_Revive.Plugins
             Parameters = objects.ToArray();
         }
 
+        public void StopPlugin()
+        {
+            IsRunning = false;
+            _hookThread.Abort();
+        }
+
         public void ExecutePlugin()
         {
+            IsRunning = true;
             try
             {
-                Thread hookTr = new Thread(HookPlugin);
-                hookTr.SetApartmentState(ApartmentState.STA);
-                hookTr.Start();
+                _hookThread = new Thread(HookPlugin);
+                _hookThread.SetApartmentState(ApartmentState.STA);
+                _hookThread.Start();
             }
             catch (Exception)
             {

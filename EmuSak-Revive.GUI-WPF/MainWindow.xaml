@@ -742,9 +742,13 @@
                                                     <TextBlock Text="Launch on Startup" />
                                                 </ui:ToggleSwitch>
 
+                                                <ui:Button Content="Stop Plugin"
+                                                           Icon="Stop24"
+                                                           Margin="10 0 0 0" />
+
                                                 <ui:Button Content="Launch Plugin"
-                                                       Icon="PlugConnected24"
-                                                       Margin="10 0 0 0" />
+                                                           Icon="PlugConnected24"
+                                                           Margin="10 0 0 0" />
                                             </StackPanel>
                                         </Grid>
                                     </ui:Card>
