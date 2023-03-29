@@ -1,16 +1,9 @@
 ﻿using EmuSak_Revive.ConfigIni.Core;
 using EmuSak_Revive.GUI_WPF.ExtraWindows;
-using log4net;
-using log4net.Repository.Hierarchy;
 using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace EmuSak_Revive.GUI_WPF
@@ -56,7 +49,6 @@ namespace EmuSak_Revive.GUI_WPF
         {
             //What happens when an exception was raised
             Exception e = (Exception)args.ExceptionObject;
-            //MessageBox.Show("MyHandler caught : " + e.Message + "\n" + "Runtime terminating: " + args.IsTerminating);
 
             ExceptionTranslater el = new ExceptionTranslater(e);
             System.Threading.Thread t = new System.Threading.Thread(el.Translate);

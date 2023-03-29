@@ -1,7 +1,6 @@
 ﻿using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.Emulators;
 using EmuSak_Revive.Network;
-using Glumboi.UI.Toast;
 using System.Windows;
 using System.Windows.Media;
 using Wpf.Ui.Controls;
@@ -133,7 +132,7 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
                 EmuShader.InstallShader(MainWindow.EmuConfig, Networking.GetShaderDownload(gameName), gameId);
                 return;
             }
-            ToastHandler.ShowToast($"There is no shader available for {gameName} at the moment.", "Info");
+            Networking.ShowNotification($"There is no shader available for {gameName} at the moment.");
             //  ^
             //  |
             //Sends message if game exists in paste but the url is not valid

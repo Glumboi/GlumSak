@@ -25,7 +25,6 @@ using System.Web.UI.WebControls;
 using System.Threading.Tasks;
 using EmuSak_Revive.Plugins;
 using System.Windows.Media.Imaging;
-using log4net.Plugin;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -63,12 +62,14 @@ namespace EmuSak_Revive.GUI_WPF
 
         private string firmwareToDownload = string.Empty;
         private string autorunFile = "./AutorunPlugins.txt";
+        private IntPtr windowHandle;
 
         #endregion Private local variables
 
         public MainWindow()
         {
             InitializeComponent();
+            windowHandle = new WindowInteropHelper(this).Handle;
         }
 
         private void UiWindow_Loaded(object sender, RoutedEventArgs e)
@@ -82,7 +83,6 @@ namespace EmuSak_Revive.GUI_WPF
             Networking.DownloadProgressBar = Download_ProgressBar;
             Networking.DownloadProgressText = DownloadProgress_TextBlock;
             Progress_Border.Visibility = Visibility.Collapsed;
-            Networking.MainWindowHandle = new WindowInteropHelper(this).Handle;
 
             LoadFirmwares();
             CheckShaderUrl(); //--> Checks if a valid paste is entered
@@ -718,12 +718,17 @@ namespace EmuSak_Revive.GUI_WPF
 
             foreach (var item in autorunPlugins)
             {
-                item.ExecutePlugin();
+                if (item != null)
+                {
+                    item.ExecutePlugin();
+                }
             }
         }
 
         private void LoadPlugins()
         {
+            windowHandle = new WindowInteropHelper(this).Handle;
+
             if (!Properties.Settings.Default.AllowPlugins)
             {
                 Plugins_Tab.Visibility = Visibility.Collapsed;
@@ -741,12 +746,13 @@ namespace EmuSak_Revive.GUI_WPF
                     string[] files = Directory.GetFiles(item);
                     string pathOfPlugin = string.Empty;
                     string iniOfPlugin = string.Empty;
+                    List<string> dllPaths = new List<string>();
 
                     foreach (string file in files)
                     {
                         if (file.Contains(".dll"))
                         {
-                            pathOfPlugin = file;
+                            dllPaths.Add(file);
                         }
 
                         if (file.Contains(".ini"))
@@ -755,7 +761,7 @@ namespace EmuSak_Revive.GUI_WPF
                         }
                     }
 
-                    Plugin plugIn = new Plugin(pathOfPlugin, iniOfPlugin);
+                    Plugin plugIn = new Plugin(windowHandle, dllPaths, iniOfPlugin);
                     plugins.Add(plugIn);
                 }
                 LoadAutorunPlugins();
@@ -870,7 +876,6 @@ namespace EmuSak_Revive.GUI_WPF
         {
             if (state)
             {
-                if (plugin.IsRunning) return;
                 plugin.ExecutePlugin();
                 return;
             }
