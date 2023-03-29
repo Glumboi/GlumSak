@@ -1,10 +1,8 @@
 ﻿using EmuSak_Revive.ConfigIni.Core;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Security.Permissions;
 using System.Threading;
 
 namespace EmuSak_Revive.Plugins
@@ -23,6 +21,20 @@ namespace EmuSak_Revive.Plugins
                 if (value != _isRunning)
                 {
                     _isRunning = value;
+                }
+            }
+        }
+
+        private IntPtr _mainWindowHandle;
+
+        public IntPtr MainWindowHandle
+        {
+            get => _mainWindowHandle;
+            set
+            {
+                if (value != _mainWindowHandle)
+                {
+                    _mainWindowHandle = value;
                 }
             }
         }
@@ -153,21 +165,27 @@ namespace EmuSak_Revive.Plugins
             }
         }
 
+        private List<string> _possiblePahts = new List<string>();
+
         private IniParser iniParser;
 
-        public Plugin(string locationOfPlugin, string iniLocation)
+        public Plugin(IntPtr mainWindowHandle, List<string> possiblePaths, string iniLocation)
         {
-            DllPath = locationOfPlugin;
+            _possiblePahts = possiblePaths;
+            MainWindowHandle = mainWindowHandle;
             IniPath = iniLocation;
 
             iniParser = new IniParser(IniPath);
 
             LoadPluginName();
-            LoadPluginIcon();
             LoadEntryPoint();
             LoadClass();
             LoadNamespace();
             LoadParams();
+
+            GetRightDll();
+
+            LoadPluginIcon();
         }
 
         private void LoadPluginName()
@@ -217,7 +235,15 @@ namespace EmuSak_Revive.Plugins
 
         public void ExecutePlugin()
         {
+            if (IsRunning)
+            {
+                StopPlugin();
+                ExecutePlugin();
+                return;
+            }
+
             IsRunning = true;
+
             try
             {
                 _hookThread = new Thread(HookPlugin);
@@ -230,17 +256,29 @@ namespace EmuSak_Revive.Plugins
             }
         }
 
+        private Type _entrypointType;
+
+        private void GetRightDll()
+        {
+            foreach (var item in _possiblePahts)
+            {
+                Assembly assembly = Assembly.LoadFile(item);
+                Type type = assembly.GetType($"{EntryPointClassNameSpace}.{EntryPointClass}");
+                if (type != null)
+                {
+                    DllPath = item;
+                    _entrypointType = type;
+                }
+            }
+        }
+
         private void HookPlugin()
         {
-            string dllFile = DllPath;
-
-            Debug.WriteLine("Loading Plugin: " + dllFile);
-            Assembly assembly = Assembly.LoadFile(dllFile);
-            Type type = assembly.GetType($"{EntryPointClassNameSpace}.{EntryPointClass}");
+            Type type = _entrypointType;
             object obj = Activator.CreateInstance(type);
             MethodInfo method = type.GetMethod(EntryPoint);
 
-            PlugInResult = method.Invoke(obj, new object[] { Parameters });
+            PlugInResult = method.Invoke(obj, new object[] { MainWindowHandle, Parameters });
         }
     }
 }

@@ -26,13 +26,12 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <ui:TitleBar
-            x:Name="TitleBar"
-            Title="GameActionsWindow"
-            UseSnapLayout="True"
-            ShowMaximize="False"
-            CanMaximize="False"
-            Icon="/Assets/Icon.png" />
+        <ui:TitleBar x:Name="TitleBar"
+                     Title="GameActionsWindow"
+                     UseSnapLayout="True"
+                     ShowMaximize="False"
+                     CanMaximize="False"
+                     Icon="/Assets/Icon.png" />
 
         <Border Padding="5" Grid.Row="1">
             <Grid Grid.Row="1">
