@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "dotnet",
+            "name": "Main",
+            "projectPath": "D:/Github/GlumSak/EmuSak-Revive.GUI-WPF/EmuSak-Revive.GUI-WPF.csproj",
+            "exePath": "D:/Github/GlumSak/EmuSak-Revive.GUI-WPF/bin/Debug/GlumSak.exe",
+            "args": [],
+        },
+    ]
+}
