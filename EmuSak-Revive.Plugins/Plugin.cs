@@ -247,6 +247,7 @@ namespace EmuSak_Revive.Plugins
             try
             {
                 _hookThread = new Thread(HookPlugin);
+                _hookThread.Name = PluginName + " {Thread}";
                 _hookThread.SetApartmentState(ApartmentState.STA);
                 _hookThread.Start();
             }

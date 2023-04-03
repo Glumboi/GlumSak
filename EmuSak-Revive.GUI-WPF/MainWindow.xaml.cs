@@ -843,7 +843,7 @@ namespace EmuSak_Revive.GUI_WPF
             buttonStop.Content = "Stop Plugin";
             buttonStop.Icon = Wpf.Ui.Common.SymbolRegular.Stop24;
             buttonStop.Margin = new Thickness(10, 0, 0, 0);
-            buttonStop.Name = nameOfPlugin;
+            buttonStop.Name = $"Stop{nameOfPlugin}_Button";
             buttonStop.Click += StopPluginButton_Click;
 
             stackPanel.Children.Add(toggleSwitch);
