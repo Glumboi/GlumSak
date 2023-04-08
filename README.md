@@ -10,7 +10,7 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 
 # News
 
- - Updates may slow down, working on GlumSak and irl stress
+ - Updates may slow down, working on GlumSak3 and irl stress
 
 [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=GlumSak)](https://github.com/gazf/github-readme-twitter)
   
