@@ -10,6 +10,8 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 
 # News
 
+ - Updates may slow down, working on GlumSak and irl stress
+
 [![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=GlumSak)](https://github.com/gazf/github-readme-twitter)
   
 [![Glumboi - GlumSak](https://img.shields.io/static/v1?label=Glumboi&message=GlumSak&color=blue&logo=github)](https://github.com/Glumboi/GlumSak "Go to GitHub repo")
