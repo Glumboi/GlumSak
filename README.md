@@ -24,7 +24,7 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 [![issues - GlumSak](https://img.shields.io/github/issues/Glumboi/GlumSak)](https://github.com/Glumboi/GlumSak/issues)
 
 
-<div align="center">
+
 
 # Restart is recommended after install
           
