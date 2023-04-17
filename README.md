@@ -47,7 +47,10 @@ by buying me a server to test around with and for having such a cool community.
   - To select a portable install open the settings with the button on the left and select the folder of the portable Yuzu/Ryujinx make sure you select the folder that contains the filesystem folders and files, for Ryu it would be called "portable" and for Yuzu it's "user" then restart the app 
   
 # Create your own paste
-  [Click me to learn how to create pastes!](https://github.com/Glumboi/GlumSak-PasteCreator#how-to-use)
+  - Pastes can be easily created using the official PasteCreator-Plugin
+  - Pastes do NOT contain pirated contents rather point to links, creators of pastes and I do not take responsibility for any copyright violations. 
+  - Everything is for educational use!
+  - Pastes follow this syntax: nameOfTheGame=https://directDownloadLink.zip | shadercount (a number)
   
 # Future plans
   [Roadmap](https://trello.com/b/NgcOhYhr/glumsak-road-map)
