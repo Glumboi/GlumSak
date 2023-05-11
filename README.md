@@ -35,12 +35,6 @@ This project originally was a joke and I never thought that I'll do this some da
 This project is highly inspired from emusak-ui  by CapitaineJSparrow. With the difference 
 that I did all the things from ground up myself. This is probably my biggest and most 
 time consuming project, but I really enjoy developing it. 
-
-A special thanks to all the people in Sin's cove that motivated me over the past 1-2 weeks 
-making this project happen.
-
-And another special thanks to Sin himself for supporting me and this project
-by buying me a server to test around with and for having such a cool community.
   
 # What can it do?
   - Install keys, shaders and firmwares to yuzu (shader not supported currently) and ryu with only a few clicks!
