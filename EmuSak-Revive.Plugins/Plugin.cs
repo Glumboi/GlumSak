@@ -229,8 +229,8 @@ namespace EmuSak_Revive.Plugins
 
         public void StopPlugin()
         {
-            IsRunning = false;
             _hookThread.Abort();
+            IsRunning = false;
         }
 
         public void ExecutePlugin()

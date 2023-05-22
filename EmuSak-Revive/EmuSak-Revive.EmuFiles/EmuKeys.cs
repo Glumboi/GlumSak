@@ -11,10 +11,7 @@ namespace EmuSak_Revive.EmuFiles
 {
     public class EmuKeys
     {
-        public Form DownloadFinishedForm { get; private set; }
-
-        private static string keysUrl = @"https://drive.google.com/file/d/1bN9tg5HbfTCKPXAJaJmDdwP-XJsoMxjX/view?usp=sharing"; //Old/for google drive
-        private static string keysServerUrl = Networking.GetShaderDownload("titlekeys"); //@"https://phoebe.feralhosting.com/carltschober/links/GlussySac/Keys_Switch/SwitchKeys.zip";
+        private static string keysServerUrl = Networking.GetShaderDownload("titlekeys");
 
         private static void RunDownLoad(string filePath, string destination)
         {
@@ -36,12 +33,12 @@ namespace EmuSak_Revive.EmuFiles
 
         public static void InstallKeys(int config, bool portable)
         {
-            keysServerUrl = Networking.GetShaderDownload("titlekeys"); //So the link refreshes if user changed the paste
+            keysServerUrl = Networking.GetShaderDownload("titlekeys");
             var temp = Path.GetTempPath();
             var filePath = temp + "tempKeys.Sak";
 
-            try
-            {
+            //try
+            //{
                 switch (config)
                 {
                     case 0 when portable:
@@ -60,11 +57,11 @@ namespace EmuSak_Revive.EmuFiles
                         DownLoadKeys(filePath, Ryujinx.KeysLoc);
                         break;
                 }
-            }
-            catch (System.Exception)
+            //}
+            /*catch (System.Exception)
             {
                 Networking.ShowNotification("Could not install keys, make sure your paste is right!", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
-            }
+            }*/
         }
     }
 }

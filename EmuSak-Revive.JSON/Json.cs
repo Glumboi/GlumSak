@@ -18,10 +18,9 @@ namespace EmuSak_Revive.JSON
             return JsonConvert.SerializeObject(parsedJson, Newtonsoft.Json.Formatting.Indented);
         }
 
-        private static List<string> CreateNsuIdsFile(string URL)
+        private static IEnumerable<string> CreateNsuIdsFile(string URL)
         {
             Regex nsuIdRegex = new Regex(@"""nsuId"": (\d+)");
-            List<string> nsuIds = new List<string>();
 
             using (WebClient client = new WebClient())
             using (Stream stream = client.OpenRead(URL))
@@ -32,26 +31,22 @@ namespace EmuSak_Revive.JSON
                     string line = reader.ReadLine();
                     if (line == null)
                     {
-                        break;
+                        yield break;
                     }
 
                     var match = nsuIdRegex.Match(line);
                     if (match.Success)
                     {
-                        nsuIds.Add(match.Groups[1].Value);
+                        yield return match.Groups[1].Value;
                     }
                 }
             }
-
-            File.WriteAllLines("./Json/nsuIds.txt", nsuIds);
-            return nsuIds;
         }
 
         public static void Run(string URL)
         {
             CreateNsuIdsFile(URL);
             GameMeta.DownloadGameMeta();
-            //RunJsonPython();
         }
 
         private static void RunJsonPython() //Starts our Json.exe which gathers json info from a titledb

@@ -25,6 +25,8 @@ using System.Web.UI.WebControls;
 using System.Threading.Tasks;
 using EmuSak_Revive.Plugins;
 using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using System.Drawing;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -277,19 +279,12 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void Filter_TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            IEnumerable<System.Windows.Controls.Button> buttons = Games_Panel.Children.OfType<System.Windows.Controls.Button>();
-            foreach (var btn in buttons)
-            {
-                string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString();
+            var gameButtons = Games_Panel.Children.OfType<System.Windows.Controls.Button>();
+            var visibilities = Filtering.Buttons.GetButtonsToHide(gameButtons, Filter_TextBox.Text);
 
-                if (!gameName.ToLower().Contains(Filter_TextBox.Text.ToLower()))
-                {
-                    btn.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    btn.Visibility = Visibility.Visible;
-                }
+            for (int i = 0; i < visibilities.Count(); i++)
+            {
+                gameButtons.ElementAt(i).Visibility = visibilities.ElementAt(i);
             }
         }
 
@@ -311,55 +306,32 @@ namespace EmuSak_Revive.GUI_WPF
             Firmware_ComboBox.SelectedIndex = 0;
         }
 
+        private System.Windows.Controls.Button CreateGameButtonFromMetaLine(string line)
+        {
+            string fileGameID = line.Split('\"')[3];
+            string icon = line.Split('\"')[1];
+            string gameId = fileGameID.Split('|')[0];
+            string gameName = line.Split('\"')[5];
+            SwitchGame game = new SwitchGame(gameName, gameId, icon);
+            switchGames.Add(game);
+
+            ids.Add(fileGameID);
+            names.Add(gameName);
+            return CreateButton(game);
+        }
+
         private void LoadGamesToUI(int config)
         {
-            List<System.Drawing.Image> images = new List<System.Drawing.Image>();
-            List<string> names = new List<string>();
-            List<string> ids = new List<string>();
-
             string[] fileLines = File.ReadAllLines("./Json/gameIcons_Ids.txt");
 
             foreach (var line in fileLines)
             {
-                if (!line.Contains("null"))
+                foreach (var game in config == 0 ? Yuzu.Games : Ryujinx.Games)
                 {
-                    string fileGameID = line.Split('\"')[3];
-                    string icon = line.Split('\"')[1];
-                    string gameId = fileGameID.Split('|')[0];
-                    string gameName = line.Split('\"')[5];
-                    System.Windows.Controls.Button currentBtn = new System.Windows.Controls.Button();
-                    //string cleaned = UnicodeDecoder.Decoder(gameNameRaw); --> Deactivated due to being somewhat obsolete
+                    if (!line.Contains(game)) continue;
 
-                    bool condition = false;
-                    if (config == 0)
-                    {
-                        condition = Yuzu.Games.Contains(gameId);
-                    }
-                    if (config == 1)
-                    {
-                        condition = Ryujinx.Games.Contains(gameId);
-                    }
-
-                    if (condition)
-                    {
-                        SwitchGame game = new SwitchGame(gameName, gameId, icon);
-
-                        currentBtn = CreateButton(game);
-
-                        imageButtons.Add(currentBtn);
-                        switchGames.Add(game);
-                    }
+                    imageButtons.Add(CreateGameButtonFromMetaLine(line));
                 }
-            }
-
-            foreach (var item in imageButtons)
-            {
-                string gameID = item.Tag.GetType().GetProperty("GameName").GetValue(item.Tag, null).ToString();
-                string gameName = item.Tag.GetType().GetProperty("GameID").GetValue(item.Tag, null).ToString();
-
-                images.Add(Extensions.Imaging.ConvertButtonImageToSystemImage(item));
-                ids.Add(gameID);
-                names.Add(gameName);
             }
             GlumSakCache.CreateGlumSakCache(switchGames, config);
         }

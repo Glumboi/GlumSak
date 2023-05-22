@@ -2,7 +2,6 @@
 using System.IO;
 using EmuSak_Revive.Network;
 using System.Threading.Tasks;
-using System.Threading;
 
 namespace EmuSak_Revive.EmuFiles
 {
@@ -47,10 +46,10 @@ namespace EmuSak_Revive.EmuFiles
             var fileName = Temporary.TempPath + $"tempFirmware.Sak";
             bool portable = Ryujinx.PortableRyujinx;
 
-            //Network.GDriveDownloader downloader = new Network.GDriveDownloader();
-            //downloader.DownloadFile(url, fileName);
-
-            Task.Run(() => { RunRyuDownloadAsync(fileName, portable ? portableFirmwareLoc : firmwareLoc, url); });
+            Task.Run(() =>
+            {
+                RunRyuDownload(fileName, portable ? portableFirmwareLoc : firmwareLoc, url);
+            });
         }
 
         private static void RyuFirmwareExtraction(string path)
@@ -76,24 +75,22 @@ namespace EmuSak_Revive.EmuFiles
             }
         }
 
-        private static async void RunRyuDownloadAsync(string fileName, string destination, string url)
+        private static async void RunRyuDownload(string fileName, string destination, string url)
         {
             Networking.DownloadAFileFromServer(url, fileName, destination);
-            while (!Networking.DownloadDone)
+            while (!Networking.DownloadDone) { }
+
+            await Task.Run(() =>
             {
-                await Task.Delay(1500);
-            }
-            UninstallOldFirmware(destination);
-            RyuFirmwareExtraction(destination);
+                UninstallOldFirmware(destination);
+                RyuFirmwareExtraction(destination);
+            });
         }
 
         private static void InstallYuzuFirmware(string url)
         {
             var firmwareLoc = Yuzu.FirmwareLoc;
             var fileName = Temporary.TempPath + $"tempFirmware.Sak";
-
-            //Network.GDriveDownloader downloader = new Network.GDriveDownloader();
-            //downloader.DownloadFile(url, fileName);
 
             Task.Run(() =>
             {
