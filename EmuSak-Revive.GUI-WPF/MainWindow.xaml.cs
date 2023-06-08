@@ -19,12 +19,14 @@ using EmuSak_Revive.EmuFiles;
 using EmuSak_Revive.JSON;
 
 using Wpf.Ui.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Media.Animation;
-using System.Web.UI.WebControls;
-using System.Threading.Tasks;
+using System.Windows.Media.Effects;
 using EmuSak_Revive.Plugins;
 using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+using EmuSak_Revive.GUI_WPF.PluginExtra;
+using Wpf.Ui.Appearance;
+using EmuSak_Revive.GUI_WPF.CustomControls;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -53,8 +55,6 @@ namespace EmuSak_Revive.GUI_WPF
         private List<string> firmwareVersions = new List<string>();
         private List<SwitchGame> switchGames = new List<SwitchGame>();
         private List<System.Windows.Controls.Button> imageButtons = new List<System.Windows.Controls.Button>();
-        private List<Plugin> plugins = new List<Plugin>();
-        private List<Plugin> autorunPlugins = new List<Plugin>();
 
         #endregion List variables
 
@@ -150,7 +150,7 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void CreatePluginAutorunFile()
         {
-            List<string> pluginNames = autorunPlugins.Select(s => s.PluginName).ToList();
+            List<string> pluginNames = PluginHelpers.autorunPlugins.Select(s => s.PluginName).ToList();
             File.Delete(autorunFile);
             File.WriteAllLines(autorunFile, pluginNames);
         }
@@ -261,35 +261,14 @@ namespace EmuSak_Revive.GUI_WPF
             UpdateYuzu();
         }
 
-        private void GameButton_Click(object sender, RoutedEventArgs e)
-        {
-            System.Windows.Controls.Button btn = (System.Windows.Controls.Button)sender;
-            string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString(); //Get GameName from Button
-
-            foreach (var item in switchGames)
-            {
-                if (item.GameName == gameName)
-                {
-                    ShowGameActionsWindow(item);
-                }
-            }
-        }
-
         private void Filter_TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            IEnumerable<System.Windows.Controls.Button> buttons = Games_Panel.Children.OfType<System.Windows.Controls.Button>();
-            foreach (var btn in buttons)
-            {
-                string gameName = btn.Tag.GetType().GetProperty("GameName").GetValue(btn.Tag, null).ToString();
+            var gameButtons = Games_Panel.Children.OfType<GameButton>();
+            var visibilities = Filtering.Buttons.GetButtonsToHide(gameButtons, Filter_TextBox.Text);
 
-                if (!gameName.ToLower().Contains(Filter_TextBox.Text.ToLower()))
-                {
-                    btn.Visibility = Visibility.Collapsed;
-                }
-                else
-                {
-                    btn.Visibility = Visibility.Visible;
-                }
+            for (int i = 0; i < visibilities.Count(); i++)
+            {
+                gameButtons.ElementAt(i).Visibility = visibilities.ElementAt(i);
             }
         }
 
@@ -311,55 +290,32 @@ namespace EmuSak_Revive.GUI_WPF
             Firmware_ComboBox.SelectedIndex = 0;
         }
 
+        private System.Windows.Controls.Button CreateGameButtonFromMetaLine(string line)
+        {
+            string fileGameID = line.Split('\"')[3];
+            string icon = line.Split('\"')[1];
+            string gameId = fileGameID.Split('|')[0];
+            string gameName = line.Split('\"')[5];
+            SwitchGame game = new SwitchGame(gameName, gameId, icon);
+            switchGames.Add(game);
+
+            ids.Add(fileGameID);
+            names.Add(gameName);
+            return CreateButton(game);
+        }
+
         private void LoadGamesToUI(int config)
         {
-            List<System.Drawing.Image> images = new List<System.Drawing.Image>();
-            List<string> names = new List<string>();
-            List<string> ids = new List<string>();
-
             string[] fileLines = File.ReadAllLines("./Json/gameIcons_Ids.txt");
 
             foreach (var line in fileLines)
             {
-                if (!line.Contains("null"))
+                foreach (var game in config == 0 ? Yuzu.Games : Ryujinx.Games)
                 {
-                    string fileGameID = line.Split('\"')[3];
-                    string icon = line.Split('\"')[1];
-                    string gameId = fileGameID.Split('|')[0];
-                    string gameName = line.Split('\"')[5];
-                    System.Windows.Controls.Button currentBtn = new System.Windows.Controls.Button();
-                    //string cleaned = UnicodeDecoder.Decoder(gameNameRaw); --> Deactivated due to being somewhat obsolete
+                    if (!line.Contains(game)) continue;
 
-                    bool condition = false;
-                    if (config == 0)
-                    {
-                        condition = Yuzu.Games.Contains(gameId);
-                    }
-                    if (config == 1)
-                    {
-                        condition = Ryujinx.Games.Contains(gameId);
-                    }
-
-                    if (condition)
-                    {
-                        SwitchGame game = new SwitchGame(gameName, gameId, icon);
-
-                        currentBtn = CreateButton(game);
-
-                        imageButtons.Add(currentBtn);
-                        switchGames.Add(game);
-                    }
+                    imageButtons.Add(CreateGameButtonFromMetaLine(line));
                 }
-            }
-
-            foreach (var item in imageButtons)
-            {
-                string gameID = item.Tag.GetType().GetProperty("GameName").GetValue(item.Tag, null).ToString();
-                string gameName = item.Tag.GetType().GetProperty("GameID").GetValue(item.Tag, null).ToString();
-
-                images.Add(Extensions.Imaging.ConvertButtonImageToSystemImage(item));
-                ids.Add(gameID);
-                names.Add(gameName);
             }
             GlumSakCache.CreateGlumSakCache(switchGames, config);
         }
@@ -376,39 +332,9 @@ namespace EmuSak_Revive.GUI_WPF
 
         private System.Windows.Controls.Button CreateButton(SwitchGame game, System.Drawing.Image btnImage = null)
         {
-            ImageSource imgSrc = null;
-
-            imgSrc = game.GameImageSource;
-
-            System.Windows.Controls.Image btnImg = new System.Windows.Controls.Image();
-            btnImg.Source = imgSrc;
-
-            System.Windows.Controls.Button btn = new System.Windows.Controls.Button
-            {
-                Width = 24,
-                Height = 24,
-                Content = btnImg
-            };
-
-            Thickness m = btn.Margin;
-
-            //Set Button margin
-            m.Left = 4;
-            m.Right = 4;
-            m.Top = 4;
-            m.Bottom = 4;
-
-            btn.RenderSize = new System.Windows.Size(150, 150);
-            btn.Height = 150;
-            btn.Width = 150;
-            btn.Margin = m;
-            btn.Tag = new { GameName = game.GameName, GameID = game.GameID };
-            btn.RenderTransform = new TranslateTransform();
-
-            btn.Click += GameButton_Click;
-
-            Games_Panel.Children.Add(btn);
-            return btn;
+            var gameBtn = new GameButton(game);
+            Games_Panel.Children.Add(gameBtn);
+            return gameBtn;
         }
 
         public void LoadPortableEmus()
@@ -713,10 +639,10 @@ namespace EmuSak_Revive.GUI_WPF
 
             foreach (var line in File.ReadAllLines(autorunFile))
             {
-                autorunPlugins.Add(GetPluginByName(line));
+                PluginHelpers.autorunPlugins.Add(PluginHelpers.GetPluginByName(line));
             }
 
-            foreach (var item in autorunPlugins)
+            foreach (var item in PluginHelpers.autorunPlugins)
             {
                 if (item != null)
                 {
@@ -740,29 +666,9 @@ namespace EmuSak_Revive.GUI_WPF
 
             if (Directory.Exists(pluginsLocation))
             {
-                string[] dirs = Directory.GetDirectories(pluginsLocation);
-                foreach (string item in dirs)
+                foreach (Plugin plugin in PluginHelpers.GetPlugins(pluginsLocation, windowHandle))
                 {
-                    string[] files = Directory.GetFiles(item);
-                    string pathOfPlugin = string.Empty;
-                    string iniOfPlugin = string.Empty;
-                    List<string> dllPaths = new List<string>();
-
-                    foreach (string file in files)
-                    {
-                        if (file.Contains(".dll"))
-                        {
-                            dllPaths.Add(file);
-                        }
-
-                        if (file.Contains(".ini"))
-                        {
-                            iniOfPlugin = file;
-                        }
-                    }
-
-                    Plugin plugIn = new Plugin(windowHandle, dllPaths, iniOfPlugin);
-                    plugins.Add(plugIn);
+                    PluginHelpers.plugins.Add(plugin);
                 }
                 LoadAutorunPlugins();
                 CreatePluginListItems();
@@ -771,143 +677,22 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void CreatePluginListItems()
         {
-            foreach (Plugin plugIn in plugins)
+            foreach (Plugin plugin in PluginHelpers.plugins)
             {
-                bool isAutorun = autorunPlugins.Contains(plugIn);
-                CreatePluginListItem(plugIn.PluginName, plugIn.PluginIcon, isAutorun);
+                bool isAutorun = PluginHelpers.autorunPlugins.Contains(plugin);
+                CreatePluginListItem(plugin, isAutorun);
             }
         }
 
-        private void CreatePluginListItem(string nameOfPlugin, string pathOfIcon, bool autoRun)
+        private void CreatePluginListItem(Plugin plugin, bool autoRun)
         {
             ListViewItem item = new ListViewItem();
             item.Focusable = false;
             item.Visibility = Visibility.Visible;
 
-            Card card = new Card();
-            Grid grid = new Grid();
-            grid.ColumnDefinitions.Add(new ColumnDefinition());
-            grid.ColumnDefinitions.Add(new ColumnDefinition());
-
-            StackPanel infoStackPanel = new StackPanel();
-            infoStackPanel.Orientation = System.Windows.Controls.Orientation.Horizontal;
-
-            System.Windows.Controls.Image image = new System.Windows.Controls.Image();
-            image.Margin = new Thickness(0, 0, 10, 0);
-            image.Height = 35;
-            image.Width = 35;
-
-            if (File.Exists(pathOfIcon))
-            {
-                BitmapImage bitmap = new BitmapImage();
-                bitmap.BeginInit();
-                bitmap.UriSource = new Uri(pathOfIcon);
-                bitmap.EndInit();
-                image.Source = bitmap;
-            }
-            else
-            {
-                image.Visibility = Visibility.Collapsed;
-            }
-
-            infoStackPanel.Children.Add(image);
-
-            TextBlock textBlock = new TextBlock();
-            textBlock.Text = nameOfPlugin;
-            textBlock.VerticalAlignment = VerticalAlignment.Center;
-            textBlock.FontWeight = FontWeights.Bold;
-            infoStackPanel.Children.Add(textBlock);
-
-            StackPanel stackPanel = new StackPanel();
-            stackPanel.Orientation = System.Windows.Controls.Orientation.Horizontal;
-            stackPanel.HorizontalAlignment = HorizontalAlignment.Right;
-
-            ToggleSwitch toggleSwitch = new ToggleSwitch();
-            toggleSwitch.Name = nameOfPlugin;
-            toggleSwitch.IsChecked = autoRun;
-            toggleSwitch.Checked += AutoRun_SwitchChecked;
-            toggleSwitch.Unchecked += AutoRun_SwitchUnchecked;
-
-            TextBlock toggleTextBlock = new TextBlock();
-            toggleTextBlock.Text = "Launch on Startup";
-            toggleSwitch.Content = toggleTextBlock;
-
-            Wpf.Ui.Controls.Button buttonStart = new Wpf.Ui.Controls.Button();
-            buttonStart.Content = "Launch Plugin";
-            buttonStart.Icon = Wpf.Ui.Common.SymbolRegular.PlayCircle24;
-            buttonStart.Margin = new Thickness(10, 0, 0, 0);
-            buttonStart.Name = nameOfPlugin;
-            buttonStart.Click += LaunchPluginButton_Click;
-
-            Wpf.Ui.Controls.Button buttonStop = new Wpf.Ui.Controls.Button();
-            buttonStop.Content = "Stop Plugin";
-            buttonStop.Icon = Wpf.Ui.Common.SymbolRegular.Stop24;
-            buttonStop.Margin = new Thickness(10, 0, 0, 0);
-            buttonStop.Name = $"Stop{nameOfPlugin}_Button";
-            buttonStop.Click += StopPluginButton_Click;
-
-            stackPanel.Children.Add(toggleSwitch);
-            stackPanel.Children.Add(buttonStop);
-            stackPanel.Children.Add(buttonStart);
-
-            Grid.SetColumn(infoStackPanel, 0);
-            Grid.SetColumn(stackPanel, 1);
-            grid.Children.Add(infoStackPanel);
-            grid.Children.Add(stackPanel);
-
-            card.Content = grid;
+            var card = new PluginCard(plugin, autoRun);
             item.Content = card;
             Plugins_ListView.Items.Add(item);
-        }
-
-        private void AutoRun_SwitchUnchecked(object sender, RoutedEventArgs e)
-        {
-            var ts = (ToggleSwitch)sender;
-            autorunPlugins.Remove(GetPluginByName(ts.Name));
-        }
-
-        private void AutoRun_SwitchChecked(object sender, RoutedEventArgs e)
-        {
-            var ts = (ToggleSwitch)sender;
-            autorunPlugins.Add(GetPluginByName(ts.Name));
-        }
-
-        private void ChangePluginState(Plugin plugin, bool state)
-        {
-            if (state)
-            {
-                plugin.ExecutePlugin();
-                return;
-            }
-
-            plugin.StopPlugin();
-        }
-
-        private Plugin GetPluginByName(string nameOfPlugin)
-        {
-            foreach (var item in plugins)
-            {
-                if (item.PluginName == nameOfPlugin)
-                {
-                    return item;
-                }
-            }
-
-            return null;
-        }
-
-        private void LaunchPluginButton_Click(object sender, RoutedEventArgs e)
-        {
-            var btn = sender as Wpf.Ui.Controls.Button;
-
-            ChangePluginState(GetPluginByName(btn.Name), true);
-        }
-
-        private void StopPluginButton_Click(object sender, RoutedEventArgs e)
-        {
-            var btn = sender as Wpf.Ui.Controls.Button;
-
-            ChangePluginState(GetPluginByName(btn.Name), false);
         }
     }
 }

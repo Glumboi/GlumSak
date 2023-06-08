@@ -150,19 +150,27 @@ namespace EmuSak_Revive.Emulators
 
         #region Yuzu updater
 
-        public static void GetYuzuEABuilds()
+        private static IEnumerable<YuzuVersion> GetYuzuEABuilds(int limit)
         {
             List<string> linksToVisit = Networking.ParseLinks(@"https://pineappleea.github.io/");
 
             foreach (var item in linksToVisit)
             {
-                if (item.Contains("EA-") && versionsList.Count < 30) //Limit to 30 since more than that is
-                                                                     //useless and not shown by default with
-                                                                     //the Github API
+                if (item.Contains("EA-") && versionsList.Count < limit) //Limit to 30 since more than that is
+                                                                        //useless and not shown by default with
+                                                                        //the Github API
                 {
-                    versionsList.Add(item.Split('/').Last());
-                    versionLinks.Add(item);
+                    yield return new YuzuVersion(item, item.Split('/').Last());
                 }
+            }
+        }
+
+        public static void GetYuzuEABuilds()
+        {
+            foreach (var item in GetYuzuEABuilds(30))
+            {
+                versionsList.Add(item.VersionString);
+                versionLinks.Add(item.DirectDownloadURL);
             }
         }
 
@@ -192,7 +200,6 @@ namespace EmuSak_Revive.Emulators
 
                 while (string.IsNullOrEmpty(exeProcess.MainWindowTitle))
                 {
-                    Thread.Sleep(100);
                     exeProcess.Refresh();
                 }
 

@@ -21,6 +21,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;
 
 namespace EmuSak_Revive.GUI_WPF.ExtraWindows
@@ -37,6 +38,7 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
         public ConfigurationWindow()
         {
             InitializeComponent();
+            Accent.Apply(Accent.GetColorizationColor());
         }
 
         private void UiWindow_Loaded(object sender, RoutedEventArgs e)

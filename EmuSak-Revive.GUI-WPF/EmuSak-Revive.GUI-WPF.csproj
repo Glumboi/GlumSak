@@ -116,9 +116,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomControls\GameButton.xaml.cs">
+      <DependentUpon>GameButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PluginCard.xaml.cs">
+      <DependentUpon>PluginCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ColorExt.cs" />
+    <Compile Include="PluginExtra\PluginHelpers.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\GameButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\PluginCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ExtraWindows\AutoUpdateWindow.xaml">
       <SubType>Designer</SubType>
@@ -168,6 +186,7 @@
     <Compile Include="ExtraWindows\SaveManagerWindow.xaml.cs">
       <DependentUpon>SaveManagerWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Filtering\Buttons.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -209,7 +228,7 @@
       <Name>EmuSak-Revive.JSON</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmuSak-Revive.Plugins\EmuSak-Revive.Plugins.csproj">
-      <Project>{57968fbc-07c1-4752-af1e-70b979e015fa}</Project>
+      <Project>{57968FBC-07C1-4752-AF1E-70B979E015FA}</Project>
       <Name>EmuSak-Revive.Plugins</Name>
     </ProjectReference>
     <ProjectReference Include="..\EmuSak-Revive\EmuSak-Revive.ConfigIni\EmuSak-Revive.ConfigIni.csproj">

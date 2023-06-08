@@ -216,6 +216,7 @@
     <Compile Include="SwitchGame.cs" />
     <Compile Include="Yuzu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YuzuVersion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

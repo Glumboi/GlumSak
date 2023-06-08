@@ -42,6 +42,7 @@ namespace EmuSak_Revive.EmuFiles
                     return true;
                 }
             }
+
             return false;
         }
 
@@ -51,7 +52,10 @@ namespace EmuSak_Revive.EmuFiles
 
             if (IsGameIDEqualToShader(gameID))
             {
-                Task.Run(() => { Networking.DownloadAFileFromServer(url, fileName, lastCheckedGame); });
+                Task.Run(() =>
+                {
+                    Networking.DownloadAFileFromServer(url, fileName, lastCheckedGame);
+                });
             }
         }
 

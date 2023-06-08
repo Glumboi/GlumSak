@@ -125,6 +125,7 @@
       <HintPath>..\packages\Octokit.5.0.0\lib\netstandard2.0\Octokit.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="Siticone.UI">
       <HintPath>..\..\..\..\Sitcone UI\Siticone.UI.dll</HintPath>
     </Reference>
