@@ -45,7 +45,7 @@ namespace EmuSak_Revive.GUI_WPF.ExtraWindows
             }
             else
             {
-                GitHubToken = "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"; //<-- Your github api token here
+                GitHubToken = ""; //<-- Your github api token here
             }
 
             Credentials tokenAuth = new Credentials(GitHubToken);
