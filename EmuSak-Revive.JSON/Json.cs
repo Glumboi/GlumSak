@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace EmuSak_Revive.JSON
 {

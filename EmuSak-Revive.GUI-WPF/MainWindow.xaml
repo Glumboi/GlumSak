@@ -2,6 +2,7 @@
     x:Class="EmuSak_Revive.GUI_WPF.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:CustomControls="clr-namespace:EmuSak_Revive.GUI_WPF.CustomControls"
     xmlns:VM="clr-namespace:EmuSak_Revive.GUI_WPF.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:EmuSak_Revive.GUI_WPF"
@@ -18,10 +19,6 @@
     WindowCornerPreference="Round"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
-
-    <Window.DataContext>
-        <VM:HomeViewModel />
-    </Window.DataContext>
 
     <ui:UiWindow.Resources>
         <Storyboard x:Key="SpinHomeImage">
@@ -214,8 +211,16 @@
                                     Grid.Row="2"
                                     Height="30"
                                     Margin="0,0,2,0"
-                                    VerticalAlignment="Stretch"
-                                    Foreground="Gray" />
+                                    VerticalAlignment="Stretch">
+                                    <ProgressBar.Foreground>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                            <GradientStop Offset="0.0" Color="Wheat" />
+                                            <GradientStop Offset="0.25" Color="Pink" />
+                                            <GradientStop Offset="0.75" Color="DeepPink" />
+                                            <GradientStop Offset="1.0" Color="Silver" />
+                                        </LinearGradientBrush>
+                                    </ProgressBar.Foreground>
+                                </ProgressBar>
 
                                 <TextBlock
                                     x:Name="DownloadProgress_TextBlock"
@@ -765,53 +770,10 @@
                                 FontWeight="Bold"
                                 Text="Installed Plugins" />
 
-                            <ListView x:Name="Plugins_ListView" Grid.Row="1">
-
-                                <ListViewItem Focusable="False" Visibility="Collapsed">
-                                    <ui:Card>
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition />
-                                                <ColumnDefinition />
-                                            </Grid.ColumnDefinitions>
-
-                                            <StackPanel Orientation="Horizontal">
-                                                <Image
-                                                    Width="35"
-                                                    Height="35"
-                                                    Margin="0,0,10,0"
-                                                    RenderOptions.BitmapScalingMode="HighQuality"
-                                                    Source="./Assets/Info_Asset.png" />
-
-                                                <TextBlock
-                                                    VerticalAlignment="Center"
-                                                    FontWeight="Bold"
-                                                    Text="DummyPlugin.dll" />
-                                            </StackPanel>
-
-                                            <StackPanel
-                                                Grid.Column="1"
-                                                HorizontalAlignment="Right"
-                                                Orientation="Horizontal">
-
-                                                <ui:ToggleSwitch>
-                                                    <TextBlock Text="Launch on Startup" />
-                                                </ui:ToggleSwitch>
-
-                                                <ui:Button
-                                                    Margin="10,0,0,0"
-                                                    Content="Stop Plugin"
-                                                    Icon="Stop24" />
-
-                                                <ui:Button
-                                                    Margin="10,0,0,0"
-                                                    Content="Launch Plugin"
-                                                    Icon="PlugConnected24" />
-                                            </StackPanel>
-                                        </Grid>
-                                    </ui:Card>
-                                </ListViewItem>
-                            </ListView>
+                            <ListView
+                                x:Name="Plugins_ListView"
+                                Grid.Row="1"
+                                HorizontalAlignment="Stretch" />
                         </Grid>
                     </Border>
                 </TabItem>

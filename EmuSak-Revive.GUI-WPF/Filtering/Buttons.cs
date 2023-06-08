@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmuSak_Revive.GUI_WPF.CustomControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,11 @@ namespace EmuSak_Revive.GUI_WPF.Filtering
 {
     internal class Buttons
     {
-        public static IEnumerable<Visibility> GetButtonsToHide(IEnumerable<System.Windows.Controls.Button> buttons, string filterSrc)
+        public static IEnumerable<Visibility> GetButtonsToHide(IEnumerable<GameButton> buttons, string filterSrc)
         {
             foreach (var button in buttons)
             {
-                string gameName = button.Tag.GetType().GetProperty("GameName").GetValue(button.Tag, null).ToString();
+                string gameName = button.GameName;
                 if (!gameName.ToLower().Contains(filterSrc.ToLower()))
                 {
                     yield return Visibility.Collapsed;

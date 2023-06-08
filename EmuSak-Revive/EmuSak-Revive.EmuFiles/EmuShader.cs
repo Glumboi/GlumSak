@@ -42,6 +42,7 @@ namespace EmuSak_Revive.EmuFiles
                     return true;
                 }
             }
+
             return false;
         }
 

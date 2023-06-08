@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows;
+using Wpf.Ui.Appearance;
 
 namespace EmuSak_Revive.GUI_WPF
 {
