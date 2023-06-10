@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using System.Security.Policy;
 
 namespace EmuSak_Revive.JSON
 {
@@ -19,7 +20,7 @@ namespace EmuSak_Revive.JSON
             return JsonConvert.SerializeObject(parsedJson, Newtonsoft.Json.Formatting.Indented);
         }
 
-        private static IEnumerable<string> CreateNsuIdsFile(string URL)
+        private static IEnumerable<string> GetNsuIDs(string URL)
         {
             Regex nsuIdRegex = new Regex(@"""nsuId"": (\d+)");
 
@@ -44,9 +45,21 @@ namespace EmuSak_Revive.JSON
             }
         }
 
+        private static void CreateNSUIDsFile(string URL)
+        {
+            using (FileStream fs = new FileStream("./Json/nsuIds.txt", FileMode.Create))
+            using (StreamWriter sw = new StreamWriter(fs, Encoding.UTF8))
+            {
+                foreach (var item in GetNsuIDs(URL))
+                {
+                    sw.WriteLine(item);
+                }
+            }
+        }
+
         public static void Run(string URL)
         {
-            CreateNsuIdsFile(URL);
+            CreateNSUIDsFile(URL);
             GameMeta.DownloadGameMeta();
         }
 

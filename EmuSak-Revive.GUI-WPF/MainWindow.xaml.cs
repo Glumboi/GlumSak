@@ -306,11 +306,12 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void LoadGamesToUI(int config)
         {
-            string[] fileLines = File.ReadAllLines("./Json/gameIcons_Ids.txt");
+            IEnumerable<string> fileLines = File.ReadLines("./Json/gameIcons_Ids.txt"); 
+            List<string> games = config == 0 ? Yuzu.Games : Ryujinx.Games;
 
             foreach (var line in fileLines)
             {
-                foreach (var game in config == 0 ? Yuzu.Games : Ryujinx.Games)
+                foreach (var game in games)
                 {
                     if (!line.Contains(game)) continue;
 
@@ -395,7 +396,7 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void GetIconsAndIds()
         {
-            string[] fileLines = File.ReadAllLines("./Json/gameIcons_Ids.txt");
+            IEnumerable<string> fileLines = File.ReadLines("./Json/gameIcons_Ids.txt");
 
             foreach (var fileLine in fileLines)
             {
@@ -637,7 +638,7 @@ namespace EmuSak_Revive.GUI_WPF
         {
             if (!File.Exists(autorunFile)) return;
 
-            foreach (var line in File.ReadAllLines(autorunFile))
+            foreach (var line in File.ReadLines(autorunFile))
             {
                 PluginHelpers.autorunPlugins.Add(PluginHelpers.GetPluginByName(line));
             }

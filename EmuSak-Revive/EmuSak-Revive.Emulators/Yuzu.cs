@@ -191,28 +191,24 @@ namespace EmuSak_Revive.Emulators
 
         public static string GetYuzuBinaryVersion(string path)
         {
-            try
+            if (Directory.Exists(path))
             {
                 string exe = "yuzu.exe";
                 string fullExePath = Path.Combine(path, exe);
 
                 Process exeProcess = Process.Start(fullExePath);
 
-                while (string.IsNullOrEmpty(exeProcess.MainWindowTitle))
+                do
                 {
                     exeProcess.Refresh();
-                }
+                } while (exeProcess.MainWindowTitle == "");
 
                 exeProcess.Kill();
 
                 return "EA-" + exeProcess.MainWindowTitle.Split(' ').Last();
             }
-            catch (Exception)
-            {
-                Networking.ShowNotification("Could not check for yuzu updates, did you select a valid yuzu folder?", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
-
-                return string.Empty;
-            }
+            Networking.ShowNotification("Could not check for yuzu updates, did you select a valid yuzu folder?", Wpf.Ui.Common.SymbolRegular.ErrorCircle24);
+            return string.Empty;
         }
 
         public static bool IsLocalYuzuOutdated(string localVer, string newestWeb)
