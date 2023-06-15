@@ -12,7 +12,7 @@ Since this is an ongoing project I want to gather as much feedback as possible, 
 
  - Updates may slow down, working on GlumSak3 and irl stress
 
-[![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=GlumSak)](https://github.com/gazf/github-readme-twitter)
+[![github-readme-twitter](https://github-readme-twitter.gazf.vercel.app/api?id=Glumsak)](https://github.com/gazf/github-readme-twitter)  
   
 [![Glumboi - GlumSak](https://img.shields.io/static/v1?label=Glumboi&message=GlumSak&color=blue&logo=github)](https://github.com/Glumboi/GlumSak "Go to GitHub repo")
 [![stars - GlumSak](https://img.shields.io/github/stars/Glumboi/GlumSak?style=social)](https://github.com/Glumboi/GlumSak)
