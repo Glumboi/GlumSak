@@ -148,7 +148,7 @@ namespace EmuSak_Revive.Network
             string count = GetPasteValue('|', gameName, 1);
             if (count == string.Empty)
             {
-                return "0 or not specified";
+                return "0";
             }
 
             return count;

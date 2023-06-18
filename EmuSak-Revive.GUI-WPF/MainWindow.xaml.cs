@@ -27,6 +27,7 @@ using System.Windows.Shapes;
 using EmuSak_Revive.GUI_WPF.PluginExtra;
 using Wpf.Ui.Appearance;
 using EmuSak_Revive.GUI_WPF.CustomControls;
+using Wpf.Ui.Common;
 
 namespace EmuSak_Revive.GUI_WPF
 {
@@ -54,7 +55,7 @@ namespace EmuSak_Revive.GUI_WPF
         private List<string> names = new List<string>();
         private List<string> firmwareVersions = new List<string>();
         private List<SwitchGame> switchGames = new List<SwitchGame>();
-        private List<System.Windows.Controls.Button> imageButtons = new List<System.Windows.Controls.Button>();
+        private List<CardExpander> imageButtons = new List<CardExpander>();
 
         #endregion List variables
 
@@ -290,7 +291,7 @@ namespace EmuSak_Revive.GUI_WPF
             Firmware_ComboBox.SelectedIndex = 0;
         }
 
-        private System.Windows.Controls.Button CreateGameButtonFromMetaLine(string line)
+        private CardExpander CreateGameButtonFromMetaLine(string line)
         {
             string fileGameID = line.Split('\"')[3];
             string icon = line.Split('\"')[1];
@@ -306,7 +307,7 @@ namespace EmuSak_Revive.GUI_WPF
 
         private void LoadGamesToUI(int config)
         {
-            IEnumerable<string> fileLines = File.ReadLines("./Json/gameIcons_Ids.txt"); 
+            IEnumerable<string> fileLines = File.ReadLines("./Json/gameIcons_Ids.txt");
             List<string> games = config == 0 ? Yuzu.Games : Ryujinx.Games;
 
             foreach (var line in fileLines)
@@ -321,17 +322,7 @@ namespace EmuSak_Revive.GUI_WPF
             GlumSakCache.CreateGlumSakCache(switchGames, config);
         }
 
-        private void ShowGameActionsWindow(SwitchGame game)
-        {
-            /* PlayAudio.PlayFromByteArr(mainWindowPlayer,
-             Properties.Settings.Default.PlaySounds,
-             Properties.Resources.enter_back);*/
-
-            GameActionsWindow gameActionsWindow = new GameActionsWindow(game);
-            gameActionsWindow.Show();
-        }
-
-        private System.Windows.Controls.Button CreateButton(SwitchGame game, System.Drawing.Image btnImage = null)
+        private CardExpander CreateButton(SwitchGame game, System.Drawing.Image btnImage = null)
         {
             var gameBtn = new GameButton(game);
             Games_Panel.Children.Add(gameBtn);

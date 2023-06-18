@@ -22,35 +22,40 @@
 
     <ui:UiWindow.Resources>
         <Storyboard x:Key="SpinHomeImage">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Home_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Home_Image"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="SpinInfoImage">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Info_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Info_Image"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="SpinSettingsImage">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Settings_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Settings_Image"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="SpinNewsImage">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="News_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="News_Image"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
 
         <Storyboard x:Key="SpinPluginsImage">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Plugins_Image" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Plugins_Image"
+                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)">
                 <EasingDoubleKeyFrame KeyTime="00:00:00" Value="0" />
                 <EasingDoubleKeyFrame KeyTime="00:00:00.3000000" Value="360" />
             </DoubleAnimationUsingKeyFrames>
@@ -279,12 +284,16 @@
 
                     <Border Padding="5">
                         <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="59*" />
+                                <ColumnDefinition Width="62*" />
+                            </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="6*" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
-                            <StackPanel>
+                            <StackPanel Grid.ColumnSpan="2">
                                 <TextBlock
                                     HorizontalAlignment="Center"
                                     FontSize="20"
@@ -297,13 +306,17 @@
                                     Fill="DarkGray" />
                             </StackPanel>
 
-                            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.ColumnSpan="2" Margin="0,61,0,0" Grid.RowSpan="2">
                                 <TextBlock TextWrapping="Wrap">
-                                    GlumSak 2.x.x.x is a re defined experience of the Tool "GlumSak" made by Glumboi.<LineBreak />
-                                    GlumSak is a Tool made by Glumboi that helps you to set up your Emulators. This Project took big inspiration of the Tool "emusak-ui" and is a sort of revive for it.<LineBreak />
-                                    I spent much time developing and improving this tool over the past 4 Months to bring ya'll the best experience of this Project and it's Visions.<LineBreak />
+                                    GlumSak 2.x.x.x is a re defined experience of the Tool "GlumSak" made by Glumboi.
                                     <LineBreak />
-                                    If you have something to report such as a Bug or a new Feature, then you can do that with Discord or write me an E-Mail, I surely take a read sometimes.<LineBreak />
+                                    GlumSak is a Tool made by Glumboi that helps you to set up your Emulators. This Project took big inspiration of the Tool "emusak-ui" and is a sort of revive for it.
+                                    <LineBreak />
+                                    I spent much time developing and improving this tool over the past 4 Months to bring ya'll the best experience of this Project and it's Visions.
+                                    <LineBreak />
+                                    <LineBreak />
+                                    If you have something to report such as a Bug or a new Feature, then you can do that with Discord or write me an E-Mail, I surely take a read sometimes.
+                                    <LineBreak />
                                     <LineBreak />
                                     What is new in GlumSak 2.x.x.x and higher?<LineBreak />
                                     <LineBreak />
@@ -312,10 +325,11 @@
                                     - Better Window resizing<LineBreak />
                                     - A new, clean and fresh looking UI design flow as I call it<LineBreak />
                                     <LineBreak />
-                                    Old Versions (Versions using Windows Forms) are officially out of Support but can still work for some time.</TextBlock>
+                                    Old Versions (Versions using Windows Forms) are officially out of Support but can still work for some time.
+                                </TextBlock>
                             </ScrollViewer>
 
-                            <Grid Grid.Row="2">
+                            <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="0,366,0,0" Grid.RowSpan="2">
 
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
