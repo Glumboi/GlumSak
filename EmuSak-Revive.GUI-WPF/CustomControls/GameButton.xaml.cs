@@ -1,19 +1,26 @@
-﻿using EmuSak_Revive.Emulators;
+﻿using EmuSak_Revive.EmuFiles;
+using EmuSak_Revive.Emulators;
 using EmuSak_Revive.GUI_WPF.ExtraWindows;
+using EmuSak_Revive.Network;
 using System;
 using System.Drawing;
 using System.Windows;
+using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Wpf.Ui.Common;
+using Wpf.Ui.Controls;
 
 namespace EmuSak_Revive.GUI_WPF.CustomControls
 {
     /// <summary>
     /// Interaction logic for GameButton.xaml
     /// </summary>
-    public partial class GameButton : Wpf.Ui.Controls.Button
+    public partial class GameButton : CardExpander
     {
+        private string _shaderUrl;
+
         public SwitchGame Game { get; private set; }
 
         public string GameID
@@ -25,6 +32,26 @@ namespace EmuSak_Revive.GUI_WPF.CustomControls
         // Using a DependencyProperty as the backing store for GameID.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty GameIDProperty =
             DependencyProperty.Register("GameID", typeof(string), typeof(GameButton), new PropertyMetadata(null));
+
+        public string LocalShaderCount
+        {
+            get => (string)GetValue(LocalShaderCountProperty);
+            set => SetValue(LocalShaderCountProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for GameID.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty LocalShaderCountProperty =
+            DependencyProperty.Register("LocalShaderCount", typeof(string), typeof(GameButton), new PropertyMetadata(null));
+
+        public string WebShaderCount
+        {
+            get => (string)GetValue(WebShaderCountProperty);
+            set => SetValue(WebShaderCountProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for GameID.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty WebShaderCountProperty =
+            DependencyProperty.Register("WebShaderCount", typeof(string), typeof(GameButton), new PropertyMetadata(null));
 
         public string GameName
         {
@@ -76,10 +103,29 @@ namespace EmuSak_Revive.GUI_WPF.CustomControls
         public static readonly DependencyProperty DesiredButtonSizeProperty =
             DependencyProperty.Register("ImageSize", typeof(int), typeof(GameButton), new PropertyMetadata(155));
 
-        public GameButton(SwitchGame switchGame = null)
+        public static readonly DependencyProperty DownloadShaderCommandProperty =
+            DependencyProperty.Register("DownloadShaderCommand", typeof(ICommand), typeof(GameButton));
+
+        public ICommand DownloadShaderCommand
+        {
+            get { return (ICommand)GetValue(DownloadShaderCommandProperty); }
+            set { SetValue(DownloadShaderCommandProperty, value); }
+        }
+
+        public void CreateDownloadShaderCommand()
+        {
+            DownloadShaderCommand = new RelayCommand(DownloadShader, IsShaderAvailable);
+        }
+
+        public GameButton(
+            SwitchGame switchGame = null,
+            int desiredImageSize = 155,
+            int desiredButtonSize = 220)
         {
             InitializeComponent();
-            Style = (Style)Application.Current.Resources[typeof(Wpf.Ui.Controls.Button)];
+            CreateDownloadShaderCommand();
+
+            Style = (Style)Application.Current.Resources[typeof(CardExpander)];
 
             if (switchGame != null)
             {
@@ -88,12 +134,14 @@ namespace EmuSak_Revive.GUI_WPF.CustomControls
                 GameName = switchGame.GameName;
                 GameImageSource = ConvertToImageSource(switchGame.GameImage);
             }
+
+            DesiredImageSize = desiredImageSize;
         }
 
-        protected override void OnClick()
+        /*protected override void OnClick()
         {
             new GameActionsWindow(Game).Show();
-        }
+        }*/
 
         private static ImageSource ConvertToImageSource(System.Drawing.Image image)
         {
@@ -120,6 +168,30 @@ namespace EmuSak_Revive.GUI_WPF.CustomControls
         {
             [System.Runtime.InteropServices.DllImport("gdi32.dll")]
             public static extern bool DeleteObject(IntPtr hObject);
+        }
+
+        private void CardExpander_Expanded(object sender, RoutedEventArgs e)
+        {
+            LoadShaderInfo();
+        }
+
+        private bool IsShaderAvailable()
+        {
+            return !string.IsNullOrEmpty(_shaderUrl);
+        }
+
+        private void LoadShaderInfo()
+        {
+            LocalShaderCount = EmuShader.GetShaderCount(GameID);
+            WebShaderCount = Network.Networking.GetPasteGameShaderCount(GameName);
+            _shaderUrl = Network.Networking.GetShaderDownload(GameName);
+        }
+
+        private void DownloadShader()
+        {
+            var downloadUrl = Networking.GetShaderDownload(GameName);
+            EmuShader.InstallShader(MainWindow.EmuConfig, downloadUrl,
+                GameID);
         }
     }
 }

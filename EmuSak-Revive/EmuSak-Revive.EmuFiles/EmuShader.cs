@@ -14,7 +14,20 @@ namespace EmuSak_Revive.EmuFiles
 {
     public static class EmuShader
     {
+        private static Dictionary<string, string> _shaderQueue = new Dictionary<string, string>();
+
+        public static Dictionary<string, string> ShaderQueue
+        {
+            get => _shaderQueue;
+            set
+            {
+                if (value != _shaderQueue)
+                    _shaderQueue = value;
+            }
+        }
+
         public static List<string> RyuGameShaderLocations { get => Ryujinx.GamesShader; }
+
         private static string lastCheckedGame = string.Empty;
 
         public static void InstallShader(int config, string url, string gameId)
