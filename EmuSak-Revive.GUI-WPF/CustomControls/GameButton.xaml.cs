@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Wpf.Ui.Common;
 using Wpf.Ui.Controls;
+using Wpf.Ui.Styles.Controls;
 
 namespace EmuSak_Revive.GUI_WPF.CustomControls
 {
@@ -120,7 +121,7 @@ namespace EmuSak_Revive.GUI_WPF.CustomControls
         public GameButton(
             SwitchGame switchGame = null,
             int desiredImageSize = 155,
-            int desiredButtonSize = 220)
+            int desiredButtonSize = 245)
         {
             InitializeComponent();
             CreateDownloadShaderCommand();

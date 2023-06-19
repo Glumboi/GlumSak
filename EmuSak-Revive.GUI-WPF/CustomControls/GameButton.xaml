@@ -6,13 +6,39 @@
     xmlns:local="clr-namespace:EmuSak_Revive.GUI_WPF.CustomControls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    Width="220"
+    Width="245"
     Margin="{Binding GlobalMargin}"
     d:DesignHeight="450"
     d:DesignWidth="800"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
     Expanded="CardExpander_Expanded"
     mc:Ignorable="d">
+    <ui:CardExpander.ContextMenu>
+        <ContextMenu Opened="CardExpander_Expanded">
+            <ui:MenuItem
+                Command="{Binding DownloadShaderCommand}"
+                Header="Install Shaders"
+                SymbolIcon="ArrowDownload24" />
+
+            <Separator />
+
+            <ui:MenuItem IsEnabled="False" SymbolIcon="Save24">
+                <ui:MenuItem.Header>
+                    <TextBlock Text="Local: ">
+                        <TextBlock Text="{Binding LocalShaderCount}" />
+                    </TextBlock>
+                </ui:MenuItem.Header>
+            </ui:MenuItem>
+
+            <ui:MenuItem IsEnabled="False" SymbolIcon="Globe24">
+                <ui:MenuItem.Header>
+                    <TextBlock Text="Web: ">
+                        <TextBlock Text="{Binding WebShaderCount}" />
+                    </TextBlock>
+                </ui:MenuItem.Header>
+            </ui:MenuItem>
+        </ContextMenu>
+    </ui:CardExpander.ContextMenu>
     <ui:CardExpander.Header>
         <Grid>
             <Rectangle
@@ -38,16 +64,20 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid>
-                <TextBlock
-                    Padding="2"
-                    HorizontalAlignment="Left"
-                    FontWeight="Bold"
-                    Text="{Binding LocalShaderCount, StringFormat=Local: {0}}" />
-                <TextBlock
-                    Padding="2"
-                    HorizontalAlignment="Right"
-                    FontWeight="Bold"
-                    Text="{Binding WebShaderCount, StringFormat=Web:{0}}" />
+                <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="Save24" />
+                    <TextBlock
+                        Padding="2"
+                        FontWeight="Bold"
+                        Text="{Binding LocalShaderCount, StringFormat=Local: {0}}" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="Globe24" />
+                    <TextBlock
+                        Padding="2"
+                        FontWeight="Bold"
+                        Text="{Binding WebShaderCount, StringFormat=Web:{0}}" />
+                </StackPanel>
             </Grid>
             <ui:Button
                 Grid.Row="1"
