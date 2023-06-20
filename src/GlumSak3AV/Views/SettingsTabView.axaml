@@ -1,0 +1,213 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
+             xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GlumSak3AV.Views.SettingsTabView">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0" Orientation="Horizontal">
+                        <Button
+                            x:Name="ResetApp_Button"
+                            Margin="0,0,8,0"
+                            HorizontalAlignment="Stretch"
+                            Content="Reset" />
+
+                        <Button
+                            x:Name="RestartApp_Button"
+                            HorizontalAlignment="Stretch"
+                            Content="Restart" />
+
+                        <Button
+                            x:Name="DeleteTempFiles_Button"
+                            Margin="8,0,0,0"
+                            Content="Delete temporary Files" />
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Expander Grid.Row="1" Margin="0,10,0,5">
+                <Expander.Header>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image
+                            Width="40"
+                            Height="40"
+                            Margin="0,0,4,0"
+                            Source="../Assets/Yuzu_Asset.png" />
+
+                        <TextBlock
+                            Margin="4,0,0,0"
+                            VerticalAlignment="Center"
+                            FontWeight="Bold"
+                            Text="Portable Settings" />
+                    </StackPanel>
+                </Expander.Header>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBox
+                        x:Name="YuzuPath_TextBox"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Margin="0,0,0,10" />
+
+                    <TextBox
+                        x:Name="RyuPath_TextBox"
+                        Grid.Row="1"
+                        Grid.Column="0" />
+
+                    <Button
+                        x:Name="SelectYuzuPath_Button"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="4,0,0,10"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+
+                        <Image
+                            Width="20"
+                            Height="20"
+                            Margin="-9,0,-10,0"
+                            Source="../Assets/OpenFolder_Asset.png" />
+                    </Button>
+
+                    <Button
+                        x:Name="SelectRyujinxPath_Button"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="4,0,0,0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch">
+
+                        <Image
+                            Width="20"
+                            Height="20"
+                            Margin="-9,0,-10,0"
+                            Source="../Assets/OpenFolder_Asset.png" />
+                    </Button>
+                </Grid>
+            </Expander>
+
+            <Expander Grid.Row="2" Margin="0,5,0,5">
+
+                <Expander.Header>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image
+                            Width="40"
+                            Height="40"
+                            Margin="0,0,4,0"
+                            Source="../Assets/Paste_Asset.png" />
+
+                        <TextBlock
+                            Margin="4,0,0,0"
+                            VerticalAlignment="Center"
+                            FontWeight="Bold"
+                            Text="Paste Settings" />
+                    </StackPanel>
+                </Expander.Header>
+
+                <Grid>
+                    <TextBox
+                        x:Name="PasteBinUrl_TextBox" />
+                </Grid>
+            </Expander>
+
+            <Expander Grid.Row="3" Margin="0,5,0,0">
+
+                <Expander.Header>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image
+                            Width="40"
+                            Height="40"
+                            Margin="0,0,4,0"
+                            Source="../Assets/Other_Asset.png" />
+
+                        <TextBlock
+                            Margin="4,0,0,0"
+                            VerticalAlignment="Center"
+                            FontWeight="Bold"
+                            Text="Other" />
+                    </StackPanel>
+                </Expander.Header>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="1">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+
+                        <CheckBox
+                            x:Name="CheckForAppUpdates_CheckBox"
+                            VerticalAlignment="Top"
+                            Content="Check for App Updates on startup" />
+
+                        <StackPanel Grid.Row="1">
+                            <TextBlock
+                                x:Name="SnackDuration_TextBlock"
+                                HorizontalAlignment="Center"
+                                FontWeight="Bold"
+                                Text="Snackbar display Duration: {duration}" />
+
+                            <Slider
+                                x:Name="SnackDuration_Slider"
+                                IsSnapToTickEnabled="True"
+                                Maximum="20000"
+                                Minimum="1000"
+                                TickFrequency="1000" />
+                        </StackPanel>
+                    </Grid>
+
+                    <ToggleSwitch
+                        x:Name="AllowPlugins_Switch"
+                        Grid.Row="3"
+                        Margin="0,10,0,0"
+                        Content="Allow Plugins" />
+                </Grid>
+            </Expander>
+
+            <Button
+                x:Name="SaveSettings_Button"
+                Grid.Row="5"
+                Height="31"
+                Margin="0,10,0,0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Content="Save Settings" />
+        </Grid>
+    </ScrollViewer>
+</UserControl>

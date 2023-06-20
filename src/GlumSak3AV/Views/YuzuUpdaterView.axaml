@@ -1,0 +1,85 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
+             xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GlumSak3AV.Views.YuzuUpdaterView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <ComboBox x:Name="YuzuVersions_DropDown" VerticalAlignment="Top" />
+
+                <TextBox
+                    x:Name="YuzuBinariesPath_TextBox"
+                    Margin="0,4,0,0" />
+            </StackPanel>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Margin="4,0,0,0" Orientation="Horizontal">
+
+                    <Button
+                        x:Name="CheckForYuzuUpdates_Button"
+                        Height="36"
+                        Margin="0,0,4,0"
+                        Content="Check for Updates" />
+
+                    <Button
+                        x:Name="DownloadYuzuVersion_Button"
+                        Height="36"
+                        Content="Download Yuzu Version"/>
+                </StackPanel>
+
+                <Button
+                    x:Name="SelectYuzuBinariesFolder_Button"
+                    Grid.Row="1"
+                    Width="35"
+                    Height="35"
+                    Margin="4,4,0,0">
+
+                    <Image
+                        Width="20"
+                        Height="20"
+                        Margin="-9,0,-10,0"
+                        Source="../Assets/OpenFolder_Asset.png" />
+                </Button>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="0,6,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <CheckBox
+                    x:Name="YuzuStartupUpdateCheck_CheckBox"
+                    Grid.Column="0"
+                    VerticalAlignment="Top"
+                    Content="Check for Yuzu updates on startup" />
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

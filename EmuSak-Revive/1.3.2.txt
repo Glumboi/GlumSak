@@ -1,4 +1,0 @@
-- Added image compression to the game buttons, this drastically reduces the ram usage and improves the main forms rendering
-- Added mediafire support for shader downloads
-- Minor performance improvements here and there
-- Reduced image button flicker when scrolling with the mouse wheel

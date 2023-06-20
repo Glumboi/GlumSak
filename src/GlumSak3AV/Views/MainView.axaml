@@ -1,0 +1,167 @@
+<UserControl
+    x:Class="GlumSak3AV.Views.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:GlumSak3AV.Views"
+    xmlns:vm="clr-namespace:GlumSak3AV.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:DataType="vm:MainViewModel"
+    mc:Ignorable="d">
+	<Design.DataContext>
+		<!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+		<vm:MainViewModel />
+	</Design.DataContext>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+
+		<Border Grid.Row="1" Padding="10">
+			<TabControl x:Name="MainTabs_TabControl" Grid.Row="1">
+				<TabItem>
+					<TabItem.Header>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+
+							<Image
+                                x:Name="Home_Image"
+                                Height="25"
+                                HorizontalAlignment="Left"
+                                RenderTransformOrigin="0.5,0.5"
+                                Source="/Assets/Home_Asset.png">
+								<Image.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform />
+										<SkewTransform />
+										<RotateTransform />
+										<TranslateTransform />
+									</TransformGroup>
+								</Image.RenderTransform>
+							</Image>
+
+							<TextBlock
+                                Grid.Column="1"
+                                Margin="4,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="Home" />
+						</Grid>
+					</TabItem.Header>
+					<views:HomeTabView />
+				</TabItem>
+
+				<TabItem>
+					<TabItem.Header>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+
+							<Image
+                                x:Name="Info_Image"
+                                Height="25"
+                                HorizontalAlignment="Left"
+                                RenderTransformOrigin="0.5,0.5"
+                                Source="/Assets/Info_Asset.png">
+								<Image.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform />
+										<SkewTransform />
+										<RotateTransform />
+										<TranslateTransform />
+									</TransformGroup>
+								</Image.RenderTransform>
+							</Image>
+
+							<TextBlock
+                                Grid.Column="1"
+                                Margin="4,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="Info" />
+						</Grid>
+					</TabItem.Header>
+					<views:InfoTabView />
+				</TabItem>
+
+				<TabItem>
+					<TabItem.Header>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+
+							<Image
+                                x:Name="Settings_Image"
+                                Height="25"
+                                HorizontalAlignment="Left"
+                                RenderTransformOrigin="0.5,0.5"
+                                Source="/Assets/Settings_Asset.png">
+								<Image.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform />
+										<SkewTransform />
+										<RotateTransform />
+										<TranslateTransform />
+									</TransformGroup>
+								</Image.RenderTransform>
+							</Image>
+
+							<TextBlock
+                                Grid.Column="1"
+                                Margin="4,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="Settings" />
+						</Grid>
+					</TabItem.Header>
+					<views:SettingsTabView />
+				</TabItem>
+
+				<TabItem>
+					<TabItem.Header>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition />
+								<ColumnDefinition />
+							</Grid.ColumnDefinitions>
+
+							<Image
+                                x:Name="YuzuUpdater_Image"
+                                Height="25"
+                                HorizontalAlignment="Left"
+                                RenderTransformOrigin="0.5,0.5"
+                                Source="/Assets/Update_Asset.png">
+								<Image.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform />
+										<SkewTransform />
+										<RotateTransform />
+										<TranslateTransform />
+									</TransformGroup>
+								</Image.RenderTransform>
+							</Image>
+
+							<TextBlock
+                                Grid.Column="1"
+                                Margin="4,0,0,0"
+                                VerticalAlignment="Center"
+                                Text="Yuzu Updater" />
+						</Grid>
+					</TabItem.Header>
+					<views:YuzuUpdaterView />
+				</TabItem>
+			</TabControl>
+		</Border>
+	</Grid>
+</UserControl>

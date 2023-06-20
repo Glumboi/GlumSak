@@ -1,0 +1,156 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
+             xmlns:vm="using:GlumSak3AV.ViewModels"
+             xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+             xmlns:viewModels="clr-namespace:GlumSak3AV.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="GlumSak3AV.Views.HomeTabView"
+             x:DataType="viewModels:HomeTabViewModel">
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:HomeTabViewModel />
+    </Design.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Border
+            Grid.Row="0"
+            Padding="5"
+            RenderTransformOrigin="0.5,0.5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="7*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <ComboBox
+                                Grid.Column="0"
+                                Margin="0,0,4,0"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                SelectedIndex="0" />
+
+                            <StackPanel Grid.Column="1">
+                                <ComboBox
+                                    Margin="0,0,4,0"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Stretch" />
+                            </StackPanel>
+                        </Grid>
+
+                        <Button
+                            Grid.Column="1"
+                            Margin="0,0,2,0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Content="Download Firmware" />
+                        
+                        <Button
+                            x:Name="Keys_Button"
+                            Grid.Column="2"
+                            Margin="2,0,0,0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Content="Download Keys" />
+                    </Grid>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1">
+                    <Border Margin="0,4,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox
+                                x:Name="Filter_TextBox"
+                                Grid.Column="0"
+                                Margin="0,0,4,0"/>
+
+                            <Button
+                                x:Name="ClearFilter_Button"
+                                Grid.Column="1"
+                                Margin="0,0,0,0"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                Content="Clear Filter"/>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Padding="5">
+            <ScrollViewer>
+                <ItemsControl Grid.Row="1" Items="{Binding GameButtons}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
+
+        <Border
+            x:Name="Progress_Border"
+            Grid.Row="2"
+            Padding="5">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <ProgressBar
+                    x:Name="Download_ProgressBar"
+                    Grid.Row="2"
+                    Height="30"
+                    Margin="0,0,2,0"
+                    VerticalAlignment="Stretch"
+                    Foreground="Gray" />
+
+                <TextBlock
+                    x:Name="DownloadProgress_TextBlock"
+                    Margin="0,0,0,2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="Download starting..." />
+
+                <Button
+                    x:Name="CancelDownload_Button"
+                    Grid.Column="1"
+                    Height="28"
+                    Margin="2,0,0,0"
+                    HorizontalAlignment="Stretch"
+                    Content="Cancel Download" />
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
