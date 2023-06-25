@@ -56,7 +56,7 @@
                             Margin="4,0,0,0"
                             VerticalAlignment="Center"
                             FontWeight="Bold"
-                            Text="Emu Settings" />
+                            Text="Portable Settings" />
                     </StackPanel>
                 </Expander.Header>
                 <Grid>

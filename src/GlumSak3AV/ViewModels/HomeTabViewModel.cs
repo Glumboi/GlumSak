@@ -33,9 +33,9 @@ public class HomeTabViewModel : ViewModelBase
         }
     }
 
-    private List<string> _firmwares = Networking.Firmwares.GetFirmwareVersions();
+    private List<Networking.SwitchFirmware> _firmwares = Networking.Firmwares.GetFirmwareVersions();
 
-    public List<string> Firmwares
+    public List<Networking.SwitchFirmware> Firmwares
     {
         get => _firmwares;
         set

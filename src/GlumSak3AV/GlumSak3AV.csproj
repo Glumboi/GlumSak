@@ -45,6 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GlumSak3AV.Networking\GlumSak3AV.Networking.csproj" />
     <ProjectReference Include="..\GlumSak3AV.Switch\GlumSak3AV.Switch.csproj" />
   </ItemGroup>
 </Project>

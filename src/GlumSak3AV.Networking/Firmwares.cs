@@ -9,10 +9,9 @@ public class Firmwares
     /// </summary>
     /// <param name="version"></param>
     /// <returns></returns>
-    public static string GetFirmwareDownload(string version)
+    public static string GetFirmwareDownload(List<string> urls, string version)
     {
-        return Parsing.ParseLinks("https://archive.org/download/nintendo-switch-global-firmwares")
-                   [0].Split(new char[] { '#' })[0]
+        return urls[0].Split(new char[] { '#' })[0]
                + "/Firmware%20" + version.Split(new char[] { ' ' })[1]
                + ".zip";
     }
@@ -21,11 +20,14 @@ public class Firmwares
     /// This gets all firmwares from a archive.org site
     /// </summary>
     /// <returns></returns>
-    public static List<string> GetFirmwareVersions()
+    public static List<SwitchFirmware> GetFirmwareVersions()
     {
         List<string> linksToVisit =
             Parsing.ParseLinks(@"https://archive.org/download/nintendo-switch-global-firmwares");
-        List<string> rtrnList = new List<string>();
+
+        List<SwitchFirmware> rtrnList = new List<SwitchFirmware>();
+        List<string> firmwareVersionsSorted = new List<string>();
+        List<string> firmwareDownloadURLS = new List<string>();
 
         foreach (var item in linksToVisit)
         {
@@ -37,12 +39,19 @@ public class Firmwares
                 if (version.Contains("Firmware") && !version.Contains("%") && !version.Contains("MD5"))
                 {
                     var itemToAdd = version.Split(new string[] { "Firmware" }, StringSplitOptions.None)[1];
-                    rtrnList.Add(itemToAdd);
+                    firmwareVersionsSorted.Add(itemToAdd);
+                    firmwareDownloadURLS.Add(GetFirmwareDownload(linksToVisit, itemToAdd));
                 }
             }
         }
 
-        return rtrnList.Distinct().OrderByDescending(VersionSorter.OrderVersion).ToList();
+        var list = firmwareVersionsSorted.Distinct().OrderByDescending(VersionSorter.OrderVersion).ToList();
+        for (var index = 0; index < list.Count; index++)
+        {
+            rtrnList.Add(new SwitchFirmware(list[index], firmwareDownloadURLS[index]));
+        }
+
+        return rtrnList;
     }
 
     public static IEnumerable<string> NaturalSort(IEnumerable<string> list)
@@ -59,6 +68,31 @@ public class Firmwares
                 })
             .OrderBy(x => x.SortStr)
             .Select(x => x.OrgStr);
+    }
+}
+
+public struct SwitchFirmware
+{
+    private string _version;
+
+    public string Version
+    {
+        get => _version;
+        set => _version = value;
+    }
+
+    private string _zipURL;
+
+    public string ZipURL
+    {
+        get => _zipURL;
+        set => _zipURL = value;
+    }
+
+    public SwitchFirmware(string version, string zipUrl)
+    {
+        _zipURL = zipUrl;
+        _version = version;
     }
 }
 
