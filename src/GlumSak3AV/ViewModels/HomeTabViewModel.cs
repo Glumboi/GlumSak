@@ -18,6 +18,35 @@ public class HomeTabViewModel : ViewModelBase
             this.RaiseAndSetIfChanged(ref _gameButtons, value);
         }
     }
+    
+    private int _selectedFirmware;
+
+    public int SelectedFirmware
+    {
+        get => _selectedFirmware;
+        set
+        {
+            if (value != _selectedFirmware)
+            {
+                this.RaiseAndSetIfChanged(ref _selectedFirmware, value);
+            }
+        }
+    }
+
+    private List<string> _firmwares = Networking.Firmwares.GetFirmwareVersions();
+
+    public List<string> Firmwares
+    {
+        get => _firmwares;
+        set
+        {
+            if (value != _firmwares)
+            {
+                this.RaiseAndSetIfChanged(ref _firmwares, value);
+                SelectedFirmware = 0;
+            }
+        }
+    }
 
     public HomeTabViewModel()
     {
