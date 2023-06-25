@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Avalonia.Controls;
 using GlumSak3AV.CustomControls;
+using GlumSak3AV.Networking;
 using GlumSak3AV.Switch;
 using ReactiveUI;
 
@@ -8,6 +9,18 @@ namespace GlumSak3AV.ViewModels;
 
 public class HomeTabViewModel : ViewModelBase
 {
+    public string _gameFilter;
+    
+    public string GameFilter
+    {
+        get => _gameFilter;
+        set
+        {
+            this.RaiseAndSetIfChanged(ref _gameFilter, value);
+            Filtering.Buttons.GetButtonsToHide(ref _gameButtons, value);
+        }
+    }
+
     public List<GameButton> _gameButtons = new List<GameButton>();
 
     public List<GameButton> GameButtons
@@ -18,7 +31,7 @@ public class HomeTabViewModel : ViewModelBase
             this.RaiseAndSetIfChanged(ref _gameButtons, value);
         }
     }
-    
+
     private int _selectedFirmware;
 
     public int SelectedFirmware
@@ -33,7 +46,7 @@ public class HomeTabViewModel : ViewModelBase
         }
     }
 
-    private List<Networking.SwitchFirmware> _firmwares = Networking.Firmwares.GetFirmwareVersions();
+    private List<Networking.SwitchFirmware> _firmwares = new List<SwitchFirmware>();
 
     public List<Networking.SwitchFirmware> Firmwares
     {
@@ -52,8 +65,10 @@ public class HomeTabViewModel : ViewModelBase
     {
         for (int i = 0; i < 27; i++)
         {
-            GameButtons.Add(new GameButton(new SwitchGame("Game", "ID",
+            GameButtons.Add(new GameButton(new SwitchGame("Game" + i, "ID",
                 "https://placehold.co/600x400/png")));
         }
+
+        Firmwares = Networking.Firmwares.GetFirmwareVersions();
     }
 }
