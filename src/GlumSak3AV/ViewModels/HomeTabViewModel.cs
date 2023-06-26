@@ -1,35 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net.Http.Headers;
+using System.Reactive;
+using System.Windows.Input;
+using Avalonia;
 using Avalonia.Controls;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.CustomControls;
 using GlumSak3AV.Networking;
 using GlumSak3AV.Switch;
-using ReactiveUI;
 
 namespace GlumSak3AV.ViewModels;
 
 public class HomeTabViewModel : ViewModelBase
 {
-    public string _gameFilter;
-    
-    public string GameFilter
-    {
-        get => _gameFilter;
-        set
-        {
-            this.RaiseAndSetIfChanged(ref _gameFilter, value);
-            Filtering.Buttons.GetButtonsToHide(ref _gameButtons, value);
-        }
-    }
+    private List<SwitchFirmware> _firmwares = new List<SwitchFirmware>();
 
-    public List<GameButton> _gameButtons = new List<GameButton>();
-
-    public List<GameButton> GameButtons
+    public List<SwitchFirmware> Firmwares
     {
-        get => _gameButtons;
-        set
-        {
-            this.RaiseAndSetIfChanged(ref _gameButtons, value);
-        }
+        get => _firmwares;
+        set => SetProperty(ref _firmwares, value);
     }
 
     private int _selectedFirmware;
@@ -37,38 +28,51 @@ public class HomeTabViewModel : ViewModelBase
     public int SelectedFirmware
     {
         get => _selectedFirmware;
-        set
-        {
-            if (value != _selectedFirmware)
-            {
-                this.RaiseAndSetIfChanged(ref _selectedFirmware, value);
-            }
-        }
+        set => SetProperty(ref _selectedFirmware, value);
     }
 
-    private List<Networking.SwitchFirmware> _firmwares = new List<SwitchFirmware>();
+    private List<GameButton> _gameButtons = new List<GameButton>();
 
-    public List<Networking.SwitchFirmware> Firmwares
+    public List<GameButton> GameButtons
     {
-        get => _firmwares;
-        set
-        {
-            if (value != _firmwares)
-            {
-                this.RaiseAndSetIfChanged(ref _firmwares, value);
-                SelectedFirmware = 0;
-            }
-        }
+        get => _gameButtons;
+        set => SetProperty(ref _gameButtons, value);
     }
 
+    public ICommand ClearFilterCommand { get; internal set; }
+
+    void CreateClearFilterCommand()
+    {
+        ClearFilterCommand = new RelayCommand(ClearFilter);
+    }
+
+    void ClearFilter()
+    {
+        Filter = string.Empty;
+    }
+
+    private string _filter;
+
+    public string Filter
+    {
+        get => _filter;
+        set
+        {
+            SetProperty(ref _filter, value);
+            Filtering.Buttons.GetButtonsToHide(ref _gameButtons, value);
+        }
+    }
+    
     public HomeTabViewModel()
     {
+        CreateClearFilterCommand();
+        
         for (int i = 0; i < 27; i++)
         {
-            GameButtons.Add(new GameButton(new SwitchGame("Game" + i, "ID",
+            _gameButtons.Add(new GameButton(new SwitchGame("Game" + i, "ID",
                 "https://placehold.co/600x400/png")));
         }
 
-        Firmwares = Networking.Firmwares.GetFirmwareVersions();
+        _firmwares = Networking.Firmwares.GetFirmwareVersions();
     }
 }
