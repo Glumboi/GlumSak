@@ -262,3 +262,4 @@ __pycache__/
 
 # vscode
 .vscode
+src/rust/target
