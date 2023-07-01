@@ -20,6 +20,6 @@ public class CloudSaveViewModel : ViewModelBase
 
     void LoginWithGoogle()
     {
-        Console.WriteLine("Todo !");
+        Console.WriteLine("Result from rust code :", CsBindgen.NativeMethods.my_add(10, 10));
     }
 }
