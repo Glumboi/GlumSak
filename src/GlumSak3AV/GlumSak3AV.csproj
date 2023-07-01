@@ -34,6 +34,9 @@
       <DependentUpon>SettingsTabView.axaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\YuzuUpdaterView - Copier.axaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
     <Compile Update="Views\YuzuUpdaterView.axaml.cs">
       <DependentUpon>YuzuUpdaterView.axaml</DependentUpon>
       <SubType>Code</SubType>
