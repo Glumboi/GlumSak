@@ -62,11 +62,11 @@ public class HomeTabViewModel : ViewModelBase
             Filtering.Buttons.GetButtonsToHide(ref _gameButtons, value);
         }
     }
-    
+
     public HomeTabViewModel()
     {
         CreateClearFilterCommand();
-        
+
         for (int i = 0; i < 27; i++)
         {
             _gameButtons.Add(new GameButton(new SwitchGame("Game" + i, "ID",
