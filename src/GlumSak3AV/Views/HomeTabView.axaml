@@ -12,98 +12,115 @@
     d:DesignWidth="800"
     x:DataType="viewModels:HomeTabViewModel"
     mc:Ignorable="d">
-	<Design.DataContext>
-		<!--
+    <Design.DataContext>
+        <!--
             This only sets the DataContext for the previewer in an IDE,
             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
         -->
-		<vm:HomeTabViewModel />
-	</Design.DataContext>
+        <vm:HomeTabViewModel />
+    </Design.DataContext>
 
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="12*" />
-			<RowDefinition Height="Auto" />
-		</Grid.RowDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-		<Border
+        <Border
             Grid.Row="0"
             Padding="5"
             RenderTransformOrigin="0.5,0.5">
-			<Grid>
-				<Grid.RowDefinitions>
-					<RowDefinition />
-					<RowDefinition />
-					<RowDefinition Height="7*" />
-				</Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition Height="7*" />
+                </Grid.RowDefinitions>
 
-				<StackPanel>
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="2*" />
-							<ColumnDefinition Width="*" />
-							<ColumnDefinition Width="*" />
-						</Grid.ColumnDefinitions>
-						<Grid>
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="2*" />
-								<ColumnDefinition />
-							</Grid.ColumnDefinitions>
-							<ComboBox
+                <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <ComboBox
                                 Grid.Column="0"
                                 Margin="0,0,4,0"
                                 HorizontalAlignment="Stretch"
                                 VerticalAlignment="Stretch"
                                 Items="{Binding Firmwares}"
                                 SelectedIndex="{Binding SelectedFirmware}">
-								<ComboBox.ItemTemplate>
-									<DataTemplate>
-										<TextBlock Text="{Binding Version}" />
-									</DataTemplate>
-								</ComboBox.ItemTemplate>
-							</ComboBox>
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Version}" />
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
 
-							<StackPanel Grid.Column="1">
-								<ComboBox
-                                    Margin="0,0,4,0"
+                            <Grid Grid.Column="1"  >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <ComboBox
+                                    Items="{Binding Emulators}"
+                                    SelectedIndex="{Binding SelectedEmulator}"
+                                    Margin="0,0,2,0"
                                     HorizontalAlignment="Stretch"
-                                    VerticalAlignment="Stretch" />
-							</StackPanel>
-						</Grid>
+                                    VerticalAlignment="Stretch" >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding JsonData.name}" />
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                                <Button Grid.Column="1"
+                                        FontWeight="Bold"
+                                        Margin="2,0,4,0"
+                                        HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch">+</Button>
+                            </Grid>
+                        </Grid>
 
-						<Button
+                        <Button
                             Grid.Column="1"
                             Margin="0,0,2,0"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
                             Content="Download Firmware" />
 
-						<Button
+                        <Button
                             x:Name="Keys_Button"
                             Grid.Column="2"
                             Margin="2,0,0,0"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
                             Content="Download Keys" />
-					</Grid>
-				</StackPanel>
+                    </Grid>
+                </StackPanel>
 
-				<StackPanel Grid.Row="1">
-					<Border Margin="0,4,0,0">
-						<Grid>
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="*" />
-								<ColumnDefinition Width="*" />
-							</Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="1">
+                    <Border Margin="0,4,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
 
-							<TextBox
+                            <TextBox
                                 x:Name="Filter_TextBox"
                                 Grid.Column="0"
                                 Margin="0,0,4,0"
                                 Text="{Binding Filter}" />
 
-							<Button
+                            <Button
                                 x:Name="ClearFilter_Button"
                                 Grid.Column="1"
                                 Margin="0,0,0,0"
@@ -111,36 +128,36 @@
                                 VerticalAlignment="Stretch"
                                 Command="{Binding ClearFilterCommand}"
                                 Content="Clear Filter" />
-						</Grid>
-					</Border>
-				</StackPanel>
-			</Grid>
-		</Border>
+                        </Grid>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
 
-		<Border Grid.Row="1" Padding="5">
-			<ScrollViewer>
-				<ItemsControl Grid.Row="1" Items="{Binding GameButtons}">
-					<ItemsControl.ItemsPanel>
-						<ItemsPanelTemplate>
-							<WrapPanel />
-						</ItemsPanelTemplate>
-					</ItemsControl.ItemsPanel>
-				</ItemsControl>
-			</ScrollViewer>
-		</Border>
+        <Border Grid.Row="1" Padding="5">
+            <ScrollViewer>
+                <ItemsControl Grid.Row="1" Items="{Binding GameButtons}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </Border>
 
-		<Border
+        <Border
             x:Name="Progress_Border"
             Grid.Row="2"
             Padding="5">
 
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="4*" />
-					<ColumnDefinition />
-				</Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
-				<ProgressBar
+                <ProgressBar
                     x:Name="Download_ProgressBar"
                     Grid.Row="2"
                     Height="30"
@@ -148,21 +165,21 @@
                     VerticalAlignment="Stretch"
                     Foreground="Gray" />
 
-				<TextBlock
+                <TextBlock
                     x:Name="DownloadProgress_TextBlock"
                     Margin="0,0,0,2"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Text="Download starting..." />
 
-				<Button
+                <Button
                     x:Name="CancelDownload_Button"
                     Grid.Column="1"
                     Height="28"
                     Margin="2,0,0,0"
                     HorizontalAlignment="Stretch"
                     Content="Cancel Download" />
-			</Grid>
-		</Border>
-	</Grid>
+            </Grid>
+        </Border>
+    </Grid>
 </UserControl>

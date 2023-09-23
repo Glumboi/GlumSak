@@ -8,10 +8,12 @@
 
     <ItemGroup>
       <PackageReference Include="Avalonia" Version="11.0.0-preview5" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\GlumSak3AV.Networking\GlumSak3AV.Networking.csproj" />
     </ItemGroup>
+
 
 </Project>

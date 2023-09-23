@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http.Headers;
-using System.Reactive;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Windows.Input;
-using Avalonia;
-using Avalonia.Controls;
-using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.CustomControls;
 using GlumSak3AV.Networking;
@@ -15,6 +10,22 @@ namespace GlumSak3AV.ViewModels;
 
 public class HomeTabViewModel : ViewModelBase
 {
+    private List<Emulator> _emulators = new List<Emulator>();
+
+    public List<Emulator> Emulators
+    {
+        get => _emulators;
+        set => SetProperty(ref _emulators, value);
+    }
+
+    private int _selectedEmulator = 0;
+
+    public int SelectedEmulator
+    {
+        get => _selectedEmulator;
+        set => SetProperty(ref _selectedEmulator, value);
+    }
+
     private List<SwitchFirmware> _firmwares = new List<SwitchFirmware>();
 
     public List<SwitchFirmware> Firmwares
@@ -74,5 +85,15 @@ public class HomeTabViewModel : ViewModelBase
         }
 
         _firmwares = Networking.Firmwares.GetFirmwareVersions();
+
+        string[] emuJsonPaths = Directory.GetFiles("./EmulatorConfigurations");
+        for (int i = 0; i < emuJsonPaths.Length; i++)
+        {
+            if (emuJsonPaths[i].Contains('Y'))
+            {
+                var emu = new Emulator(emuJsonPaths[i]);
+                Emulators.Add(emu);
+            }
+        }
     }
 }

@@ -1,0 +1,7 @@
+﻿{
+  "name": "Yuzu (standard)",
+  "windowsRootPath" : "%APPDATA%/yuzu",
+  "linuxRootPath" : ".local/share/yuzu",
+  "gamePath": "/cache/game_list",
+  "isGamesCachedAsFolder": false
+}
