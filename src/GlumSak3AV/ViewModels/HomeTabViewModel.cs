@@ -1,18 +1,22 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
+using System.Reactive.Linq;
 using System.Windows.Input;
+using Avalonia;
 using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.CustomControls;
 using GlumSak3AV.Networking;
 using GlumSak3AV.Switch;
+using GlumSak3AV.Views;
 
 namespace GlumSak3AV.ViewModels;
 
 public class HomeTabViewModel : ViewModelBase
 {
-    private List<Emulator> _emulators = new List<Emulator>();
+    private ObservableCollection<Emulator> _emulators = new ObservableCollection<Emulator>();
 
-    public List<Emulator> Emulators
+    public ObservableCollection<Emulator> Emulators
     {
         get => _emulators;
         set => SetProperty(ref _emulators, value);
@@ -23,12 +27,16 @@ public class HomeTabViewModel : ViewModelBase
     public int SelectedEmulator
     {
         get => _selectedEmulator;
-        set => SetProperty(ref _selectedEmulator, value);
+        set
+        {
+            SetProperty(ref _selectedEmulator, value);
+            LoadGamesToGUI();
+        }
     }
 
-    private List<SwitchFirmware> _firmwares = new List<SwitchFirmware>();
+    private ObservableCollection<SwitchFirmware> _firmwares = new ObservableCollection<SwitchFirmware>();
 
-    public List<SwitchFirmware> Firmwares
+    public ObservableCollection<SwitchFirmware> Firmwares
     {
         get => _firmwares;
         set => SetProperty(ref _firmwares, value);
@@ -42,9 +50,9 @@ public class HomeTabViewModel : ViewModelBase
         set => SetProperty(ref _selectedFirmware, value);
     }
 
-    private List<GameButton> _gameButtons = new List<GameButton>();
+    private ObservableCollection<GameButton> _gameButtons = new ObservableCollection<GameButton>();
 
-    public List<GameButton> GameButtons
+    public ObservableCollection<GameButton> GameButtons
     {
         get => _gameButtons;
         set => SetProperty(ref _gameButtons, value);
@@ -74,26 +82,48 @@ public class HomeTabViewModel : ViewModelBase
         }
     }
 
+    public ICommand EditEmulatorConfigurationCommand { get; internal set; }
+
+    void CreateEditEmulatorConfigurationCommand()
+    {
+        EditEmulatorConfigurationCommand = new RelayCommand(EditEmulatorConfiguration);
+    }
+
+    void EditEmulatorConfiguration()
+    {
+        EditEmulatorConfigWindow wnd = new EditEmulatorConfigWindow(Emulators[SelectedEmulator].JsonData);
+        wnd.ShowDialog(MainWindow._currentMainWindow);
+    }
+    
+    void LoadGamesToGUI()
+    {
+        GameButtons.Clear();
+
+        foreach (var game in Emulators[_selectedEmulator].GetGames())
+        {
+            GameButtons.Add(new GameButton(game));
+        }
+    }
+
+    void LoadFirmwares()
+    {
+        foreach (var firmware in Networking.Firmwares.GetFirmwareVersions())
+        {
+            Firmwares.Add(firmware);
+        }
+    }
+    
     public HomeTabViewModel()
     {
-        CreateClearFilterCommand();
-
-        for (int i = 0; i < 27; i++)
-        {
-            _gameButtons.Add(new GameButton(new SwitchGame("Game" + i, "ID",
-                "https://placehold.co/600x400/png")));
-        }
-
-        _firmwares = Networking.Firmwares.GetFirmwareVersions();
-
         string[] emuJsonPaths = Directory.GetFiles("./EmulatorConfigurations");
         for (int i = 0; i < emuJsonPaths.Length; i++)
         {
-            if (emuJsonPaths[i].Contains('Y'))
-            {
-                var emu = new Emulator(emuJsonPaths[i]);
-                Emulators.Add(emu);
-            }
+            Emulators.Add(new Emulator(emuJsonPaths[i]));
         }
+
+        CreateClearFilterCommand();
+        CreateEditEmulatorConfigurationCommand();
+        LoadFirmwares();
+        LoadGamesToGUI();
     }
 }

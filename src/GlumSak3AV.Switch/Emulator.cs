@@ -8,7 +8,7 @@ public class Emulator
     public string EmulatorName { get; set; }
     public string EmulatorRoot { get; set; }
     public string GamesRootPath { get; set; }
-    public List<SwitchGame> Games { get; set; }
+    public List<SwitchGame> Games { get; set; } = new List<SwitchGame>();
     public EmuJsonDummy JsonData { get; set; }
 
     public Emulator(string jsonPath)
@@ -26,33 +26,27 @@ public class Emulator
         }
 
         GamesRootPath = EmulatorRoot + JsonData.gamePath;
-
-        try
-        {
-            GetGames();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
     }
 
-    public void GetGames()
+    public List<SwitchGame> GetGames()
     {
-        if (!JsonData.isGamesCachedAsFolder)
+        Games.Clear();
+
+        string[] idSources = JsonData.isGamesCachedAsFolder
+            ? Directory.GetDirectories(GamesRootPath)
+            : Directory.GetFiles(GamesRootPath);
+        for (int i = 0; i < idSources.Length; i++)
         {
-            string[] files = Directory.GetFiles(GamesRootPath);
-            for (int i = 0; i < files.Length; i++)
-            {
-                var span = files[i].AsSpan();
-                var start = span.LastIndexOf('\\') + 1;
-                var length = span.IndexOf('.') - start;
-                string id = span.Slice(start, length).ToString();
-                
-                Games.Add(new SwitchGame(GamesRootPath, id, ""));
-            }
+            var span = idSources[i].AsSpan();
+            var start = span.LastIndexOf('\\') + 1;
+            var length = span.Contains('.') ? span.IndexOf('.') - start : span.Length - start;
+            string id = span.Slice(start, length).ToString();
+
+            var game = EshopAPI.GetGameFromDatabaseByID(id);
+            Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
         }
+
+        return Games;
     }
 
     public void InstallShader()

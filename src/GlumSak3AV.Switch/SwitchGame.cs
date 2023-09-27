@@ -44,7 +44,6 @@ public class SwitchGame
             if (_localImage == null)
             {
                 return Networking.WebImage.DownloadImage(ImageURL);
-               // Network.Networking.LoadImageFromUrl(ImageURL, 150, 150);
             }
 
             return _localImage;

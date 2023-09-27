@@ -1,0 +1,42 @@
+﻿<Window x:Class="GlumSak3AV.Views.EditEmulatorConfigWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="using:FluentAvalonia.UI.Controls"
+        xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+        xmlns:viewModels="clr-namespace:GlumSak3AV.ViewModels"
+        xmlns:vm="using:GlumSak3AV.ViewModels"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="BorderOnly"
+        CanResize="False"
+        d:DesignHeight="450"
+        d:DesignWidth="350"
+        Height="350"
+        Width="250"
+        WindowStartupLocation="CenterOwner"
+        x:DataType="viewModels:EditEmulatorConfigViewModel"
+        mc:Ignorable="d"
+        PointerPressed="InputElement_OnPointerPressed"
+        PointerMoved="InputElement_OnPointerMoved"
+        PointerReleased="InputElement_OnPointerReleased">
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:EditEmulatorConfigViewModel />
+    </Design.DataContext>
+    <Border Padding="6">
+        <Grid>
+            <TextBlock FontWeight="Bold"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Top"
+                       FontSize="14"
+                       Text="{Binding EmuConfigName}"
+                       Padding="10" />
+        </Grid>
+    </Border>
+</Window>

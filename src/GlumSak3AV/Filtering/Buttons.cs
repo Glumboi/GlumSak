@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Avalonia.Controls;
 using GlumSak3AV.CustomControls;
 
@@ -6,7 +7,7 @@ namespace GlumSak3AV.Filtering;
 
 public class Buttons
 {
-    public static void GetButtonsToHide(ref List<GameButton> buttons, string filterSrc)
+    public static void GetButtonsToHide(ref ObservableCollection<GameButton> buttons, string filterSrc)
     {
         foreach (var button in buttons)
         {

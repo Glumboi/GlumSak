@@ -64,28 +64,49 @@
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
 
-                            <Grid Grid.Column="1"  >
+                            <Grid Grid.Column="1">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
                                 <ComboBox
                                     Items="{Binding Emulators}"
                                     SelectedIndex="{Binding SelectedEmulator}"
-                                    Margin="0,0,2,0"
                                     HorizontalAlignment="Stretch"
-                                    VerticalAlignment="Stretch" >
+                                    VerticalAlignment="Stretch">
                                     <ComboBox.ItemTemplate>
                                         <DataTemplate>
                                             <TextBlock Text="{Binding JsonData.name}" />
                                         </DataTemplate>
                                     </ComboBox.ItemTemplate>
                                 </ComboBox>
-                                <Button Grid.Column="1"
+                                <Grid Grid.Column="1"
+                                      Margin="4,0,4,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <Button
                                         FontWeight="Bold"
-                                        Margin="2,0,4,0"
-                                        HorizontalAlignment="Stretch" 
-                                        VerticalAlignment="Stretch">+</Button>
+                                        Margin="0,0,2,0"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Stretch"
+                                        Command="{Binding EditEmulatorConfigurationCommand}">
+                                        <Button.Content>
+                                            <ui:SymbolIcon Symbol="Edit" />
+                                        </Button.Content>
+                                    </Button>
+                                    <Button
+                                        Grid.Column="1"
+                                        FontWeight="Bold"
+                                        Margin="2,0,0,0"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalAlignment="Stretch">
+                                        <Button.Content>
+                                            <ui:SymbolIcon Symbol="Add" />
+                                        </Button.Content>
+                                    </Button>
+                                </Grid>
                             </Grid>
                         </Grid>
 
@@ -128,6 +149,7 @@
                                 VerticalAlignment="Stretch"
                                 Command="{Binding ClearFilterCommand}"
                                 Content="Clear Filter" />
+
                         </Grid>
                     </Border>
                 </StackPanel>
@@ -136,13 +158,14 @@
 
         <Border Grid.Row="1" Padding="5">
             <ScrollViewer>
-                <ItemsControl Grid.Row="1" Items="{Binding GameButtons}">
+                <ItemsControl Items="{Binding GameButtons}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel />
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
+
             </ScrollViewer>
         </Border>
 

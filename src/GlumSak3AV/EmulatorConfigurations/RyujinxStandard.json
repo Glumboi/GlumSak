@@ -1,7 +1,7 @@
 ﻿{
   "name": "Ryujinx (standard)",
-  "windowsRootPath" : "%APPDATA%/yuzu",
-  "linuxRootPath" : ".local/share/yuzu",
-  "gamePath": "cache/game_list",
+  "windowsRootPath" : "%APPDATA%/Ryujinx",
+  "linuxRootPath" : ".local/share/Ryujinx",
+  "gamePath": "/games",
   "isGamesCachedAsFolder": true
 }
