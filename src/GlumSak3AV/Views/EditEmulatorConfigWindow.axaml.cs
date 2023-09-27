@@ -14,12 +14,34 @@ public partial class EditEmulatorConfigWindow : Window
 
     private bool _windowDragging = false;
     private PointerPoint _originalPoint;
+    public static Window _editEmuConfigWindow;
 
+    public EditEmulatorConfigWindow()
+    {
+        InitializeComponent();
+        
+        _editEmuConfigWindow = this;
+        EditEmulatorConfigViewModel dT = new EditEmulatorConfigViewModel();
+        this.DataContext = dT;
+        dT.JsonDummy = new EmuJsonDummy
+        {
+            name = "Your config name here",
+            firmwarePath = "Firmware path here",
+            gamePath = "Game path here",
+            linuxRootPath = "Linux root path here",
+            windowsRootPath = "Windows root path here",
+            isGamesCachedAsFolder = false,
+            keysPath = "Keys path here"
+        };
+    }
+    
     public EditEmulatorConfigWindow(EmuJsonDummy jsonOfCurrentEmu)
     {
         InitializeComponent();
-        this.DataContext = new EditEmulatorConfigViewModel();
-        _jsonDummy = jsonOfCurrentEmu;
+        _editEmuConfigWindow = this;
+        EditEmulatorConfigViewModel dT = new EditEmulatorConfigViewModel();
+        this.DataContext = dT;
+        dT.JsonDummy = jsonOfCurrentEmu;
     }
 
     private void InputElement_OnPointerMoved(object? sender, PointerEventArgs e)

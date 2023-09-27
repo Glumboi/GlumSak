@@ -2,6 +2,8 @@
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Reactive.Linq;
+using System.Reflection.Metadata.Ecma335;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Avalonia;
 using CommunityToolkit.Mvvm.Input;
@@ -89,14 +91,43 @@ public class HomeTabViewModel : ViewModelBase
         EditEmulatorConfigurationCommand = new RelayCommand(EditEmulatorConfiguration);
     }
 
-    void EditEmulatorConfiguration()
+    async void EditEmulatorConfiguration()
     {
         EditEmulatorConfigWindow wnd = new EditEmulatorConfigWindow(Emulators[SelectedEmulator].JsonData);
-        wnd.ShowDialog(MainWindow._currentMainWindow);
+        await wnd.ShowDialog(MainWindow._currentMainWindow);
+        LoadEmulators();
     }
-    
+
+    public ICommand CreateNewEmulatorConfigurationCommand { get; internal set; }
+
+    void CreateCreateNewEmulatorConfigurationCommand()
+    {
+        CreateNewEmulatorConfigurationCommand = new RelayCommand(CreateNewEmulatorConfiguration);
+    }
+
+    async void CreateNewEmulatorConfiguration()
+    {
+        EditEmulatorConfigWindow wnd = new EditEmulatorConfigWindow();
+        await wnd.ShowDialog(MainWindow._currentMainWindow);
+        LoadEmulators();
+    }
+
+    public ICommand RemoveEmulatorConfigurationCommand { get; internal set; }
+
+    void CreateRemoveEmulatorConfigurationCommand()
+    {
+        RemoveEmulatorConfigurationCommand = new RelayCommand(RemoveEmulatorConfiguration);
+    }
+
+    void RemoveEmulatorConfiguration()
+    {
+        File.Delete(Emulators[SelectedEmulator].JsonFile);
+        LoadEmulators();
+    }
+
     void LoadGamesToGUI()
     {
+        if (Emulators.Count < 1) return;
         GameButtons.Clear();
 
         foreach (var game in Emulators[_selectedEmulator].GetGames())
@@ -112,17 +143,27 @@ public class HomeTabViewModel : ViewModelBase
             Firmwares.Add(firmware);
         }
     }
-    
-    public HomeTabViewModel()
+
+    void LoadEmulators()
     {
+        Emulators.Clear();
+
         string[] emuJsonPaths = Directory.GetFiles("./EmulatorConfigurations");
         for (int i = 0; i < emuJsonPaths.Length; i++)
         {
             Emulators.Add(new Emulator(emuJsonPaths[i]));
         }
 
+        SelectedEmulator = 0;
+    }
+
+    public HomeTabViewModel()
+    {
+        LoadEmulators();
         CreateClearFilterCommand();
         CreateEditEmulatorConfigurationCommand();
+        CreateCreateNewEmulatorConfigurationCommand();
+        CreateRemoveEmulatorConfigurationCommand();
         LoadFirmwares();
         LoadGamesToGUI();
     }

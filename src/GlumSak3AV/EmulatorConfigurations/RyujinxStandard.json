@@ -2,6 +2,8 @@
   "name": "Ryujinx (standard)",
   "windowsRootPath" : "%APPDATA%/Ryujinx",
   "linuxRootPath" : ".local/share/Ryujinx",
-  "gamePath": "/games",
+  "gamePath": "/games", 
+  "firmwarePath": "/bis/system/contents/registered",
+  "keysPath" : "/system",
   "isGamesCachedAsFolder": true
 }

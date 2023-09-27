@@ -12,16 +12,14 @@
         ExtendClientAreaTitleBarHeightHint="-1"
         SystemDecorations="BorderOnly"
         CanResize="False"
-        d:DesignHeight="450"
+        Name="EditEmuConfigWindow"
+        d:DesignHeight="650"
         d:DesignWidth="350"
-        Height="350"
-        Width="250"
+        Height="685"
+        Width="350"
         WindowStartupLocation="CenterOwner"
         x:DataType="viewModels:EditEmulatorConfigViewModel"
-        mc:Ignorable="d"
-        PointerPressed="InputElement_OnPointerPressed"
-        PointerMoved="InputElement_OnPointerMoved"
-        PointerReleased="InputElement_OnPointerReleased">
+        mc:Ignorable="d">
     <Design.DataContext>
         <!--
             This only sets the DataContext for the previewer in an IDE,
@@ -31,12 +29,143 @@
     </Design.DataContext>
     <Border Padding="6">
         <Grid>
-            <TextBlock FontWeight="Bold"
-                       HorizontalAlignment="Stretch"
-                       VerticalAlignment="Top"
-                       FontSize="14"
-                       Text="{Binding EmuConfigName}"
-                       Padding="10" />
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Border
+                BorderThickness="2"
+                Background="Transparent"
+                BorderBrush="Azure"
+                Padding="4"
+                CornerRadius="6"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                PointerPressed="InputElement_OnPointerPressed"
+                PointerMoved="InputElement_OnPointerMoved"
+                PointerReleased="InputElement_OnPointerReleased">
+                <TextBlock
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    FontSize="14"
+                    Text="{Binding EmuConfigName}"
+                    Padding="10" />
+            </Border>
+
+            <StackPanel Grid.Row="1" Margin="0 4 0 0 ">
+                <TextBlock Text="Filename" Padding="4" />
+                <TextBox Text="{Binding JsonFileName}"></TextBox>
+
+                <TextBlock Text="Emu config name" Padding="4" />
+                <TextBox Text="{Binding EmuConfigName}"></TextBox>
+
+                <TextBlock Text="Linux emulator path" Padding="4" />
+                <TextBox Text="{Binding EmuConfigLinuxRootPath}"></TextBox>
+
+                <TextBlock Text="Windows emulator path" Padding="4" />
+                <TextBox Text="{Binding EmuConfigWindowsRootPath}"></TextBox>
+
+                <CheckBox IsChecked="{Binding UsesFoldersAsCache}" Content="Uses folders to cache games?" Padding="4" />
+
+                <ui:SettingsExpander
+                    Description="Extra paths related to where games are stored and such, recommended to check if valid!">
+                    <ui:SettingsExpander.IconSource>
+                        <ui:SymbolIconSource Symbol="SettingsFilled"></ui:SymbolIconSource>
+                    </ui:SettingsExpander.IconSource>
+                    <ui:SettingsExpander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontWeight="Bold">Other paths</TextBlock>
+                        </StackPanel>
+                    </ui:SettingsExpander.Header>
+                    <ui:SettingsExpander.Items>
+
+                        <ui:SettingsExpanderItem>
+                            <ui:SettingsExpanderItem.IconSource>
+                                <ui:SymbolIconSource Symbol="GamesFilled" />
+                            </ui:SettingsExpanderItem.IconSource>
+                            <ui:SettingsExpanderItem.Description>
+                                Game cache path
+                            </ui:SettingsExpanderItem.Description>
+                            <ui:SettingsExpanderItem.Content>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <TextBox Text="{Binding EmuGamesPath}"
+                                             HorizontalAlignment="Stretch" />
+                                </Grid>
+                            </ui:SettingsExpanderItem.Content>
+                        </ui:SettingsExpanderItem>
+
+                        <ui:SettingsExpanderItem>
+                            <ui:SettingsExpanderItem.IconSource>
+                                <ui:SymbolIconSource Symbol="Folder" />
+                            </ui:SettingsExpanderItem.IconSource>
+                            <ui:SettingsExpanderItem.Description>
+                                Firmware path
+                            </ui:SettingsExpanderItem.Description>
+                            <ui:SettingsExpanderItem.Content>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <TextBox Text="{Binding EmuFirmwarePath}"
+                                             HorizontalAlignment="Stretch" />
+                                </Grid>
+                            </ui:SettingsExpanderItem.Content>
+                        </ui:SettingsExpanderItem>
+
+                        <ui:SettingsExpanderItem>
+                            <ui:SettingsExpanderItem.IconSource>
+                                <ui:SymbolIconSource Symbol="Import" />
+                            </ui:SettingsExpanderItem.IconSource>
+                            <ui:SettingsExpanderItem.Description>
+                                Keys path
+                            </ui:SettingsExpanderItem.Description>
+                            <ui:SettingsExpanderItem.Content>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <TextBox
+                                        Text="{Binding EmuKeysPath}"
+                                        HorizontalAlignment="Stretch" />
+                                </Grid>
+                            </ui:SettingsExpanderItem.Content>
+                        </ui:SettingsExpanderItem>
+
+                    </ui:SettingsExpander.Items>
+                </ui:SettingsExpander>
+            </StackPanel>
+
+            <Grid Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        Margin="2 0 2 0"
+                        Command="{Binding AcceptCommand}">
+                    <Button.Content>
+                        Accept
+                    </Button.Content>
+                </Button>
+                <Button Grid.Column="1"
+                        Margin="2 0 2 0"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        Command="{Binding CancelCommand}">
+                    <Button.Content>
+                        Cancel
+                    </Button.Content>
+                </Button>
+                <Button Grid.Column="2"
+                        Margin="2 0 2 0"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        Command="{Binding ResetCommand}">
+                    <Button.Content>
+                        Reset
+                    </Button.Content>
+                </Button>
+
+            </Grid>
         </Grid>
     </Border>
 </Window>

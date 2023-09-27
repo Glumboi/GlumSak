@@ -8,12 +8,16 @@ public class Emulator
     public string EmulatorName { get; set; }
     public string EmulatorRoot { get; set; }
     public string GamesRootPath { get; set; }
+    public string FirmwareRootPath { get; set; }
+    public string KeysRootPath { get; set; }
     public List<SwitchGame> Games { get; set; } = new List<SwitchGame>();
     public EmuJsonDummy JsonData { get; set; }
+    public string JsonFile { get; set; }
 
     public Emulator(string jsonPath)
     {
         JsonData = JsonSerializer.Deserialize<EmuJsonDummy>(File.ReadAllText(jsonPath));
+        JsonFile = jsonPath;
         EmulatorName = JsonData.name;
 
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -26,27 +30,34 @@ public class Emulator
         }
 
         GamesRootPath = EmulatorRoot + JsonData.gamePath;
+        FirmwareRootPath = EmulatorRoot + JsonData.firmwarePath;
+        KeysRootPath = EmulatorRoot + JsonData.keysPath;
     }
 
     public List<SwitchGame> GetGames()
     {
         Games.Clear();
 
-        string[] idSources = JsonData.isGamesCachedAsFolder
-            ? Directory.GetDirectories(GamesRootPath)
-            : Directory.GetFiles(GamesRootPath);
-        for (int i = 0; i < idSources.Length; i++)
+        if (Directory.Exists(GamesRootPath))
         {
-            var span = idSources[i].AsSpan();
-            var start = span.LastIndexOf('\\') + 1;
-            var length = span.Contains('.') ? span.IndexOf('.') - start : span.Length - start;
-            string id = span.Slice(start, length).ToString();
+            string[] idSources = JsonData.isGamesCachedAsFolder
+                ? Directory.GetDirectories(GamesRootPath)
+                : Directory.GetFiles(GamesRootPath);
+            for (int i = 0; i < idSources.Length; i++)
+            {
+                var span = idSources[i].AsSpan();
+                var start = span.LastIndexOf('\\') + 1;
+                var length = span.Contains('.') ? span.IndexOf('.') - start : span.Length - start;
+                string id = span.Slice(start, length).ToString();
 
-            var game = EshopAPI.GetGameFromDatabaseByID(id);
-            Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
+                var game = EshopAPI.GetGameFromDatabaseByID(id);
+                Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
+            }
+
+            return Games;
         }
 
-        return Games;
+        return null;
     }
 
     public void InstallShader()
