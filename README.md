@@ -2,7 +2,7 @@
   
 <img src="https://i.imgur.com/c7783EU.png" width="312" height="100" />
 
-Since this is an ongoing project I want to gather as much feedback as possible, thus I advise everyone to share their experience with GlumSak
+# COOKING GLUMSAK 3
 
 [Click me to write an E-Mail to me that describes your experience!](mailto:glumboi.contact@gmail.com)
   
