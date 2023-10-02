@@ -14,6 +14,20 @@ public class Emulator
     public EmuJsonDummy JsonData { get; set; }
     public string JsonFile { get; set; }
 
+    public Emulator()
+    {
+        JsonData = new EmuJsonDummy
+        {
+            name = "EmulatorConfig name",
+            linuxRootPath = "Linux root path",
+            firmwarePath = "Firmware path",
+            windowsRootPath = "Windows path",
+            isGamesCachedAsFolder = false,
+            keysPath = "Keys path",
+            gamePath = "Games path"
+        };
+    }
+    
     public Emulator(string jsonPath)
     {
         JsonData = JsonSerializer.Deserialize<EmuJsonDummy>(File.ReadAllText(jsonPath));

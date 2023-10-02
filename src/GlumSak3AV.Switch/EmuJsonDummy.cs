@@ -24,6 +24,9 @@ public static class JsonOperations
             fileName = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss");
         }
 
-        File.WriteAllText($"./EmulatorConfigurations/{fileName}.json", JsonSerializer.Serialize(json));
+        var finalFileName = fileName.Contains("EmulatorConfigurations")
+            ? fileName
+            : $"./EmulatorConfigurations/{fileName}.json";
+        File.WriteAllText(finalFileName, JsonSerializer.Serialize(json));
     }
 }

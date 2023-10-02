@@ -8,6 +8,21 @@ namespace GlumSak3AV.ViewModels;
 
 public class EditEmulatorConfigViewModel : ViewModelBase
 {
+    private Emulator _emulator;
+
+    public Emulator Emulator
+    {
+        get => _emulator;
+        set
+        {
+            if (value != _emulator)
+            {
+                _emulator = value;
+                JsonDummy = value.JsonData;
+            }
+        }
+    }
+
     private EmuJsonDummy _jsonDummy;
 
     public EmuJsonDummy JsonDummy
@@ -23,6 +38,7 @@ public class EditEmulatorConfigViewModel : ViewModelBase
             EmuGamesPath = value.gamePath;
             EmuKeysPath = value.keysPath;
             EmuFirmwarePath = value.firmwarePath;
+            JsonFileName = string.IsNullOrWhiteSpace(Emulator.JsonFile) ? "Filename" : Emulator.JsonFile;
         }
     }
 
@@ -107,7 +123,7 @@ public class EditEmulatorConfigViewModel : ViewModelBase
         JsonDummy.gamePath = EmuGamesPath;
         JsonDummy.keysPath = EmuKeysPath;
         JsonDummy.firmwarePath = EmuFirmwarePath;
-        JsonOperations.WriteNewConfig(JsonDummy, _jsonFileName);
+        JsonOperations.WriteNewConfig(JsonDummy, JsonFileName);
 
         EditEmulatorConfigWindow._editEmuConfigWindow.Close();
     }
@@ -142,8 +158,24 @@ public class EditEmulatorConfigViewModel : ViewModelBase
         EditEmulatorConfigWindow._editEmuConfigWindow.Close();
     }
 
+    public ICommand AutoLoadCommand { get; internal set; }
+
+    void CreateAutoLoadCommand()
+    {
+        AutoLoadCommand = new RelayCommand(AutoLoadExtraPaths);
+    }
+
+    void AutoLoadExtraPaths()
+    {
+        if (UsesFoldersAsCache)
+        {
+            EmuGamesPath = "";
+        }
+    }
+
     public EditEmulatorConfigViewModel()
     {
+        CreateAutoLoadCommand();
         CreateAcceptCommand();
         CreateResetCommand();
         CreateCancelCommand();

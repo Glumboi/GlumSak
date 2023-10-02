@@ -128,7 +128,8 @@
                             Margin="0,0,2,0"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
-                            Content="Download Firmware" />
+                            Content="Download Firmware"
+                            Command="{Binding DownloadAndInstallFirmwareCommand}" />
 
                         <Button
                             x:Name="Keys_Button"

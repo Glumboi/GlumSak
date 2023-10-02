@@ -13,9 +13,9 @@
         SystemDecorations="BorderOnly"
         CanResize="False"
         Name="EditEmuConfigWindow"
-        d:DesignHeight="650"
+        d:DesignHeight="720"
         d:DesignWidth="350"
-        Height="685"
+        Height="720"
         Width="350"
         WindowStartupLocation="CenterOwner"
         x:DataType="viewModels:EditEmulatorConfigViewModel"
@@ -68,7 +68,17 @@
                 <TextBox Text="{Binding EmuConfigWindowsRootPath}"></TextBox>
 
                 <CheckBox IsChecked="{Binding UsesFoldersAsCache}" Content="Uses folders to cache games?" Padding="4" />
-
+                
+                <Button HorizontalAlignment="Stretch"
+                        Margin="0 6 0 4">
+                    <Button.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <ui:SymbolIcon Symbol="Refresh" Margin="0 0 5 0"/>
+                            <TextBlock>Auto load</TextBlock>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                
                 <ui:SettingsExpander
                     Description="Extra paths related to where games are stored and such, recommended to check if valid!">
                     <ui:SettingsExpander.IconSource>

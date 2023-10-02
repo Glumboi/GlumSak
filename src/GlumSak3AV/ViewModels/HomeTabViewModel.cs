@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Reactive.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -84,6 +85,18 @@ public class HomeTabViewModel : ViewModelBase
         }
     }
 
+    public ICommand DownloadAndInstallFirmwareCommand { get; internal set; }
+
+    void CreateDownloadAndInstallFirmwareCommand()
+    {
+        DownloadAndInstallFirmwareCommand = new RelayCommand(DownloadAndInstallFirmware);
+    }
+
+    void DownloadAndInstallFirmware()
+    {
+        StaticInstances.WebInstances._downloader.DownloadFile(Firmwares[SelectedFirmware].ZipURL, "./", "");
+    }
+
     public ICommand EditEmulatorConfigurationCommand { get; internal set; }
 
     void CreateEditEmulatorConfigurationCommand()
@@ -93,7 +106,7 @@ public class HomeTabViewModel : ViewModelBase
 
     async void EditEmulatorConfiguration()
     {
-        EditEmulatorConfigWindow wnd = new EditEmulatorConfigWindow(Emulators[SelectedEmulator].JsonData);
+        EditEmulatorConfigWindow wnd = new EditEmulatorConfigWindow(Emulators[SelectedEmulator]);
         await wnd.ShowDialog(MainWindow._currentMainWindow);
         LoadEmulators();
     }
@@ -129,8 +142,16 @@ public class HomeTabViewModel : ViewModelBase
     {
         if (Emulators.Count < 1) return;
         GameButtons.Clear();
+        var emuGames = Emulators[_selectedEmulator].GetGames();
 
-        foreach (var game in Emulators[_selectedEmulator].GetGames())
+        //TODO: Implement a better way of notifying the user that a config is corrupt aka not working!
+        if (emuGames == null)
+        {
+            Debug.WriteLine("One emulator config is corrupt!");
+            return;
+        }
+
+        foreach (var game in emuGames)
         {
             GameButtons.Add(new GameButton(game));
         }
@@ -165,6 +186,7 @@ public class HomeTabViewModel : ViewModelBase
         CreateCreateNewEmulatorConfigurationCommand();
         CreateRemoveEmulatorConfigurationCommand();
         LoadFirmwares();
+        CreateDownloadAndInstallFirmwareCommand();
         LoadGamesToGUI();
     }
 }

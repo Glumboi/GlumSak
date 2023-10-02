@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Xml;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
@@ -23,25 +24,16 @@ public partial class EditEmulatorConfigWindow : Window
         _editEmuConfigWindow = this;
         EditEmulatorConfigViewModel dT = new EditEmulatorConfigViewModel();
         this.DataContext = dT;
-        dT.JsonDummy = new EmuJsonDummy
-        {
-            name = "Your config name here",
-            firmwarePath = "Firmware path here",
-            gamePath = "Game path here",
-            linuxRootPath = "Linux root path here",
-            windowsRootPath = "Windows root path here",
-            isGamesCachedAsFolder = false,
-            keysPath = "Keys path here"
-        };
+        dT.Emulator = new Emulator();
     }
     
-    public EditEmulatorConfigWindow(EmuJsonDummy jsonOfCurrentEmu)
+    public EditEmulatorConfigWindow(Emulator emulator)
     {
         InitializeComponent();
         _editEmuConfigWindow = this;
         EditEmulatorConfigViewModel dT = new EditEmulatorConfigViewModel();
         this.DataContext = dT;
-        dT.JsonDummy = jsonOfCurrentEmu;
+        dT.Emulator = emulator;
     }
 
     private void InputElement_OnPointerMoved(object? sender, PointerEventArgs e)
