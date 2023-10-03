@@ -110,7 +110,7 @@ public class HomeTabViewModel : ViewModelBase
     void DownloadAndInstallKeys()
     {
         StaticInstances.WebInstances._downloader.DownloadFile(Emulators[SelectedEmulator]
-            .KeysDownload(""));
+            .KeysDownload("https://www.mediafire.com/file/a8dg2wnszlowsfm/prod.zip/file"));
     }
 
     public ICommand EditEmulatorConfigurationCommand { get; internal set; }
