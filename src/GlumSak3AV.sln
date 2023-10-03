@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlumSak3AV.Switch", "GlumSa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlumSak3AV.Networking", "GlumSak3AV.Networking\GlumSak3AV.Networking.csproj", "{B962285D-3858-43C2-AD85-872127FBA0A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlumSak3AV.Files", "GlumSak3AV.Files\GlumSak3AV.Files.csproj", "{51ECCDAB-47A5-4EEB-A7F1-8435F6C2C73B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{B962285D-3858-43C2-AD85-872127FBA0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B962285D-3858-43C2-AD85-872127FBA0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B962285D-3858-43C2-AD85-872127FBA0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51ECCDAB-47A5-4EEB-A7F1-8435F6C2C73B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51ECCDAB-47A5-4EEB-A7F1-8435F6C2C73B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51ECCDAB-47A5-4EEB-A7F1-8435F6C2C73B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51ECCDAB-47A5-4EEB-A7F1-8435F6C2C73B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

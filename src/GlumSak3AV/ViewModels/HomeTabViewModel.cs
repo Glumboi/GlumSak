@@ -94,7 +94,23 @@ public class HomeTabViewModel : ViewModelBase
 
     void DownloadAndInstallFirmware()
     {
-        StaticInstances.WebInstances._downloader.DownloadFile(Firmwares[SelectedFirmware].ZipURL, "./", "");
+        StaticInstances.WebInstances._downloader.DownloadFile(new DownloadSettings(false, false, true,
+            Firmwares[SelectedFirmware].ZipURL,
+            Path.GetTempPath(),
+            "./")); //Firmwares[SelectedFirmware].ZipURL, Path.GetTempPath(), "");
+    }
+
+    public ICommand DownloadAndInstallKeysCommand { get; internal set; }
+
+    void CreateDownloadAndInstallKeysCommand()
+    {
+        DownloadAndInstallKeysCommand = new RelayCommand(DownloadAndInstallKeys);
+    }
+
+    void DownloadAndInstallKeys()
+    {
+        StaticInstances.WebInstances._downloader.DownloadFile(Emulators[SelectedEmulator]
+            .KeysDownload(""));
     }
 
     public ICommand EditEmulatorConfigurationCommand { get; internal set; }
@@ -187,6 +203,7 @@ public class HomeTabViewModel : ViewModelBase
         CreateRemoveEmulatorConfigurationCommand();
         LoadFirmwares();
         CreateDownloadAndInstallFirmwareCommand();
+        CreateDownloadAndInstallKeysCommand();
         LoadGamesToGUI();
     }
 }

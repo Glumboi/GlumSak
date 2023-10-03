@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using System.Text.Json;
+using GlumSak3AV.Networking;
 
 namespace GlumSak3AV.Switch;
 
@@ -27,7 +28,7 @@ public class Emulator
             gamePath = "Games path"
         };
     }
-    
+
     public Emulator(string jsonPath)
     {
         JsonData = JsonSerializer.Deserialize<EmuJsonDummy>(File.ReadAllText(jsonPath));
@@ -74,7 +75,14 @@ public class Emulator
         return null;
     }
 
-    public void InstallShader()
+    public DownloadSettings KeysDownload(string keysUrl)
     {
+        return new DownloadSettings(
+            false,
+            true,
+            false,
+            keysUrl,
+            Path.GetTempPath(),
+            KeysRootPath);
     }
 }
