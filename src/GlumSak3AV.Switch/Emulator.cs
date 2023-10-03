@@ -41,7 +41,7 @@ public class Emulator
         }
         else
         {
-            EmulatorRoot = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + JsonData.linuxRootPath;
+            EmulatorRoot = JsonData.linuxRootPath.Contains("%LINUXUSER%") ? Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + JsonData.linuxRootPath.Replace("%LINUXUSER%", String.Empty) : JsonData.linuxRootPath;
         }
 
         GamesRootPath = EmulatorRoot + JsonData.gamePath;
