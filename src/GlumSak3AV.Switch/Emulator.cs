@@ -60,8 +60,8 @@ public class Emulator
                 : Directory.GetFiles(GamesRootPath);
             for (int i = 0; i < idSources.Length; i++)
             {
-                var span = idSources[i].AsSpan();
-                var start = span.LastIndexOf('\\') + 1;
+                var span = idSources[i].Replace('\\', '/').AsSpan();
+                var start = span.LastIndexOf('/') + 1;
                 var length = span.Contains('.') ? span.IndexOf('.') - start : span.Length - start;
                 string id = span.Slice(start, length).ToString();
 
