@@ -41,7 +41,7 @@ public class Emulator
         }
         else
         {
-            EmulatorRoot = JsonData.linuxRootPath;
+            EmulatorRoot = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + JsonData.linuxRootPath;
         }
 
         GamesRootPath = EmulatorRoot + JsonData.gamePath;
@@ -62,7 +62,7 @@ public class Emulator
             {
                 var span = idSources[i].Replace('\\', '/').AsSpan();
                 var start = span.LastIndexOf('/') + 1;
-                var length = span.Contains('.') ? span.IndexOf('.') - start : span.Length - start;
+                var length = idSources[i].Contains(".pv") ? span.LastIndexOf('.') - start : span.Length - start;
                 string id = span.Slice(start, length).ToString();
 
                 var game = EshopAPI.GetGameFromDatabaseByID(id);
