@@ -69,11 +69,11 @@ public class Emulator
             {
                 var span = idSources[i].Replace('\\', '/').AsSpan();
                 var start = span.LastIndexOf('/') + 1;
-                var length = idSources[i].Contains(".pv") ? span.LastIndexOf('.') - start : span.Length - start;
+                var length = idSources[i].Contains(".pv") ? span.LastIndexOf('.') - 3 - start : span.Length - start;
                 string id = span.Slice(start, length).ToString();
 
                 var game = EshopAPI.GetGameFromDatabaseByID(id);
-                if (game != null) Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
+                Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
             }
 
             return Games;
