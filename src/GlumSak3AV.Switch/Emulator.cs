@@ -20,7 +20,7 @@ public class Emulator
     public Emulator()
     {
         _tempPath = Path.GetTempPath();
-        
+
         JsonData = new EmuJsonDummy
         {
             name = "EmulatorConfig name",
@@ -36,7 +36,7 @@ public class Emulator
     public Emulator(string jsonPath)
     {
         _tempPath = Path.GetTempPath();
-        
+
         JsonData = JsonSerializer.Deserialize<EmuJsonDummy>(File.ReadAllText(jsonPath));
         JsonFile = jsonPath;
         EmulatorName = JsonData.name;
@@ -75,7 +75,7 @@ public class Emulator
                 string id = span.Slice(start, length).ToString();
 
                 var game = EshopAPI.GetGameFromDatabaseByID(id);
-                Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
+                if (game != null) Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
             }
 
             return Games;
@@ -97,8 +97,6 @@ public class Emulator
 
     public DownloadSettings FirmwareDownload(string firmwareUrl)
     {
-        
-
         return new DownloadSettings(false,
             true,
             false,
@@ -113,7 +111,7 @@ public class Emulator
 
                     for (var index = 0; index < files.Length; index++)
                     {
-                        var file = files[index];
+                        var file = files[index].Replace('\\', '/');
                         var splitted = file.Split('/');
 
                         for (var i = 0; i < splitted.Length; i++)
