@@ -24,50 +24,38 @@ public class Firmwares
     {
         List<string> linksToVisit =
             Parsing.ParseLinks(@"https://archive.org/download/nintendo-switch-global-firmwares");
-
         List<SwitchFirmware> rtrnList = new List<SwitchFirmware>();
-        List<string> firmwareVersionsSorted = new List<string>();
-        List<string> firmwareDownloadURLS = new List<string>();
 
-        foreach (var item in linksToVisit)
+        foreach (var link in linksToVisit)
         {
-            var splitted = item.Split(new string[] { ".zip" }, StringSplitOptions.None);
-            var firmwareVersions = splitted[0].Split('/');
-            //var sorted = NaturalSort(firmwareVersions).ToArray(); => Disabled for testing purposes
-            foreach (var version in firmwareVersions)
+            string firmwareVersion = ExtractFirmwareVersion(link);
+            if (!string.IsNullOrEmpty(firmwareVersion))
             {
-                if (version.Contains("Firmware") && !version.Contains("%") && !version.Contains("MD5"))
-                {
-                    var itemToAdd = version.Split(new string[] { "Firmware" }, StringSplitOptions.None)[1];
-                    firmwareVersionsSorted.Add(itemToAdd);
-                    firmwareDownloadURLS.Add(GetFirmwareDownload(linksToVisit, itemToAdd));
-                }
+                string downloadUrl = GetFirmwareDownload(linksToVisit, firmwareVersion);
+                rtrnList.Add(new SwitchFirmware(firmwareVersion, downloadUrl));
             }
         }
 
-        var list = firmwareVersionsSorted.Distinct().OrderByDescending(VersionSorter.OrderVersion).ToList();
-        for (var index = 0; index < list.Count; index++)
-        {
-            rtrnList.Add(new SwitchFirmware(list[index], firmwareDownloadURLS[index]));
-        }
+        rtrnList.Sort((x, y) => VersionSorter.OrderVersion(y.Version).CompareTo(VersionSorter.OrderVersion(x.Version)));
 
         return rtrnList;
     }
 
-    public static IEnumerable<string> NaturalSort(IEnumerable<string> list)
+    private static string ExtractFirmwareVersion(string link)
     {
-        int maxLen = list.Select(s => s.Length).Max();
-        Func<string, char> PaddingChar = s => char.IsDigit(s[0]) ? ' ' : char.MaxValue;
+        string[] splitted = link.Split(new string[] { ".zip" }, StringSplitOptions.None);
+        string[] firmwareVersions = splitted[0].Split('/');
 
-        return list
-            .Select(s =>
-                new
-                {
-                    OrgStr = s,
-                    SortStr = Regex.Replace(s, @"(\d+)|(\D+)", m => m.Value.PadLeft(maxLen, PaddingChar(m.Value)))
-                })
-            .OrderBy(x => x.SortStr)
-            .Select(x => x.OrgStr);
+        foreach (var version in firmwareVersions)
+        {
+            if (version.Contains("Firmware") && !version.Contains("%") && !version.Contains("MD5"))
+            {
+                string itemToAdd = version.Split(new string[] { "Firmware" }, StringSplitOptions.None)[1];
+                return itemToAdd;
+            }
+        }
+
+        return null;
     }
 }
 

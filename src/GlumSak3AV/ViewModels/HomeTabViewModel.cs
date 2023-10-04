@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reactive.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
@@ -94,10 +95,8 @@ public class HomeTabViewModel : ViewModelBase
 
     void DownloadAndInstallFirmware()
     {
-        StaticInstances.WebInstances._downloader.DownloadFile(new DownloadSettings(false, false, true,
-            Firmwares[SelectedFirmware].ZipURL,
-            Path.GetTempPath(),
-            "./")); //Firmwares[SelectedFirmware].ZipURL, Path.GetTempPath(), "");
+        StaticInstances.WebInstances._downloader.DownloadFile(Emulators[SelectedEmulator]
+            .FirmwareDownload(Firmwares[SelectedFirmware].ZipURL));
     }
 
     public ICommand DownloadAndInstallKeysCommand { get; internal set; }

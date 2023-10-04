@@ -65,6 +65,11 @@ public class Downloader : IDisposable
         {
             Console.WriteLine("Unzipping file...");
             Files.Zip.Unzip(_currentTempFile, _currentSettings.Destination);
+
+            if (_currentSettings.AfterExtractionOperation != null)
+            {
+                _currentSettings.AfterExtractionOperation.Invoke();
+            }
         }
 
         File.Delete(_currentTempFile);

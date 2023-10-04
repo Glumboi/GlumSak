@@ -15,8 +15,12 @@ public class Emulator
     public EmuJsonDummy JsonData { get; set; }
     public string JsonFile { get; set; }
 
+    private string _tempPath;
+
     public Emulator()
     {
+        _tempPath = Path.GetTempPath();
+
         JsonData = new EmuJsonDummy
         {
             name = "EmulatorConfig name",
@@ -41,7 +45,10 @@ public class Emulator
         }
         else
         {
-            EmulatorRoot = JsonData.linuxRootPath.Contains("%LINUXUSER%") ? Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + JsonData.linuxRootPath.Replace("%LINUXUSER%", String.Empty) : JsonData.linuxRootPath;
+            EmulatorRoot = JsonData.linuxRootPath.Contains("%LINUXUSER%")
+                ? Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) +
+                  JsonData.linuxRootPath.Replace("%LINUXUSER%", String.Empty)
+                : JsonData.linuxRootPath;
         }
 
         GamesRootPath = EmulatorRoot + JsonData.gamePath;
@@ -66,7 +73,7 @@ public class Emulator
                 string id = span.Slice(start, length).ToString();
 
                 var game = EshopAPI.GetGameFromDatabaseByID(id);
-                Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
+                if (game != null) Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
             }
 
             return Games;
@@ -82,7 +89,63 @@ public class Emulator
             true,
             false,
             keysUrl,
-            Path.GetTempPath(),
+            _tempPath,
             KeysRootPath);
+    }
+
+    public DownloadSettings FirmwareDownload(string firmwareUrl)
+    {
+        var files = JsonData.isGamesCachedAsFolder
+            ? Directory.GetDirectories(FirmwareRootPath)
+            : Directory.GetFiles(FirmwareRootPath);
+
+        if (files.Length > 1 && JsonData.isGamesCachedAsFolder)
+        {
+            for (int i = 0; i < files.Length; i++)
+            {
+                Directory.Delete(files[i]);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < files.Length; i++)
+            {
+                File.Delete(files[i]);
+            }
+        }
+
+        return new DownloadSettings(false,
+            true,
+            false,
+            firmwareUrl,
+            _tempPath,
+            FirmwareRootPath,
+            () =>
+            {
+                if (this.JsonData.isGamesCachedAsFolder)
+                {
+                    var files = Directory.GetFiles(this.FirmwareRootPath);
+
+                    for (var index = 0; index < files.Length; index++)
+                    {
+                        var file = files[index];
+                        var dirName = file;
+                        var splitted = file.Split('\\');
+
+                        for (var i = 0; i < splitted.Length; i++)
+                        {
+                            var fileName = splitted[i];
+                            if (fileName.Contains(".nca"))
+                            {
+                                File.Move(file, this.FirmwareRootPath + "\\" + "\\00");
+                                Directory.CreateDirectory(this.FirmwareRootPath + "\\" + fileName);
+                                File.Move(this.FirmwareRootPath + "\\00",
+                                    this.FirmwareRootPath + "\\" + fileName + "\\00");
+                            }
+                        }
+                    }
+                }
+            }
+        );
     }
 }

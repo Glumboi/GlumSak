@@ -62,8 +62,5 @@
     <None Update="EmulatorConfigurations\RyujinxStandard.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Json\nsuIds.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>
