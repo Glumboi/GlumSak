@@ -20,7 +20,7 @@ public class Emulator
     public Emulator()
     {
         _tempPath = Path.GetTempPath();
-
+        
         JsonData = new EmuJsonDummy
         {
             name = "EmulatorConfig name",
@@ -35,6 +35,8 @@ public class Emulator
 
     public Emulator(string jsonPath)
     {
+        _tempPath = Path.GetTempPath();
+        
         JsonData = JsonSerializer.Deserialize<EmuJsonDummy>(File.ReadAllText(jsonPath));
         JsonFile = jsonPath;
         EmulatorName = JsonData.name;
@@ -95,24 +97,7 @@ public class Emulator
 
     public DownloadSettings FirmwareDownload(string firmwareUrl)
     {
-        var files = JsonData.isGamesCachedAsFolder
-            ? Directory.GetDirectories(FirmwareRootPath)
-            : Directory.GetFiles(FirmwareRootPath);
-
-        if (files.Length > 1 && JsonData.isGamesCachedAsFolder)
-        {
-            for (int i = 0; i < files.Length; i++)
-            {
-                Directory.Delete(files[i]);
-            }
-        }
-        else
-        {
-            for (int i = 0; i < files.Length; i++)
-            {
-                File.Delete(files[i]);
-            }
-        }
+        
 
         return new DownloadSettings(false,
             true,
@@ -129,18 +114,17 @@ public class Emulator
                     for (var index = 0; index < files.Length; index++)
                     {
                         var file = files[index];
-                        var dirName = file;
-                        var splitted = file.Split('\\');
+                        var splitted = file.Split('/');
 
                         for (var i = 0; i < splitted.Length; i++)
                         {
                             var fileName = splitted[i];
                             if (fileName.Contains(".nca"))
                             {
-                                File.Move(file, this.FirmwareRootPath + "\\" + "\\00");
-                                Directory.CreateDirectory(this.FirmwareRootPath + "\\" + fileName);
-                                File.Move(this.FirmwareRootPath + "\\00",
-                                    this.FirmwareRootPath + "\\" + fileName + "\\00");
+                                File.Move(file, this.FirmwareRootPath + "/" + "/00");
+                                Directory.CreateDirectory(this.FirmwareRootPath + "/" + fileName);
+                                File.Move(this.FirmwareRootPath + "/00",
+                                    this.FirmwareRootPath + "/" + fileName + "/00");
                             }
                         }
                     }

@@ -3,7 +3,7 @@
   "windowsRootPath" : "%APPDATA%/Ryujinx",
   "linuxRootPath" : "%LINUXUSER%/.config/Ryujinx",
   "gamePath": "/games", 
-  "firmwarePath": "/bis/system/contents/registered",
+  "firmwarePath": "/bis/system/Contents/registered",
   "keysPath" : "/system",
   "isGamesCachedAsFolder": true
 }
