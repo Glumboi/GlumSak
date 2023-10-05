@@ -8,9 +8,11 @@ using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Avalonia;
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.CustomControls;
 using GlumSak3AV.Networking;
+using GlumSak3AV.Networking.CustomControls;
 using GlumSak3AV.Switch;
 using GlumSak3AV.Views;
 
@@ -62,6 +64,14 @@ public class HomeTabViewModel : ViewModelBase
         set => SetProperty(ref _gameButtons, value);
     }
 
+    public ObservableCollection<CustomProgressBar> _progressBars = new ObservableCollection<CustomProgressBar>();
+
+    public ObservableCollection<CustomProgressBar> ProgressBars
+    {
+        get => _progressBars;
+        set => SetProperty(ref _progressBars, value);
+    }
+
     public ICommand ClearFilterCommand { get; internal set; }
 
     void CreateClearFilterCommand()
@@ -86,6 +96,15 @@ public class HomeTabViewModel : ViewModelBase
         }
     }
 
+    void AddDownload(DownloadSettings settings)
+    {
+        Downloader downloader;
+        CustomProgressBar progressBar;
+        DownloaderFactory.CreateNewDownloader(out downloader, out progressBar);
+        ProgressBars.Add(progressBar);
+        downloader.DownloadFile(settings);
+    }
+
     public ICommand DownloadAndInstallFirmwareCommand { get; internal set; }
 
     void CreateDownloadAndInstallFirmwareCommand()
@@ -95,7 +114,7 @@ public class HomeTabViewModel : ViewModelBase
 
     void DownloadAndInstallFirmware()
     {
-        StaticInstances.WebInstances._downloader.DownloadFile(Emulators[SelectedEmulator]
+        AddDownload(Emulators[SelectedEmulator]
             .FirmwareDownload(Firmwares[SelectedFirmware].ZipURL));
     }
 
@@ -108,7 +127,7 @@ public class HomeTabViewModel : ViewModelBase
 
     void DownloadAndInstallKeys()
     {
-        StaticInstances.WebInstances._downloader.DownloadFile(Emulators[SelectedEmulator]
+        AddDownload(Emulators[SelectedEmulator]
             .KeysDownload("https://www.mediafire.com/file/a8dg2wnszlowsfm/prod.zip/file"));
     }
 
@@ -193,16 +212,21 @@ public class HomeTabViewModel : ViewModelBase
         SelectedEmulator = 0;
     }
 
-    public HomeTabViewModel()
+    private void Initialize()
     {
         LoadEmulators();
+        LoadFirmwares();
         CreateClearFilterCommand();
         CreateEditEmulatorConfigurationCommand();
         CreateCreateNewEmulatorConfigurationCommand();
         CreateRemoveEmulatorConfigurationCommand();
-        LoadFirmwares();
         CreateDownloadAndInstallFirmwareCommand();
         CreateDownloadAndInstallKeysCommand();
         LoadGamesToGUI();
+    }
+
+    public HomeTabViewModel()
+    {
+        Initialize();
     }
 }

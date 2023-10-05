@@ -24,7 +24,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="12*" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2.5*" />
         </Grid.RowDefinitions>
 
         <Border
@@ -180,44 +180,19 @@
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                 </ItemsControl>
-
             </ScrollViewer>
         </Border>
-
-        <Border
-            x:Name="Progress_Border"
-            Grid.Row="2"
-            Padding="5">
-
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
-                <ProgressBar
-                    x:Name="Download_ProgressBar"
-                    Grid.Row="2"
-                    Height="30"
-                    Margin="0,0,2,0"
-                    VerticalAlignment="Stretch"
-                    Foreground="Gray" />
-
-                <TextBlock
-                    x:Name="DownloadProgress_TextBlock"
-                    Margin="0,0,0,2"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Text="Download starting..." />
-
-                <Button
-                    x:Name="CancelDownload_Button"
-                    Grid.Column="1"
-                    Height="28"
-                    Margin="2,0,0,0"
-                    HorizontalAlignment="Stretch"
-                    Content="Cancel Download" />
-            </Grid>
-        </Border>
+        
+        <ScrollViewer Grid.Row="2"
+                      Margin="0 0 0  0"
+                      VerticalAlignment="Bottom">
+            <ItemsControl Items="{Binding ProgressBars}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </UserControl>

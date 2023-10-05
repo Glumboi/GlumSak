@@ -10,14 +10,22 @@
     <Expander>
         <Expander.Header>
             <Grid>
-                <Border Width="{Binding $parent[customControls:GameButton].DesiredButtonSize}"
-                        Height="{Binding $parent[customControls:GameButton].DesiredButtonSize}"
-                        HorizontalAlignment="Center"
-                        CornerRadius="10">
-                    <Border.Background>
-                        <ImageBrush
-                            Source="{Binding $parent[customControls:GameButton].GameBitmap}" />
-                    </Border.Background>
+                <Border
+                    HorizontalAlignment="Center"
+                    CornerRadius="10"
+                    BoxShadow="5 5 10 2 Black"
+                    Margin="10,10,10,10">
+
+                    <Rectangle Height="{Binding $parent[customControls:GameButton].DesiredImageSize}"
+                               Width="{Binding $parent[customControls:GameButton].DesiredImageSize}"
+                               RadiusX="10"
+                               RadiusY="10">
+
+                        <Rectangle.Fill>
+                            <ImageBrush Source="{Binding $parent[customControls:GameButton].GameBitmap}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+
                 </Border>
             </Grid>
         </Expander.Header>
@@ -33,17 +41,17 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <TextBlock HorizontalAlignment="Left" FontWeight="Bold"
-                           Text="{Binding $parent[customControls:GameButton].GameName}" 
-                           Margin="0 0 0 2"/>
+                           Text="{Binding $parent[customControls:GameButton].GameName}"
+                           Margin="0 0 0 2" />
                 <TextBlock Grid.Column="1" HorizontalAlignment="Right" FontWeight="Bold"
-                           Text="{Binding $parent[customControls:GameButton].GameID}" 
-                           Margin="0 0 0 2"/>
+                           Text="{Binding $parent[customControls:GameButton].GameID}"
+                           Margin="0 0 0 2" />
             </Grid>
-            <Button Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Install Shaders" 
-                    Margin="0 0 0 2"/>
+            <Button Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Install Shaders"
+                    Margin="0 0 0 2" />
             <Button VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2"
-                    Content="Open Save Manager (NO I WONT FINISH THIS)" 
-                    Margin="0 2 0 0"/>
+                    Content="Open Save Manager (NO I WONT FINISH THIS)"
+                    Margin="0 2 0 0" />
         </Grid>
     </Expander>
 </UserControl>

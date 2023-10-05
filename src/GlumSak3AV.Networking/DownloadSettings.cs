@@ -13,9 +13,9 @@ public struct DownloadSettings
     public Action? AfterExtractionOperation { get; set; }
 
     public DownloadSettings(bool childrenInFolder, bool isZipped, bool keepTemp, string url, string tempDestination,
-        string destination, Action? AfterExtraction = null)
+        string destination, Action? afterExtraction = null)
     {
-        AfterExtractionOperation = AfterExtraction;
+        AfterExtractionOperation = afterExtraction;
         if (url.Contains("mediafire"))
         {
             using (MediaFireDownloader downloaderNew = new MediaFireDownloader())

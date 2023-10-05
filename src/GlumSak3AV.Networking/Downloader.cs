@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
+using Avalonia.Controls;
+using GlumSak3AV.Networking.CustomControls;
 
 namespace GlumSak3AV.Networking;
 
@@ -13,6 +15,14 @@ public class Downloader : IDisposable
     private bool _isZipped;
     private DownloadSettings _currentSettings;
 
+    private CustomProgressBar _downloadProgressBar;
+
+    public CustomProgressBar DownloadProgressBar
+    {
+        get => _downloadProgressBar;
+        private set => _downloadProgressBar = value;
+    }
+
     public Downloader()
     {
         _webClient = new WebClient();
@@ -20,9 +30,19 @@ public class Downloader : IDisposable
 
         _webClient.DownloadProgressChanged += UpdateProgress;
         _webClient.DownloadFileCompleted += DownloadDone;
+
+        DownloadProgressBar = new CustomProgressBar(this);
+
+        DownloadProgressBar.StartProgressing();
     }
 
-    public void DownloadFile(DownloadSettings settings) //string addr, string tempPath, string? unzipPath = null)
+    public void CancelDownload()
+    {
+        _webClient.CancelAsync();
+    }
+
+    public void
+        DownloadFile(DownloadSettings settings) //string addr, string tempPath, string? unzipPath = null)
     {
         _currentSettings = settings;
         _isZipped = _currentSettings.IsZipped;
@@ -54,25 +74,32 @@ public class Downloader : IDisposable
             percentage.ToString("0.00"),
             remainingTimeString);
 
-        Console.Write($"\r{progressBarText}");
+        DownloadProgressBar.DownloadProgressText = progressBarText;
+        DownloadProgressBar.Progress = percentage;
     }
 
     private void DownloadDone(object? sender, AsyncCompletedEventArgs e)
     {
-        Console.WriteLine("Done downloading");
-        _stopWatch.Reset();
-        if (_isZipped)
+        if (!e.Cancelled)
         {
-            Console.WriteLine("Unzipping file...");
-            Files.Zip.Unzip(_currentTempFile, _currentSettings.Destination);
-
-            if (_currentSettings.AfterExtractionOperation != null)
+            Console.WriteLine("Done downloading");
+            _stopWatch.Reset();
+            if (_isZipped)
             {
-                _currentSettings.AfterExtractionOperation.Invoke();
+                Console.WriteLine("Unzipping file...");
+                Files.Zip.Unzip(_currentTempFile, _currentSettings.Destination);
+
+                if (_currentSettings.AfterExtractionOperation != null)
+                {
+                    _currentSettings.AfterExtractionOperation.Invoke();
+                }
             }
         }
 
         File.Delete(_currentTempFile);
+        DownloadProgressBar.StopProgressing();
+        //Done
+        Dispose();
     }
 
     private string GetFileSize(double totalBytes)
