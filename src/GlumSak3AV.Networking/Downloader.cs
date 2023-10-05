@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Net;
 using Avalonia.Controls;
@@ -8,7 +9,8 @@ namespace GlumSak3AV.Networking;
 
 public class Downloader : IDisposable
 {
-    private WebClient _webClient;
+    private HttpClientWrapper _webClient;
+    private CancellationTokenSource _cts;
     private Stopwatch _stopWatch;
 
     private string _currentTempFile;
@@ -25,20 +27,21 @@ public class Downloader : IDisposable
 
     public Downloader()
     {
-        _webClient = new WebClient();
+        _webClient = new HttpClientWrapper();
+        _cts = new CancellationTokenSource();
         _stopWatch = new Stopwatch();
 
-        _webClient.DownloadProgressChanged += UpdateProgress;
-        _webClient.DownloadFileCompleted += DownloadDone;
+        _webClient.ProgressChanged += UpdateProgress;
+        _webClient.DownloadCompleted += DownloadDone;
 
         DownloadProgressBar = new CustomProgressBar(this);
-
         DownloadProgressBar.StartProgressing();
     }
 
     public void CancelDownload()
     {
-        _webClient.CancelAsync();
+        _cts.Cancel();
+        FinalizeDownload(true);
     }
 
     public void
@@ -48,22 +51,20 @@ public class Downloader : IDisposable
         _isZipped = _currentSettings.IsZipped;
         _currentTempFile =
             $"{_currentSettings.TempDestination}/GlumSakTemp_{new Random().Next(0, Int32.MaxValue)}.tempSakFile";
-        _webClient.DownloadFileTaskAsync(_currentSettings.Url, _currentTempFile);
+        _webClient.DownloadFileAsync(_currentSettings.Url, _currentTempFile, _cts.Token);
         _stopWatch.Start();
     }
 
-    private void UpdateProgress(object sender, DownloadProgressChangedEventArgs e)
+    private void UpdateProgress(long totalBytes, long bytesReceived)
     {
-        double bytesIn = double.Parse(e.BytesReceived.ToString());
-        double totalBytes = double.Parse(e.TotalBytesToReceive.ToString());
-        double percentage = bytesIn / totalBytes * 100;
+        double percentage = (double)bytesReceived / (double)totalBytes * 100;
 
         // Calculate progress values
         double fileSize = totalBytes / 1024.0 / 1024.0;
-        double downloadSpeed = e.BytesReceived / 1024.0 / 1024.0 / _stopWatch.Elapsed.TotalSeconds;
+        double downloadSpeed = bytesReceived / 1024.0 / 1024.0 / _stopWatch.Elapsed.TotalSeconds;
 
         //Calculate ETA
-        double remainingBytes = totalBytes - bytesIn;
+        double remainingBytes = totalBytes - bytesReceived;
         double remainingTime = remainingBytes / (downloadSpeed * 1024 * 1024);
         string remainingTimeString = TimeSpan.FromSeconds(remainingTime).ToString(@"hh\:mm\:ss");
 
@@ -78,27 +79,29 @@ public class Downloader : IDisposable
         DownloadProgressBar.Progress = percentage;
     }
 
-    private void DownloadDone(object? sender, AsyncCompletedEventArgs e)
+    private void DownloadDone()
     {
-        if (!e.Cancelled)
+        Console.WriteLine("Done downloading");
+        _stopWatch.Reset();
+        if (_isZipped)
         {
-            Console.WriteLine("Done downloading");
-            _stopWatch.Reset();
-            if (_isZipped)
-            {
-                Console.WriteLine("Unzipping file...");
-                Files.Zip.Unzip(_currentTempFile, _currentSettings.Destination);
+            Console.WriteLine("Unzipping file...");
+            Files.Zip.Unzip(_currentTempFile, _currentSettings.Destination);
 
-                if (_currentSettings.AfterExtractionOperation != null)
-                {
-                    _currentSettings.AfterExtractionOperation.Invoke();
-                }
+            if (_currentSettings.AfterExtractionOperation != null)
+            {
+                _currentSettings.AfterExtractionOperation.Invoke();
             }
         }
 
-        File.Delete(_currentTempFile);
-        DownloadProgressBar.StopProgressing();
+        FinalizeDownload(false);
+    }
+
+    private void FinalizeDownload(bool cancelled)
+    {
         //Done
+        if (!cancelled) File.Delete(_currentTempFile);
+        DownloadProgressBar.StopProgressing();
         Dispose();
     }
 
@@ -114,8 +117,8 @@ public class Downloader : IDisposable
 
     private void ReleaseUnmanagedResources()
     {
-        _webClient.DownloadProgressChanged -= UpdateProgress;
-        _webClient.DownloadFileCompleted -= DownloadDone;
+        _webClient.ProgressChanged -= UpdateProgress;
+        _webClient.DownloadCompleted -= DownloadDone;
     }
 
     private void Dispose(bool disposing)
@@ -123,7 +126,6 @@ public class Downloader : IDisposable
         ReleaseUnmanagedResources();
         if (disposing)
         {
-            _webClient.Dispose();
         }
     }
 
