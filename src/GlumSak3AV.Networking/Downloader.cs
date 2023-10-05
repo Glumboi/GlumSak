@@ -14,6 +14,7 @@ public class Downloader : IDisposable
     private Stopwatch _stopWatch;
 
     private string _currentTempFile;
+    private string _currentTempFileDir;
     private bool _isZipped;
     private DownloadSettings _currentSettings;
 
@@ -49,8 +50,12 @@ public class Downloader : IDisposable
     {
         _currentSettings = settings;
         _isZipped = _currentSettings.IsZipped;
-        _currentTempFile =
-            $"{_currentSettings.TempDestination}/GlumSakTemp_{new Random().Next(0, Int32.MaxValue)}.tempSakFile";
+
+        string fileName = $"/GlumSakTemp_{new Random().Next(0, Int32.MaxValue)}";
+        string fileDir = $"{_currentSettings.TempDestination}{fileName}";
+        Directory.CreateDirectory(fileDir);
+        _currentTempFile = $"{fileDir}{fileName}";
+        _currentTempFileDir = fileDir;
         _webClient.DownloadFileAsync(_currentSettings.Url, _currentTempFile, _cts.Token);
         _stopWatch.Start();
     }
@@ -100,7 +105,7 @@ public class Downloader : IDisposable
     private void FinalizeDownload(bool cancelled)
     {
         //Done
-        if (!cancelled) File.Delete(_currentTempFile);
+        if (!cancelled) Directory.Delete(_currentTempFileDir);
         DownloadProgressBar.StopProgressing();
         Dispose();
     }
