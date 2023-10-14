@@ -40,6 +40,8 @@ public partial class SplashScreen : Window
 
     private void WorkerOnDoWork(object? sender, DoWorkEventArgs e)
     {
+        //This literally doesnt load anything in the background and is just so the user gets tricked into thinking that it loads
+        //while it actually locks up and freezes upon mainwindow init
         for (int i = 0; i < 100; i++)
         {
             Thread.Sleep(80);

@@ -65,8 +65,4 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="StaticInstances\" />
-  </ItemGroup>
 </Project>
