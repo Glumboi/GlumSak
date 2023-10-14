@@ -1,41 +1,29 @@
 ﻿using Avalonia.Media.Imaging;
+using FluentAvalonia.Core;
+using GlumSak3AV.Networking;
 
 namespace GlumSak3AV.Switch;
 
 public class SwitchGame
 {
-    /// <summary>
-    /// Gets the Name of the SwitchGame
-    /// </summary>
-    public string GameName
-    {
-        get;
-        private set;
-    }
+    public string GameName { get; private set; }
 
-    /// <summary>
-    /// Gets the ID of the SwitchGame
-    /// </summary>
-    public string GameID
-    {
-        get;
-        private set;
-    }
+    public string GameID { get; private set; }
 
-    /// <summary>
-    /// Gets the URL of the image from the SwitchGame
-    /// </summary>
-    public string ImageURL
-    {
-        get;
-        private set;
-    }
+    public string GameShaderPath { get; private set; }
 
-    /// <summary>
-    /// Loads and returns the game image from the web of localimage is null
-    /// If localimage is assigned to a System.Drawing.Image then it will return that.
-    /// </summary>
+    public bool SupportsShaderDownload { get; private set; }
+
+    public string ImageURL { get; private set; }
+
+    public long LocalShaderCount { get; private set; }
+
+    public long WebShaderCount { get; private set; }
+
+    public Entry PasteDatabaseEntry { get; set; }
+
     private Bitmap _localImage;
+
 
     public Bitmap GameImage
     {
@@ -50,22 +38,37 @@ public class SwitchGame
         }
     }
 
-    private string _imageUrl;
-
-    /// <summary>
-    /// Creates a switch game to be interacted with in the UI
-    /// </summary>
-    /// <param name="gameName">Name of the game</param>
-    /// <param name="gameID">ID of the game (not nsuid)</param>
-    /// <param name="iamgeURL">Url of the cover image</param>
-    /// <param name="localImage">Local image as cover, leave null/default if using url</param>
-    public SwitchGame(string gameName, string gameID, string iamgeURL, Bitmap localImage =
-        null)
+    public SwitchGame(string gameName, string gameID, string emulatorShaderRoot, string iamgeURL,
+        Entry pasteDatabaseEntry, Bitmap? localImage =
+            null)
 
     {
         GameName = gameName;
         GameID = gameID;
         ImageURL = iamgeURL;
         _localImage = localImage;
+        PasteDatabaseEntry = pasteDatabaseEntry;
+
+        //Setup shader path
+        GameShaderPath = emulatorShaderRoot.Replace("%GAMEID%", gameID);
+        SupportsShaderDownload = GameShaderPath.Contains(gameID);
+        if (!Directory.Exists(GameShaderPath)) Directory.CreateDirectory(GameShaderPath);
+        LocalShaderCount = GetLocalShaderCount();
+        WebShaderCount = GetWebShaderCount();
+    }
+
+    private long GetLocalShaderCount()
+    {
+        string tocFile = $"{GameShaderPath}/shared.toc";
+
+        if (!File.Exists(tocFile)) return 0;
+
+        FileInfo fileInfo = new FileInfo(tocFile);
+        return Math.Max(+((fileInfo.Length - 32) / 8), 0);
+    }
+
+    private long GetWebShaderCount()
+    {
+        return 0;
     }
 }

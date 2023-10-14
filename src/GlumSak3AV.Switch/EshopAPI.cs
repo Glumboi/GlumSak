@@ -89,7 +89,7 @@ public class EshopAPI
         File.WriteAllText("./Json/gameIcons_Ids.txt", string.Join(Environment.NewLine, lines));
     }
 
-    public static GameData GetGameFromDatabaseByID(string gameId)
+    public static GameData? GetGameFromDatabaseByID(string gameId)
     {
         if (!File.Exists(databseFile))
         {

@@ -13,6 +13,13 @@
 
     <ItemGroup>
       <ProjectReference Include="..\GlumSak3AV.Networking\GlumSak3AV.Networking.csproj" />
+      <ProjectReference Include="..\GlumSak3AV.Settings\GlumSak3AV.Settings.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="GlumSak3AV.CustomPastebinDatabaseManager">
+        <HintPath>..\GlumSak3AV.Desktop\bin\Debug\net7.0\GlumSak3AV.CustomPastebinDatabaseManager.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 

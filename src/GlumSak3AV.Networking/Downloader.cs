@@ -7,7 +7,7 @@ using GlumSak3AV.Networking.CustomControls;
 
 namespace GlumSak3AV.Networking;
 
-public class Downloader : IDisposable
+public class Downloader
 {
     private HttpClientWrapper _webClient;
     private CancellationTokenSource _cts;
@@ -107,36 +107,10 @@ public class Downloader : IDisposable
         //Done
         if (!cancelled) Directory.Delete(_currentTempFileDir);
         DownloadProgressBar.StopProgressing();
-        Dispose();
     }
 
     private string GetFileSize(double totalBytes)
     {
         return string.Format(totalBytes.ToString(".00"));
-    }
-
-    ~Downloader()
-    {
-        Dispose(false);
-    }
-
-    private void ReleaseUnmanagedResources()
-    {
-        _webClient.ProgressChanged -= UpdateProgress;
-        _webClient.DownloadCompleted -= DownloadDone;
-    }
-
-    private void Dispose(bool disposing)
-    {
-        ReleaseUnmanagedResources();
-        if (disposing)
-        {
-        }
-    }
-
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
     }
 }

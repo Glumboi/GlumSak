@@ -1,0 +1,61 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:GlumSak3AV.Views"
+        xmlns:ui="using:FluentAvalonia.UI.Controls"
+        xmlns:uip="using:FluentAvalonia.UI.Controls.Primitives"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Height="450"
+        Width="750"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="-1"
+        SystemDecorations="BorderOnly"
+        CanResize="False"
+        x:Class="GlumSak3AV.Views.SplashScreen"
+        Title="SplashScreen"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Control_OnLoaded"
+        PointerPressed="InputElement_OnPointerPressed"
+        PointerMoved="InputElement_OnPointerMoved"
+        PointerReleased="InputElement_OnPointerReleased">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350" />
+            <ColumnDefinition Width="400*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="50 0 0 0">
+            <WrapPanel>
+                <Image Source="../Assets/avalonia-logo.ico"
+                       HorizontalAlignment="Left"
+                       Height="50"
+                       Width="50">
+
+                </Image>
+                <TextBlock FontWeight="Bold" FontSize="28"
+                           Text="GlumSak3"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Margin="15 0 0 0" />
+                <TextBlock Text="Loading Resources..." FontSize="17" FontWeight="SemiBold"
+                           HorizontalAlignment="Left"
+                           Margin="0 30 0 15" />
+
+                <ProgressBar Name="progressBar" Value="0" Height="5" Width="280" IsIndeterminate="True">
+
+                </ProgressBar>
+            </WrapPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="320"
+                    Width="320">
+            <Image Source="../Assets/Placeholder.jpg"></Image>
+        </StackPanel>
+    </Grid>
+
+</Window>

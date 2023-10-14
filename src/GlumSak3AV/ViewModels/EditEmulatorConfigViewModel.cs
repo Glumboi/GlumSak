@@ -39,6 +39,8 @@ public class EditEmulatorConfigViewModel : ViewModelBase
             EmuKeysPath = value.keysPath;
             EmuFirmwarePath = value.firmwarePath;
             JsonFileName = string.IsNullOrWhiteSpace(Emulator.JsonFile) ? "Filename" : Emulator.JsonFile;
+            EmuGameShaderPath = value.shaderCacheRootpath;
+            EmulatorPaste = value.emulatorPaste;
         }
     }
 
@@ -99,12 +101,29 @@ public class EditEmulatorConfigViewModel : ViewModelBase
         set => SetProperty(ref _emuKeysPath, value);
     }
 
+    private string _emuGameShaderPath;
+
+    public string EmuGameShaderPath
+    {
+        get => _emuKeysPath;
+        set => SetProperty(ref _emuGameShaderPath, value);
+    }
+
+
     private bool _usesFoldersAsCache;
 
     public bool UsesFoldersAsCache
     {
         get => _usesFoldersAsCache;
         set => SetProperty(ref _usesFoldersAsCache, value);
+    }
+    
+    private string _emulatorPaste;
+
+    public string EmulatorPaste
+    {
+        get => _emulatorPaste;
+        set => SetProperty(ref _emulatorPaste, value);
     }
 
     public ICommand AcceptCommand { get; internal set; }
@@ -123,6 +142,8 @@ public class EditEmulatorConfigViewModel : ViewModelBase
         JsonDummy.gamePath = EmuGamesPath;
         JsonDummy.keysPath = EmuKeysPath;
         JsonDummy.firmwarePath = EmuFirmwarePath;
+        JsonDummy.shaderCacheRootpath = EmuGameShaderPath;
+        JsonDummy.emulatorPaste = EmulatorPaste;
         JsonOperations.WriteNewConfig(JsonDummy, JsonFileName);
 
         EditEmulatorConfigWindow._editEmuConfigWindow.Close();
@@ -144,6 +165,8 @@ public class EditEmulatorConfigViewModel : ViewModelBase
         EmuGamesPath = JsonDummy.gamePath;
         EmuKeysPath = JsonDummy.keysPath;
         EmuFirmwarePath = JsonDummy.firmwarePath;
+        EmuGameShaderPath = JsonDummy.shaderCacheRootpath;
+        EmulatorPaste = JsonDummy.emulatorPaste;
     }
 
     public ICommand CancelCommand { get; internal set; }

@@ -13,9 +13,9 @@
         SystemDecorations="BorderOnly"
         CanResize="False"
         Name="EditEmuConfigWindow"
-        d:DesignHeight="720"
+        d:DesignHeight="845"
         d:DesignWidth="350"
-        Height="720"
+        Height="845"
         Width="350"
         WindowStartupLocation="CenterOwner"
         x:DataType="viewModels:EditEmulatorConfigViewModel"
@@ -68,18 +68,19 @@
                 <TextBox Text="{Binding EmuConfigWindowsRootPath}"></TextBox>
 
                 <CheckBox IsChecked="{Binding UsesFoldersAsCache}" Content="Uses folders to cache games?" Padding="4" />
-                
-                <Button HorizontalAlignment="Stretch"
-                        Margin="0 6 0 4">
-                    <Button.Content>
-                        <StackPanel Orientation="Horizontal">
-                            <ui:SymbolIcon Symbol="Refresh" Margin="0 0 5 0"/>
-                            <TextBlock>Auto load</TextBlock>
-                        </StackPanel>
-                    </Button.Content>
-                </Button>
-                
+
+                <TextBlock FontWeight="Bold"
+                           Margin="0 6 0 0">
+                    Extra settings
+                </TextBlock>
+                <ui:NavigationViewItemSeparator></ui:NavigationViewItemSeparator>
+
+
+                <TextBlock Text="Emulator paste" Padding="4" />
+                <TextBox Margin="0 0 0 4" Text="{Binding EmulatorPaste}"></TextBox>
+
                 <ui:SettingsExpander
+                    IsExpanded="True"
                     Description="Extra paths related to where games are stored and such, recommended to check if valid!">
                     <ui:SettingsExpander.IconSource>
                         <ui:SymbolIconSource Symbol="SettingsFilled"></ui:SymbolIconSource>
@@ -132,6 +133,22 @@
                                 <Grid HorizontalAlignment="Stretch">
                                     <TextBox
                                         Text="{Binding EmuKeysPath}"
+                                        HorizontalAlignment="Stretch" />
+                                </Grid>
+                            </ui:SettingsExpanderItem.Content>
+                        </ui:SettingsExpanderItem>
+
+                        <ui:SettingsExpanderItem>
+                            <ui:SettingsExpanderItem.IconSource>
+                                <ui:SymbolIconSource Symbol="Games" />
+                            </ui:SettingsExpanderItem.IconSource>
+                            <ui:SettingsExpanderItem.Description>
+                                Games shader path
+                            </ui:SettingsExpanderItem.Description>
+                            <ui:SettingsExpanderItem.Content>
+                                <Grid HorizontalAlignment="Stretch">
+                                    <TextBox
+                                        Text="{Binding EmuGameShaderPath}"
                                         HorizontalAlignment="Stretch" />
                                 </Grid>
                             </ui:SettingsExpanderItem.Content>

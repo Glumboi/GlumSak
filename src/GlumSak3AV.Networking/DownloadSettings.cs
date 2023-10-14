@@ -1,6 +1,4 @@
-﻿using MediaFireDownloaderNew;
-
-namespace GlumSak3AV.Networking;
+﻿namespace GlumSak3AV.Networking;
 
 public struct DownloadSettings
 {
@@ -18,10 +16,7 @@ public struct DownloadSettings
         AfterExtractionOperation = afterExtraction;
         if (url.Contains("mediafire"))
         {
-            using (MediaFireDownloader downloaderNew = new MediaFireDownloader())
-            {
-                Url = downloaderNew.ConvertMediaFireToDirectDownload(url);
-            }
+            Url = MediafireDownloader.GetMediafireDDL(url);
         }
         else
         {

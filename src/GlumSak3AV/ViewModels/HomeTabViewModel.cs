@@ -1,14 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Reactive.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
 using System.Windows.Input;
-using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Threading;
 using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.CustomControls;
 using GlumSak3AV.Networking;
@@ -20,6 +16,8 @@ namespace GlumSak3AV.ViewModels;
 
 public class HomeTabViewModel : ViewModelBase
 {
+    private DispatcherTimer _checkProgressBarsTimer = new DispatcherTimer();
+
     private ObservableCollection<Emulator> _emulators = new ObservableCollection<Emulator>();
 
     public ObservableCollection<Emulator> Emulators
@@ -101,8 +99,15 @@ public class HomeTabViewModel : ViewModelBase
         Downloader downloader;
         CustomProgressBar progressBar;
         DownloaderFactory.CreateNewDownloader(out downloader, out progressBar);
+        progressBar.NotifyAllProgressDone += NotifyAllProgressDone;
         ProgressBars.Add(progressBar);
         downloader.DownloadFile(settings);
+    }
+
+    private void NotifyAllProgressDone(CustomProgressBar caller)
+    {
+        caller.NotifyAllProgressDone -= NotifyAllProgressDone;
+        ProgressBars.Remove(caller);
     }
 
     public ICommand DownloadAndInstallFirmwareCommand { get; internal set; }
@@ -201,6 +206,7 @@ public class HomeTabViewModel : ViewModelBase
 
     void LoadEmulators()
     {
+        var lastSelected = SelectedEmulator;
         Emulators.Clear();
 
         string[] emuJsonPaths = Directory.GetFiles("./EmulatorConfigurations");
@@ -209,7 +215,7 @@ public class HomeTabViewModel : ViewModelBase
             Emulators.Add(new Emulator(emuJsonPaths[i]));
         }
 
-        SelectedEmulator = 0;
+        SelectedEmulator = lastSelected;
     }
 
     private void Initialize()
@@ -223,6 +229,23 @@ public class HomeTabViewModel : ViewModelBase
         CreateDownloadAndInstallFirmwareCommand();
         CreateDownloadAndInstallKeysCommand();
         LoadGamesToGUI();
+
+        _checkProgressBarsTimer.Interval = TimeSpan.FromSeconds(10);
+        _checkProgressBarsTimer.Tick += CheckProgressBarsTimerOnTick;
+        //_checkProgressBarsTimer.Start();
+    }
+
+    private void CheckProgressBarsTimerOnTick(object? sender, EventArgs e)
+    {
+        //Removes progressbars every tick, maybe implement a better way in the future
+
+        for (int i = 0; i < ProgressBars.Count; i++)
+        {
+            if (ProgressBars[i].DownloadDone)
+            {
+                ProgressBars.RemoveAt(i);
+            }
+        }
     }
 
     public HomeTabViewModel()

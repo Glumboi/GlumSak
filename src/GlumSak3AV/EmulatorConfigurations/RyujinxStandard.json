@@ -5,5 +5,8 @@
   "gamePath": "/games", 
   "firmwarePath": "/bis/system/Contents/registered",
   "keysPath" : "/system",
-  "isGamesCachedAsFolder": true
+  "isGamesCachedAsFolder": true,
+  "supportsShaderInstallation": true,
+  "shaderCacheRootpath" : "/games/%GAMEID%/cache/shader",
+  "emulatorPaste" : ""
 }

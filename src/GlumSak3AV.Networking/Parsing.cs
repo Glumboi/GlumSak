@@ -20,14 +20,14 @@ internal class Parsing
     ///
     public static List<string> ParseLinks(string urlToCrawl)
     {
-        List<string> hrefs = GetHrefs(urlToCrawl);
-        HashSet<string> result = new HashSet<string>();
+        List<string> result = new List<string>();
 
-        foreach (var href in hrefs)
+        foreach (var href in GetHrefs(urlToCrawl))
         {
             result.Add(GetAbsoluteUrlString(urlToCrawl, href));
         }
-        return result.ToList();
+
+        return result;
     }
 
     /// <summary>
@@ -35,13 +35,12 @@ internal class Parsing
     /// </summary>
     /// <param name="url">Source url</param>
     /// <returns></returns>
-    public static List<string> GetHrefs(string url)
+    public static IEnumerable<string> GetHrefs(string url)
     {
         // declaring & loading dom
         HtmlWeb web = new HtmlWeb();
-        HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+        HtmlDocument doc = new HtmlDocument();
         doc = web.Load(url);
-        List<string> resultList = new List<string>();
 
         // extracting all links
         foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
@@ -50,10 +49,10 @@ internal class Parsing
 
             if (att.Value.Contains("a"))
             {
-                resultList.Add(att.Value);
+                yield return att.Value;
             }
         }
 
-        return resultList;
+        yield return string.Empty;
     }
 }

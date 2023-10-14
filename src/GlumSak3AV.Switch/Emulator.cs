@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Text.Json;
 using GlumSak3AV.Networking;
 
@@ -11,9 +12,12 @@ public class Emulator
     public string GamesRootPath { get; set; }
     public string FirmwareRootPath { get; set; }
     public string KeysRootPath { get; set; }
-    public List<SwitchGame> Games { get; set; } = new List<SwitchGame>();
+    public string ShaderCacheRootPath { get; set; }
+    public List<SwitchGame>? Games { get; set; } = new List<SwitchGame>();
     public EmuJsonDummy JsonData { get; set; }
     public string JsonFile { get; set; }
+    public string EmulatorPaste { get; set; }
+    public PastebinDatabase PastePastebinDatabase { get; set; }
 
     private string _tempPath;
 
@@ -27,9 +31,11 @@ public class Emulator
             linuxRootPath = "Linux root path",
             firmwarePath = "Firmware path",
             windowsRootPath = "Windows path",
+            shaderCacheRootpath = "Shader cache root path",
             isGamesCachedAsFolder = false,
             keysPath = "Keys path",
-            gamePath = "Games path"
+            gamePath = "Games path",
+            emulatorPaste = ""
         };
     }
 
@@ -56,9 +62,21 @@ public class Emulator
         GamesRootPath = EmulatorRoot + JsonData.gamePath;
         FirmwareRootPath = EmulatorRoot + JsonData.firmwarePath;
         KeysRootPath = EmulatorRoot + JsonData.keysPath;
+        ShaderCacheRootPath = EmulatorRoot + JsonData.shaderCacheRootpath;
+        EmulatorPaste = JsonData.emulatorPaste;
+
+        LoadPaste();
     }
 
-    public List<SwitchGame> GetGames()
+    private void LoadPaste()
+    {
+        if (!string.IsNullOrWhiteSpace(EmulatorPaste))
+        {
+            PastePastebinDatabase = new PastebinDatabase(new List<Entry>(), EmulatorPaste);
+        }
+    }
+
+    public List<SwitchGame>? GetGames()
     {
         Games.Clear();
 
@@ -75,7 +93,12 @@ public class Emulator
                 string id = span.Slice(start, length).ToString();
 
                 var game = EshopAPI.GetGameFromDatabaseByID(id);
-                if (game != null) Games.Add(new SwitchGame(game.name, game.id, game.iconUrl));
+                if (game != null)
+                    Games.Add(new SwitchGame(game.name, game.id, this.ShaderCacheRootPath, game.iconUrl,
+                        PastePastebinDatabase != null
+                            ? PastePastebinDatabase.GetEntryByIdentifier(game.id)
+                            : new Entry(game.id, new[] { "ShaderURL", "ShaderCount" },
+                                new[] { "0", "0" })));
             }
 
             return Games;

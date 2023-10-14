@@ -13,6 +13,9 @@ public class EmuJsonDummy
     public string firmwarePath { get; set; }
     public string keysPath { get; set; }
     public bool isGamesCachedAsFolder { get; set; }
+    public bool supportsShaderInstallation { get; set; }
+    public string shaderCacheRootpath { get; set; }
+    public string emulatorPaste { get; set; }
 }
 
 public static class JsonOperations

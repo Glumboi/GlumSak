@@ -5,5 +5,8 @@
   "gamePath": "/cache/game_list",
   "firmwarePath": "/nand/system/Contents/registered",
   "keysPath" : "/keys",
-  "isGamesCachedAsFolder": false
+  "isGamesCachedAsFolder": false,
+  "supportsShaderInstallation": false,
+  "shaderCacheRootpath" : "UNDEFINED",
+  "emulatorPaste" : ""
 }
