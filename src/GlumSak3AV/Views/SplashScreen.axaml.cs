@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel;
 using System.Threading;
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
+using FluentAvalonia.UI.Controls;
 using GlumSak3AV.ViewModels;
 
 namespace GlumSak3AV.Views;
@@ -42,9 +43,10 @@ public partial class SplashScreen : Window
     {
         //This literally doesnt load anything in the background and is just so the user gets tricked into thinking that it loads
         //while it actually locks up and freezes upon mainwindow init
+        //TODO: implement proper loading in the future
         for (int i = 0; i < 100; i++)
         {
-            Thread.Sleep(80);
+            Thread.Sleep(40);
         }
     }
 

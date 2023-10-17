@@ -53,9 +53,11 @@ public partial class CustomProgressBar : UserControl
 
     public void StopProgressing()
     {
+        _downloadProgressTextBlock.Text = "Unzipping...";
+        NotifyAllProgressDone?.Invoke(this);
+        _downloadProgressTextBlock.Text = "Done!";
         this.IsVisible = false;
         DownloadDone = true;
-        NotifyAllProgressDone?.Invoke(this);
     }
 
     private void CancelDownload_Button_OnClick(object? sender, RoutedEventArgs e)

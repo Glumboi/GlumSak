@@ -3,10 +3,12 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Input;
-using Avalonia.Controls;
 using Avalonia.Threading;
 using CommunityToolkit.Mvvm.Input;
+using FluentAvalonia.UI.Controls;
+using GlumSak3AV.CustomBehaviours;
 using GlumSak3AV.CustomControls;
+using GlumSak3AV.Filtering;
 using GlumSak3AV.Networking;
 using GlumSak3AV.Networking.CustomControls;
 using GlumSak3AV.Switch;
@@ -90,7 +92,7 @@ public class HomeTabViewModel : ViewModelBase
         set
         {
             SetProperty(ref _filter, value);
-            Filtering.Buttons.GetButtonsToHide(ref _gameButtons, value);
+            Buttons.GetButtonsToHide(ref _gameButtons, value);
         }
     }
 
@@ -171,13 +173,23 @@ public class HomeTabViewModel : ViewModelBase
         RemoveEmulatorConfigurationCommand = new RelayCommand(RemoveEmulatorConfiguration);
     }
 
-    void RemoveEmulatorConfiguration()
+    async void RemoveEmulatorConfiguration()
     {
-        File.Delete(Emulators[SelectedEmulator].JsonFile);
-        LoadEmulators();
+        GlumSakDialog dlg = new GlumSakDialog("Do you really want to delete this Emulator config?",
+            "The deletion is not reversible and will permanently remove this config from GlumSak!",
+            "Yes",
+            "No");
+
+        var res = await dlg.ShowAsync();
+
+        if (res == ContentDialogResult.Primary)
+        {
+            File.Delete(Emulators[SelectedEmulator].JsonFile);
+            LoadEmulators();
+        }
     }
 
-    void LoadGamesToGUI()
+    async void LoadGamesToGUI()
     {
         if (Emulators.Count < 1) return;
         GameButtons.Clear();
@@ -186,6 +198,17 @@ public class HomeTabViewModel : ViewModelBase
         //TODO: Implement a better way of notifying the user that a config is corrupt aka not working!
         if (emuGames == null)
         {
+            GlumSakDialog dlg = new GlumSakDialog("One or more Emulator configs is not set up properly",
+                "Prevented a crash caused by one or more corrupted config files, please verify the integrity of the EmulatorConfigs!\n" +
+                "Do you want to exit the app?",
+                "Yes",
+                "No");
+
+            if (await dlg.ShowAsync() == ContentDialogResult.Primary)
+            {
+                CurrentApplication.Close();
+            }
+
             Debug.WriteLine("One emulator config is corrupt!");
             return;
         }

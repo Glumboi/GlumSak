@@ -3,13 +3,28 @@ namespace GlumSak3AV.Networking;
 public struct Entry
 {
     private string[] _values = new string[] { };
+
+    public string[] Values
+    {
+        get => _values;
+        private set => _values = value;
+    }
+
     private string[] _types = new string[] { };
+
+    public string[] Types
+    {
+        get => _types;
+        private set => _types = value;
+    }
+
+
     private string _identifier = String.Empty;
 
     public Entry(string identifier, string[] types, string[] values)
     {
-        _values = values;
-        _types = types;
+        Values = values;
+        Types = types;
         _identifier = $"[{identifier}]";
     }
 
@@ -28,7 +43,8 @@ public struct Entry
             }
         }
 
-        throw new DatabaseException("Could not find a Value matching the given Type. Are you reading from a valid paste?");
+        throw new DatabaseException(
+            "Could not find a Value matching the given Type. Are you reading from a valid paste?");
     }
 
     public string GetTypeOfValue(string value)
@@ -41,7 +57,8 @@ public struct Entry
             }
         }
 
-        throw new DatabaseException("Could not find a Type matching the given Value. Are you reading from a valid paste?");
+        throw new DatabaseException(
+            "Could not find a Type matching the given Value. Are you reading from a valid paste?");
     }
 
     public string GetEntryInOneLine()
@@ -58,5 +75,28 @@ public struct Entry
 
         result = createdString;
         return result;
+    }
+}
+
+public static class EntryExtras
+{
+    public static bool HasType(this Entry entry, string type)
+    {
+        foreach (var entryType in entry.Types)
+        {
+            if (entryType == type) return true;
+        }
+
+        return false;
+    }
+
+    public static bool HasValue(this Entry entry, string value)
+    {
+        foreach (var entryValue in entry.Values)
+        {
+            if (entryValue == value) return true;
+        }
+
+        return false;
     }
 }

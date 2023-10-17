@@ -32,7 +32,7 @@
                     VerticalAlignment="Center"
                     Margin="50 0 0 0">
             <WrapPanel>
-                <Image Source="../Assets/avalonia-logo.ico"
+                <Image Source="../Assets/Icon.png"
                        HorizontalAlignment="Left"
                        Height="50"
                        Width="50">
@@ -52,9 +52,12 @@
                 </ProgressBar>
             </WrapPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="320"
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Height="100"
                     Width="320">
-            <Image Source="../Assets/Placeholder.jpg"></Image>
+            <Image Source="../Assets/Illustration_splash_prototype.png"></Image>
         </StackPanel>
     </Grid>
 

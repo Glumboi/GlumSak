@@ -47,10 +47,15 @@
                            Text="{Binding $parent[customControls:GameButton].GameID}"
                            Margin="0 0 0 2" />
             </Grid>
-            <Button Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Content="Install Shaders"
+            <Button Grid.Row="1"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Content="Install Shaders"
+                    Click="InstallShaders_Button_OnClick"
                     Margin="0 0 0 2" />
-            <Button VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2"
-                    Content="Open Save Manager (NO I WONT FINISH THIS)"
+            <Button VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch" Grid.Row="2"
+                    Content="Coming in a later version..."
                     Margin="0 2 0 0" />
         </Grid>
     </Expander>

@@ -1,6 +1,8 @@
+using System.Threading.Tasks;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using FluentAvalonia.UI.Controls;
 using GlumSak3AV.ViewModels;
 using GlumSak3AV.Views;
 
@@ -17,6 +19,7 @@ public partial class App : Application
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new SplashScreen();
+            
             /*desktop.MainWindow = new MainWindow
             {
                 DataContext = new MainViewModel()

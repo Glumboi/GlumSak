@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Net;
+using System.Windows.Input;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
@@ -8,7 +9,9 @@ using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
+using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.Switch;
+using GlumSak3AV.Views;
 
 namespace GlumSak3AV.CustomControls;
 
@@ -21,11 +24,7 @@ using Avalonia.Media.Imaging;
 
 public partial class GameButton : UserControl
 {
-    public SwitchGame Game
-    {
-        get;
-        private set;
-    }
+    public SwitchGame Game { get; private set; }
 
     public string GameID
     {
@@ -94,6 +93,7 @@ public partial class GameButton : UserControl
     public static readonly AvaloniaProperty<int> DesiredButtonSizeProperty =
         AvaloniaProperty.Register<GameButton, int>(nameof(DesiredButtonSize), defaultValue: 155);
 
+
     public GameButton(SwitchGame switchGame = null)
     {
         InitializeComponent();
@@ -123,9 +123,14 @@ public partial class GameButton : UserControl
         }
     }
 
-    protected override void OnPointerPressed(PointerPressedEventArgs e)
+    void InstallShader()
     {
-        base.OnPointerPressed(e);
-        //new GameActionsWindow(Game).Show();
+        //TODO: implement   
+        Console.WriteLine("Test");
+    }
+
+    private void InstallShaders_Button_OnClick(object? sender, RoutedEventArgs e)
+    {
+        InstallShader();
     }
 }
