@@ -1,7 +1,7 @@
 ﻿{
   "name": "Yuzu (standard)",
   "windowsRootPath" : "%APPDATA%/yuzu",
-  "linuxRootPath" : "%LINUXUSER%/.local/yuzu",
+  "linuxRootPath" : "%LINUXUSER%/.local/share/yuzu",
   "gamePath": "/cache/game_list",
   "firmwarePath": "/nand/system/Contents/registered",
   "keysPath" : "/keys",

@@ -80,31 +80,38 @@ public class Emulator
     {
         Games.Clear();
 
-        if (Directory.Exists(GamesRootPath))
+        try
         {
-            string[] idSources = JsonData.isGamesCachedAsFolder
-                ? Directory.GetDirectories(GamesRootPath)
-                : Directory.GetFiles(GamesRootPath);
-            for (int i = 0; i < idSources.Length; i++)
+            if (Directory.Exists(GamesRootPath))
             {
-                var span = idSources[i].Replace('\\', '/').AsSpan();
-                var start = span.LastIndexOf('/') + 1;
-                var length = idSources[i].Contains(".pv") ? span.LastIndexOf('.') - 3 - start : span.Length - start;
-                string id = span.Slice(start, length).ToString();
+                string[] idSources = JsonData.isGamesCachedAsFolder
+                    ? Directory.GetDirectories(GamesRootPath)
+                    : Directory.GetFiles(GamesRootPath);
+                for (int i = 0; i < idSources.Length; i++)
+                {
+                    var span = idSources[i].Replace('\\', '/').AsSpan();
+                    var start = span.LastIndexOf('/') + 1;
+                    var length = idSources[i].Contains(".pv") ? span.LastIndexOf('.') - 3 - start : span.Length - start;
+                    string id = span.Slice(start, length).ToString();
 
-                var game = EshopAPI.GetGameFromDatabaseByID(id);
-                if (game != null)
-                    Games.Add(new SwitchGame(game.name, game.id, this.ShaderCacheRootPath, game.iconUrl,
-                        PastePastebinDatabase != null
-                            ? PastePastebinDatabase.GetEntryByIdentifier(game.id)
-                            : new Entry(game.id, new[] { "ShaderURL", "ShaderCount" },
-                                new[] { "0", "0" })));
+                    var game = EshopAPI.GetGameFromDatabaseByID(id);
+                    if (game != null)
+                        Games.Add(new SwitchGame(game.name, game.id, this.ShaderCacheRootPath, game.iconUrl,
+                            PastePastebinDatabase != null
+                                ? PastePastebinDatabase.GetEntryByIdentifier(game.id)
+                                : new Entry(game.id, new[] { "ShaderURL", "ShaderCount" },
+                                    new[] { "0", "0" })));
+                }
+
+                return Games;
             }
-
-            return Games;
+        }
+        catch
+        {
+            return null;
         }
 
-        return null;
+        return new List<SwitchGame>();
     }
 
     public DownloadSettings KeysDownload(string keysUrl)
