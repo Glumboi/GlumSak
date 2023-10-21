@@ -13,7 +13,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\GlumSak3AV.Networking\GlumSak3AV.Networking.csproj" />
-      <ProjectReference Include="..\GlumSak3AV.Settings\GlumSak3AV.Settings.csproj" />
     </ItemGroup>
 
     <ItemGroup>

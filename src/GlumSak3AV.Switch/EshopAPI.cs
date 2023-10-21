@@ -3,13 +3,16 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using Avalonia.Platform;
+using GlumSak3AV.Settings;
 using Newtonsoft.Json;
 
 namespace GlumSak3AV.Switch;
 
 public class EshopAPI
 {
-    const string jsonUrl = "https://raw.githubusercontent.com/blawar/titledb/master/US.en.json";
+    //TODO: Implement better way of updating at runtime
+    private static string jsonUrl = "https://raw.githubusercontent.com/blawar/titledb/master/US.en.json";
+
     private const string nsuIdFile = "./Json/nsuIds.txt";
     private const string databseFile = "./Json/gameIcons_Ids.txt";
     private static string[] nsuIds = new string[] { };
@@ -17,6 +20,14 @@ public class EshopAPI
 
     public static void SetupGameMeta()
     {
+        //TODO: Improve how settings are loaded, as a whole in general as well
+
+        if (!Directory.Exists("./Json"))
+        {
+            Directory.CreateDirectory("./Json");
+        }
+
+        jsonUrl = SettingsFactory.Settings.Value.switchGameDatabaseCrawl;
         CreateNSUIDsFile(jsonUrl);
         DonwloadGameMeta();
     }
@@ -95,7 +106,7 @@ public class EshopAPI
         {
             SetupGameMeta();
         }
-        
+
         var lines = File.ReadLines(databseFile);
 
         foreach (string line in lines)
@@ -113,10 +124,11 @@ public class EshopAPI
                     start += end + 1; // Move to the next part
                     parts[i] = part.ToString(); // Store the string value
                 }
+
                 string url = parts[0];
                 string id = parts[1];
                 string title = parts[2];
-                
+
                 return new GameData
                 {
                     iconUrl = url,

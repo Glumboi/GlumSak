@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using GlumSak3AV.Settings;
 
 namespace GlumSak3AV.Networking;
 
@@ -23,7 +24,7 @@ public class Firmwares
     public static List<SwitchFirmware> GetFirmwareVersions()
     {
         List<string> linksToVisit =
-            Parsing.ParseLinks(@"https://archive.org/download/nintendo-switch-global-firmwares");
+            Parsing.ParseLinks(SettingsFactory.Settings.Value.fimwaresCrawl);
         List<SwitchFirmware> rtrnList = new List<SwitchFirmware>();
 
         foreach (var link in linksToVisit)

@@ -3,10 +3,12 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using FluentAvalonia.UI.Controls;
+using GlumSak3AV.Settings;
 using GlumSak3AV.ViewModels;
 using GlumSak3AV.Views;
 
 namespace GlumSak3AV;
+
 public partial class App : Application
 {
     public override void Initialize()
@@ -16,10 +18,13 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        //Load app settings
+        SettingsFactory.LoadSettings();
+
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new SplashScreen();
-            
+
             /*desktop.MainWindow = new MainWindow
             {
                 DataContext = new MainViewModel()

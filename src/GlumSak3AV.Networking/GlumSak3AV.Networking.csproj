@@ -14,6 +14,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\GlumSak3AV.Files\GlumSak3AV.Files.csproj" />
+      <ProjectReference Include="..\GlumSak3AV.Settings\GlumSak3AV.Settings.csproj" />
     </ItemGroup>
 
 </Project>
