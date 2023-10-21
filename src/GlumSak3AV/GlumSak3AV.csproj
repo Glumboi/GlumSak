@@ -62,8 +62,4 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Json\" />
-  </ItemGroup>
 </Project>

@@ -51,7 +51,7 @@ public class Downloader
         _currentSettings = settings;
         _isZipped = _currentSettings.IsZipped;
 
-        string fileName = $"/GlumSakTemp_{new Random().Next(0, Int32.MaxValue)}";
+        string fileName = $"GlumSakTemp_{new Random().Next(0, Int32.MaxValue)}";
         string fileDir = $"{_currentSettings.TempDestination}{fileName}";
         Directory.CreateDirectory(fileDir);
         _currentTempFile = $"{fileDir}{fileName}";

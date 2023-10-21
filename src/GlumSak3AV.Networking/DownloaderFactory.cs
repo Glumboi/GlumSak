@@ -9,4 +9,9 @@ public class DownloaderFactory
         dl = new Downloader();
         pb = dl.DownloadProgressBar;
     }
+    
+    public static Downloader CreateNewDownloader()
+    {
+        return new Downloader();
+    }
 }
