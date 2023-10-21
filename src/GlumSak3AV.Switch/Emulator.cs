@@ -62,7 +62,7 @@ public class Emulator
         GamesRootPath = EmulatorRoot + JsonData.gamePath;
         FirmwareRootPath = EmulatorRoot + JsonData.firmwarePath;
         KeysRootPath = EmulatorRoot + JsonData.keysPath;
-        ShaderCacheRootPath = EmulatorRoot + JsonData.shaderCacheRootpath;
+        ShaderCacheRootPath = !JsonData.supportsShaderInstallation ? "UNDEFINED" : EmulatorRoot + JsonData.shaderCacheRootpath;
         EmulatorPaste = JsonData.emulatorPaste;
 
         LoadPaste();

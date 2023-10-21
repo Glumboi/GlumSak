@@ -13,9 +13,9 @@
         SystemDecorations="BorderOnly"
         CanResize="False"
         Name="EditEmuConfigWindow"
-        d:DesignHeight="845"
+        d:DesignHeight="875"
         d:DesignWidth="350"
-        Height="845"
+        Height="875"
         Width="350"
         WindowStartupLocation="CenterOwner"
         x:DataType="viewModels:EditEmulatorConfigViewModel"
@@ -67,15 +67,16 @@
                 <TextBlock Text="Windows emulator path" Padding="4" />
                 <TextBox Text="{Binding EmuConfigWindowsRootPath}"></TextBox>
 
-                <CheckBox IsChecked="{Binding UsesFoldersAsCache}" Content="Uses folders to cache games?" Padding="4" />
+                <CheckBox IsChecked="{Binding UsesFoldersAsCache}" Content="Uses folders to cache games" Padding="4" />
+                
+                <CheckBox IsChecked="{Binding SupportsShaderInstallation}" Content="Supports shader installation" Padding="4" />
 
                 <TextBlock FontWeight="Bold"
                            Margin="0 6 0 0">
                     Extra settings
                 </TextBlock>
                 <ui:NavigationViewItemSeparator></ui:NavigationViewItemSeparator>
-
-
+                
                 <TextBlock Text="Emulator paste" Padding="4" />
                 <TextBox Margin="0 0 0 4" Text="{Binding EmulatorPaste}"></TextBox>
 
