@@ -13,7 +13,7 @@ public class Firmwares
     public static string GetFirmwareDownload(List<string> urls, string version)
     {
         return urls[0].Split(new char[] { '#' })[0]
-               + "/Firmware%20" + version.Split(new char[] { ' ' })[1]
+               + "/Firmware%20" + version
                + ".zip";
     }
 
@@ -32,8 +32,7 @@ public class Firmwares
             string firmwareVersion = ExtractFirmwareVersion(link);
             if (!string.IsNullOrEmpty(firmwareVersion))
             {
-                string downloadUrl = GetFirmwareDownload(linksToVisit, firmwareVersion);
-                rtrnList.Add(new SwitchFirmware(firmwareVersion, downloadUrl));
+                rtrnList.Add(new SwitchFirmware(firmwareVersion, link));
             }
         }
 
@@ -44,7 +43,22 @@ public class Firmwares
 
     private static string ExtractFirmwareVersion(string link)
     {
-        string[] splitted = link.Split(new string[] { ".zip" }, StringSplitOptions.None);
+        //TODO: Imrpove performance, and/or readability
+
+        if (link.Contains("Rebootless", StringComparison.OrdinalIgnoreCase) ||
+            link.Contains("Release", StringComparison.OrdinalIgnoreCase) ||
+            !link.Contains("Firmware") ||
+            link.Contains("MD5")) return null;
+
+        var span = link.AsSpan();
+
+        int spaceIndex = span.LastIndexOf(' ');
+        int lastDotIndex = span.LastIndexOf('.');
+        string str = span.Slice(spaceIndex + 1, lastDotIndex - spaceIndex - 1).ToString();
+        return str;
+
+        //Old code, keep for reference
+        /*string[] splitted = link.Split(new string[] { ".zip" }, StringSplitOptions.None);
         string[] firmwareVersions = splitted[0].Split('/');
 
         foreach (var version in firmwareVersions)
@@ -56,7 +70,7 @@ public class Firmwares
             }
         }
 
-        return null;
+        return null;*/
     }
 }
 
