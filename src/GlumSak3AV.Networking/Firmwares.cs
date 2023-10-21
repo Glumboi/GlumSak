@@ -6,18 +6,6 @@ namespace GlumSak3AV.Networking;
 public class Firmwares
 {
     /// <summary>
-    /// Parses the given archive.org link with the firmwares and slpits the returned url and returns the result
-    /// </summary>
-    /// <param name="version"></param>
-    /// <returns></returns>
-    public static string GetFirmwareDownload(List<string> urls, string version)
-    {
-        return urls[0].Split(new char[] { '#' })[0]
-               + "/Firmware%20" + version
-               + ".zip";
-    }
-
-    /// <summary>
     /// This gets all firmwares from a archive.org site
     /// </summary>
     /// <returns></returns>
