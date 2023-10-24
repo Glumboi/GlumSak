@@ -11,6 +11,7 @@ using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.Switch;
+using GlumSak3AV.ViewModels;
 using GlumSak3AV.Views;
 
 namespace GlumSak3AV.CustomControls;
@@ -92,19 +93,53 @@ public partial class GameButton : UserControl
 
     public static readonly AvaloniaProperty<int> DesiredButtonSizeProperty =
         AvaloniaProperty.Register<GameButton, int>(nameof(DesiredButtonSize), defaultValue: 155);
-
-
-    public GameButton(SwitchGame switchGame = null)
+    
+    public ICommand InstallShaderCommand
     {
-        InitializeComponent();
-        if (switchGame != null)
-        {
-            Game = switchGame;
-            GameID = switchGame.GameID;
-            GameName = switchGame.GameName;
-            GameImage = switchGame.ImageURL;
-        }
+        get => (ICommand)GetValue(InstallShaderCommandProperty);
+        set => SetValue(InstallShaderCommandProperty, value);
     }
+
+    public static readonly AvaloniaProperty<ICommand> InstallShaderCommandProperty =
+        AvaloniaProperty.Register<GameButton, ICommand>(nameof(DesiredButtonSize));
+
+    void CreateInstallShaderCommand()
+    {
+        InstallShaderCommand = new RelayCommand(InstallShader, SupportsShaderInstallation);
+    }
+
+    void InstallShader()
+    {
+        //TODO: implement   
+        Console.WriteLine("Test");
+    }
+    
+    private bool SupportsShaderInstallation()
+    {
+        return Game.SupportsShaderDownload;
+    }
+
+    #region ctors
+
+    public GameButton()
+    {
+        this.DataContext = this;
+        InitializeComponent();
+        CreateInstallShaderCommand();
+    }
+
+    public GameButton(SwitchGame switchGame)
+    {
+        this.DataContext = new GameButtonViewModel(switchGame);
+        InitializeComponent();
+
+        Game = switchGame;
+        GameID = switchGame.GameID;
+        GameName = switchGame.GameName;
+        GameImage = switchGame.ImageURL;
+    }
+
+    #endregion
 
     private void InitializeComponent()
     {
@@ -119,18 +154,7 @@ public partial class GameButton : UserControl
 
             Stream stream = new MemoryStream(imageBytes);
 
-            return new Avalonia.Media.Imaging.Bitmap(stream);
+            return new Bitmap(stream);
         }
-    }
-
-    void InstallShader()
-    {
-        //TODO: implement   
-        Console.WriteLine("Test");
-    }
-
-    private void InstallShaders_Button_OnClick(object? sender, RoutedEventArgs e)
-    {
-        InstallShader();
     }
 }

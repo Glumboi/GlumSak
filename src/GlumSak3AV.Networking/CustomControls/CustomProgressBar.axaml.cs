@@ -33,6 +33,9 @@ public partial class CustomProgressBar : UserControl
 
     public Action<CustomProgressBar> NotifyAllProgressDone { get; set; }
 
+    private string _downloadDisplayName;
+    private string _downloadSenderName;
+
 
     public CustomProgressBar(Downloader downloader)
     {

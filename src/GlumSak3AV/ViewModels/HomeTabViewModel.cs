@@ -18,7 +18,7 @@ namespace GlumSak3AV.ViewModels;
 
 public class HomeTabViewModel : ViewModelBase
 {
-    private DispatcherTimer _checkProgressBarsTimer = new DispatcherTimer();
+    public static HomeTabViewModel? CurrentHomeTabInstance { get; private set; }
 
     private ObservableCollection<Emulator> _emulators = new ObservableCollection<Emulator>();
 
@@ -96,7 +96,7 @@ public class HomeTabViewModel : ViewModelBase
         }
     }
 
-    void AddDownload(DownloadSettings settings)
+    public void AddDownload(DownloadSettings settings)
     {
         Downloader downloader;
         CustomProgressBar progressBar;
@@ -252,27 +252,11 @@ public class HomeTabViewModel : ViewModelBase
         CreateDownloadAndInstallFirmwareCommand();
         CreateDownloadAndInstallKeysCommand();
         LoadGamesToGUI();
-
-        _checkProgressBarsTimer.Interval = TimeSpan.FromSeconds(10);
-        _checkProgressBarsTimer.Tick += CheckProgressBarsTimerOnTick;
-        //_checkProgressBarsTimer.Start();
-    }
-
-    private void CheckProgressBarsTimerOnTick(object? sender, EventArgs e)
-    {
-        //Removes progressbars every tick, maybe implement a better way in the future
-
-        for (int i = 0; i < ProgressBars.Count; i++)
-        {
-            if (ProgressBars[i].DownloadDone)
-            {
-                ProgressBars.RemoveAt(i);
-            }
-        }
     }
 
     public HomeTabViewModel()
     {
         Initialize();
+        CurrentHomeTabInstance = this;
     }
 }

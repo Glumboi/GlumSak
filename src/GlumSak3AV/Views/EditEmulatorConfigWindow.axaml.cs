@@ -3,7 +3,9 @@ using System.Xml;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using FluentAvalonia.UI.Controls;
 using GlumSak3AV.Switch;
 using GlumSak3AV.ViewModels;
 

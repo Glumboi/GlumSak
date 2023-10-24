@@ -19,7 +19,8 @@
                 Margin="0,0,0,2"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                Text="Download starting..." />
+                Text="Download starting..." >
+            </TextBlock>
             <ProgressBar
                 x:FieldModifier="public"
                 x:Name="Download_ProgressBar"

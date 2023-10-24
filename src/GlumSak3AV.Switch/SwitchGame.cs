@@ -15,31 +15,30 @@ public class SwitchGame
     public bool SupportsShaderDownload { get; private set; }
 
     public string ImageURL { get; private set; }
+    
+    private string _shaderDownloadURL;
 
-    public long LocalShaderCount { get; private set; }
+    public string ShaderDownloadURL
+    {
+        get => _shaderDownloadURL;
+        set => _shaderDownloadURL = value;
+    }
 
-    public long WebShaderCount { get; private set; }
 
-    public Entry PasteDatabaseEntry { get; set; }
+    private string _webShaderCount;
+
+    public string WebShaderCount
+    {
+        get => _webShaderCount;
+        set => _webShaderCount = value;
+    }
+
+    public string LocalShaderCount { get; private set; }
 
     private Bitmap _localImage;
 
-
-    public Bitmap GameImage
-    {
-        get
-        {
-            if (_localImage == null)
-            {
-                return Networking.WebImage.DownloadImage(ImageURL);
-            }
-
-            return _localImage;
-        }
-    }
-
     public SwitchGame(string gameName, string gameID, string emulatorShaderRoot, string iamgeURL,
-        Entry pasteDatabaseEntry, Bitmap? localImage =
+        string webShaderCount, string shaderDownloadUrl, Bitmap? localImage =
             null)
 
     {
@@ -47,14 +46,15 @@ public class SwitchGame
         GameID = gameID;
         ImageURL = iamgeURL;
         _localImage = localImage;
-        PasteDatabaseEntry = pasteDatabaseEntry;
-
+        
         //Setup shader path
         GameShaderPath = emulatorShaderRoot.Replace("%GAMEID%", gameID);
         SupportsShaderDownload = GameShaderPath.Contains(gameID);
+        LocalShaderCount = GetLocalShaderCount().ToString();
+        ShaderDownloadURL = shaderDownloadUrl;
+        WebShaderCount = webShaderCount;
+
         if (!Directory.Exists(GameShaderPath)) Directory.CreateDirectory(GameShaderPath);
-        LocalShaderCount = GetLocalShaderCount();
-        WebShaderCount = GetWebShaderCount();
     }
 
     private long GetLocalShaderCount()
@@ -65,10 +65,5 @@ public class SwitchGame
 
         FileInfo fileInfo = new FileInfo(tocFile);
         return Math.Max(+((fileInfo.Length - 32) / 8), 0);
-    }
-
-    private long GetWebShaderCount()
-    {
-        return 0;
     }
 }

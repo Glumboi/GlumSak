@@ -1,8 +1,18 @@
-﻿namespace GlumSak3AV.Networking
+﻿using System.Net;
+
+namespace GlumSak3AV.Networking
 {
     public static class WebReader
     {
-        public static async Task<IEnumerable<string>> ReadFromUrl(string url)
+        public static string ReadAllTextFromUrl(string url)
+        {
+            using (WebClient client = new WebClient())
+            {
+                return client.DownloadString(url);
+            }
+        }
+
+        public static async Task<IEnumerable<string>> ReadLinesFromUrl(string url)
         {
             var request = new HttpRequestMessage(HttpMethod.Get, url);
             using var client = new HttpClient();
@@ -18,7 +28,6 @@
             {
                 throw new Exception($"Failed to fetch data from {url}. Status code: {response.StatusCode}");
             }
-            
         }
     }
 }

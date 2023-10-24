@@ -17,7 +17,7 @@ public class Emulator
     public EmuJsonDummy JsonData { get; set; }
     public string JsonFile { get; set; }
     public string EmulatorPaste { get; set; }
-    public PastebinDatabase PastePastebinDatabase { get; set; }
+    public IniReader IniDatabase { get; set; }
 
     private string _tempPath;
 
@@ -72,12 +72,14 @@ public class Emulator
     {
         if (!string.IsNullOrWhiteSpace(EmulatorPaste))
         {
-            PastePastebinDatabase = new PastebinDatabase(new List<Entry>(), EmulatorPaste);
+            IniDatabase = new IniReader(EmulatorPaste);
         }
     }
 
     public List<SwitchGame>? GetGames()
     {
+        LoadPaste();
+        
         Games.Clear();
 
         try
@@ -97,17 +99,17 @@ public class Emulator
                     var game = EshopAPI.GetGameFromDatabaseByID(id);
                     if (game != null)
                         Games.Add(new SwitchGame(game.name, game.id, this.ShaderCacheRootPath, game.iconUrl,
-                            PastePastebinDatabase != null
-                                ? PastePastebinDatabase.GetEntryByIdentifier(game.id)
-                                : new Entry(game.id, new[] { "ShaderURL", "ShaderCount" },
-                                    new[] { "0", "0" })));
+                            IniDatabase?.GetValue("ShaderCount", game.id, "N/A") ?? "N/A",
+                            IniDatabase?.GetValue("ShaderURL", game.id, string.Empty) ?? string.Empty));
                 }
 
                 return Games;
             }
         }
-        catch
+        catch (Exception e)
         {
+            Console.WriteLine(e.Message);
+            
             return null;
         }
 

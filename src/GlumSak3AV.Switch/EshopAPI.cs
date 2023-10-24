@@ -111,7 +111,7 @@ public class EshopAPI
 
         foreach (string line in lines)
         {
-            if (line.Contains(gameId))
+            if (line.Contains(gameId, StringComparison.OrdinalIgnoreCase))
             {
                 var span = line.AsSpan();
                 int start = 0;

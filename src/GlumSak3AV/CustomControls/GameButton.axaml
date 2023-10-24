@@ -4,10 +4,19 @@
              xmlns:local="clr-namespace:GlumSak3AV.Views"
              xmlns:customControls="clr-namespace:GlumSak3AV.CustomControls"
              x:Class="GlumSak3AV.CustomControls.GameButton"
-             Width="{Binding $parent[customControls:GameButton].DesiredButtonSize}"
-             Height="{Binding $parent[customControls:GameButton].DesiredButtonSize}"
+             xmlns:vm="using:GlumSak3AV.ViewModels"
+             x:DataType="vm:GameButtonViewModel"
+             Width="300"
              Margin="4 0 4 8">
+    
     <Expander>
+        <Expander.ContextMenu>
+            <ContextMenu>
+                <MenuItem>
+                    <MenuItem.Header>TEST</MenuItem.Header>
+                </MenuItem>
+            </ContextMenu>
+        </Expander.ContextMenu>
         <Expander.Header>
             <Grid>
                 <Border
@@ -22,7 +31,7 @@
                                RadiusY="10">
 
                         <Rectangle.Fill>
-                            <ImageBrush Source="{Binding $parent[customControls:GameButton].GameBitmap}" />
+                            <ImageBrush Source="{Binding GameBitmap}" />
                         </Rectangle.Fill>
                     </Rectangle>
 
@@ -41,21 +50,23 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <TextBlock HorizontalAlignment="Left" FontWeight="Bold"
-                           Text="{Binding $parent[customControls:GameButton].GameName}"
+                           Text="{Binding Game.LocalShaderCount, StringFormat=Local: {0}}"
                            Margin="0 0 0 2" />
                 <TextBlock Grid.Column="1" HorizontalAlignment="Right" FontWeight="Bold"
-                           Text="{Binding $parent[customControls:GameButton].GameID}"
+                           Text="{Binding Game.WebShaderCount, StringFormat=Web: {0}}"
                            Margin="0 0 0 2" />
             </Grid>
             <Button Grid.Row="1"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch"
                     Content="Install Shaders"
-                    Click="InstallShaders_Button_OnClick"
+                    Command="{Binding InstallShadersCommand}"
                     Margin="0 0 0 2" />
+            
             <Button VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch" Grid.Row="2"
                     Content="Coming in a later version..."
+                    IsEnabled="False"
                     Margin="0 2 0 0" />
         </Grid>
     </Expander>
