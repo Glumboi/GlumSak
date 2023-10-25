@@ -17,7 +17,7 @@ public class Emulator
     public EmuJsonDummy JsonData { get; set; }
     public string JsonFile { get; set; }
     public string EmulatorPaste { get; set; }
-    public IniReader IniDatabase { get; set; }
+    public IniReader? IniDatabase { get; set; }
 
     private string _tempPath;
 

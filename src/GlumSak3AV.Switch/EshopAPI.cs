@@ -34,7 +34,7 @@ public class EshopAPI
 
     private static void CreateNSUIDsFile(string URL)
     {
-        using (FileStream fs = new FileStream("./Json/nsuIds.txt", FileMode.Create))
+        using (FileStream fs = new FileStream("./Json/nsuIds.txt", FileMode.Open))
         using (StreamWriter sw = new StreamWriter(fs, Encoding.UTF8))
         {
             foreach (var item in GetNsuIDs(URL))

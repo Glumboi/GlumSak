@@ -27,24 +27,16 @@
 
                             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
                                 <TextBlock TextWrapping="Wrap">
-                                    GlumSak 2.x.x.x is a re defined experience of the Tool "GlumSak" made by Glumboi.
+                                    GlumSak3 is yet another re write of GlumSak that aims to improve the second iteration of GlumSak to make it even better!
+                                    <LineBreak />
                                     <LineBreak />
                                     GlumSak is a Tool made by Glumboi that helps you to set up your Emulators. This Project took big inspiration of the Tool "emusak-ui" and is a sort of revive for it.
-                                    <LineBreak />
-                                    I spent much time developing and improving this tool over the past 4 Months to bring ya'll the best experience of this Project and it's Visions.
                                     <LineBreak />
                                     <LineBreak />
                                     If you have something to report such as a Bug or a new Feature, then you can do that with Discord or write me an E-Mail, I surely take a read sometimes.
                                     <LineBreak />
                                     <LineBreak />
-                                    What is new in GlumSak 2.x.x.x and higher?<LineBreak />
-                                    <LineBreak />
-                                    - A new GUI built from the Ground up in WPF and C#<LineBreak />
-                                    - Much improved Performance over the older versions<LineBreak />
-                                    - Better Window resizing<LineBreak />
-                                    - A new, clean and fresh looking UI design flow as I call it<LineBreak />
-                                    <LineBreak />
-                                    Old Versions (Versions using Windows Forms) are officially out of Support but can still work for some time.
+                                    Old Versions (Versions using Windows Forms and WPF) are officially out of Support but can still work for some time.
                                 </TextBlock>
                             </ScrollViewer>
 
@@ -56,12 +48,14 @@
                                 </Grid.ColumnDefinitions>
 
                                 <Button
+                                    IsVisible="False"
                                     x:Name="EmuSakUIGithub_Button"
                                     Grid.Column="0"
                                     VerticalAlignment="Bottom"
                                     Content="emusak-ui project" />
 
                                 <Button
+                                    IsVisible="False"
                                     x:Name="GlumSakGithub_Button"
                                     Grid.Column="1"
                                     HorizontalAlignment="Right"

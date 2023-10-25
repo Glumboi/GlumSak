@@ -21,6 +21,19 @@ public class GlumSakDialog
             CloseButtonText = secondaryText
         };
     }
+    
+    public GlumSakDialog(
+        string title,
+        string content,
+        string primaryText)
+    {
+        _dlg = new ContentDialog()
+        {
+            Title = title,
+            Content = content,
+            PrimaryButtonText = primaryText,
+        };
+    }
 
     public async Task<ContentDialogResult> ShowAsync()
     {

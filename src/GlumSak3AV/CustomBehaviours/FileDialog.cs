@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace GlumSak3AV.CustomBehaviours;
@@ -12,7 +13,7 @@ public class FileDialog
             Process.Start(new ProcessStartInfo
             {
                 FileName = "explorer.exe",
-                Arguments = $"/select, \"{path}\"",
+                Arguments = $"/select, \"{Path.GetFullPath(path) }\"",
                 UseShellExecute = true
             });
         }

@@ -58,7 +58,7 @@
 					</TabItem.Header>
 					<views:InfoTabView />
 				</TabItem>
-				<TabItem>
+				<TabItem IsVisible="False">
 					<TabItem.Header>
 						<Grid>
 							<Grid.ColumnDefinitions>
@@ -80,7 +80,7 @@
 					</TabItem.Header>
 					<views:SettingsTabView />
 				</TabItem>
-				<TabItem>
+				<TabItem IsVisible="False">
 					<TabItem.Header>
 						<Grid>
 							<Grid.ColumnDefinitions>
@@ -102,7 +102,7 @@
 					</TabItem.Header>
 					<views:YuzuUpdaterView />
 				</TabItem>
-				<TabItem>
+				<TabItem IsVisible="False">
 					<TabItem.Header>
 						<Grid>
 							<Grid.ColumnDefinitions>

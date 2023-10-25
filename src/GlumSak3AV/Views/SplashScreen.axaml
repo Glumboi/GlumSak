@@ -57,7 +57,7 @@
                     VerticalAlignment="Center"
                     Height="100"
                     Width="320">
-            <Image Source="../Assets/Illustration_splash_prototype.png"></Image>
+            <Image IsVisible="False" Source="../Assets/Illustration_splash_prototype.png"></Image>
         </StackPanel>
     </Grid>
 

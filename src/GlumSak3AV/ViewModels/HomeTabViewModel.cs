@@ -132,10 +132,22 @@ public class HomeTabViewModel : ViewModelBase
         DownloadAndInstallKeysCommand = new RelayCommand(DownloadAndInstallKeys);
     }
 
-    void DownloadAndInstallKeys()
+    async void DownloadAndInstallKeys()
     {
-        AddDownload(Emulators[SelectedEmulator]
-            .KeysDownload("https://www.mediafire.com/file/a8dg2wnszlowsfm/prod.zip/file"));
+        //TODO: Improve checking if paste contains keys and make it more visible for the end user
+        
+        try
+        {
+            AddDownload(Emulators[SelectedEmulator]
+                .KeysDownload(Emulators[SelectedEmulator].IniDatabase.GetValue("KeyUrl", "Keys")));
+        }
+        catch 
+        {
+            GlumSakDialog dlg = new GlumSakDialog("Error", 
+                "You either did not specify a paste in your emulator config, or the paste does not contain keys!", 
+                "OK");
+            await dlg.ShowAsync();
+        }
     }
 
     public ICommand EditEmulatorConfigurationCommand { get; internal set; }
