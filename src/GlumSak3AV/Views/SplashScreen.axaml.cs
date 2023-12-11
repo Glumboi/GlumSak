@@ -12,6 +12,7 @@ public partial class SplashScreen : Window
 {
     private bool _windowDragging = false;
     private PointerPoint _originalPoint;
+    BackgroundWorker worker = new BackgroundWorker();
 
     public SplashScreen()
     {
@@ -20,7 +21,6 @@ public partial class SplashScreen : Window
 
     private void Control_OnLoaded(object? sender, RoutedEventArgs e)
     {
-        BackgroundWorker worker = new BackgroundWorker();
         worker.WorkerReportsProgress = true;
         worker.DoWork += WorkerOnDoWork;
         worker.RunWorkerCompleted += WorkerOnRunWorkerCompleted;
@@ -34,6 +34,8 @@ public partial class SplashScreen : Window
             DataContext = new MainViewModel()
         };
         mw.Show();
+        worker.DoWork -= WorkerOnDoWork;
+        worker.RunWorkerCompleted -= WorkerOnRunWorkerCompleted;
         Close();
     }
 
@@ -41,10 +43,10 @@ public partial class SplashScreen : Window
     {
         //This literally doesnt load anything in the background and is just so the user gets tricked into thinking that it loads
         //while it actually locks up and freezes upon mainwindow init
-        
+
         //TODO: implement proper loading in the future
         //DONE: Partial proper loading
-        EshopAPI.SetupGameMeta();
+        StaticInstances.NintendoEShopApi = new NintendoEShopAPI();
     }
 
     private void InputElement_OnPointerMoved(object? sender, PointerEventArgs e)

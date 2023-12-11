@@ -2,25 +2,15 @@ using System;
 using System.IO;
 using System.Net;
 using System.Windows.Input;
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Input;
-using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
-using Avalonia.Media;
-using Avalonia.Media.Imaging;
 using CommunityToolkit.Mvvm.Input;
 using GlumSak3AV.Switch;
 using GlumSak3AV.ViewModels;
-using GlumSak3AV.Views;
 
 namespace GlumSak3AV.CustomControls;
 
 using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
-using Avalonia.Media;
 using Avalonia.Media.Imaging;
 
 public partial class GameButton : UserControl

@@ -96,7 +96,7 @@ public class Emulator
                     var length = idSources[i].Contains(".pv") ? span.LastIndexOf('.') - 3 - start : span.Length - start;
                     string id = span.Slice(start, length).ToString();
 
-                    var game = EshopAPI.GetGameFromDatabaseByID(id);
+                    var game = StaticInstances.NintendoEShopApi.GetGameFromDatabaseByID(id);
                     if (game != null)
                         Games.Add(new SwitchGame(game.name, game.id, this.ShaderCacheRootPath, game.iconUrl,
                             IniDatabase?.GetValue("ShaderCount", game.id, "N/A") ?? "N/A",

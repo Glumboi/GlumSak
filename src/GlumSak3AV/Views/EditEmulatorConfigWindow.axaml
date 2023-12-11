@@ -19,7 +19,8 @@
         Width="350"
         WindowStartupLocation="CenterOwner"
         x:DataType="viewModels:EditEmulatorConfigViewModel"
-        mc:Ignorable="d">
+        mc:Ignorable="d"
+        Icon="/Assets/Icon.ico">
     <Design.DataContext>
         <!--
             This only sets the DataContext for the previewer in an IDE,

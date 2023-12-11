@@ -1,66 +1,66 @@
 ﻿using System.Collections.Concurrent;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using Avalonia.Platform;
 using GlumSak3AV.Settings;
 using Newtonsoft.Json;
+using SkiaSharp;
 
 namespace GlumSak3AV.Switch;
 
-public class EshopAPI
+public class NintendoEShopAPI
 {
-    //TODO: Implement better way of updating at runtime
-    private static string jsonUrl = "https://raw.githubusercontent.com/blawar/titledb/master/US.en.json";
+    public string DataBaseURL { get; set; }
 
-    private const string nsuIdFile = "./Json/nsuIds.txt";
-    private const string databseFile = "./Json/gameIcons_Ids.txt";
-    private static string[] nsuIds = new string[] { };
-    private static string response = string.Empty;
+    private const string jsonDir = "./Json";
+    private const string nsuIDFile = jsonDir + "/nsuIds.txt";
+    private const string databseFile = jsonDir + "/gameIcons_Ids.txt";
 
-    public static void SetupGameMeta()
+    public NintendoEShopAPI()
     {
-        //TODO: Improve how settings are loaded, as a whole in general as well
+        DataBaseURL = SettingsFactory.Settings.Value.switchGameDatabaseCrawl;
 
-        if (!Directory.Exists("./Json"))
-        {
-            Directory.CreateDirectory("./Json");
-        }
+        if (!Directory.Exists(jsonDir)) Directory.CreateDirectory(jsonDir);
+        if (!File.Exists(nsuIDFile)) File.Create(nsuIDFile).Close();
+        if (!File.Exists(databseFile)) File.Create(databseFile).Close();
+        SetupGameMeta();
+    }
 
-        jsonUrl = SettingsFactory.Settings.Value.switchGameDatabaseCrawl;
-        CreateNSUIDsFile(jsonUrl);
+    public void SetupGameMeta()
+    {
+        CreateNsuIDsFile(DataBaseURL);
         DonwloadGameMeta();
     }
 
-    private static void CreateNSUIDsFile(string URL)
+    private void CreateNsuIDsFile(string URL)
     {
-        using (FileStream fs = new FileStream("./Json/nsuIds.txt", FileMode.Open))
+        using (FileStream fs = new FileStream(nsuIDFile, FileMode.OpenOrCreate))
         using (StreamWriter sw = new StreamWriter(fs, Encoding.UTF8))
         {
-            foreach (var item in GetNsuIDs(URL))
+            foreach (var item in GetNsuIds(URL))
             {
                 sw.WriteLine(item);
             }
         }
     }
 
-    private static IEnumerable<string> GetNsuIDs(string URL)
+    private IEnumerable<string> GetNsuIds(string url)
     {
-        Regex nsuIdRegex = new Regex(@"""nsuId"": (\d+)");
-
-        using (WebClient client = new WebClient())
-        using (Stream stream = client.OpenRead(URL))
-        using (StreamReader reader = new StreamReader(stream))
+        const string pattern = @"nsuId"": (\d+)";
+        var regex = new Regex(pattern);
+  
+        using (var client = new WebClient())
+        using (var stream = client.OpenRead(url))
+        using (var reader = new StreamReader(stream))
         {
             while (true)
             {
-                string line = reader.ReadLine();
-                if (line == null)
-                {
-                    yield break;
-                }
+                var line = reader.ReadLine();
+                if (line == null) break;
 
-                var match = nsuIdRegex.Match(line);
+                var match = regex.Match(line);
                 if (match.Success)
                 {
                     yield return match.Groups[1].Value;
@@ -69,22 +69,20 @@ public class EshopAPI
         }
     }
 
-    private static void DonwloadGameMeta()
+    private void DonwloadGameMeta()
     {
         using (HttpClient client = new HttpClient())
         {
-            nsuIds = File.ReadLines(nsuIdFile).Where(x => !string.IsNullOrEmpty(x)).ToArray();
-            response = client.GetStringAsync(jsonUrl).Result;
-            Dictionary<string, GameData> data = JsonConvert.DeserializeObject<Dictionary<string, GameData>>(response);
-            GetAll(data);
+            //nsuIds = File.ReadLines(nsuIDFile).Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            GetAll(JsonConvert.DeserializeObject<Dictionary<string, GameData>>(client.GetStringAsync(DataBaseURL).Result));
         }
     }
 
-    private static void GetAll(Dictionary<string, GameData> data)
+    private static void GetAll(Dictionary<string, GameData>? data)
     {
         ConcurrentQueue<string> lines = new ConcurrentQueue<string>();
 
-        Parallel.ForEach(nsuIds, fileLine =>
+        Parallel.ForEach(File.ReadLines(nsuIDFile), fileLine =>
         {
             if (data.ContainsKey(fileLine))
             {
@@ -97,10 +95,10 @@ public class EshopAPI
             }
         });
 
-        File.WriteAllText("./Json/gameIcons_Ids.txt", string.Join(Environment.NewLine, lines));
+        File.WriteAllText(databseFile, string.Join(Environment.NewLine, lines));
     }
 
-    public static GameData? GetGameFromDatabaseByID(string gameId)
+    public GameData? GetGameFromDatabaseByID(string gameId)
     {
         if (!File.Exists(databseFile))
         {
