@@ -2,7 +2,12 @@
   
 <img src="https://i.imgur.com/c7783EU.png" width="312" height="100" />
 
-# COOKING GLUMSAK 3
+# Due to the recent events surrounding yuzu, this project gets put on hold
+
+## Old ReadMe
+<details>
+  <summary>Expand</summary>
+  # COOKING GLUMSAK 3
 
 [Click me to write an E-Mail to me that describes your experience!](mailto:glumboi.contact@gmail.com)
   
@@ -72,3 +77,6 @@ My biggest and most fun project.
   
 Donate me via crypto (BTC): bc1qrfdct0ryhtf209z9xegqqafylyrv8ssnq5vmyu. 
 My Ko-fi: https://ko-fi.com/glumboi
+</details>
+
+
