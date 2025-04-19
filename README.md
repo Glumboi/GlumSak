@@ -68,7 +68,7 @@ time consuming project, but I really enjoy developing it.
   ![alt text](https://i.imgur.com/x46UvqE.png)
 
   
-# This is for education, use at your own risk! GlumSak is a Tool and doesn't provide any pirated things on its own! 
+# This is for education, use at your own risk! GlumSak is a Tool and doesn't provide any non-legally obtained files on its own! 
   
 ## License
 
